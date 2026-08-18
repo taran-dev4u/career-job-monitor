@@ -34,14 +34,15 @@ The monitor must:
 
 ## 3. Current Project Snapshot
 
-Last structurally verified: **2026-08-18 08:30 UTC**.
+Last structurally verified: **2026-08-18 15:00 UTC**.
 
 - Companies configured: **17** (`CMP-001` through `CMP-017`).
 - Monitor interval: **30 minutes**.
 - Primary runner: active GitHub Actions workflow `.github/workflows/job-monitor.yml`, scheduled at minutes **7 and 37 UTC** each hour.
 - Private repository: **`https://github.com/taran-dev4u/career-job-monitor`**, default branch `main`.
 - Local fallback task: **`Career Job Monitor - Every 30 Minutes`**, retained but disabled while GitHub Actions is active.
-- State schema: **v2**, with separate `discovered`, `evaluated`, and `notified` maps. The first v2 reliability baseline suppresses notifications.
+- State schema: **v3**, with separate `discovered`, `evaluated`, and `notified` maps plus baseline-pending suppression that still allows a rejected posting to alert if it later becomes eligible.
+- Latest controlled cloud validation: **17 Healthy**, **0 Confirmed Empty**, **0 Degraded**, **0 Broken**; 398 extracted records reconciled as 63 included and 335 rejected.
 - Sponsorship policy: prospectively reject explicit no-sponsorship/no-OPT/no-CPT postings; allow sponsorship-available and sponsorship-not-mentioned postings. Historical accepted rows predating this policy are retained.
 - User dashboard: `LATEST_JOBS.md`; GitHub issues provide new-job and source-health notifications.
 - Generated workbook: `outputs/job-monitor/Job_Monitor.xlsx`, with seven audit/visibility sheets.
@@ -284,14 +285,14 @@ Entry template:
 - Scheduler status: GitHub Actions is the active primary scheduler at `7,37 * * * *` UTC. Local Windows task is disabled, retained for rollback, and had last result `0` before handoff.
 - Follow-up: GitHub scheduled events are best-effort and may be delayed during platform congestion; monitor the Actions page if a run is late.
 
-### TASK-20260818-0546-codex — IN_PROGRESS
+### TASK-20260818-0546-codex — DONE
 - Started: 2026-08-18T05:46:53Z
-- Completed:
+- Completed: 2026-08-18T15:00:38Z
 - Objective: Implement the approved GitHub Actions reliability and visibility upgrade: auditable eligibility decisions, raw extraction and 30-day decision history, per-company source health, Apply Now dashboard, GitHub alerts, and a seven-sheet workbook.
 - Files expected: `AGENTS.md`, `README.md`, `config.json`, `package.json`, `.github/workflows/job-monitor.yml`, `src/lib.mjs`, `src/scrape.mjs`, `src/monitor.mjs`, `src/build_workbook.mjs`, `src/build_workbook_ci.mjs`, `src/github_notify.mjs`, `tests/filter.test.mjs`, `tests/monitor_data.test.mjs`, `data/state.json`, `data/jobs.json`, `data/runs.json`, `data/current_candidates.json`, `data/decision_history.json`, `data/source_health.json`, `data/last_batch.json`, `LATEST_JOBS.md`, `outputs/job-monitor/Job_Monitor.xlsx`
-- Files changed: Pending.
+- Files changed: `.github/workflows/job-monitor.yml`, `AGENTS.md`, `README.md`, `config.json`, `package.json`, `src/lib.mjs`, `src/scrape.mjs`, `src/monitor.mjs`, `src/build_workbook.mjs`, `src/build_workbook_ci.mjs`, `src/github_notify.mjs`, `src/workbook_data.mjs`, `tests/filter.test.mjs`, `tests/monitor_data.test.mjs`, `tests/smoke_scraper.mjs`, `tests/smoke_all.mjs`, `tests/debug_source.mjs`, `tests/fixtures/parser_contracts.json`, `LATEST_JOBS.md`, `data/state.json`, `data/jobs.json`, `data/runs.json`, `data/current_candidates.json`, `data/decision_history.json`, `data/source_health.json`, `data/last_batch.json`, `outputs/job-monitor/Job_Monitor.xlsx`.
 - Files deleted: None planned.
-- Behavior/data impact: Preserve customized URLs and historical records; migrate dedup state without clearing it; add explicit discovered/evaluated/notified state, eligibility evidence, current raw snapshot, rolling 30-day audit, source-health transitions, active-job verification, dashboard output, and GitHub issue notifications. The controlled first upgraded run will suppress new-job alerts while populating audit data.
-- Verification: Pending.
-- Scheduler status: GitHub Actions remains the active scheduler; local Windows fallback remains disabled. No local state-producing monitor run will occur until overlap is checked and the upgraded workflow is ready for controlled validation.
-- Follow-up: Pending.
+- Behavior/data impact: Preserved every customized source URL and historical record; migrated state without clearing legacy `seen`; added v3 discovered/evaluated/notified state, baseline-pending suppression, full detail evaluation, pagination, current raw snapshot, 30-day decision evidence, daily active-job rechecks, per-company health/streaks, dashboard, seven-sheet workbook, artifacts, and GitHub job/health issues. One false-positive baseline-backlog issue was closed with a correction while preserving audit/history; subsequent v3 runs proved backlog suppression and delivered two genuinely new postings.
+- Verification: `npm test` passed decision, sponsorship, experience, internship, state, workbook-contract, adapter-family, and parser-fixture tests; CI workbook `--verify` passed all seven sheets and hyperlink counts; live all-company smoke found candidates on all 17 sources and sampled details without errors after targeted retries; cloud runs `32145714222`, `32147893093`, `32149853441`, and `32151158497` passed scanning, workbook verification, notifications, artifact upload, and persistence. Final run completed in 5m43s with 17 Healthy sources, 398 = 63 included + 335 rejected, zero pending/errors, a valid `Job-Monitor-17` artifact, one genuinely new JPMorgan alert, and automatic closure of Apple/Fidelity/Google health issues.
+- Scheduler status: GitHub Actions remains active at `7,37 * * * *` UTC with `contents: write`, `issues: write`, and concurrency protection. The obsolete scheduled run `32149784282` was cancelled before notification/persistence because it started on the superseded v2 commit; the corrected queued run then completed successfully. Local Windows fallback remains disabled.
+- Follow-up: GitHub schedules are best-effort and can start late. The workflow currently emits a GitHub annotation that v4 actions target deprecated Node 20 internals while GitHub forces Node 24; execution is successful, but upgrade the action major versions when GitHub publishes compatible stable releases.
