@@ -99,4 +99,3 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 | CMP-017 | Goldman Sachs | Healthy | 19 | 0 | 0 | 2026-08-18T14:59:39.218Z |  |
 
 > “Degraded” means extraction could not prove the source was complete. Review the unfiltered dashboard or workbook audit sheets for every decision.
-

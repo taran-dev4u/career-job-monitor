@@ -32,7 +32,7 @@ export function filteredDashboard(runAt, records, health) {
   lines.push("## Source Health", "", "| ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |", "|---|---|---|---:|---:|---:|---|---|");
   for (const item of health) lines.push(`| ${item.company_id} | ${escapeMd(item.company)} | ${item.status} | ${item.candidate_count} | ${item.detail_error_count} | ${item.zero_streak} | ${escapeMd(item.last_healthy_at || "Never")} | ${escapeMd(item.diagnostic || "")} |`);
   lines.push("", "> “Degraded” means extraction could not prove the source was complete. Review the unfiltered dashboard or workbook audit sheets for every decision.", "");
-  return `${lines.join("\n")}\n`;
+  return `${lines.join("\n").trimEnd()}\n`;
 }
 
 export function unfilteredDashboard(runAt, records) {
@@ -46,7 +46,7 @@ export function unfilteredDashboard(runAt, records) {
     for (const job of ordered) lines.push(`| ${escapeMd(job.first_seen_at || job.discovered_at || "Not stated")} | ${escapeMd(job.company)} | ${escapeMd(job.title || job.role)} | ${escapeMd(job.location || "Not stated")} | ${escapeMd(job.posted || "Not stated")} | ${escapeMd(job.sponsorship_status || "Unclear")} | ${displayYears(job.required_experience_years)} | ${escapeMd(job.decision || "Unknown")} | ${escapeMd(reasons(job))} | [Open](${job.job_url}) |`);
     lines.push("");
   }
-  return `${lines.join("\n")}\n`;
+  return `${lines.join("\n").trimEnd()}\n`;
 }
 
 export async function writeDashboards(root, runAt, records, health) {
