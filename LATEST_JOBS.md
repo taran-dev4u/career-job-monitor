@@ -1,23 +1,24 @@
 # Latest Eligible Jobs — Filtered
 
-Updated: **2026-08-18T19:41:28.101Z UTC** / **Aug 18, 2026, 3:41 PM Eastern**
+Updated: **2026-08-18T19:59:05.963Z UTC** / **Aug 18, 2026, 3:59 PM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
 > Newest discovered jobs are always shown first.
 
-Source health: **16 healthy**, **0 confirmed empty**, **1 degraded**, **0 broken**.
+Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken**.
 
 ## Apply Now
 
 | First Seen | Company | Role | Location | Type | Posted | Required | Preferred | Sponsorship | Apply |
 |---|---|---|---|---|---|---:|---:|---|---|
+| 2026-08-18T19:56:29.266Z | JPMorgan Chase & Co | Software Engineer III - Data Platform/AI Engineer (Python/AWS) | Plano, TX, United States | Full time | 2026-08-18T19:40:10.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210710350) |
 | 2026-08-18T19:38:20.092Z | JPMorgan Chase & Co | Software Engineer II - Android Engineer | New York, NY, United States | Full time | 2026-08-18T19:00:50.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210748846) |
 | 2026-08-18T18:57:47.226Z | Apple Inc | Software Engineer, Search and RAG Applications | Not stated | Not specified | Aug 18, 2026 | Not stated | 2+ years | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200676386-3337/software-engineer-search-and-rag-applications?team=MLAI) |
 | 2026-08-18T18:57:47.226Z | Apple Inc | Software Engineer, Search and RAG Applications | Not stated | Not specified | Aug 18, 2026 | Not stated | 2+ years | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200676386-3760/software-engineer-search-and-rag-applications?team=MLAI) |
-| 2026-08-18T17:42:15.768Z | COMPUNNEL SOFTWARE GROUP, INC | Artificial Intelligence Engineer | Not stated | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=lWoVd1XYrg926Ru832xm2g%3d%3d&Source=4414&EntityGroup=2321) |
 | 2026-08-18T17:40:49.402Z | Oracle America, Inc | Platform Software Engineer 1 - Full-time Intern Conversion | United States | Internship | 2026-08-18T17:10:30.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://careers.oracle.com/en/sites/jobsearch/job/342415) |
 | 2026-08-18T17:40:13.413Z | JPMorgan Chase & Co | Java Backend Software Engineer III Kubernetes/ Docker / AWS | Locations | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210779159) |
+| 2026-08-18T16:48:12.722Z | Goldman Sachs | Engineering-L2-Dallas-Analyst-Software Engineering | Not stated | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/181810) |
 | 2026-08-18T16:41:03.547Z | Amazon.com Services LLC | Software Development Engineer, iOS | Not stated | Not specified | Posted: August 17, 2026 (Updated about 19 hours ago) | Not stated | 1+ years | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10505107/software-development-engineer-ios) |
 | 2026-08-18T15:12:05.007Z | Apple Inc | iOS Engineer - Creator Studio | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678174-0836/ios-engineer-creator-studio?team=SFTWR) |
 | 2026-08-18T15:12:05.007Z | Apple Inc | iOS Engineer - Creator Studio | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678174-1435/ios-engineer-creator-studio?team=SFTWR) |
@@ -29,7 +30,18 @@ Source health: **16 healthy**, **0 confirmed empty**, **1 degraded**, **0 broken
 | 2026-08-18T14:24:50.526Z | Apple Inc | Software Development Engineer in Test, Creative Apps | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200673694-0836/software-development-engineer-in-test-creative-apps?team=SFTWR) |
 | 2026-08-18T14:24:50.526Z | Apple Inc | Software Engineer, IS&T Early Career Opportunities | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678510-0836/software-engineer-is-t-early-career-opportunities?team=SFTWR) |
 | 2026-08-18T14:24:50.526Z | Apple Inc | Software Engineer, IS&T Early Career Opportunities | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678510-3956/software-engineer-is-t-early-career-opportunities?team=SFTWR) |
-| 2026-08-18T14:24:50.526Z | Apple Inc | Swift Software Engineer : Agentic OS Experiences | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200643348-0836/swift-software-engineer-agentic-os-experiences?team=SFTWR) |
+| 2026-08-18T14:18:20.178Z | Goldman Sachs | Corporate Planning & Management, Software Engineering, Dallas, Associate | Not stated | Not specified | Not stated | Not stated | 3+ years | Unclear | [Apply](https://higher.gs.com/roles/170257) |
+| 2026-08-18T14:18:20.178Z | Goldman Sachs | Compliance Engineering, Site Reliability Engineer SRE, Associate, Dallas | Not stated | Not specified | Not stated | Not stated | 4+ years | Not Mentioned | [Apply](https://higher.gs.com/roles/170770) |
+| 2026-08-18T14:18:20.178Z | Goldman Sachs | Compliance Engineering, Software Engineer, Associate, Dallas | Not stated | Not specified | Not stated | 3+ years | Not stated | Unclear | [Apply](https://higher.gs.com/roles/179368) |
+| 2026-08-18T14:18:20.178Z | Goldman Sachs | Corporate Planning & Management, Software Engineering, New York, Associate | Not stated | Not specified | Not stated | Not stated | 3+ years | Unclear | [Apply](https://higher.gs.com/roles/170256) |
+| 2026-08-18T14:18:20.178Z | Goldman Sachs | Corporate Treasury, New York, Associate, Software Engineering | Not stated | Not specified | Not stated | 1+ years | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/176999) |
+| 2026-08-18T14:18:20.178Z | Goldman Sachs | Corporate Treasury, New York, Associate, Software Engineering | Not stated | Not specified | Not stated | Not stated | 3+ years | Not Mentioned | [Apply](https://higher.gs.com/roles/178036) |
+| 2026-08-18T14:18:20.178Z | Goldman Sachs | Risk-Dallas-Associate-Software Engineering | Not stated | Not specified | Not stated | 3+ years | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/180914) |
+| 2026-08-18T14:18:20.178Z | Goldman Sachs | Risk-Salt Lake City-Associate-Software Engineering | Not stated | Not specified | Not stated | 3+ years | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/179691) |
+| 2026-08-18T14:18:20.178Z | Goldman Sachs | Software Engineer, Global Banking & Markets, AI/ML Technology | Not stated | Not specified | Not stated | Not stated | 2+ years | Not Mentioned | [Apply](https://higher.gs.com/roles/177423) |
+| 2026-08-18T14:18:20.178Z | Goldman Sachs | Software Engineer, Global Banking & Markets, Electronic Trading | Not stated | Not specified | Not stated | 3+ years | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/180700) |
+| 2026-08-18T14:18:20.178Z | Goldman Sachs | Software Engineering - Data, Lakehouse and AI Data Platform Engineer - Associate - Dallas | Not stated | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/179758) |
+| 2026-08-18T14:18:20.178Z | Goldman Sachs | Tax, Salt Lake City, Associate, Software Engineering | Not stated | Not specified | Not stated | 1+ years | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/180303) |
 | 2026-08-18T14:10:36.736Z | Oracle America, Inc | Software Developer 4 | and 1 more | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://careers.oracle.com/en/sites/jobsearch/job/336131) |
 | 2026-08-18T14:08:11.649Z | JPMorgan Chase & Co | Software Engineer III - Front End / React JS | Columbus, OH, United States | Full time | 2026-08-18T13:35:01.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210745498) |
 | 2026-08-18T14:08:11.649Z | JPMorgan Chase & Co | Software Engineer III - Data Platform Engineer AWS | Plano, TX, United States | Full time | 2026-08-17T20:51:48.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210749315) |
@@ -65,22 +77,22 @@ Source health: **16 healthy**, **0 confirmed empty**, **1 degraded**, **0 broken
 
 | ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |
 |---|---|---|---:|---:|---:|---|---|
-| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-18T19:34:05.064Z |  |
-| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-18T19:34:50.080Z |  |
-| CMP-003 | Google LLC | Healthy | 3 | 0 | 0 | 2026-08-18T19:34:58.525Z |  |
-| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-18T19:35:19.266Z |  |
-| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-18T19:36:36.266Z |  |
-| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-18T19:38:10.329Z |  |
-| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-18T19:38:20.058Z |  |
-| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-18T19:38:42.940Z |  |
-| CMP-009 | Intel Corporation | Healthy | 5 | 0 | 0 | 2026-08-18T19:38:54.138Z |  |
-| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-18T19:39:03.510Z |  |
-| CMP-011 | Microsoft Corporation | Healthy | 27 | 0 | 0 | 2026-08-18T19:39:22.525Z |  |
-| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-18T19:39:31.201Z |  |
-| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-18T19:39:52.166Z |  |
-| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 40 | 0 | 0 | 2026-08-18T19:40:08.018Z |  |
-| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-18T19:40:21.396Z |  |
-| CMP-016 | Microsoft | Healthy | 20 | 0 | 0 | 2026-08-18T19:40:30.823Z |  |
-| CMP-017 | Goldman Sachs | Degraded | 0 | 0 | 1 | 2026-08-18T19:04:22.208Z | Page loaded but zero jobs were not explicitly confirmed |
+| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-18T19:52:09.527Z |  |
+| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-18T19:52:53.449Z |  |
+| CMP-003 | Google LLC | Healthy | 3 | 0 | 0 | 2026-08-18T19:53:01.827Z |  |
+| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-18T19:53:28.219Z |  |
+| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-18T19:54:45.228Z |  |
+| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-18T19:56:19.822Z |  |
+| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-18T19:56:29.216Z |  |
+| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-18T19:56:42.951Z |  |
+| CMP-009 | Intel Corporation | Healthy | 5 | 0 | 0 | 2026-08-18T19:56:51.385Z |  |
+| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-18T19:57:00.728Z |  |
+| CMP-011 | Microsoft Corporation | Healthy | 27 | 0 | 0 | 2026-08-18T19:57:19.772Z |  |
+| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-18T19:57:28.615Z |  |
+| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-18T19:57:48.844Z |  |
+| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 40 | 0 | 0 | 2026-08-18T19:58:20.001Z |  |
+| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-18T19:58:39.337Z |  |
+| CMP-016 | Microsoft | Healthy | 20 | 0 | 0 | 2026-08-18T19:58:48.795Z |  |
+| CMP-017 | Goldman Sachs | Healthy | 19 | 0 | 0 | 2026-08-18T19:59:05.858Z |  |
 
 > “Degraded” means extraction could not prove the source was complete. Review the unfiltered dashboard or workbook audit sheets for every decision.
