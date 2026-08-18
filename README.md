@@ -14,6 +14,8 @@ This project checks 17 configured US career pages every 30 minutes. GitHub Actio
 
 The Markdown views are deliberately separate: `LATEST_JOBS.md` contains only active eligible roles, while `ALL_EXTRACTED_JOBS.md` includes every extracted role with its decision and exclusion reasons.
 
+Job identity uses the career site's stable job or requisition ID when available, so a title or URL-slug change does not create a duplicate new-job alert. URL identity remains the fallback for sources that expose no stable ID.
+
 The monitor opens each job-detail page before deciding eligibility. It keeps software engineering/development, AI/ML, applied technical, data/platform/infrastructure, SRE, DevOps, cloud, mobile, and related roles. Full-time, part-time, contract, and graduate-eligible internships may qualify. A role is rejected when it explicitly requires more than three years, establishes excluded senior/leadership responsibility, requires an intern to be currently enrolled, says sponsorship is unavailable, or says OPT/CPT applicants are ineligible. Experience above three years that is only preferred is displayed but does not cause rejection. Sponsorship silence and current/future sponsorship availability remain eligible.
 
 ## First run behavior

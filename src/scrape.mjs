@@ -1,5 +1,5 @@
 import { chromium } from "playwright";
-import { clean, compactSnippet, detectJobType, evaluateEligibility, extractJobId, hashText, isOlderThan, markBaselinePending, notificationDecision, stableJobKey } from "./lib.mjs";
+import { clean, compactSnippet, detectJobType, evaluateEligibility, extractJobId, hashText, isOlderThan, markBaselinePending, notificationDecision, stableJobIdentityKey } from "./lib.mjs";
 
 const GENERIC_TITLES = /^(?:jobs?|careers?|search results?|view jobs?|learn more|apply|read more|saved jobs?)$/i;
 const NAVIGATION_URL = /\/(?:search|results?|saved-jobs?|job-search|recommendations|alerts)\/?$/i;
@@ -123,8 +123,9 @@ async function discoverCandidates(page, jsonPayloads, company, config) {
     const normalized = item.href.replace(/#.*$/, "").replace(/\/$/, "");
     const title = clean(item.title).replace(/^Learn more about\s+/i, "");
     if (normalized === sourceUrl || title.length < 4 || title.length > 200 || GENERIC_TITLES.test(title)) continue;
-    const key = stableJobKey(company.id, normalized);
-    if (!unique.has(key)) unique.set(key, { href: normalized, title, context: clean(item.context).slice(0, 1600), key, external_id: item.external_id || "" });
+    const externalId = clean(item.external_id) || extractJobId(normalized, title);
+    const key = stableJobIdentityKey(company.id, externalId, normalized);
+    if (!unique.has(key)) unique.set(key, { href: normalized, title, context: clean(item.context).slice(0, 1600), key, external_id: externalId });
     if (unique.size >= config.max_cards_per_company) break;
   }
   return [...unique.values()];
@@ -230,11 +231,13 @@ export async function scanCompany(browser, company, config, state, suppressNotif
     for (const candidate of candidates) {
       const discovered = state.discovered[candidate.key] || { first_seen_at: now, url: candidate.href };
       discovered.last_seen_at = now;
+      discovered.url = candidate.href;
       state.discovered[candidate.key] = discovered;
       if (suppressNotifications) markBaselinePending(state.notified, candidate.key, now);
       const cached = state.evaluated[candidate.key]?.record;
       const stale = cached?.active_status === "Active" && isOlderThan(cached.last_verified_at, Number(config.detail_recheck_hours || 24) * 3_600_000);
-      if ((!cached || stale) && detailsUsed < detailLimit) {
+      const listingChanged = cached && (cached.job_url !== candidate.href || clean(cached.title) !== clean(candidate.title));
+      if ((!cached || stale || listingChanged) && detailsUsed < detailLimit) {
         detailsUsed += 1;
         try {
           const record = await readDetail(context, candidate, company, config, discovered.first_seen_at || now);

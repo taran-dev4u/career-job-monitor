@@ -18,9 +18,14 @@ export function stableJobKey(companyId, url) {
   const normalized = `${companyId}|${String(url).replace(/#.*$/, "").replace(/\/$/, "")}`;
   return crypto.createHash("sha256").update(normalized).digest("hex").slice(0, 24);
 }
+export function stableJobIdentityKey(companyId, jobId, url) {
+  const identity = clean(jobId) ? `job-id:${clean(jobId).toLowerCase()}` : url;
+  return stableJobKey(companyId, identity);
+}
 export function extractJobId(url, text = "") {
   const patterns = [
     /\b((?:REQ|JR|JOB)[-_ ]?\d{4,})\b/i,
+    /\/details\/([A-Za-z0-9_-]{4,})(?:\/|$|\?)/i,
     /(?:[?&]|\/)(?:job(?:id)?|req(?:uisition)?(?:id)?|position(?:id)?|pid)[=\/_-]([A-Za-z0-9-]{4,})/i,
     /\/(?:job|jobs)\/[^?#]*?((?:REQ|JR|R)?[-_]?\d{4,})(?:\/|$|\?)/i
   ];

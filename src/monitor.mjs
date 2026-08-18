@@ -1,7 +1,7 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawn } from "node:child_process";
-import { readJson, writeJsonAtomic } from "./lib.mjs";
+import { extractJobId, readJson, stableJobIdentityKey, writeJsonAtomic } from "./lib.mjs";
 import { scanCompany, startBrowser, adapterName } from "./scrape.mjs";
 import { writeDashboards } from "./dashboard.mjs";
 
@@ -38,6 +38,34 @@ function asHistoricalJob(record, discoveredAt) {
   };
 }
 
+function identityKey(record) {
+  const jobId = record.job_id || extractJobId(record.job_url || "", record.title || record.role || "");
+  return stableJobIdentityKey(record.company_id, jobId, record.job_url || "");
+}
+
+function migrateStateToStableJobIds(state, records) {
+  for (const [oldKey, entry] of Object.entries(state.evaluated)) {
+    const record = entry?.record;
+    if (!record?.company_id || !record?.job_url) continue;
+    const jobId = record.job_id || extractJobId(record.job_url, record.title || record.role || "");
+    if (!jobId) continue;
+    const newKey = stableJobIdentityKey(record.company_id, jobId, record.job_url);
+    const migrated = { ...entry, record: { ...record, key: newKey, job_id: jobId } };
+    if (!state.evaluated[newKey] || String(entry.last_evaluated_at || "") > String(state.evaluated[newKey].last_evaluated_at || "")) state.evaluated[newKey] = migrated;
+    const discovery = state.discovered[oldKey] || { first_seen_at: record.first_seen_at || "", url: record.job_url };
+    state.discovered[newKey] ||= { ...discovery, url: record.job_url };
+    if (state.notified[oldKey]) state.notified[newKey] ||= { ...state.notified[oldKey], reason: `${state.notified[oldKey].reason || "previous notification"}; migrated to job ID` };
+  }
+  for (const record of records) {
+    if (!record?.company_id || !record?.job_url) continue;
+    const jobId = record.job_id || extractJobId(record.job_url, record.title || record.role || "");
+    if (!jobId) continue;
+    const newKey = stableJobIdentityKey(record.company_id, jobId, record.job_url);
+    const oldKey = record.key;
+    if (oldKey && state.notified[oldKey]) state.notified[newKey] ||= { ...state.notified[oldKey], reason: `${state.notified[oldKey].reason || "previous notification"}; migrated to job ID` };
+  }
+}
+
 async function runOnce() {
   const started = Date.now();
   const state = await readJson(dataPath("state.json"), { initialized: false, seen: {} });
@@ -46,10 +74,6 @@ async function runOnce() {
   state.notified ||= {};
   const priorSchemaVersion = Number(state.schema_version || 1);
   const jobs = await readJson(dataPath("jobs.json"), []);
-  for (const job of jobs) {
-    const key = job.key || Object.entries(state.discovered).find(([, value]) => value.url?.replace(/#.*$/, "") === job.job_url?.replace(/#.*$/, ""))?.[0];
-    if (key) state.notified[key] ||= { notified_at: job.discovered_at, reason: "legacy accepted history" };
-  }
   const runs = await readJson(dataPath("runs.json"), []);
   const priorCurrent = await readJson(dataPath("current_candidates.json"), []);
   if (priorSchemaVersion < 3 && state.reliability_baseline_complete) {
@@ -57,7 +81,12 @@ async function runOnce() {
       if (record.key) state.notified[record.key] ||= { notified_at: state.last_run_at || new Date().toISOString(), reason: "baseline pending first evaluation" };
     }
   }
-  state.schema_version = 3;
+  if (priorSchemaVersion < 4) migrateStateToStableJobIds(state, [...priorCurrent, ...jobs]);
+  for (const job of jobs) {
+    const key = identityKey(job);
+    state.notified[key] ||= { notified_at: job.discovered_at, reason: "accepted history" };
+  }
+  state.schema_version = 4;
   const priorAudit = await readJson(dataPath("decision_history.json"), []);
   const priorHealth = await readJson(dataPath("source_health.json"), []);
   const healthById = new Map(priorHealth.map(item => [item.company_id, item]));
@@ -98,10 +127,10 @@ async function runOnce() {
   } finally { if (browser) await browser.close().catch(error => console.error(`Browser shutdown warning: ${error.message}`)); }
 
   const runAt = new Date().toISOString();
-  const uniqueExisting = new Set(jobs.map(job => job.key || `${job.company_id}|${job.job_url}`));
+  const uniqueExisting = new Set(jobs.map(identityKey));
   const added = [];
   for (const record of addedRecords) {
-    const dedup = record.key || `${record.company_id}|${record.job_url}`;
+    const dedup = identityKey(record);
     if (uniqueExisting.has(dedup)) { state.notified[record.key] ||= { notified_at: runAt, reason: "deduplicated against history" }; continue; }
     uniqueExisting.add(dedup);
     added.push(asHistoricalJob(record, runAt));

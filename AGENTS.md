@@ -41,7 +41,7 @@ Last structurally verified: **2026-08-18 15:00 UTC**.
 - Primary runner: active GitHub Actions workflow `.github/workflows/job-monitor.yml`, scheduled at minutes **7 and 37 UTC** each hour.
 - Private repository: **`https://github.com/taran-dev4u/career-job-monitor`**, default branch `main`.
 - Local fallback task: **`Career Job Monitor - Every 30 Minutes`**, retained but disabled while GitHub Actions is active.
-- State schema: **v3**, with separate `discovered`, `evaluated`, and `notified` maps plus baseline-pending suppression that still allows a rejected posting to alert if it later becomes eligible.
+- State schema: **v4**, with separate `discovered`, `evaluated`, and `notified` maps, stable company/job-ID deduplication when an external ID is available, and baseline-pending suppression that still allows a rejected posting to alert if it later becomes eligible.
 - Latest controlled cloud validation: **17 Healthy**, **0 Confirmed Empty**, **0 Degraded**, **0 Broken**; 398 extracted records reconciled as 63 included and 335 rejected.
 - Sponsorship policy: prospectively reject explicit no-sponsorship/no-OPT/no-CPT postings; allow sponsorship-available and sponsorship-not-mentioned postings. Historical accepted rows predating this policy are retained.
 - User dashboards: `LATEST_JOBS.md` is filtered/eligible and `ALL_EXTRACTED_JOBS.md` is unfiltered; both keep newest discoveries first. GitHub issues provide new-job and source-health notifications.
@@ -302,10 +302,10 @@ Entry template:
 - Started: 2026-08-18T15:06:45Z
 - Completed:
 - Objective: Keep newest jobs at the top everywhere and maintain separate generated Markdown dashboards for filtered eligible jobs and the complete unfiltered extraction snapshot.
-- Files expected: `AGENTS.md`, `README.md`, `.github/workflows/job-monitor.yml`, `package.json`, `src/job_order.mjs`, `src/dashboard.mjs`, `src/monitor.mjs`, `src/workbook_data.mjs`, `tests/monitor_data.test.mjs`, `LATEST_JOBS.md`, `ALL_EXTRACTED_JOBS.md`, `outputs/job-monitor/Job_Monitor.xlsx`
+- Files expected: `AGENTS.md`, `README.md`, `.github/workflows/job-monitor.yml`, `package.json`, `src/job_order.mjs`, `src/dashboard.mjs`, `src/lib.mjs`, `src/scrape.mjs`, `src/monitor.mjs`, `src/workbook_data.mjs`, `tests/filter.test.mjs`, `tests/monitor_data.test.mjs`, `LATEST_JOBS.md`, `ALL_EXTRACTED_JOBS.md`, runtime JSON files, `outputs/job-monitor/Job_Monitor.xlsx`
 - Files changed: Pending.
 - Files deleted: None planned.
-- Behavior/data impact: Presentation/order change only; preserve all job, state, decision, and run history. `LATEST_JOBS.md` remains the filtered view; `ALL_EXTRACTED_JOBS.md` becomes the unfiltered view with decisions and reasons.
+- Behavior/data impact: Preserve all job, state, decision, and run history. `LATEST_JOBS.md` remains the filtered view; `ALL_EXTRACTED_JOBS.md` becomes the unfiltered view with decisions and reasons. Migrate deduplication to stable company/job-ID keys when available so career-site URL slug changes cannot create false new-job alerts.
 - Verification: Pending.
 - Scheduler status: GitHub Actions is active; no monitor run is currently in progress. Local Windows fallback remains disabled.
 - Follow-up: Pending.

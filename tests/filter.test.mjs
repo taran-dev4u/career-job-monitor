@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import config from "../config.json" with { type: "json" };
-import { enrollmentDecision, evaluateEligibility, experienceDecision, extractJobId, markBaselinePending, notificationDecision, roleLooksRelevant, sponsorshipDecision, stableJobKey } from "../src/lib.mjs";
+import { enrollmentDecision, evaluateEligibility, experienceDecision, extractJobId, markBaselinePending, notificationDecision, roleLooksRelevant, sponsorshipDecision, stableJobIdentityKey, stableJobKey } from "../src/lib.mjs";
 import parserFixtures from "./fixtures/parser_contracts.json" with { type: "json" };
 import { adapterName, jsonCandidatesFrom } from "../src/scrape.mjs";
 
@@ -39,7 +39,12 @@ assert.equal(evaluateEligibility({ title: "AI Engineering Intern", description: 
 assert.equal(evaluateEligibility({ title: "Contract Software Developer", description: "Minimum 2 years. No sponsorship is available.", config }).accepted, false);
 
 assert.equal(extractJobId("https://example.com/jobs/REQ-12345"), "REQ-12345");
+assert.equal(extractJobId("https://jobs.apple.com/en-us/details/200678174-0836/software-engineer-creator-studio"), "200678174-0836");
 assert.equal(stableJobKey("CMP-001", "https://example.com/jobs/1"), stableJobKey("CMP-001", "https://example.com/jobs/1#apply"));
+assert.equal(
+  stableJobIdentityKey("CMP-004", "200678174-0836", "https://jobs.apple.com/en-us/details/200678174-0836/software-engineer-creator-studio"),
+  stableJobIdentityKey("CMP-004", "200678174-0836", "https://jobs.apple.com/en-us/details/200678174-0836/ios-engineer-creator-studio")
+);
 assert.equal(adapterName("https://intel.wd1.myworkdayjobs.com/job/x"), "Workday");
 assert.equal(adapterName("https://jpmc.fa.oraclecloud.com/jobs"), "Oracle Recruiting");
 assert.equal(adapterName("https://careers.qualcomm.com/careers"), "Eightfold");
