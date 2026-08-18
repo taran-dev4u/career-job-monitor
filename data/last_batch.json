@@ -1,29 +1,6 @@
 {
-  "run_at": "2026-08-18T21:38:29.218Z",
+  "run_at": "2026-08-18T21:57:42.948Z",
   "suppressed": false,
-  "jobs": [
-    {
-      "discovered_at": "2026-08-18T21:38:29.218Z",
-      "company_id": "CMP-004",
-      "company": "Apple Inc",
-      "role": "Software Engineer (Front End), Retail and Marcom Engineering",
-      "location": "",
-      "experience": "No required experience above 3 years detected",
-      "posted": "Aug 18, 2026",
-      "job_id": "200677686-3956",
-      "job_url": "https://jobs.apple.com/en-us/details/200677686-3956/software-engineer-front-end-retail-and-marcom-engineering?team=SFTWR",
-      "source_url": "https://jobs.apple.com/en-us/search?location=united-states-USA&team=machine-learning-infrastructure-MLAI-MLI+deep-learning-and-reinforcement-learning-MLAI-DLRL+natural-language-processing-and-speech-technologies-MLAI-NLP+computer-vision-MLAI-CV+apps-and-frameworks-SFTWR-AF+cloud-and-infrastructure-SFTWR-CLD+core-operating-systems-SFTWR-COS+devops-and-site-reliability-SFTWR-DSR+engineering-project-management-SFTWR-EPM+information-systems-and-technology-SFTWR-ISTECH+machine-learning-and-ai-SFTWR-MCHLN+wireless-software-SFTWR-WSFT+applied-research-MLAI-AR",
-      "match_reason": "Eligible technical role; No required experience above 3 years detected; sponsorship: Not Mentioned; Not an internship",
-      "description_snippet": "Back to search results Software Engineer (Front End), Retail and Marcom Engineering Sunnyvale, California, United States Software and Services Submit Resume Summary Posted: Aug 18, 2026 Weekly Hours: 40 Role Number: 200677686-3956 Do you want to help build some of the largest and most consequential enterprise and customer technology systems in the world? Join Apple’s Information Systems and Technology (IS&T) organization. IS&T is the engine behind everything Apple does for customers and for the people who build for them. It’s Apple’s central nervous system. Supporting 2.5 billion active Apple devices, processing billions of secure transactions, and keeping the technology that defines modern life running flawlessly, IS&T makes the impossible feel effortless. Do you love building solutions to handle global complexity and immense scale? Imagine what you could do here. Retail and Marcom Eng…",
-      "key": "37f8c210c88b590af73ae2fa",
-      "active_status": "Active",
-      "job_type": "Not specified",
-      "required_experience_years": null,
-      "preferred_experience_years": null,
-      "sponsorship_status": "Not Mentioned",
-      "sponsorship_evidence": "No sponsorship restriction found",
-      "experience_evidence": "No explicit required-years statement detected"
-    }
-  ],
+  "jobs": [],
   "health_alerts": []
 }
