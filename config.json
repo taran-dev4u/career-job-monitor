@@ -1,0 +1,28 @@
+{
+  "interval_minutes": 30,
+  "baseline_on_first_run": true,
+  "headless": true,
+  "navigation_timeout_ms": 45000,
+  "settle_time_ms": 5000,
+  "max_cards_per_company": 40,
+  "max_new_details_per_company": 15,
+  "max_experience_years": 3,
+  "sponsorship_policy": {
+    "exclude_explicit_no_sponsorship": true,
+    "exclude_explicit_no_opt_cpt": true,
+    "allow_when_not_mentioned": true
+  },
+  "location_terms": ["united states", "usa", "u.s.", "remote"],
+  "role_terms": [
+    "software engineer", "software developer", "software development",
+    "machine learning", "artificial intelligence", " ai engineer", "ai/ml",
+    "data engineer", "platform engineer", "backend engineer", "back-end engineer",
+    "frontend engineer", "front-end engineer", "full stack", "full-stack",
+    "site reliability", "devops", "cloud engineer", "mobile engineer",
+    "ios engineer", "android engineer", "systems engineer", "application developer"
+  ],
+  "exclude_title_terms": [
+    "senior", "sr.", "staff", "principal", "lead ", "manager", "director",
+    "architect", "distinguished", "vice president", "vp,", "intern"
+  ]
+}

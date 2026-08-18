@@ -1,0 +1,5 @@
+node_modules/
+data/debug/
+*.log
+outputs/job-monitor/*.png
+outputs/job-monitor/*.ndjson

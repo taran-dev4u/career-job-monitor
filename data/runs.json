@@ -1,0 +1,128 @@
+[
+  {
+    "run_at": "2026-08-17T20:53:14.610Z",
+    "mode": "baseline",
+    "companies_checked": 17,
+    "candidates_seen": 41,
+    "new_jobs_added": 0,
+    "errors": 0,
+    "duration_seconds": 161.1
+  },
+  {
+    "run_at": "2026-08-17T21:06:49.629Z",
+    "mode": "incremental",
+    "companies_checked": 17,
+    "candidates_seen": 42,
+    "new_jobs_added": 1,
+    "errors": 0,
+    "duration_seconds": 171
+  },
+  {
+    "run_at": "2026-08-17T21:30:56.425Z",
+    "mode": "incremental",
+    "companies_checked": 17,
+    "candidates_seen": 44,
+    "new_jobs_added": 1,
+    "errors": 0,
+    "duration_seconds": 184.2
+  },
+  {
+    "run_at": "2026-08-17T22:00:43.500Z",
+    "mode": "incremental",
+    "companies_checked": 17,
+    "candidates_seen": 42,
+    "new_jobs_added": 1,
+    "errors": 0,
+    "duration_seconds": 170.8
+  },
+  {
+    "run_at": "2026-08-17T23:51:00.381Z",
+    "mode": "incremental",
+    "companies_checked": 17,
+    "candidates_seen": 46,
+    "new_jobs_added": 5,
+    "errors": 0,
+    "duration_seconds": 214.2
+  },
+  {
+    "run_at": "2026-08-18T00:00:39.687Z",
+    "mode": "incremental",
+    "companies_checked": 17,
+    "candidates_seen": 44,
+    "new_jobs_added": 0,
+    "errors": 0,
+    "duration_seconds": 168.9
+  },
+  {
+    "run_at": "2026-08-18T00:30:41.165Z",
+    "mode": "incremental",
+    "companies_checked": 17,
+    "candidates_seen": 34,
+    "new_jobs_added": 0,
+    "errors": 0,
+    "duration_seconds": 166.6
+  },
+  {
+    "run_at": "2026-08-18T01:00:30.359Z",
+    "mode": "incremental",
+    "companies_checked": 17,
+    "candidates_seen": 43,
+    "new_jobs_added": 0,
+    "errors": 0,
+    "duration_seconds": 159.5
+  },
+  {
+    "run_at": "2026-08-18T02:39:24.347Z",
+    "mode": "incremental",
+    "companies_checked": 17,
+    "candidates_seen": 46,
+    "new_jobs_added": 1,
+    "errors": 0,
+    "duration_seconds": 175.8
+  },
+  {
+    "run_at": "2026-08-18T03:00:47.088Z",
+    "mode": "incremental",
+    "companies_checked": 17,
+    "candidates_seen": 46,
+    "new_jobs_added": 0,
+    "errors": 0,
+    "duration_seconds": 175.7
+  },
+  {
+    "run_at": "2026-08-18T03:30:52.368Z",
+    "mode": "incremental",
+    "companies_checked": 17,
+    "candidates_seen": 45,
+    "new_jobs_added": 0,
+    "errors": 0,
+    "duration_seconds": 180.6
+  },
+  {
+    "run_at": "2026-08-18T04:00:45.952Z",
+    "mode": "incremental",
+    "companies_checked": 17,
+    "candidates_seen": 46,
+    "new_jobs_added": 0,
+    "errors": 0,
+    "duration_seconds": 174.4
+  },
+  {
+    "run_at": "2026-08-18T04:30:45.136Z",
+    "mode": "incremental",
+    "companies_checked": 17,
+    "candidates_seen": 45,
+    "new_jobs_added": 0,
+    "errors": 0,
+    "duration_seconds": 175
+  },
+  {
+    "run_at": "2026-08-18T05:00:41.802Z",
+    "mode": "incremental",
+    "companies_checked": 17,
+    "candidates_seen": 46,
+    "new_jobs_added": 0,
+    "errors": 0,
+    "duration_seconds": 166.6
+  }
+]

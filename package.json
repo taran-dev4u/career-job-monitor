@@ -1,0 +1,18 @@
+{
+  "name": "career-job-monitor",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "once": "node src/monitor.mjs --once",
+    "watch": "node src/monitor.mjs --watch --interval-minutes 30",
+    "build-workbook": "node src/build_workbook.mjs",
+    "build-workbook:ci": "node src/build_workbook_ci.mjs",
+    "test": "node tests/filter.test.mjs",
+    "smoke": "node tests/smoke_scraper.mjs"
+  },
+  "dependencies": {
+    "exceljs": "4.4.0",
+    "playwright": "1.62.1"
+  }
+}
