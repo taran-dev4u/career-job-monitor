@@ -113,7 +113,9 @@ async function discoverCandidates(page, jsonPayloads, company, config) {
     const item = { ...rawItem, href };
     if (adapter === "Eightfold" && !/\/careers\/job\//i.test(item.href)) continue;
     const googleDetail = adapter === "Google" && /\/jobs\/results\/\d+/i.test(item.href);
-    if (!item.href || !/^https?:/i.test(item.href) || (!JOB_URL_HINT.test(item.href) && !googleDetail) || NAVIGATION_URL.test(new URL(item.href).pathname) || LISTING_PATH.test(new URL(item.href).pathname)) continue;
+    const itemPath = item.href && /^https?:/i.test(item.href) ? new URL(item.href).pathname : "";
+    const nonJobDocument = /\.(?:pdf|docx?|xlsx?)(?:$|\?)/i.test(item.href) || /\/(?:legal|privacy|terms|accessibility)(?:\/|$)/i.test(itemPath);
+    if (!item.href || !/^https?:/i.test(item.href) || nonJobDocument || (!JOB_URL_HINT.test(item.href) && !googleDetail) || NAVIGATION_URL.test(itemPath) || LISTING_PATH.test(itemPath)) continue;
     const itemHost = new URL(item.href).hostname.replace(/^www\./, "");
     const allowedExternal = company.id === "CMP-015" && /staffline\.compunnel\.com$/i.test(itemHost);
     const sameDomain = itemHost === sourceHost || itemHost.endsWith(`.${sourceHost}`) || sourceHost.endsWith(`.${itemHost}`);
