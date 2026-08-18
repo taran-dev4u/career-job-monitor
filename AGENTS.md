@@ -34,19 +34,21 @@ The monitor must:
 
 ## 3. Current Project Snapshot
 
-Last structurally verified: **2026-08-18 00:34 UTC**.
+Last structurally verified: **2026-08-18 05:30 UTC**.
 
 - Companies configured: **17** (`CMP-001` through `CMP-017`).
 - Monitor interval: **30 minutes**.
-- Windows scheduled-task name: **`Career Job Monitor - Every 30 Minutes`**.
+- Primary runner: active GitHub Actions workflow `.github/workflows/job-monitor.yml`, scheduled at minutes **7 and 37 UTC** each hour.
+- Private repository: **`https://github.com/taran-dev4u/career-job-monitor`**, default branch `main`.
+- Local fallback task: **`Career Job Monitor - Every 30 Minutes`**, retained but disabled while GitHub Actions is active.
 - Baseline state: **initialized**.
-- Deduplication entries at verification: **50**.
-- Accepted new jobs at verification: **8**.
-- Completed run records at verification: **7**.
+- Deduplication entries at verification: **51**.
+- Accepted new jobs at verification: **9**.
+- Completed run records at verification: **15**.
 - Sponsorship policy: prospectively reject explicit no-sponsorship/no-OPT/no-CPT postings; allow sponsorship-available and sponsorship-not-mentioned postings. Historical accepted rows predating this policy are retained.
 - Generated workbook: `outputs/job-monitor/Job_Monitor.xlsx`.
-- Runtime: bundled Node.js with Playwright and `@oai/artifact-tool`; `node_modules` is a local junction to the Codex bundled dependency runtime.
-- Repository status: this folder is **not currently a Git repository**. Do not assume Git history, branches, or rollback are available.
+- Runtime: local runs use bundled Node.js, Playwright, and `@oai/artifact-tool`; GitHub uses Node.js 24, Playwright, Chromium, and the ExcelJS CI builder.
+- Repository status: Git repository on branch `main`, tracking private remote `origin` at `taran-dev4u/career-job-monitor`.
 
 The snapshot is not a live dashboard. Update it only after structural changes such as adding/removing companies, changing the scheduler, changing runtime dependencies, changing data layout, or completing a controlled re-baseline. Routine 30-minute scan results belong in the runtime logs, not here.
 
@@ -70,6 +72,7 @@ The snapshot is not a live dashboard. Update it only after structural changes su
 | `data/runs.json` | Monitor run history | Runtime-owned; do not manually manufacture successful runs. |
 | `monitor.log` | Detailed operational output and source errors | Append-only runtime log; inspect recent lines during diagnosis. |
 | `outputs/job-monitor/Job_Monitor.xlsx` | Generated user-facing workbook | Never edit manually. Correct JSON/code, then rebuild it. |
+| `.github/workflows/job-monitor.yml` | Primary always-on 30-minute scheduler, tests, scan, workbook artifact, and persistence commit | Keep `contents: write`, concurrency protection, and off-hour cron minutes. |
 | `src/` | Scraping, filtering, deduplication, orchestration, and workbook generation | Make minimal changes and test the affected subsystem. |
 | `scripts/` | One-shot runner and Windows scheduled-task management | Treat scheduler changes as operationally significant. |
 | `tests/` | Filter/dedup unit checks and live source smoke test | Extend when behavior changes. |
@@ -172,7 +175,7 @@ Automatic scans update `data/state.json`, `data/jobs.json`, `data/runs.json`, `m
 
 ## 7. Scheduler Safety
 
-Expected task name: `Career Job Monitor - Every 30 Minutes`.
+Primary scheduling is GitHub Actions. Expected local fallback task name: `Career Job Monitor - Every 30 Minutes`.
 
 Use the provided scripts rather than recreating task definitions manually:
 
@@ -183,6 +186,8 @@ powershell.exe -ExecutionPolicy Bypass -File .\scripts\uninstall_scheduled_task.
 ```
 
 Before a state-sensitive change, inspect task state and stop it if necessary. After maintenance, restore the requested schedule and verify the last task result. Do not report the task as healthy solely because it exists; confirm a completed run and exit code `0`.
+
+Keep the local task disabled while GitHub Actions is active. For cloud scheduler changes, validate a manual `workflow_dispatch` run through scan, CI workbook verification, artifact upload, and state commit before declaring success.
 
 ## 8. Required Validation Matrix
 
@@ -196,6 +201,7 @@ Run only the checks relevant to the change, but do not skip an applicable row.
 | Company addition | Duplicate/ID check, controlled baseline, job-count comparison, state preservation, workbook verification. |
 | Workbook builder or data correction | Build with `node src/build_workbook.mjs --verify`, inspect values/formulas/errors, and visually review every affected sheet. |
 | Scheduler scripts/settings | One manual scheduled-task run, wait for completion, confirm exit code `0`, next run time, and log/workbook update. |
+| GitHub Actions workflow | Clean `npm ci`, unit tests, CI workbook verification, successful manual cloud run, artifact existence, bot state commit, and active schedule on the default branch. |
 
 On this machine, use the bundled Node executable resolved by the project environment or the path already used by `scripts/run_once.ps1`. Do not install replacement spreadsheet libraries: workbook authoring uses `@oai/artifact-tool`.
 
@@ -263,14 +269,14 @@ Entry template:
 - Scheduler status: Waited for the active cycle to finish before runtime edits. Final state `Ready`, last task result `0`, next scheduled run retained.
 - Follow-up: None. Existing accepted rows were intentionally not retroactively deleted because the user requested this rule “from now on.”
 
-### TASK-20260818-0520-codex — IN_PROGRESS
+### TASK-20260818-0520-codex — DONE
 - Started: 2026-08-18T05:20:48Z
-- Completed:
+- Completed: 2026-08-18T05:30:01Z
 - Objective: Move unattended 30-minute monitoring to GitHub Actions so scans continue while the local computer is off, while preserving state, job history, run history, and the Excel output in a private GitHub repository.
 - Files expected: `AGENTS.md`, `README.md`, `.gitignore`, `.github/workflows/job-monitor.yml`, `package.json`, `package-lock.json`, `src/monitor.mjs`, `src/build_workbook_ci.mjs`
-- Files changed: Pending.
+- Files changed: `AGENTS.md`, `README.md`, `.gitignore`, `.github/workflows/job-monitor.yml`, `package.json`, `package-lock.json`, `src/monitor.mjs`, `src/build_workbook_ci.mjs`, plus runtime-owned `data/state.json`, `data/runs.json`, and `outputs/job-monitor/Job_Monitor.xlsx` from the successful cloud run.
 - Files deleted: None planned.
 - Behavior/data impact: Add a Linux/GitHub-compatible workbook path and persistent workflow commits. Create private repository `taran-dev4u/career-job-monitor`. Disable the local Windows scheduled task only after a successful cloud run.
-- Verification: Pending dependency install, unit tests, CI workbook generation, workflow syntax inspection, first GitHub Actions run, committed-state verification, and scheduler handoff.
-- Scheduler status: Local task was healthy before work; it will be temporarily disabled before state-sensitive implementation and retained for rollback.
-- Follow-up: Finalize after the cloud workflow succeeds.
+- Verification: Clean isolated `npm ci` succeeded; unit tests passed; CI workbook write/read verification passed for all three sheets; workflow syntax parsed; private repository created and pushed; manual GitHub Actions run `32102845353` completed successfully across checkout, Node, dependencies, Chromium, tests, 17-company scan, workbook verification, artifact upload, and bot persistence commit `6fe8ab3`; cloud run recorded 0 source errors; artifact `Job-Monitor-1` exists; workflow state is active.
+- Scheduler status: GitHub Actions is the active primary scheduler at `7,37 * * * *` UTC. Local Windows task is disabled, retained for rollback, and had last result `0` before handoff.
+- Follow-up: GitHub scheduled events are best-effort and may be delayed during platform congestion; monitor the Actions page if a run is late.

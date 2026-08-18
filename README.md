@@ -38,6 +38,9 @@ powershell.exe -ExecutionPolicy Bypass -File .\scripts\uninstall_scheduled_task.
 
 The workflow at `.github/workflows/job-monitor.yml` runs at minutes 7 and 37 of every UTC hour and can also be started manually from the Actions tab. It installs Chromium, runs unit tests, scans all sources, rebuilds the workbook with the portable CI builder, uploads the workbook as a 30-day workflow artifact, and commits updated state/job/run JSON plus the workbook back to the default branch.
 
+- Private repository: https://github.com/taran-dev4u/career-job-monitor
+- Workflow runs: https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml
+
 The workflow uses repository-scoped `GITHUB_TOKEN` access with `contents: write`; no personal token or career-site credentials are stored. GitHub schedules are best-effort and may start late during platform congestion. The local Windows scheduled task should remain disabled while the GitHub workflow is active to avoid two independent monitors.
 
 The browser runs headlessly. Errors from individual company pages are logged to `monitor.log` and do not stop the remaining companies. Career sites change their markup and bot protection periodically; inspect `Run Log`/`monitor.log` if a source repeatedly returns zero candidates or errors.
