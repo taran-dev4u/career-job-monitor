@@ -232,5 +232,19 @@
     "new_jobs_added": 0,
     "errors": 0,
     "duration_seconds": 165.9
+  },
+  {
+    "run_at": "2026-08-18T14:19:27.974Z",
+    "mode": "reliability baseline",
+    "companies_checked": 17,
+    "candidates_seen": 337,
+    "evaluations_completed": 185,
+    "new_jobs_added": 0,
+    "healthy_sources": 4,
+    "confirmed_empty_sources": 0,
+    "degraded_sources": 11,
+    "broken_sources": 2,
+    "errors": 2,
+    "duration_seconds": 1088.6
   }
 ]

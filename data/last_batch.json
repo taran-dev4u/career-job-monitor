@@ -1,6 +1,49 @@
 {
-  "run_at": "",
+  "run_at": "2026-08-18T14:19:27.974Z",
   "suppressed": true,
   "jobs": [],
-  "health_alerts": []
+  "health_alerts": [
+    {
+      "run_at": "2026-08-18T14:04:37.143Z",
+      "company_id": "CMP-004",
+      "company": "Apple Inc",
+      "source_url": "https://jobs.apple.com/en-us/search?location=united-states-USA&team=machine-learning-infrastructure-MLAI-MLI+deep-learning-and-reinforcement-learning-MLAI-DLRL+natural-language-processing-and-speech-technologies-MLAI-NLP+computer-vision-MLAI-CV+apps-and-frameworks-SFTWR-AF+cloud-and-infrastructure-SFTWR-CLD+core-operating-systems-SFTWR-COS+devops-and-site-reliability-SFTWR-DSR+engineering-project-management-SFTWR-EPM+information-systems-and-technology-SFTWR-ISTECH+machine-learning-and-ai-SFTWR-MCHLN+wireless-software-SFTWR-WSFT+applied-research-MLAI-AR",
+      "resolved_url": "",
+      "adapter": "Apple",
+      "http_status": 0,
+      "status": "Broken",
+      "candidate_count": 0,
+      "detail_success_count": 0,
+      "detail_error_count": 0,
+      "pending_detail_count": 0,
+      "eligible_count": 0,
+      "rejected_count": 0,
+      "zero_streak": 1,
+      "degraded_streak": 0,
+      "last_candidate_at": "",
+      "last_healthy_at": "",
+      "diagnostic": "page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://jobs.apple.com/en-us/search?location=united-states-USA&team=machine-learning-infrastructure-MLAI-MLI+deep-learning-and-reinforcement-learning-MLAI-DLRL+natural-language-processing-and-speech-technologies-MLAI-NLP+computer-vision-MLAI-CV+apps-and-frameworks-SFTWR-AF+cloud-and-infrastructure-SFTWR-CLD+core-operating-systems-SFTWR-COS+devops-and-site-reliability-SFTWR-DSR+engineering-project-management-SFTWR-EPM+information-systems-and-technology-SFTWR-ISTECH+machine-learning-and-ai-SFTWR-MCHLN+wireless-software-SFTWR-WSFT+applied-research-MLAI-AR\", waiting until \"domcontentloaded\"\n"
+    },
+    {
+      "run_at": "2026-08-18T14:05:15.689Z",
+      "company_id": "CMP-005",
+      "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
+      "source_url": "https://jobs.fidelity.com/en/jobs/?search=software&team=Technology&pagesize=20&origin=filtered#results",
+      "resolved_url": "",
+      "adapter": "Phenom",
+      "http_status": 0,
+      "status": "Broken",
+      "candidate_count": 0,
+      "detail_success_count": 0,
+      "detail_error_count": 0,
+      "pending_detail_count": 0,
+      "eligible_count": 0,
+      "rejected_count": 0,
+      "zero_streak": 1,
+      "degraded_streak": 0,
+      "last_candidate_at": "",
+      "last_healthy_at": "",
+      "diagnostic": "locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('a[rel=\\'next\\'],button[aria-label*=\\'Next page\\' i],a[aria-label*=\\'Next page\\' i],button[title*=\\'Next page\\' i],a[title*=\\'Next page\\' i]').filter({ hasNot: locator('[disabled], [aria-disabled=\\'true\\']') }).first()\n    - locator resolved to <a class=\"page-link\" rel=\"next nofollow\" aria-label=\"Next page\" href=\"https://jobs.fidelity.com/en/jobs/?page=2&search=software&team=Technology&pagesize=20&origin=filtered#results\">>></a>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not stable\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not stable\n    - retrying click action\n      - waiting 100ms\n    - waiting for element to be visible, enabled and stable\n    - element is not stable\n  - retrying click action\n    - waiting 500ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - element is outside of the viewport\n  - retrying click action\n    - waiting 500ms\n    - waiting for element to be visible, enabled and stable\n    - element is not stable\n  54 × retrying click action\n       - waiting 500ms\n       - waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <div class=\"onetrust-pc-dark-filter ot-fade-in\"></div> from <div data-nosnippet=\"true\" id=\"onetrust-consent-sdk\">…</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n"
+    }
+  ]
 }
