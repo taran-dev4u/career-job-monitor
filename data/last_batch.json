@@ -1,29 +1,6 @@
 {
-  "run_at": "2026-08-18T23:35:43.565Z",
+  "run_at": "2026-08-18T23:56:46.792Z",
   "suppressed": false,
-  "jobs": [
-    {
-      "discovered_at": "2026-08-18T23:35:43.565Z",
-      "company_id": "CMP-010",
-      "company": "Oracle America, Inc",
-      "role": "Core Infrastructure Engineer",
-      "location": "",
-      "experience": "No required experience above 3 years detected",
-      "posted": "",
-      "job_id": "341865",
-      "job_url": "https://careers.oracle.com/en/sites/jobsearch/job/341865",
-      "source_url": "https://careers.oracle.com/en/sites/jobsearch/jobs?keyword=Software+Engineering&lastSelectedFacet=POSTING_DATES&location=United+States&locationId=300000000149325&selectedPostingDatesFacet=7&sortBy=POSTING_DATES_DESC",
-      "match_reason": "Eligible technical role; No required experience above 3 years detected; sponsorship: Not Mentioned; Not an internship",
-      "description_snippet": "View More Jobs Core Infrastructure Engineer Nashville, TN, United States TRENDING Job Identification 341865 Job Category Product and Research Posting Date 08/18/2026, 10:58 PM Role Individual Contributor Job Type Regular Employee Does this position require a security clearance? No Years 3 to 5+ years Applicants are required to read, write, and speak the following languages English Job Description Implements and optimizes components within existing distributed systems under guidance. Applies basic scalability requirements, conducts performance/load testing, and configures resiliency features (retries, circuit breakers, timeouts) to handle network variability. Builds telemetry, alerts, and runbook-driven procedures; delivers scoped features and fault-injection tests; and helps implement basic data replication and synchronization. Assists with on-call rotations, uses automation/IaC scripts…",
-      "key": "5ffbd7d8db41835ddc3bca99",
-      "active_status": "Active",
-      "job_type": "Not specified",
-      "required_experience_years": null,
-      "preferred_experience_years": null,
-      "sponsorship_status": "Not Mentioned",
-      "sponsorship_evidence": "No sponsorship restriction found",
-      "experience_evidence": "No explicit required-years statement detected"
-    }
-  ],
+  "jobs": [],
   "health_alerts": []
 }
