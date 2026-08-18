@@ -696,5 +696,27 @@
     "sponsorship_status": "Not Mentioned",
     "sponsorship_evidence": "No sponsorship restriction found",
     "experience_evidence": "No explicit required-years statement detected"
+  },
+  {
+    "discovered_at": "2026-08-18T18:06:55.588Z",
+    "company_id": "CMP-001",
+    "company": "Amazon.com Services LLC",
+    "role": "Software Engineer I, Payments",
+    "location": "",
+    "experience": "Entry / early career",
+    "posted": "Posted: February 6, 2026 (Updated 3 months ago)",
+    "job_id": "10502486",
+    "job_url": "https://www.amazon.jobs/en/jobs/10502486/software-engineer-i-payments",
+    "source_url": "https://www.amazon.jobs/en/search?offset=0&result_limit=10&sort=recent&category%5B%5D=software-development&job_type%5B%5D=Full-Time&country%5B%5D=USA&distanceType=Mi&radius=24km&industry_experience=less_than_1_year&is_manager%5B%5D=0&latitude=&longitude=&loc_group_id=&loc_query=United%20States&base_query=&city=&country=USA&region=&county=&query_options=&",
+    "match_reason": "Eligible technical role; Entry / early career; sponsorship: Not Mentioned; Not an internship",
+    "description_snippet": "Skip to main content Amazon Jobs home page My career Software Engineer I, Payments Job ID: 10502486 | Twitch Interactive, Inc. - D48 Apply now Description If you are interested in this position, please apply on Twitch's Career site https://www.twitch.tv/jobs/en/ About Us: Twitch is the world’s biggest live streaming service, with global communities built around gaming, entertainment, music, sports, cooking, and more. It is where thousands of communities come together for whatever, every day. We’re about community, inside and out. You’ll find coworkers who are eager to team up, collaborate, and smash (or elegantly solve) problems together. We’re on a quest to empower live communities, so if this sounds good to you, see what we’re up to on LinkedIn and X, and discover the projects we’re solving on our Blog. Be sure to explore our Interviewing Guide to learn how to ace our interview proces…",
+    "key": "0a414e349aa36b02a22fcdbc",
+    "active_status": "Active",
+    "job_type": "Not specified",
+    "required_experience_years": null,
+    "preferred_experience_years": null,
+    "sponsorship_status": "Not Mentioned",
+    "sponsorship_evidence": "No sponsorship restriction found",
+    "experience_evidence": "Entry / early-career language detected"
   }
 ]

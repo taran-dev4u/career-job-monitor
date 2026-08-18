@@ -1,6 +1,6 @@
 # Latest Eligible Jobs — Filtered
 
-Updated: **2026-08-18T17:43:04.887Z UTC** / **Aug 18, 2026, 1:43 PM Eastern**
+Updated: **2026-08-18T18:06:55.588Z UTC** / **Aug 18, 2026, 2:06 PM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
@@ -13,7 +13,6 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 | First Seen | Company | Role | Location | Type | Posted | Required | Preferred | Sponsorship | Apply |
 |---|---|---|---|---|---|---:|---:|---|---|
 | 2026-08-18T17:42:15.768Z | COMPUNNEL SOFTWARE GROUP, INC | Artificial Intelligence Engineer | Not stated | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=lWoVd1XYrg926Ru832xm2g%3d%3d&Source=4414&EntityGroup=2321) |
-| 2026-08-18T17:42:15.768Z | COMPUNNEL SOFTWARE GROUP, INC | Full Stack GenAI Developer | Not stated | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=A18YEXOoGvHWx0PrUA8O%2bw%3d%3d&Source=4414&EntityGroup=2321) |
 | 2026-08-18T17:40:49.402Z | Oracle America, Inc | Platform Software Engineer 1 - Full-time Intern Conversion | United States | Internship | 2026-08-18T17:10:30.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://careers.oracle.com/en/sites/jobsearch/job/342415) |
 | 2026-08-18T17:40:13.413Z | JPMorgan Chase & Co | Java Backend Software Engineer III Kubernetes/ Docker / AWS | Locations | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210779159) |
 | 2026-08-18T16:48:12.722Z | Goldman Sachs | Engineering-L2-Dallas-Analyst-Software Engineering | Not stated | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/181810) |
@@ -73,28 +72,29 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 | 2026-08-18T13:49:41.370Z | Amazon.com Services LLC | Data Engineer I, Sales Data Services (SDS) | Not stated | Not specified | Posted: February 6, 2026 (Updated 3 months ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10496112/data-engineer-i-sales-data-services-sds) |
 | 2026-08-18T13:49:41.370Z | Amazon.com Services LLC | EFA Network Software Engineer I, Annapurna Labs | Not stated | Not specified | Posted: February 6, 2026 (Updated 3 months ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10481932/efa-network-software-engineer-i-annapurna-labs) |
 | 2026-08-18T13:49:41.370Z | Amazon.com Services LLC | Software Development Engineer | Not stated | Not specified | Posted: February 6, 2026 (Updated 3 months ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10489298/software-development-engineer) |
+| 2026-08-18T13:49:41.370Z | Amazon.com Services LLC | Software Engineer I, Payments | Not stated | Not specified | Posted: February 6, 2026 (Updated 3 months ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10502486/software-engineer-i-payments) |
 | 2026-08-18T13:49:41.370Z | Amazon.com Services LLC | Software Development Engineer I – AI/ML Network Infrastructure, Annapurna Labs | Not stated | Not specified | Posted: January 28, 2026 (Updated 2 months ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10490741/software-development-engineer-i-ai-ml-network-infrastructure-annapurna-labs) |
 
 ## Source Health
 
 | ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |
 |---|---|---|---:|---:|---:|---|---|
-| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-18T17:36:00.558Z |  |
-| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-18T17:36:46.034Z |  |
-| CMP-003 | Google LLC | Healthy | 3 | 0 | 0 | 2026-08-18T17:36:54.402Z |  |
-| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-18T17:37:09.297Z |  |
-| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-18T17:38:26.508Z |  |
-| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-18T17:40:01.704Z |  |
-| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-18T17:40:13.371Z |  |
-| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-18T17:40:40.880Z |  |
-| CMP-009 | Intel Corporation | Healthy | 5 | 0 | 0 | 2026-08-18T17:40:49.335Z |  |
-| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-18T17:41:08.060Z |  |
-| CMP-011 | Microsoft Corporation | Healthy | 26 | 0 | 0 | 2026-08-18T17:41:30.532Z |  |
-| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-18T17:41:39.509Z |  |
-| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-18T17:41:59.874Z |  |
-| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 40 | 0 | 0 | 2026-08-18T17:42:15.740Z |  |
-| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-18T17:42:46.726Z |  |
-| CMP-016 | Microsoft | Healthy | 20 | 0 | 0 | 2026-08-18T17:42:55.983Z |  |
-| CMP-017 | Goldman Sachs | Healthy | 20 | 0 | 0 | 2026-08-18T17:43:04.811Z |  |
+| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-18T18:00:12.333Z |  |
+| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-18T18:00:55.837Z |  |
+| CMP-003 | Google LLC | Healthy | 3 | 0 | 0 | 2026-08-18T18:01:04.131Z |  |
+| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-18T18:01:24.103Z |  |
+| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-18T18:02:39.120Z |  |
+| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-18T18:04:11.861Z |  |
+| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-18T18:04:21.249Z |  |
+| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-18T18:04:34.802Z |  |
+| CMP-009 | Intel Corporation | Healthy | 5 | 0 | 0 | 2026-08-18T18:04:43.331Z |  |
+| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-18T18:04:57.605Z |  |
+| CMP-011 | Microsoft Corporation | Healthy | 27 | 0 | 0 | 2026-08-18T18:05:25.391Z |  |
+| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-18T18:05:34.129Z |  |
+| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-18T18:05:53.857Z |  |
+| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 40 | 0 | 0 | 2026-08-18T18:06:09.675Z |  |
+| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-18T18:06:37.740Z |  |
+| CMP-016 | Microsoft | Healthy | 20 | 0 | 0 | 2026-08-18T18:06:46.915Z |  |
+| CMP-017 | Goldman Sachs | Healthy | 20 | 0 | 0 | 2026-08-18T18:06:55.519Z |  |
 
 > “Degraded” means extraction could not prove the source was complete. Review the unfiltered dashboard or workbook audit sheets for every decision.
