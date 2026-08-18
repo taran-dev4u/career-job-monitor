@@ -17,6 +17,18 @@ const ADAPTERS = [
 
 export function adapterName(url) { return ADAPTERS.find(([pattern]) => pattern.test(url))?.[1] || "Generic DOM/JSON-LD"; }
 
+async function resilientGoto(page, url, timeout) {
+  try { return await page.goto(url, { waitUntil: "domcontentloaded", timeout }); }
+  catch (firstError) {
+    try { return await page.goto(url, { waitUntil: "commit", timeout: Math.min(timeout, 20000) }); }
+    catch {
+      const body = clean(await page.locator("body").innerText().catch(() => ""));
+      if (page.url() !== "about:blank" && body.length > 300) return { status: () => 200, recovered: true };
+      throw firstError;
+    }
+  }
+}
+
 async function scrollResults(page) {
   await page.evaluate(async () => {
     for (let index = 0; index < 5; index += 1) {
@@ -37,7 +49,8 @@ async function advanceNextPage(page) {
   ].join(",")).filter({ hasNot: page.locator("[disabled], [aria-disabled='true']") }).first();
   if (!await next.count() || !await next.isVisible().catch(() => false) || await next.isDisabled().catch(() => true)) return false;
   const before = `${page.url()}|${clean(await page.locator("body").innerText().catch(() => "")).slice(0, 500)}`;
-  await Promise.all([page.waitForLoadState("domcontentloaded", { timeout: 15000 }).catch(() => {}), next.click()]);
+  try { await Promise.all([page.waitForLoadState("domcontentloaded", { timeout: 15000 }).catch(() => {}), next.click({ timeout: 8000 })]); }
+  catch { return false; }
   await page.waitForTimeout(2500);
   const after = `${page.url()}|${clean(await page.locator("body").innerText().catch(() => "")).slice(0, 500)}`;
   return after !== before;
@@ -118,7 +131,7 @@ async function discoverCandidates(page, jsonPayloads, company, config) {
 async function readDetail(context, candidate, company, config, now) {
   const detail = await context.newPage();
   try {
-    const response = await detail.goto(candidate.href, { waitUntil: "domcontentloaded", timeout: config.navigation_timeout_ms });
+    const response = await resilientGoto(detail, candidate.href, config.navigation_timeout_ms);
     await detail.waitForTimeout(Math.min(3500, config.settle_time_ms));
     const data = await detail.evaluate(() => {
       const flatten = value => Array.isArray(value) ? value.flatMap(flatten) : value?.["@graph"] ? flatten(value["@graph"]) : [value];
@@ -180,10 +193,10 @@ export async function scanCompany(browser, company, config, state, suppressNotif
     } catch {}
   });
   try {
-    let response = await page.goto(company.career_url, { waitUntil: "domcontentloaded", timeout: config.navigation_timeout_ms });
+    let response = await resilientGoto(page, company.career_url, config.navigation_timeout_ms);
     const adapter = adapterName(company.career_url);
     if (adapter === "Meta" && new URL(page.url()).pathname === "/") {
-      response = await page.goto("https://www.metacareers.com/jobsearch/", { waitUntil: "domcontentloaded", timeout: config.navigation_timeout_ms });
+      response = await resilientGoto(page, "https://www.metacareers.com/jobsearch/", config.navigation_timeout_ms);
       await page.waitForTimeout(5000);
       const search = page.locator("input[type='text']").last();
       if (await search.count()) {
