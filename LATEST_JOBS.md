@@ -1,6 +1,6 @@
 # Latest Eligible Jobs — Filtered
 
-Updated: **2026-08-18T14:59:39.279Z UTC** / **Aug 18, 2026, 10:59 AM Eastern**
+Updated: **2026-08-18T15:15:54.486Z UTC** / **Aug 18, 2026, 11:15 AM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
@@ -12,15 +12,15 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 
 | First Seen | Company | Role | Location | Type | Posted | Required | Preferred | Sponsorship | Apply |
 |---|---|---|---|---|---|---:|---:|---|---|
+| 2026-08-18T15:12:05.007Z | Apple Inc | iOS Engineer - Creator Studio | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678174-0836/ios-engineer-creator-studio?team=SFTWR) |
+| 2026-08-18T15:12:05.007Z | Apple Inc | iOS Engineer - Creator Studio | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678174-1435/ios-engineer-creator-studio?team=SFTWR) |
+| 2026-08-18T15:12:05.007Z | Apple Inc | iOS Engineer - Creator Studio | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678174-2926/ios-engineer-creator-studio?team=SFTWR) |
+| 2026-08-18T15:12:05.007Z | Apple Inc | iOS Engineer - Creator Studio | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678174-3337/ios-engineer-creator-studio?team=SFTWR) |
+| 2026-08-18T15:12:05.007Z | Apple Inc | iOS Engineer - Creator Studio | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678174-3543/ios-engineer-creator-studio?team=SFTWR) |
 | 2026-08-18T14:57:30.119Z | JPMorgan Chase & Co | Software Engineer III (Java & AWS) | New York, NY, United States | Full time | 2026-08-18T14:49:34.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210735404) |
 | 2026-08-18T14:51:32.571Z | COMPUNNEL SOFTWARE GROUP, INC | AWS Data Engineer | Not stated | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=lb1c5d0N9CeW6sTnd2fW8A%3d%3d&Source=4414&EntityGroup=2321) |
 | 2026-08-18T14:24:50.526Z | Apple Inc | Infrastructure Software Engineer (Provisioning) - Apple Services Engineering | Not stated | Not specified | Aug 17, 2026 | Not stated | 3+ years | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678460-0836/infrastructure-software-engineer-provisioning-apple-services-engineering?team=SFTWR) |
 | 2026-08-18T14:24:50.526Z | Apple Inc | Software Development Engineer in Test, Creative Apps | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200673694-0836/software-development-engineer-in-test-creative-apps?team=SFTWR) |
-| 2026-08-18T14:24:50.526Z | Apple Inc | Software Engineer - Creator Studio | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678174-0836/software-engineer-creator-studio?team=SFTWR) |
-| 2026-08-18T14:24:50.526Z | Apple Inc | Software Engineer - Creator Studio | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678174-1435/software-engineer-creator-studio?team=SFTWR) |
-| 2026-08-18T14:24:50.526Z | Apple Inc | Software Engineer - Creator Studio | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678174-2926/software-engineer-creator-studio?team=SFTWR) |
-| 2026-08-18T14:24:50.526Z | Apple Inc | Software Engineer - Creator Studio | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678174-3337/software-engineer-creator-studio?team=SFTWR) |
-| 2026-08-18T14:24:50.526Z | Apple Inc | Software Engineer - Creator Studio | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678174-3543/software-engineer-creator-studio?team=SFTWR) |
 | 2026-08-18T14:24:50.526Z | Apple Inc | Software Engineer, App Store | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678254-0836/software-engineer-app-store?team=SFTWR) |
 | 2026-08-18T14:24:50.526Z | Apple Inc | Software Engineer, IS&T Early Career Opportunities | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678510-0836/software-engineer-is-t-early-career-opportunities?team=SFTWR) |
 | 2026-08-18T14:24:50.526Z | Apple Inc | Software Engineer, IS&T Early Career Opportunities | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678510-3956/software-engineer-is-t-early-career-opportunities?team=SFTWR) |
@@ -80,22 +80,22 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 
 | ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |
 |---|---|---|---:|---:|---:|---|---|
-| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-18T14:55:06.833Z |  |
-| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-18T14:55:27.443Z |  |
-| CMP-003 | Google LLC | Healthy | 3 | 0 | 0 | 2026-08-18T14:55:35.727Z |  |
-| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-18T14:56:52.477Z |  |
-| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-18T14:57:08.915Z |  |
-| CMP-006 | IBM Corporation | Healthy | 40 | 0 | 0 | 2026-08-18T14:57:18.651Z |  |
-| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-18T14:57:30.089Z |  |
-| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-18T14:57:43.589Z |  |
-| CMP-009 | Intel Corporation | Healthy | 40 | 0 | 0 | 2026-08-18T14:57:52.413Z |  |
-| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-18T14:58:01.616Z |  |
-| CMP-011 | Microsoft Corporation | Healthy | 26 | 0 | 0 | 2026-08-18T14:58:20.624Z |  |
-| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-18T14:58:29.363Z |  |
-| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-18T14:58:49.285Z |  |
-| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 40 | 0 | 0 | 2026-08-18T14:59:05.113Z |  |
-| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-18T14:59:20.680Z |  |
-| CMP-016 | Microsoft | Healthy | 20 | 0 | 0 | 2026-08-18T14:59:30.538Z |  |
-| CMP-017 | Goldman Sachs | Healthy | 19 | 0 | 0 | 2026-08-18T14:59:39.218Z |  |
+| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-18T15:11:36.803Z |  |
+| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-18T15:11:56.711Z |  |
+| CMP-003 | Google LLC | Healthy | 3 | 0 | 0 | 2026-08-18T15:12:04.984Z |  |
+| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-18T15:12:59.710Z |  |
+| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-18T15:13:16.321Z |  |
+| CMP-006 | IBM Corporation | Healthy | 40 | 0 | 0 | 2026-08-18T15:13:25.902Z |  |
+| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-18T15:13:35.420Z |  |
+| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-18T15:13:48.735Z |  |
+| CMP-009 | Intel Corporation | Healthy | 40 | 0 | 0 | 2026-08-18T15:13:56.993Z |  |
+| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-18T15:14:06.531Z |  |
+| CMP-011 | Microsoft Corporation | Healthy | 26 | 0 | 0 | 2026-08-18T15:14:25.823Z |  |
+| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-18T15:14:34.613Z |  |
+| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-18T15:14:54.484Z |  |
+| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 40 | 0 | 0 | 2026-08-18T15:15:10.281Z |  |
+| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-18T15:15:36.340Z |  |
+| CMP-016 | Microsoft | Healthy | 20 | 0 | 0 | 2026-08-18T15:15:45.766Z |  |
+| CMP-017 | Goldman Sachs | Healthy | 19 | 0 | 0 | 2026-08-18T15:15:54.388Z |  |
 
 > “Degraded” means extraction could not prove the source was complete. Review the unfiltered dashboard or workbook audit sheets for every decision.
