@@ -298,14 +298,14 @@ Entry template:
 - Scheduler status: GitHub Actions remains active at `7,37 * * * *` UTC with `contents: write`, `issues: write`, and concurrency protection. The obsolete scheduled run `32149784282` was cancelled before notification/persistence because it started on the superseded v2 commit; the corrected queued run then completed successfully. Local Windows fallback remains disabled.
 - Follow-up: GitHub schedules are best-effort and can start late. The workflow currently emits a GitHub annotation that v4 actions target deprecated Node 20 internals while GitHub forces Node 24; execution is successful, but upgrade the action major versions when GitHub publishes compatible stable releases.
 
-### TASK-20260818-1506-codex — IN_PROGRESS
+### TASK-20260818-1506-codex — DONE
 - Started: 2026-08-18T15:06:45Z
-- Completed:
+- Completed: 2026-08-18T19:43:18Z
 - Objective: Keep newest jobs at the top everywhere and maintain separate generated Markdown dashboards for filtered eligible jobs and the complete unfiltered extraction snapshot.
 - Files expected: `AGENTS.md`, `README.md`, `.github/workflows/job-monitor.yml`, `package.json`, `src/job_order.mjs`, `src/dashboard.mjs`, `src/lib.mjs`, `src/scrape.mjs`, `src/monitor.mjs`, `src/workbook_data.mjs`, `tests/filter.test.mjs`, `tests/monitor_data.test.mjs`, `LATEST_JOBS.md`, `ALL_EXTRACTED_JOBS.md`, runtime JSON files, `outputs/job-monitor/Job_Monitor.xlsx`
-- Files changed: Pending.
-- Files deleted: None planned.
-- Behavior/data impact: Preserve all job, state, decision, and run history. `LATEST_JOBS.md` remains the filtered view; `ALL_EXTRACTED_JOBS.md` becomes the unfiltered view with decisions and reasons. Migrate deduplication to stable company/job-ID keys when available so career-site URL slug changes cannot create false new-job alerts.
-- Verification: Pending.
-- Scheduler status: GitHub Actions is active; no monitor run is currently in progress. Local Windows fallback remains disabled.
-- Follow-up: Pending.
+- Files changed: `AGENTS.md`, `README.md`, `.github/workflows/job-monitor.yml`, `package.json`, `src/job_order.mjs`, `src/dashboard.mjs`, `src/lib.mjs`, `src/scrape.mjs`, `src/monitor.mjs`, `src/workbook_data.mjs`, `tests/filter.test.mjs`, `tests/monitor_data.test.mjs`, `LATEST_JOBS.md`, `ALL_EXTRACTED_JOBS.md`, `data/state.json`, `data/jobs.json`, `data/runs.json`, `data/current_candidates.json`, `data/decision_history.json`, `data/source_health.json`, `data/last_batch.json`, `outputs/job-monitor/Job_Monitor.xlsx`.
+- Files deleted: None.
+- Behavior/data impact: Preserved all job, state, decision, and run history. Both Markdown dashboards and all time-oriented workbook sheets now show newest records first. `LATEST_JOBS.md` is the filtered active/eligible view; `ALL_EXTRACTED_JOBS.md` is the unfiltered snapshot with decisions and exclusion reasons. State schema v4 uses stable company/job-ID identity when available, with URL fallback, preventing URL-slug changes from creating duplicate alerts. False Apple issue #7 was corrected and closed without deleting its audit/history rows.
+- Verification: `npm test` passed ordering, dashboard, eligibility, sponsorship, internship, adapter, and stable-ID tests; dashboard generation produced separate navigation-linked filtered/unfiltered files; CI workbook verification passed all seven sheets (Apply Now 48, New Jobs 39, All Extracted Jobs 335, Decision Audit 740, Source Health 17, Run Log 38, Companies 17). Cloud run `32152858655` validated both dashboards, artifact upload, and persistence; post-fix run `32153818152` passed all steps without repeating the five Apple slug-change alerts. State reports schema v4, current Apple records contain extracted IDs, and artifact `Job-Monitor-25` is available. Latest dashboard rows were directly inspected and are newest-first.
+- Scheduler status: GitHub Actions remains active at `7,37 * * * *` UTC with concurrency protection; subsequent scheduled runs continued successfully. Local Windows fallback remains disabled.
+- Follow-up: The latest scan has 16 Healthy, 1 Degraded (Goldman Sachs returned zero candidates without an explicit empty signal), and 0 Broken sources. The configured health-streak alert will report persistent degradation; no manual data deletion is warranted.
