@@ -8,8 +8,9 @@
     "watch": "node src/monitor.mjs --watch --interval-minutes 30",
     "build-workbook": "node src/build_workbook.mjs",
     "build-workbook:ci": "node src/build_workbook_ci.mjs",
-    "test": "node tests/filter.test.mjs",
-    "smoke": "node tests/smoke_scraper.mjs"
+    "test": "node tests/filter.test.mjs && node tests/monitor_data.test.mjs",
+    "smoke": "node tests/smoke_scraper.mjs",
+    "smoke:all": "node tests/smoke_all.mjs"
   },
   "dependencies": {
     "exceljs": "4.4.0",

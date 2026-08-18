@@ -19,7 +19,7 @@ Never silently reinterpret the project goal, broaden the job criteria, or discar
 
 This project monitors configured United States career pages every 30 minutes and records only newly discovered roles that match the user's target profile.
 
-A job is in scope when it is related to software engineering, software development, AI, machine learning, or the configured adjacent technical disciplines; the role does not explicitly require more than three years of experience; and the posting does not explicitly deny sponsorship or OPT/CPT eligibility. Senior, staff, principal, lead, management, director, architect, and similar high-seniority roles are excluded by default. Sponsorship availability or no sponsorship mention is acceptable.
+A job is in scope when it is related to software engineering, software development, AI, machine learning, or a configured adjacent technical discipline; the role does not explicitly require more than three years of experience; and the posting does not explicitly deny sponsorship or OPT/CPT eligibility. Full-time, part-time, contract, and graduate-eligible internships can qualify. Internships explicitly requiring current enrollment are rejected. Experience above three years that is only preferred or desirable does not cause rejection. Senior, staff, principal, lead, management, director, architect, and similar high-responsibility roles are excluded by default. Sponsorship availability, future availability, unclear language, or no sponsorship mention is acceptable.
 
 The monitor must:
 
@@ -34,19 +34,17 @@ The monitor must:
 
 ## 3. Current Project Snapshot
 
-Last structurally verified: **2026-08-18 05:30 UTC**.
+Last structurally verified: **2026-08-18 08:30 UTC**.
 
 - Companies configured: **17** (`CMP-001` through `CMP-017`).
 - Monitor interval: **30 minutes**.
 - Primary runner: active GitHub Actions workflow `.github/workflows/job-monitor.yml`, scheduled at minutes **7 and 37 UTC** each hour.
 - Private repository: **`https://github.com/taran-dev4u/career-job-monitor`**, default branch `main`.
 - Local fallback task: **`Career Job Monitor - Every 30 Minutes`**, retained but disabled while GitHub Actions is active.
-- Baseline state: **initialized**.
-- Deduplication entries at verification: **51**.
-- Accepted new jobs at verification: **9**.
-- Completed run records at verification: **15**.
+- State schema: **v2**, with separate `discovered`, `evaluated`, and `notified` maps. The first v2 reliability baseline suppresses notifications.
 - Sponsorship policy: prospectively reject explicit no-sponsorship/no-OPT/no-CPT postings; allow sponsorship-available and sponsorship-not-mentioned postings. Historical accepted rows predating this policy are retained.
-- Generated workbook: `outputs/job-monitor/Job_Monitor.xlsx`.
+- User dashboard: `LATEST_JOBS.md`; GitHub issues provide new-job and source-health notifications.
+- Generated workbook: `outputs/job-monitor/Job_Monitor.xlsx`, with seven audit/visibility sheets.
 - Runtime: local runs use bundled Node.js, Playwright, and `@oai/artifact-tool`; GitHub uses Node.js 24, Playwright, Chromium, and the ExcelJS CI builder.
 - Repository status: Git repository on branch `main`, tracking private remote `origin` at `taran-dev4u/career-job-monitor`.
 
@@ -55,8 +53,8 @@ The snapshot is not a live dashboard. Update it only after structural changes su
 ### Known operational limitations
 
 - Career sites frequently change DOM markup, APIs, bot protection, and authentication behavior.
-- Landing-only or heavily dynamic URLs may return zero candidates even when the company has jobs. A zero count is not proof that no jobs exist.
-- Consult `data/runs.json` and `monitor.log` for current source behavior. Add a platform-specific adapter or a better filtered results URL when repeated zero counts are confirmed.
+- A zero count is trusted only when the source explicitly confirms no matching jobs. Otherwise it is `Degraded` or `Broken` and must remain visible.
+- Consult `LATEST_JOBS.md`, `data/source_health.json`, `data/runs.json`, and `monitor.log` for current behavior. Platform adapters use official page JSON/API payloads when exposed and browser/JSON-LD extraction as fallback.
 - `scripts/run_once.ps1` currently contains a machine-specific bundled Node.js path. Preserve it on this machine; make portability changes only as an explicit task.
 
 ## 4. Source-of-Truth Map
@@ -67,12 +65,17 @@ The snapshot is not a live dashboard. Update it only after structural changes su
 | `README.md` | Human-facing usage and basic operating commands | Keep concise; do not duplicate the complete agent manual. |
 | `companies.json` | Stable company IDs, names, and customized career URLs | Check duplicates; never reuse a retired ID. |
 | `config.json` | Interval, browser limits, role terms, experience limit, and exclusions | Do not alter user criteria without authorization. |
-| `data/state.json` | Baseline flag, canonical seen-job keys, and last-run state | Runtime-owned; never clear or reset casually. |
+| `data/state.json` | Baseline/schema flags plus discovered, evaluated, notified, and legacy seen-job state | Runtime-owned; never clear or reset casually. |
 | `data/jobs.json` | Accepted newly discovered jobs | Append/deduplicate; preserve history unless deletion is explicitly requested. |
 | `data/runs.json` | Monitor run history | Runtime-owned; do not manually manufacture successful runs. |
+| `data/current_candidates.json` | Latest unfiltered extracted-job snapshot and decisions | Runtime-owned; includes included, rejected, pending, and extraction-error records. |
+| `data/decision_history.json` | Rolling 30-day decision/evidence audit | Runtime-owned; preserve legacy records and let retention logic prune by age. |
+| `data/source_health.json` | Latest one-row-per-company health diagnostics and streaks | Runtime-owned; zero candidates must never silently imply health. |
+| `data/last_batch.json` | Notification handoff for the latest new-job batch and health alerts | Runtime-owned; first reliability baseline is suppressed. |
+| `LATEST_JOBS.md` | Tracked Apply Now dashboard and compact source-health summary | Generated by the monitor; do not hand-curate job rows. |
 | `monitor.log` | Detailed operational output and source errors | Append-only runtime log; inspect recent lines during diagnosis. |
 | `outputs/job-monitor/Job_Monitor.xlsx` | Generated user-facing workbook | Never edit manually. Correct JSON/code, then rebuild it. |
-| `.github/workflows/job-monitor.yml` | Primary always-on 30-minute scheduler, tests, scan, workbook artifact, and persistence commit | Keep `contents: write`, concurrency protection, and off-hour cron minutes. |
+| `.github/workflows/job-monitor.yml` | Primary always-on scheduler, tests, scan, alerts, workbook artifact, and persistence commit | Keep `contents: write`, `issues: write`, concurrency protection, and off-hour cron minutes. |
 | `src/` | Scraping, filtering, deduplication, orchestration, and workbook generation | Make minimal changes and test the affected subsystem. |
 | `scripts/` | One-shot runner and Windows scheduled-task management | Treat scheduler changes as operationally significant. |
 | `tests/` | Filter/dedup unit checks and live source smoke test | Extend when behavior changes. |
@@ -171,7 +174,7 @@ Never invent missing job facts. Leave unknown optional fields empty and explain 
 
 ### Routine scheduled monitoring
 
-Automatic scans update `data/state.json`, `data/jobs.json`, `data/runs.json`, `monitor.log`, and the generated workbook. Routine runs do **not** create Agent Change Ledger entries. The ledger is for agent-made changes and repairs, not job-by-job operational history.
+Automatic scans update all runtime JSON files, `LATEST_JOBS.md`, `monitor.log`, and the generated workbook. They may create/close GitHub notification issues. Routine runs do **not** create Agent Change Ledger entries. The ledger is for agent-made changes and repairs, not job-by-job operational history.
 
 ## 7. Scheduler Safety
 
@@ -196,10 +199,10 @@ Run only the checks relevant to the change, but do not skip an applicable row.
 | Change | Minimum required validation |
 |---|---|
 | Documentation only | Verify every referenced path/command; perform the Fresh-Agent Walkthrough below. |
-| Role/experience/dedup logic | `node tests/filter.test.mjs` plus representative edge cases. |
+| Role/experience/sponsorship/internship/dedup logic | `node tests/filter.test.mjs` plus representative edge cases. |
 | Scraper or career URL | Filter tests plus `node tests/smoke_scraper.mjs CMP-###`; use `--details` when validating detail extraction. |
 | Company addition | Duplicate/ID check, controlled baseline, job-count comparison, state preservation, workbook verification. |
-| Workbook builder or data correction | Build with `node src/build_workbook.mjs --verify`, inspect values/formulas/errors, and visually review every affected sheet. |
+| Workbook builder or data correction | Local: `node src/build_workbook.mjs --verify`; cloud/portable: `npm run build-workbook:ci -- --verify`. Inspect values/hyperlinks/errors and visually review affected sheets. |
 | Scheduler scripts/settings | One manual scheduled-task run, wait for completion, confirm exit code `0`, next run time, and log/workbook update. |
 | GitHub Actions workflow | Clean `npm ci`, unit tests, CI workbook verification, successful manual cloud run, artifact existence, bot state commit, and active schedule on the default branch. |
 
@@ -280,3 +283,15 @@ Entry template:
 - Verification: Clean isolated `npm ci` succeeded; unit tests passed; CI workbook write/read verification passed for all three sheets; workflow syntax parsed; private repository created and pushed; manual GitHub Actions run `32102845353` completed successfully across checkout, Node, dependencies, Chromium, tests, 17-company scan, workbook verification, artifact upload, and bot persistence commit `6fe8ab3`; cloud run recorded 0 source errors; artifact `Job-Monitor-1` exists; workflow state is active.
 - Scheduler status: GitHub Actions is the active primary scheduler at `7,37 * * * *` UTC. Local Windows task is disabled, retained for rollback, and had last result `0` before handoff.
 - Follow-up: GitHub scheduled events are best-effort and may be delayed during platform congestion; monitor the Actions page if a run is late.
+
+### TASK-20260818-0546-codex — IN_PROGRESS
+- Started: 2026-08-18T05:46:53Z
+- Completed:
+- Objective: Implement the approved GitHub Actions reliability and visibility upgrade: auditable eligibility decisions, raw extraction and 30-day decision history, per-company source health, Apply Now dashboard, GitHub alerts, and a seven-sheet workbook.
+- Files expected: `AGENTS.md`, `README.md`, `config.json`, `package.json`, `.github/workflows/job-monitor.yml`, `src/lib.mjs`, `src/scrape.mjs`, `src/monitor.mjs`, `src/build_workbook.mjs`, `src/build_workbook_ci.mjs`, `src/github_notify.mjs`, `tests/filter.test.mjs`, `tests/monitor_data.test.mjs`, `data/state.json`, `data/jobs.json`, `data/runs.json`, `data/current_candidates.json`, `data/decision_history.json`, `data/source_health.json`, `data/last_batch.json`, `LATEST_JOBS.md`, `outputs/job-monitor/Job_Monitor.xlsx`
+- Files changed: Pending.
+- Files deleted: None planned.
+- Behavior/data impact: Preserve customized URLs and historical records; migrate dedup state without clearing it; add explicit discovered/evaluated/notified state, eligibility evidence, current raw snapshot, rolling 30-day audit, source-health transitions, active-job verification, dashboard output, and GitHub issue notifications. The controlled first upgraded run will suppress new-job alerts while populating audit data.
+- Verification: Pending.
+- Scheduler status: GitHub Actions remains the active scheduler; local Windows fallback remains disabled. No local state-producing monitor run will occur until overlap is checked and the upgraded workflow is ready for controlled validation.
+- Follow-up: Pending.

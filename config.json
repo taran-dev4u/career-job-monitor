@@ -5,7 +5,11 @@
   "navigation_timeout_ms": 45000,
   "settle_time_ms": 5000,
   "max_cards_per_company": 40,
+  "max_pages_per_company": 3,
   "max_new_details_per_company": 15,
+  "detail_recheck_hours": 24,
+  "decision_history_days": 30,
+  "source_health_degraded_alert_streak": 3,
   "max_experience_years": 3,
   "sponsorship_policy": {
     "exclude_explicit_no_sponsorship": true,
@@ -19,10 +23,11 @@
     "data engineer", "platform engineer", "backend engineer", "back-end engineer",
     "frontend engineer", "front-end engineer", "full stack", "full-stack",
     "site reliability", "devops", "cloud engineer", "mobile engineer",
-    "ios engineer", "android engineer", "systems engineer", "application developer"
+    "ios engineer", "android engineer", "systems engineer", "application developer",
+    "infrastructure engineer", "research engineer", "applied researcher", "applied research"
   ],
   "exclude_title_terms": [
     "senior", "sr.", "staff", "principal", "lead ", "manager", "director",
-    "architect", "distinguished", "vice president", "vp,", "intern"
+    "architect", "leadership", "distinguished", "vice president", "vp,"
   ]
 }

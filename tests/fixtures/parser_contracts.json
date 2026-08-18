@@ -1,0 +1,26 @@
+[
+  {
+    "family": "Oracle Recruiting",
+    "page_url": "https://careers.oracle.com/en/sites/jobsearch/jobs",
+    "payload": { "items": [{ "Title": "Software Developer I", "Id": "REQ-10001", "jobPath": "/en/sites/jobsearch/job/10001", "PrimaryLocation": "United States" }] },
+    "expected_title": "Software Developer I",
+    "expected_url_fragment": "/job/10001",
+    "expected_id": "REQ-10001"
+  },
+  {
+    "family": "Workday",
+    "page_url": "https://intel.wd1.myworkdayjobs.com/en-US/External",
+    "payload": { "jobPostings": [{ "title": "AI Software Engineer", "externalPath": "/job/US/AI-Software-Engineer_JR12345", "id": "JR12345", "locationsText": "US" }] },
+    "expected_title": "AI Software Engineer",
+    "expected_url_fragment": "JR12345",
+    "expected_id": "JR12345"
+  },
+  {
+    "family": "Phenom/Eightfold",
+    "page_url": "https://careers.example.com/careers",
+    "payload": { "positions": [{ "name": "Machine Learning Engineer", "jobUrl": "/careers/job/98765", "positionId": "98765", "location": "United States" }] },
+    "expected_title": "Machine Learning Engineer",
+    "expected_url_fragment": "/careers/job/98765",
+    "expected_id": "98765"
+  }
+]

@@ -8,6 +8,7 @@ name: Career Job Monitor
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: career-job-monitor
@@ -47,6 +48,11 @@ jobs:
       - name: Verify generated workbook
         run: npm run build-workbook:ci -- --verify
 
+      - name: Publish GitHub job and source-health alerts
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node src/github_notify.mjs
+
       - name: Upload current workbook
         if: always()
         uses: actions/upload-artifact@v4
@@ -61,7 +67,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/state.json data/jobs.json data/runs.json outputs/job-monitor/Job_Monitor.xlsx
+          git add data/state.json data/jobs.json data/runs.json data/current_candidates.json data/decision_history.json data/source_health.json data/last_batch.json LATEST_JOBS.md outputs/job-monitor/Job_Monitor.xlsx
           if git diff --cached --quiet; then
             echo "No persistent changes to commit."
             exit 0
