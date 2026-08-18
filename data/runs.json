@@ -187,5 +187,14 @@
     "new_jobs_added": 0,
     "errors": 0,
     "duration_seconds": 154.4
+  },
+  {
+    "run_at": "2026-08-18T11:11:31.997Z",
+    "mode": "incremental",
+    "companies_checked": 17,
+    "candidates_seen": 46,
+    "new_jobs_added": 0,
+    "errors": 0,
+    "duration_seconds": 153.4
   }
 ]
