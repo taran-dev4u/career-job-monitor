@@ -1,16 +1,25 @@
 # Latest Eligible Jobs
 
-Updated: **2026-08-18T14:38:46.613Z UTC** / **Aug 18, 2026, 10:38 AM Eastern**
+Updated: **2026-08-18T14:52:11.084Z UTC** / **Aug 18, 2026, 10:52 AM Eastern**
 
 [Download the latest Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [View workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
-Source health: **10 healthy**, **0 confirmed empty**, **7 degraded**, **0 broken**.
+Source health: **15 healthy**, **0 confirmed empty**, **2 degraded**, **0 broken**.
 
 ## Apply Now
 
 | Company | Role | Location | Type | Posted | Required | Preferred | Sponsorship | Apply |
 |---|---|---|---|---|---:|---:|---|---|
+| COMPUNNEL SOFTWARE GROUP, INC | AWS Data Engineer | Not stated | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=lb1c5d0N9CeW6sTnd2fW8A%3d%3d&Source=4414&EntityGroup=2321) |
 | Apple Inc | Infrastructure Software Engineer (Provisioning) - Apple Services Engineering | Not stated | Not specified | Aug 17, 2026 | Not stated | 3+ years | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678460-0836/infrastructure-software-engineer-provisioning-apple-services-engineering?team=SFTWR) |
+| Apple Inc | Software Engineer - Creator Studio | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678174-1435/software-engineer-creator-studio?team=SFTWR) |
+| Apple Inc | Software Engineer - Creator Studio | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678174-0836/software-engineer-creator-studio?team=SFTWR) |
+| Apple Inc | Software Engineer - Creator Studio | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678174-2926/software-engineer-creator-studio?team=SFTWR) |
+| Apple Inc | Software Engineer - Creator Studio | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678174-3543/software-engineer-creator-studio?team=SFTWR) |
+| Apple Inc | Software Engineer - Creator Studio | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678174-3337/software-engineer-creator-studio?team=SFTWR) |
+| Apple Inc | Software Engineer, IS&T Early Career Opportunities | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678510-0836/software-engineer-is-t-early-career-opportunities?team=SFTWR) |
+| Apple Inc | Software Engineer, IS&T Early Career Opportunities | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678510-3956/software-engineer-is-t-early-career-opportunities?team=SFTWR) |
+| Apple Inc | Software Development Engineer in Test, Creative Apps | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200673694-0836/software-development-engineer-in-test-creative-apps?team=SFTWR) |
 | Goldman Sachs | Software Engineer, Global Banking & Markets, AI/ML Technology | Not stated | Not specified | Not stated | Not stated | 2+ years | Not Mentioned | [Apply](https://higher.gs.com/roles/177423) |
 | Goldman Sachs | Software Engineer, Global Banking & Markets, Electronic Trading | Not stated | Not specified | Not stated | 3+ years | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/180700) |
 | Goldman Sachs | Compliance Engineering, Site Reliability Engineer SRE, Associate, Dallas | Not stated | Not specified | Not stated | Not stated | 4+ years | Not Mentioned | [Apply](https://higher.gs.com/roles/170770) |
@@ -26,6 +35,8 @@ Source health: **10 healthy**, **0 confirmed empty**, **7 degraded**, **0 broken
 | Oracle America, Inc | Software Developer 4 | and 1 more | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://careers.oracle.com/en/sites/jobsearch/job/336131) |
 | Intel Corporation | Operations Research Engineer | USA - AZ - Chandler, United States of America | FULL_TIME | 2026-08-13 | 2+ years | Not stated | Not Mentioned | [Apply](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Operations-Research-Engineer_JR0286351) |
 | Intel Corporation | Operations Research Engineer | USA - AZ - Chandler, United States of America | FULL_TIME | 2026-08-13 | Not stated | Not stated | Not Mentioned | [Apply](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Operations-Research-Engineer_JR0286348) |
+| Intel Corporation | Operations Research Engineer | USA - AZ - Chandler, United States of America | FULL_TIME | 2026-08-13 | 2+ years | Not stated | Not Mentioned | [Apply](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Operations-Research-Engineer_JR0286351?locations=1e4a4eb3adf101888ff41a77bf81a2cf&locations=1e4a4eb3adf10129d05fe377bf815dd0&locations=1e4a4eb3adf1018c4bf78f77bf8112d0&locations=1e4a4eb3adf101b8aec18a77bf810dd0&locations=1e4a4eb3adf10118b1dfe877bf8162d0&locations=da6b8032b879100204a63a809f6c0000&locations=1e4a4eb3adf10146fd5c5276bf81eece&locations=719d3d221adf0101611f7e0dfefb0000&locations=9225dd5a24931001586f2d984f1e0000&locations=1e4a4eb3adf1011246675c76bf81f8ce&locations=1e4a4eb3adf1016541777876bf8111cf&locations=1e4a4eb3adf101fa2a777d76bf8116cf&locations=1e4a4eb3adf101770f350977bf8193cf&locations=1e4a4eb3adf10174f0548376bf811bcf&locations=1e4a4eb3adf101cc4e292078bf8199d0&jobFamilyGroup=ace7a3d23b7e01a0544279031a0ec85c) |
+| Intel Corporation | Operations Research Engineer | USA - AZ - Chandler, United States of America | FULL_TIME | 2026-08-13 | Not stated | Not stated | Not Mentioned | [Apply](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Operations-Research-Engineer_JR0286348?locations=1e4a4eb3adf101888ff41a77bf81a2cf&locations=1e4a4eb3adf10129d05fe377bf815dd0&locations=1e4a4eb3adf1018c4bf78f77bf8112d0&locations=1e4a4eb3adf101b8aec18a77bf810dd0&locations=1e4a4eb3adf10118b1dfe877bf8162d0&locations=da6b8032b879100204a63a809f6c0000&locations=1e4a4eb3adf10146fd5c5276bf81eece&locations=719d3d221adf0101611f7e0dfefb0000&locations=9225dd5a24931001586f2d984f1e0000&locations=1e4a4eb3adf1011246675c76bf81f8ce&locations=1e4a4eb3adf1016541777876bf8111cf&locations=1e4a4eb3adf101fa2a777d76bf8116cf&locations=1e4a4eb3adf101770f350977bf8193cf&locations=1e4a4eb3adf10174f0548376bf811bcf&locations=1e4a4eb3adf101cc4e292078bf8199d0&jobFamilyGroup=ace7a3d23b7e01a0544279031a0ec85c) |
 | JPMorgan Chase & Co | Software Engineer III - Front End / React JS | Columbus, OH, United States | Full time | 2026-08-18T13:35:01.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210745498) |
 | JPMorgan Chase & Co | Software Engineer III: Full Stack | Jersey City, NJ, United States | Full time | 2026-08-17T14:34:13.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210746076) |
 | JPMorgan Chase & Co | Software Engineer III - Data Platform Engineer AWS | Plano, TX, United States | Full time | 2026-08-17T20:51:48.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210749315) |
@@ -35,6 +46,7 @@ Source health: **10 healthy**, **0 confirmed empty**, **7 degraded**, **0 broken
 | JPMorgan Chase & Co | SRE Software Engineer III | Jersey City, NJ, United States | Full time | 2026-08-17T18:56:52.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210780261) |
 | JPMorgan Chase & Co | Software Engineer III - Data Engineer/Applied AI (LLMs) | Plano, TX, United States | Full time | 2026-08-17T13:44:43.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210780856) |
 | JPMorgan Chase & Co | Software Engineer III - Java / Transformative AI/LLM | Locations | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210751624) |
+| JPMorgan Chase & Co | Software Engineer III - Python Automation | Jersey City, NJ, United States | Full time | 2026-08-14T11:40:07.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210739239) |
 | Qualcomm Technologies, Inc | Speech & Audio Research Engineer | San Diego, CA,US, US | FULL_TIME | 2026-06-23T00:00:00 | Not stated | Not stated | Not Mentioned | [Apply](https://careers.qualcomm.com/careers/job/446719164923) |
 | IBM Corporation | Software Engineer TS/SCI (FSP) | Annapolis Junction, ALEXANDRIA, Chantilly, WASHINGTON, Reston, McLean, Herndon, Bethesda, Catonsville, Frederick, Ashburn, Virginia, Maryland, District of Columbia, United States | Not specified | Not stated | 3+ years | 1+ years | Not Mentioned | [Apply](https://careers.ibm.com/en_US/careers/JobDetail?jobId=129236) |
 | Google LLC | Software Engineer, Service Networking Engineering Productivity | Not stated | Not specified | Not stated | 1+ years | Not stated | Not Mentioned | [Apply](https://www.google.com/about/careers/applications/jobs/results/110968593876689606-software-engineer-service-networking-engineering-productivity?location=United%20States&hl=en&target_level=EARLY&sort_by=date&employment_type=FULL_TIME&q=%22Software%20Engineer%22) |
@@ -63,23 +75,23 @@ Source health: **10 healthy**, **0 confirmed empty**, **7 degraded**, **0 broken
 
 | ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |
 |---|---|---|---:|---:|---:|---|---|
-| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-18T14:24:21.239Z |  |
-| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-18T14:24:41.919Z |  |
+| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-18T14:43:39.535Z |  |
+| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-18T14:43:59.482Z |  |
 | CMP-003 | Google LLC | Degraded | 4 | 1 | 0 | Never | 1 detail pages failed |
-| CMP-004 | Apple Inc | Degraded | 40 | 0 | 0 | Never | 25 jobs await detail evaluation |
-| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Degraded | 20 | 0 | 0 | Never | 5 jobs await detail evaluation |
-| CMP-006 | IBM Corporation | Degraded | 40 | 0 | 0 | Never | 10 jobs await detail evaluation |
-| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-18T14:30:01.554Z |  |
-| CMP-008 | JPMorgan Chase & Co | Degraded | 40 | 0 | 0 | Never | 10 jobs await detail evaluation |
-| CMP-009 | Intel Corporation | Degraded | 40 | 0 | 0 | Never | 10 jobs await detail evaluation |
-| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-18T14:32:39.193Z |  |
-| CMP-011 | Microsoft Corporation | Healthy | 26 | 0 | 0 | 2026-08-18T14:33:46.075Z |  |
-| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-18T14:33:54.938Z |  |
-| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-18T14:35:17.432Z |  |
-| CMP-014 | WELLS FARGO BANK, N.A | Degraded | 40 | 0 | 0 | Never | 10 jobs await detail evaluation |
-| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-18T14:36:58.531Z |  |
-| CMP-016 | Microsoft | Healthy | 20 | 0 | 0 | 2026-08-18T14:37:31.689Z |  |
-| CMP-017 | Goldman Sachs | Healthy | 19 | 0 | 0 | 2026-08-18T14:38:46.514Z |  |
+| CMP-004 | Apple Inc | Degraded | 40 | 0 | 0 | Never | 10 jobs await detail evaluation |
+| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-18T14:46:29.836Z |  |
+| CMP-006 | IBM Corporation | Healthy | 40 | 0 | 0 | 2026-08-18T14:47:33.507Z |  |
+| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-18T14:47:55.923Z |  |
+| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-18T14:48:48.140Z |  |
+| CMP-009 | Intel Corporation | Healthy | 40 | 0 | 0 | 2026-08-18T14:49:36.955Z |  |
+| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-18T14:49:46.273Z |  |
+| CMP-011 | Microsoft Corporation | Healthy | 26 | 0 | 0 | 2026-08-18T14:50:05.187Z |  |
+| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-18T14:50:14.598Z |  |
+| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-18T14:50:34.722Z |  |
+| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 40 | 0 | 0 | 2026-08-18T14:51:32.551Z |  |
+| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-18T14:51:52.880Z |  |
+| CMP-016 | Microsoft | Healthy | 20 | 0 | 0 | 2026-08-18T14:52:02.100Z |  |
+| CMP-017 | Goldman Sachs | Healthy | 19 | 0 | 0 | 2026-08-18T14:52:11.003Z |  |
 
 > “Degraded” means the page loaded but extraction could not prove the source was complete. Use the workbook’s All Extracted Jobs and Decision Audit sheets to inspect every decision.
 

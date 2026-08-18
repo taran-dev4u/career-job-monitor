@@ -410,5 +410,27 @@
     "sponsorship_status": "Unclear",
     "sponsorship_evidence": "We offer: The opportunity to work on high-impact platforms that directly influence firm-wide financial planning and operational resilience Access to modern cloud-native architectures, distributed systems, and large-scale",
     "experience_evidence": "3+ years of proficiency in Java (preferred) or another major programming language (Python), with readiness to upskill where necessary Full-stack development experience - comfortable building both front-end (e.g., React, "
+  },
+  {
+    "discovered_at": "2026-08-18T14:52:11.084Z",
+    "company_id": "CMP-015",
+    "company": "COMPUNNEL SOFTWARE GROUP, INC",
+    "role": "AWS Data Engineer",
+    "location": "",
+    "experience": "No required experience above 3 years detected",
+    "posted": "",
+    "job_id": "lb1c5d0N9CeW6sTnd2fW8A",
+    "job_url": "https://staffline.compunnel.com/Support/UploadResume?JobId=lb1c5d0N9CeW6sTnd2fW8A%3d%3d&Source=4414&EntityGroup=2321",
+    "source_url": "https://www.compunnel.com/job-search/?keyword=&location_id=1&location=United+States",
+    "match_reason": "Eligible technical role; No required experience above 3 years detected; sponsorship: Not Mentioned; Not an internship",
+    "description_snippet": "Submit Resume Back Submit AWS Data Engineer Pennsylvania, Malvern 08/18/2026 Contract Active Job Description: Job Summary: We are seeking an experienced AWS Data Engineer with strong expertise in AWS Cloud, data engineering, ETL processes, database systems, and real-time and offline analytic processing. The ideal candidate will have hands-on experience with AWS data services, Spark, Python, PySpark, SQL, CI/CD, and test automation, along with the ability to translate business requirements into scalable technical solutions. Key Responsibilities: • Write ETL (Extract/Transform/Load) processes, design database systems, and develop tools for real-time and offline analytic processing. • Troubleshoot software and processes to ensure data consistency and integrity. • Integrate data from a variety of sources to help business partners generate insights and make informed decisions. • Build AWS cl…",
+    "key": "829b07b98b5c314d2c39ca8a",
+    "active_status": "Active",
+    "job_type": "Not specified",
+    "required_experience_years": null,
+    "preferred_experience_years": null,
+    "sponsorship_status": "Not Mentioned",
+    "sponsorship_evidence": "No sponsorship restriction found",
+    "experience_evidence": "No explicit required-years statement detected"
   }
 ]
