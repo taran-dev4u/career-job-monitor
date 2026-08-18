@@ -1,6 +1,51 @@
 {
-  "run_at": "2026-08-18T15:46:34.671Z",
+  "run_at": "2026-08-18T16:48:25.098Z",
   "suppressed": false,
-  "jobs": [],
+  "jobs": [
+    {
+      "discovered_at": "2026-08-18T16:48:25.098Z",
+      "company_id": "CMP-001",
+      "company": "Amazon.com Services LLC",
+      "role": "Software Development Engineer, iOS",
+      "location": "",
+      "experience": "No required experience above 3 years detected",
+      "posted": "Posted: August 17, 2026 (Updated about 19 hours ago)",
+      "job_id": "10505107",
+      "job_url": "https://www.amazon.jobs/en/jobs/10505107/software-development-engineer-ios",
+      "source_url": "https://www.amazon.jobs/en/search?offset=0&result_limit=10&sort=recent&category%5B%5D=software-development&job_type%5B%5D=Full-Time&country%5B%5D=USA&distanceType=Mi&radius=24km&industry_experience=less_than_1_year&is_manager%5B%5D=0&latitude=&longitude=&loc_group_id=&loc_query=United%20States&base_query=&city=&country=USA&region=&county=&query_options=&",
+      "match_reason": "Eligible technical role; No required experience above 3 years detected; sponsorship: Not Mentioned; Not an internship",
+      "description_snippet": "Skip to main content Amazon Jobs home page My career Software Development Engineer, iOS Job ID: 10505107 | Audible, Inc. Apply now Description At Audible, we believe stories have the power to transform lives. It’s why we work with some of the world’s leading creators to produce and share audio storytelling with our millions of global listeners. We are dreamers and inventors who come from a wide range of backgrounds and experiences to empower and inspire each other. Imagine your future with us. ABOUT THIS ROLE As an iOS Engineer, it’s up to you to define, design and refine the tech that keeps us one step ahead of listeners. Anticipate. Innovate. Bring challenging ideas and we’ll support you with the latest tech, tools and systems that you need to succeed. You’ll be essential in ensuring the team can reach their potential; working closely with them, reviewing their work, mentoring, and su…",
+      "key": "e7bb6ddf9caca14823526725",
+      "active_status": "Active",
+      "job_type": "Not specified",
+      "required_experience_years": null,
+      "preferred_experience_years": 1,
+      "sponsorship_status": "Not Mentioned",
+      "sponsorship_evidence": "No sponsorship restriction found",
+      "experience_evidence": "Basic Qualifications - Bachelor's degree in computer science or equivalent - Experience working with agile development methodologies - Experience building mobile UI with SwiftUI or UIKit Preferred Qualifications - 1+ yea"
+    },
+    {
+      "discovered_at": "2026-08-18T16:48:25.098Z",
+      "company_id": "CMP-017",
+      "company": "Goldman Sachs",
+      "role": "Engineering-L2-Dallas-Analyst-Software Engineering",
+      "location": "",
+      "experience": "Entry / early career",
+      "posted": "",
+      "job_id": "",
+      "job_url": "https://higher.gs.com/roles/181810",
+      "source_url": "https://higher.gs.com/results?EXPERIENCE_LEVEL=Analyst|Associate&JOB_FUNCTION=Data%20Analytics|Data%20Engineering|Software%20Engineering&LOCATION=Arizona|Los%20Angeles|Newport%20Beach|San%20Francisco|Newport%20Beach|San%20Francisco|Washington|Wilmington|Washington|Miami|West%20Palm%20Beach|Miami|West%20Palm%20Beach|Atlanta|Chicago|Deerfield|Chicago|Boston|Boston|Detroit|Jersey%20City|Albany|New%20York|Jersey%20City|Albany|New%20York|Philadelphia|Pittsburgh|Philadelphia|Dallas|Houston|Irving|Richardson|Dallas|Houston|Richardson|Draper|Salt%20Lake%20City|Salt%20Lake%20City|Seattle|Seattle&page=1&sort=POSTED_DATE",
+      "match_reason": "Eligible technical role; Entry / early career; sponsorship: Not Mentioned; Not an internship",
+      "description_snippet": "Engineering-L2-Dallas-Analyst-Software Engineering location_on Dallas, TX, United States share Share bookmark_border Save Opportunity Overview sitemap_outline CORPORATE TITLE Analyst language OFFICE LOCATION(S) Dallas assignment JOB FUNCTION Software Engineering account_balance DIVISION Engineering Division Apply The Opportunity At Goldman Sachs, engineering teams are positioned at the center of the business, building scalable systems, solving complex technical problems and turning data into action. In data engineering roles, the emphasis is on designing, building and maintaining large-scale data platforms, delivering production pipelines, improving reliability and quality, and partnering closely with users of the platform. This is a delivery-focused role for engineers who want to build robust data assets in production, work with modern data technologies, and grow over time within the f…",
+      "key": "6810fad6a3ebe4a7f26cdb77",
+      "active_status": "Active",
+      "job_type": "Not specified",
+      "required_experience_years": null,
+      "preferred_experience_years": null,
+      "sponsorship_status": "Not Mentioned",
+      "sponsorship_evidence": "No sponsorship restriction found",
+      "experience_evidence": "Entry / early-career language detected"
+    }
+  ],
   "health_alerts": []
 }
