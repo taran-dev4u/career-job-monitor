@@ -1,9 +1,9 @@
-import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawn } from "node:child_process";
 import { readJson, writeJsonAtomic } from "./lib.mjs";
 import { scanCompany, startBrowser, adapterName } from "./scrape.mjs";
+import { writeDashboards } from "./dashboard.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const args = process.argv.slice(2);
@@ -15,8 +15,6 @@ const companies = await readJson(path.join(ROOT, "companies.json"), []);
 const intervalMinutes = intervalIndex >= 0 ? Number(args[intervalIndex + 1]) : Number(config.interval_minutes || 30);
 
 const dataPath = name => path.join(ROOT, "data", name);
-const escapeMd = value => String(value ?? "").replace(/\|/g, "\\|").replace(/\r?\n/g, " ");
-const displayYears = value => value === null || value === undefined ? "Not stated" : `${value}+ years`;
 
 async function rebuildWorkbook() {
   const builder = process.env.WORKBOOK_BUILDER || path.join("src", "build_workbook.mjs");
@@ -25,28 +23,6 @@ async function rebuildWorkbook() {
     child.on("exit", code => code === 0 ? resolve() : reject(new Error(`Workbook builder exited ${code}`)));
     child.on("error", reject);
   });
-}
-
-async function writeDashboard(runAt, records, health) {
-  const active = records.filter(record => record.accepted && record.active_status === "Active").sort((a, b) => String(b.first_seen_at).localeCompare(String(a.first_seen_at)));
-  const counts = health.reduce((acc, item) => { acc[item.status] = (acc[item.status] || 0) + 1; return acc; }, {});
-  const eastern = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", dateStyle: "medium", timeStyle: "short" }).format(new Date(runAt));
-  const lines = [
-    "# Latest Eligible Jobs", "", `Updated: **${runAt} UTC** / **${eastern} Eastern**`, "",
-    `[Download the latest Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [View workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)`, "",
-    `Source health: **${counts.Healthy || 0} healthy**, **${counts["Confirmed Empty"] || 0} confirmed empty**, **${counts.Degraded || 0} degraded**, **${counts.Broken || 0} broken**.`, "",
-    "## Apply Now", ""
-  ];
-  if (!active.length) lines.push("No currently verified eligible jobs are available.", "");
-  else {
-    lines.push("| Company | Role | Location | Type | Posted | Required | Preferred | Sponsorship | Apply |", "|---|---|---|---|---|---:|---:|---|---|");
-    for (const job of active) lines.push(`| ${escapeMd(job.company)} | ${escapeMd(job.title)} | ${escapeMd(job.location || "Not stated")} | ${escapeMd(job.job_type)} | ${escapeMd(job.posted || "Not stated")} | ${displayYears(job.required_experience_years)} | ${displayYears(job.preferred_experience_years)} | ${escapeMd(job.sponsorship_status)} | [Apply](${job.job_url}) |`);
-    lines.push("");
-  }
-  lines.push("## Source Health", "", "| ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |", "|---|---|---|---:|---:|---:|---|---|");
-  for (const item of health) lines.push(`| ${item.company_id} | ${escapeMd(item.company)} | ${item.status} | ${item.candidate_count} | ${item.detail_error_count} | ${item.zero_streak} | ${escapeMd(item.last_healthy_at || "Never")} | ${escapeMd(item.diagnostic || "")} |`);
-  lines.push("", "> “Degraded” means the page loaded but extraction could not prove the source was complete. Use the workbook’s All Extracted Jobs and Decision Audit sheets to inspect every decision.", "");
-  await fs.writeFile(path.join(ROOT, "LATEST_JOBS.md"), `${lines.join("\n")}\n`, "utf8");
 }
 
 function asHistoricalJob(record, discoveredAt) {
@@ -144,7 +120,7 @@ async function runOnce() {
   const counts = health.reduce((acc, item) => { acc[item.status] = (acc[item.status] || 0) + 1; return acc; }, {});
   runs.push({ run_at: runAt, mode: upgradeBaseline ? "reliability baseline" : configuredBaseline ? "configured baseline" : "incremental", companies_checked: companies.length, candidates_seen: current.length, evaluations_completed: evaluations.length, new_jobs_added: added.length, healthy_sources: counts.Healthy || 0, confirmed_empty_sources: counts["Confirmed Empty"] || 0, degraded_sources: counts.Degraded || 0, broken_sources: counts.Broken || 0, errors: counts.Broken || 0, duration_seconds: Math.round((Date.now() - started) / 100) / 10 });
   await writeJsonAtomic(dataPath("runs.json"), runs.slice(-500));
-  await writeDashboard(runAt, current, health);
+  await writeDashboards(ROOT, runAt, current, health);
   await rebuildWorkbook();
   console.log(`Completed: ${added.length} new jobs; ${counts.Healthy || 0} healthy, ${counts["Confirmed Empty"] || 0} confirmed empty, ${counts.Degraded || 0} degraded, ${counts.Broken || 0} broken.`);
 }

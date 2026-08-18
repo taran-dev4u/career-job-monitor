@@ -1,6 +1,6 @@
 # Career Job Monitor
 
-This project checks 17 configured US career pages every 30 minutes. GitHub Actions is the always-on runner, so monitoring continues while the local computer is shut down. Open [`LATEST_JOBS.md`](LATEST_JOBS.md) for the quickest view of verified matches and source health, or download `outputs/job-monitor/Job_Monitor.xlsx` for the full audit.
+This project checks 17 configured US career pages every 30 minutes. GitHub Actions is the always-on runner, so monitoring continues while the local computer is shut down. Open [`LATEST_JOBS.md`](LATEST_JOBS.md) for filtered eligible jobs, [`ALL_EXTRACTED_JOBS.md`](ALL_EXTRACTED_JOBS.md) for the unfiltered snapshot, or download `outputs/job-monitor/Job_Monitor.xlsx` for the full audit. All job and run views keep the newest records at the top.
 
 ## What is recorded
 
@@ -11,6 +11,8 @@ This project checks 17 configured US career pages every 30 minutes. GitHub Actio
 - `Source Health`: exactly one diagnostic row for each configured company.
 - `Run Log`: scan totals plus healthy, confirmed-empty, degraded, and broken source counts.
 - `Companies`: stable IDs and the exact customized career URLs supplied by the user.
+
+The Markdown views are deliberately separate: `LATEST_JOBS.md` contains only active eligible roles, while `ALL_EXTRACTED_JOBS.md` includes every extracted role with its decision and exclusion reasons.
 
 The monitor opens each job-detail page before deciding eligibility. It keeps software engineering/development, AI/ML, applied technical, data/platform/infrastructure, SRE, DevOps, cloud, mobile, and related roles. Full-time, part-time, contract, and graduate-eligible internships may qualify. A role is rejected when it explicitly requires more than three years, establishes excluded senior/leadership responsibility, requires an intern to be currently enrolled, says sponsorship is unavailable, or says OPT/CPT applicants are ineligible. Experience above three years that is only preferred is displayed but does not cause rejection. Sponsorship silence and current/future sponsorship availability remain eligible.
 
@@ -44,6 +46,7 @@ The workflow at `.github/workflows/job-monitor.yml` runs at minutes 7 and 37 of 
 
 - Private repository: https://github.com/taran-dev4u/career-job-monitor
 - Latest jobs: https://github.com/taran-dev4u/career-job-monitor/blob/main/LATEST_JOBS.md
+- All extracted jobs: https://github.com/taran-dev4u/career-job-monitor/blob/main/ALL_EXTRACTED_JOBS.md
 - Workflow runs: https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml
 - Alerts: https://github.com/taran-dev4u/career-job-monitor/issues
 
