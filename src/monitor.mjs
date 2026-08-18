@@ -68,13 +68,20 @@ async function runOnce() {
   state.discovered ||= { ...(state.seen || {}) };
   state.evaluated ||= {};
   state.notified ||= {};
-  state.schema_version = 2;
+  const priorSchemaVersion = Number(state.schema_version || 1);
   const jobs = await readJson(dataPath("jobs.json"), []);
   for (const job of jobs) {
     const key = job.key || Object.entries(state.discovered).find(([, value]) => value.url?.replace(/#.*$/, "") === job.job_url?.replace(/#.*$/, ""))?.[0];
     if (key) state.notified[key] ||= { notified_at: job.discovered_at, reason: "legacy accepted history" };
   }
   const runs = await readJson(dataPath("runs.json"), []);
+  const priorCurrent = await readJson(dataPath("current_candidates.json"), []);
+  if (priorSchemaVersion < 3 && state.reliability_baseline_complete) {
+    for (const record of priorCurrent.filter(item => item.decision === "Pending Detail")) {
+      if (record.key) state.notified[record.key] ||= { notified_at: state.last_run_at || new Date().toISOString(), reason: "baseline pending first evaluation" };
+    }
+  }
+  state.schema_version = 3;
   const priorAudit = await readJson(dataPath("decision_history.json"), []);
   const priorHealth = await readJson(dataPath("source_health.json"), []);
   const healthById = new Map(priorHealth.map(item => [item.company_id, item]));

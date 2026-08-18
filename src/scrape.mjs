@@ -1,5 +1,5 @@
 import { chromium } from "playwright";
-import { clean, compactSnippet, detectJobType, evaluateEligibility, extractJobId, hashText, isOlderThan, stableJobKey } from "./lib.mjs";
+import { clean, compactSnippet, detectJobType, evaluateEligibility, extractJobId, hashText, isOlderThan, markBaselinePending, notificationDecision, stableJobKey } from "./lib.mjs";
 
 const GENERIC_TITLES = /^(?:jobs?|careers?|search results?|view jobs?|learn more|apply|read more|saved jobs?)$/i;
 const NAVIGATION_URL = /\/(?:search|results?|saved-jobs?|job-search|recommendations|alerts)\/?$/i;
@@ -229,6 +229,7 @@ export async function scanCompany(browser, company, config, state, suppressNotif
       const discovered = state.discovered[candidate.key] || { first_seen_at: now, url: candidate.href };
       discovered.last_seen_at = now;
       state.discovered[candidate.key] = discovered;
+      if (suppressNotifications) markBaselinePending(state.notified, candidate.key, now);
       const cached = state.evaluated[candidate.key]?.record;
       const stale = cached?.active_status === "Active" && isOlderThan(cached.last_verified_at, Number(config.detail_recheck_hours || 24) * 3_600_000);
       if ((!cached || stale) && detailsUsed < detailLimit) {
@@ -239,10 +240,7 @@ export async function scanCompany(browser, company, config, state, suppressNotif
           records.push(record);
           evaluations.push({ ...record, evaluated_at: now });
           state.evaluated[candidate.key] = { last_evaluated_at: now, description_hash: record.description_hash, record };
-          if (record.accepted && !state.notified[candidate.key]) {
-            if (suppressNotifications) state.notified[candidate.key] = { notified_at: now, reason: "upgrade baseline" };
-            else newJobs.push(record);
-          }
+          if (notificationDecision(state.notified, candidate.key, record, suppressNotifications, now)) newJobs.push(record);
         } catch (error) {
           detailErrors += 1;
           records.push({ key: candidate.key, first_seen_at: discovered.first_seen_at, last_verified_at: now, company_id: company.id, company: company.company, title: candidate.title, location: "", posted: "", job_id: candidate.external_id || extractJobId(candidate.href), job_url: candidate.href, source_url: company.career_url, description_extracted: false, description_hash: "", description_snippet: "", active_status: "Unknown", accepted: false, decision: "Extraction Error", exclusion_reasons: [error.message], role_relevant: null, seniority: "Unknown", required_experience_years: null, preferred_experience_years: null, experience_label: "Not evaluated", experience_evidence: "", sponsorship_status: "Unclear", sponsorship_evidence: "", student_enrollment: "Unknown", enrollment_evidence: "", job_type: "Not specified" });

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import config from "../config.json" with { type: "json" };
-import { enrollmentDecision, evaluateEligibility, experienceDecision, extractJobId, roleLooksRelevant, sponsorshipDecision, stableJobKey } from "../src/lib.mjs";
+import { enrollmentDecision, evaluateEligibility, experienceDecision, extractJobId, markBaselinePending, notificationDecision, roleLooksRelevant, sponsorshipDecision, stableJobKey } from "../src/lib.mjs";
 import parserFixtures from "./fixtures/parser_contracts.json" with { type: "json" };
 import { adapterName, jsonCandidatesFrom } from "../src/scrape.mjs";
 
@@ -58,5 +58,14 @@ for (const fixture of parserFixtures) {
   assert.ok(candidates[0].href.includes(fixture.expected_url_fragment), `${fixture.family} URL`);
   assert.equal(candidates[0].external_id, fixture.expected_id, `${fixture.family} ID`);
 }
+
+const notificationState = {};
+markBaselinePending(notificationState, "pending-eligible", "2026-08-18T00:00:00Z");
+assert.equal(notificationDecision(notificationState, "pending-eligible", { accepted: true }, false, "2026-08-18T00:30:00Z"), false);
+assert.equal(notificationState["pending-eligible"].reason, "baseline eligible after pending evaluation");
+markBaselinePending(notificationState, "pending-rejected", "2026-08-18T00:00:00Z");
+assert.equal(notificationDecision(notificationState, "pending-rejected", { accepted: false }, false, "2026-08-18T00:30:00Z"), false);
+assert.equal(notificationState["pending-rejected"], undefined);
+assert.equal(notificationDecision(notificationState, "pending-rejected", { accepted: true }, false, "2026-08-19T00:30:00Z"), true);
 
 console.log("Eligibility, sponsorship, internship, deduplication, and adapter tests passed.");

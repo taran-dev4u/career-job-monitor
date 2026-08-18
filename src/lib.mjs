@@ -145,3 +145,21 @@ export function evaluateEligibility({ title, context = "", description = "", con
 }
 export function compactSnippet(text, max = 900) { const value = clean(text); return value.length <= max ? value : `${value.slice(0, max - 1)}…`; }
 export function isOlderThan(iso, milliseconds) { return !iso || Date.now() - new Date(iso).getTime() >= milliseconds; }
+
+export function markBaselinePending(notified, key, now) {
+  notified[key] ||= { notified_at: now, reason: "baseline pending first evaluation" };
+}
+
+export function notificationDecision(notified, key, record, suppress, now) {
+  const marker = notified[key];
+  if (marker?.reason === "baseline pending first evaluation") {
+    if (record.accepted) notified[key] = { notified_at: now, reason: "baseline eligible after pending evaluation" };
+    else delete notified[key];
+    return false;
+  }
+  if (suppress) {
+    if (record.accepted && !marker) notified[key] = { notified_at: now, reason: "notification-suppressed eligible baseline" };
+    return false;
+  }
+  return Boolean(record.accepted && !marker);
+}
