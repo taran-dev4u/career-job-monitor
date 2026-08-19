@@ -11,6 +11,22 @@ assert.equal(roleLooksRelevant("Applied Researcher, Machine Learning", "United S
 assert.equal(roleLooksRelevant("Infrastructure Engineer I", "United States", config), true);
 assert.equal(roleLooksRelevant("Finance Analyst", "United States", config), false);
 
+// Regression: seniority terms must be judged from the TITLE ONLY, not the body,
+// and must be whole-token (so "architect" never matches "architecture").
+assert.equal(roleLooksRelevant("Computer Vision Engineer", "You will lead the design and shape architecture with staff peers.", config), true, "senior words in body must not reject a normal-level title");
+assert.equal(roleLooksRelevant("Software Engineer II", "Amazon Leadership Principles; work with principal engineers.", config), true, "leadership/principal in body must not reject");
+assert.equal(roleLooksRelevant("ML Engineer, Platform Architecture", "United States", config), true, "'Architecture' in the title must not trigger the 'architect' exclusion");
+assert.equal(roleLooksRelevant("Principal Software Engineer", "United States", config), false, "real senior title still excluded");
+assert.equal(roleLooksRelevant("Sr Software Engineer, AI Tools", "United States", config), false, "'Sr' without a period is still senior");
+// Broader recall: common technical titles the narrow allow-list used to miss.
+assert.equal(roleLooksRelevant("Software Dev Engineer I - Graviton", "United States", config), true);
+assert.equal(roleLooksRelevant("GPU ML Engineer", "United States", config), true);
+assert.equal(roleLooksRelevant("Member of Technical Staff, Robotics", "United States", config), true);
+assert.equal(roleLooksRelevant("DevSecOps Engineer", "United States", config), true);
+// Still out of scope: non-software engineering domains.
+assert.equal(roleLooksRelevant("Electrical Engineer", "United States", config), false);
+assert.equal(roleLooksRelevant("Optical Engineer, Test Software", "United States", config), false);
+
 assert.equal(experienceDecision("Minimum 3 years of professional experience", 3).accepted, true);
 assert.equal(experienceDecision("At least 5 years of experience", 3).accepted, false);
 assert.equal(experienceDecision("5 years of software development experience", 3).accepted, false);

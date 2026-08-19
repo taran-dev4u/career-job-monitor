@@ -25,6 +25,20 @@ async function rebuildWorkbook() {
   });
 }
 
+// Regenerate the interactive HTML dashboard. Non-fatal: a dashboard failure must
+// never break a scan or block state/workbook persistence.
+async function rebuildDashboard() {
+  try {
+    await new Promise((resolve, reject) => {
+      const child = spawn(process.execPath, [path.resolve(ROOT, "src", "build_dashboard_html.mjs")], { cwd: ROOT, stdio: "inherit" });
+      child.on("exit", code => code === 0 ? resolve() : reject(new Error(`Dashboard builder exited ${code}`)));
+      child.on("error", reject);
+    });
+  } catch (error) {
+    console.error(`Dashboard build warning: ${error.message}`);
+  }
+}
+
 function asHistoricalJob(record, discoveredAt) {
   return {
     discovered_at: discoveredAt, company_id: record.company_id, company: record.company, role: record.title,
@@ -151,6 +165,7 @@ async function runOnce() {
   await writeJsonAtomic(dataPath("runs.json"), runs.slice(-500));
   await writeDashboards(ROOT, runAt, current, health);
   await rebuildWorkbook();
+  await rebuildDashboard();
   console.log(`Completed: ${added.length} new jobs; ${counts.Healthy || 0} healthy, ${counts["Confirmed Empty"] || 0} confirmed empty, ${counts.Degraded || 0} degraded, ${counts.Broken || 0} broken.`);
 }
 

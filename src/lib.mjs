@@ -36,12 +36,44 @@ export function extractJobId(url, text = "") {
   return "";
 }
 
+// A term is present as a whole token if it is bounded by non-letters on both
+// sides. This stops "architect" from matching inside "architecture" and
+// "lead" from matching "leading"/"leader"/"leadership".
+function tokenPresent(term, text) {
+  const t = String(term).trim().replace(/[.,]+$/, "").toLowerCase();
+  if (!t) return false;
+  const escaped = t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return new RegExp(`(?:^|[^a-z0-9])${escaped}(?:[^a-z0-9]|$)`, "i").test(text);
+}
+
+// Generic recall net: a title that names an engineering/dev/science ROLE in a
+// SOFTWARE/AI/DATA context, and is not in an explicitly non-software domain.
+// Recall is prioritised over precision on purpose — a false accept is a visible
+// extra row; a false reject silently loses a job.
+const ROLE_WORD = /(?:^|[^a-z])(engineer|engineering|developer|development|programmer|sde|sdet|scientist|technical staff)(?:[^a-z]|$)/i;
+const TECH_DOMAIN = /(?:^|[^a-z])(software|ml|ai|machine learning|deep learning|artificial intelligence|data|backend|back-end|front-end|frontend|full[- ]?stack|cloud|devops|devsecops|sre|site reliability|platform|infrastructure|systems?|embedded|firmware|compiler|security|network|distributed|mobile|ios|android|web|computer vision|nlp|robotics|application|applied|research|quantitative)(?:[^a-z]|$)/i;
+const NON_SOFTWARE_DOMAIN = /(?:^|[^a-z])(electrical|mechanical|optical|photonics|hardware|chemical|biomedical|bioinformatics|civil|industrial|materials|thermal|antenna|acoustic|packaging|manufacturing|fabrication|facilities|sales|account executive|marketing|recruit|talent|payroll|logistics|supply chain|construction|nurse|clinical)(?:[^a-z]|$)/i;
+
 export function roleDecision(title, context, config) {
   const cleanTitle = clean(title).toLowerCase();
-  const roleTerm = config.role_terms.find(term => ` ${cleanTitle} `.includes(term.toLowerCase())) || "";
-  const seniorText = ` ${cleanTitle} ${clean(context).toLowerCase().slice(0, 800)} `;
-  const seniorTerm = config.exclude_title_terms.find(term => seniorText.includes(term.toLowerCase())) || "";
-  return { accepted: Boolean(roleTerm) && !seniorTerm, relevant: Boolean(roleTerm), seniority: seniorTerm ? `Excluded: ${seniorTerm.trim()}` : "Allowed", evidence: seniorTerm || roleTerm || "No configured technical role term" };
+  const padded = ` ${cleanTitle} `;
+  // 1. Configured allow-list (gives a precise evidence term), else generic net.
+  const listTerm = config.role_terms.find(term => padded.includes(term.toLowerCase())) || "";
+  const generic = ROLE_WORD.test(cleanTitle) && TECH_DOMAIN.test(cleanTitle) && !NON_SOFTWARE_DOMAIN.test(cleanTitle);
+  const relevant = Boolean(listTerm) || generic;
+  const roleTerm = listTerm || (generic ? "technical engineering/developer role" : "");
+  // 2. Seniority is judged from the TITLE ONLY (never the description body),
+  //    with whole-token matching. Senior/staff/principal/lead/manager in a job
+  //    TITLE reliably signals seniority; in the body it is just noise.
+  //    "Member of Technical Staff" is an IC title, not a "Staff" seniority level.
+  const titleForSeniority = cleanTitle.replace(/technical staff/g, "technical role");
+  const seniorTerm = config.exclude_title_terms.find(term => tokenPresent(term, titleForSeniority)) || "";
+  return {
+    accepted: relevant && !seniorTerm,
+    relevant,
+    seniority: seniorTerm ? `Excluded: ${seniorTerm.trim()}` : "Allowed",
+    evidence: seniorTerm ? seniorTerm.trim() : roleTerm || "No configured technical role term"
+  };
 }
 export function roleLooksRelevant(title, context, config) { return roleDecision(title, context, config).accepted; }
 
