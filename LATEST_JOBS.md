@@ -1,6 +1,6 @@
 # Latest Eligible Jobs — Filtered
 
-Updated: **2026-08-19T01:51:20.665Z UTC** / **Aug 18, 2026, 9:51 PM Eastern**
+Updated: **2026-08-19T03:15:05.137Z UTC** / **Aug 18, 2026, 11:15 PM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
@@ -43,7 +43,6 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 | 2026-08-18T14:10:36.736Z | Oracle America, Inc | Software Developer 4 | and 1 more | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://careers.oracle.com/en/sites/jobsearch/job/336131) |
 | 2026-08-18T14:08:11.649Z | JPMorgan Chase & Co | Software Engineer III - Front End / React JS | Columbus, OH, United States | Full time | 2026-08-18T13:35:01.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210745498) |
 | 2026-08-18T14:08:11.649Z | JPMorgan Chase & Co | Software Engineer III - Data Platform Engineer AWS | Plano, TX, United States | Full time | 2026-08-17T20:51:48.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210749315) |
-| 2026-08-18T14:08:11.649Z | JPMorgan Chase & Co | Software Engineer III - Java Fullstack / AWS | Austin, TX, United States | Full time | 2026-08-17T15:22:13.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210751972) |
 | 2026-08-18T14:08:11.649Z | JPMorgan Chase & Co | Software Engineer III: Full Stack | Jersey City, NJ, United States | Full time | 2026-08-17T14:34:13.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210746076) |
 | 2026-08-18T14:06:49.813Z | Qualcomm Technologies, Inc | Speech & Audio Research Engineer | San Diego, CA,US, US | FULL_TIME | 2026-06-23T00:00:00 | Not stated | Not stated | Not Mentioned | [Apply](https://careers.qualcomm.com/careers/job/446719164923) |
 | 2026-08-18T14:05:15.694Z | IBM Corporation | Software Engineer TS/SCI (FSP) | Annapolis Junction, ALEXANDRIA, Chantilly, WASHINGTON, Reston, McLean, Herndon, Bethesda, Catonsville, Frederick, Ashburn, Virginia, Maryland, District of Columbia, United States | Not specified | Not stated | 3+ years | 1+ years | Not Mentioned | [Apply](https://careers.ibm.com/en_US/careers/JobDetail?jobId=129236) |
@@ -73,22 +72,22 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 
 | ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |
 |---|---|---|---:|---:|---:|---|---|
-| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-19T01:44:34.111Z |  |
-| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-19T01:45:17.830Z |  |
-| CMP-003 | Google LLC | Healthy | 3 | 0 | 0 | 2026-08-19T01:45:26.194Z |  |
-| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-19T01:46:11.860Z |  |
-| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-19T01:47:28.337Z |  |
-| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-19T01:48:59.570Z |  |
-| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-19T01:49:08.863Z |  |
-| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-19T01:49:17.874Z |  |
-| CMP-009 | Intel Corporation | Healthy | 5 | 0 | 0 | 2026-08-19T01:49:26.190Z |  |
-| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-19T01:49:39.962Z |  |
-| CMP-011 | Microsoft Corporation | Healthy | 26 | 0 | 0 | 2026-08-19T01:49:58.956Z |  |
-| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-19T01:50:07.705Z |  |
-| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-19T01:50:27.590Z |  |
-| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 40 | 0 | 0 | 2026-08-19T01:50:50.740Z |  |
-| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-19T01:51:02.112Z |  |
-| CMP-016 | Microsoft | Healthy | 20 | 0 | 0 | 2026-08-19T01:51:11.915Z |  |
-| CMP-017 | Goldman Sachs | Healthy | 19 | 0 | 0 | 2026-08-19T01:51:20.545Z |  |
+| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-19T03:08:45.344Z |  |
+| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-19T03:09:29.744Z |  |
+| CMP-003 | Google LLC | Healthy | 3 | 0 | 0 | 2026-08-19T03:09:38.072Z |  |
+| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-19T03:09:52.697Z |  |
+| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-19T03:11:08.007Z |  |
+| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-19T03:12:39.790Z |  |
+| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-19T03:12:49.178Z |  |
+| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-19T03:13:15.603Z |  |
+| CMP-009 | Intel Corporation | Healthy | 5 | 0 | 0 | 2026-08-19T03:13:23.930Z |  |
+| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-19T03:13:33.073Z |  |
+| CMP-011 | Microsoft Corporation | Healthy | 26 | 0 | 0 | 2026-08-19T03:13:52.067Z |  |
+| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-19T03:14:00.966Z |  |
+| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-19T03:14:20.899Z |  |
+| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 40 | 0 | 0 | 2026-08-19T03:14:36.573Z |  |
+| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-19T03:14:47.195Z |  |
+| CMP-016 | Microsoft | Healthy | 20 | 0 | 0 | 2026-08-19T03:14:56.430Z |  |
+| CMP-017 | Goldman Sachs | Healthy | 19 | 0 | 0 | 2026-08-19T03:15:05.060Z |  |
 
 > “Degraded” means extraction could not prove the source was complete. Review the unfiltered dashboard or workbook audit sheets for every decision.
