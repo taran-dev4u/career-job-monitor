@@ -1,6 +1,6 @@
 # Latest Eligible Jobs — Filtered
 
-Updated: **2026-08-19T04:00:08.164Z UTC** / **Aug 19, 2026, 12:00 AM Eastern**
+Updated: **2026-08-19T04:53:21.711Z UTC** / **Aug 19, 2026, 12:53 AM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
@@ -25,7 +25,6 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 | 2026-08-18T17:40:49.402Z | Oracle America, Inc | Platform Software Engineer 1 - Full-time Intern Conversion | United States | Internship | 2026-08-18T17:10:30.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://careers.oracle.com/en/sites/jobsearch/job/342415) |
 | 2026-08-18T16:48:12.722Z | Goldman Sachs | Engineering-L2-Dallas-Analyst-Software Engineering | Not stated | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/181810) |
 | 2026-08-18T16:41:03.547Z | Amazon.com Services LLC | Software Development Engineer, iOS | Not stated | Not specified | Posted: August 17, 2026 (Updated about 19 hours ago) | Not stated | 1+ years | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10505107/software-development-engineer-ios) |
-| 2026-08-18T15:12:05.007Z | Apple Inc | iOS Engineer - Creator Studio | Not stated | Not specified | Aug 17, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678174-1435/ios-engineer-creator-studio?team=SFTWR) |
 | 2026-08-18T14:57:30.119Z | JPMorgan Chase & Co | Software Engineer III (Java & AWS) | New York, NY, United States | Full time | 2026-08-18T14:49:34.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210735404) |
 | 2026-08-18T14:24:50.526Z | Apple Inc | Infrastructure Software Engineer (Provisioning) - Apple Services Engineering | Not stated | Not specified | Aug 17, 2026 | Not stated | 3+ years | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678460-0836/infrastructure-software-engineer-provisioning-apple-services-engineering?team=SFTWR) |
 | 2026-08-18T14:18:20.178Z | Goldman Sachs | Corporate Planning & Management, Software Engineering, Dallas, Associate | Not stated | Not specified | Not stated | Not stated | 3+ years | Unclear | [Apply](https://higher.gs.com/roles/170257) |
@@ -72,22 +71,22 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 
 | ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |
 |---|---|---|---:|---:|---:|---|---|
-| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-19T03:53:59.533Z |  |
-| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-19T03:54:48.523Z |  |
-| CMP-003 | Google LLC | Healthy | 3 | 0 | 0 | 2026-08-19T03:54:56.878Z |  |
-| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-19T03:55:11.560Z |  |
-| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-19T03:56:27.734Z |  |
-| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-19T03:57:59.364Z |  |
-| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-19T03:58:08.772Z |  |
-| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-19T03:58:18.048Z |  |
-| CMP-009 | Intel Corporation | Healthy | 5 | 0 | 0 | 2026-08-19T03:58:26.267Z |  |
-| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-19T03:58:35.419Z |  |
-| CMP-011 | Microsoft Corporation | Healthy | 26 | 0 | 0 | 2026-08-19T03:58:54.423Z |  |
-| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-19T03:59:03.123Z |  |
-| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-19T03:59:23.086Z |  |
-| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 40 | 0 | 0 | 2026-08-19T03:59:38.816Z |  |
-| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-19T03:59:49.687Z |  |
-| CMP-016 | Microsoft | Healthy | 20 | 0 | 0 | 2026-08-19T03:59:59.360Z |  |
-| CMP-017 | Goldman Sachs | Healthy | 19 | 0 | 0 | 2026-08-19T04:00:08.089Z |  |
+| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-19T04:47:02.276Z |  |
+| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-19T04:47:50.550Z |  |
+| CMP-003 | Google LLC | Healthy | 3 | 0 | 0 | 2026-08-19T04:47:59.054Z |  |
+| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-19T04:48:19.724Z |  |
+| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-19T04:49:37.025Z |  |
+| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-19T04:51:11.341Z |  |
+| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-19T04:51:20.808Z |  |
+| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-19T04:51:30.406Z |  |
+| CMP-009 | Intel Corporation | Healthy | 5 | 0 | 0 | 2026-08-19T04:51:38.725Z |  |
+| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-19T04:51:48.272Z |  |
+| CMP-011 | Microsoft Corporation | Healthy | 26 | 0 | 0 | 2026-08-19T04:52:07.595Z |  |
+| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-19T04:52:16.502Z |  |
+| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-19T04:52:37.041Z |  |
+| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 40 | 0 | 0 | 2026-08-19T04:52:53.035Z |  |
+| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-19T04:53:03.200Z |  |
+| CMP-016 | Microsoft | Healthy | 20 | 0 | 0 | 2026-08-19T04:53:12.393Z |  |
+| CMP-017 | Goldman Sachs | Healthy | 19 | 0 | 0 | 2026-08-19T04:53:21.588Z |  |
 
 > “Degraded” means extraction could not prove the source was complete. Review the unfiltered dashboard or workbook audit sheets for every decision.
