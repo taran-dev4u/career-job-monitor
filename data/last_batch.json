@@ -1,33 +1,10 @@
 {
-  "run_at": "2026-08-19T13:57:34.015Z",
+  "run_at": "2026-08-19T14:58:42.294Z",
   "suppressed": false,
-  "jobs": [
-    {
-      "discovered_at": "2026-08-19T13:57:34.015Z",
-      "company_id": "CMP-008",
-      "company": "JPMorgan Chase & Co",
-      "role": "Full stack Java and React Software Engineer II",
-      "location": "Plano, TX, United States",
-      "experience": "No required experience above 3 years detected",
-      "posted": "2026-08-19T13:22:02.000Z",
-      "job_id": "210780780",
-      "job_url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210780780",
-      "source_url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs?lastSelectedFacet=POSTING_DATES&location=United+States&locationId=300000000289738&locationLevel=country&mode=location&selectedCategoriesFacet=300000086152753&selectedPostingDatesFacet=7",
-      "match_reason": "Eligible technical role; No required experience above 3 years detected; sponsorship: Available; Not an internship",
-      "description_snippet": "Push the limits of what’s possible with us as an experienced member of our Software Engineering team. As an Experienced Software Engineer at JPMorgan Chase within the Global Technology team, you serve as member of an agile team to design and deliver trusted market-leading technology products in a secure, stable, and scalable way. Depending on the team that you join, you could be developing mobile features that give our customers and clients more control over how they bank with us, strategizing on how big data can make our trading systems quicker, creating the next innovation in payments for merchants, or supporting the integration of our private and public cloud platforms. Job Responsibilities Participates in, design and develop scalable and resilient systems using Java to contribute to continual, iterative improvements for product teams Executes software solutions, design, development,…",
-      "key": "bfbe168d0c125e1d262431fd",
-      "active_status": "Active",
-      "job_type": "Full time",
-      "required_experience_years": null,
-      "preferred_experience_years": null,
-      "sponsorship_status": "Available",
-      "sponsorship_evidence": "We do not offer any type of employment-based immigration sponsorship for this position.",
-      "experience_evidence": "No explicit required-years statement detected"
-    }
-  ],
+  "jobs": [],
   "health_alerts": [
     {
-      "run_at": "2026-08-19T13:53:18.477Z",
+      "run_at": "2026-08-19T14:46:50.110Z",
       "company_id": "CMP-005",
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "source_url": "https://jobs.fidelity.com/en/jobs/?search=software&team=Technology&pagesize=20&origin=filtered#results",
@@ -42,8 +19,8 @@
       "eligible_count": 0,
       "rejected_count": 17,
       "zero_streak": 0,
-      "degraded_streak": 6,
-      "last_candidate_at": "2026-08-19T13:53:18.477Z",
+      "degraded_streak": 7,
+      "last_candidate_at": "2026-08-19T14:46:50.110Z",
       "last_healthy_at": "2026-08-19T07:50:17.446Z",
       "diagnostic": "3 jobs await detail evaluation"
     }
