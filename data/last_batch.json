@@ -1,10 +1,33 @@
 {
-  "run_at": "2026-08-19T11:43:46.991Z",
+  "run_at": "2026-08-19T12:00:39.133Z",
   "suppressed": false,
-  "jobs": [],
+  "jobs": [
+    {
+      "discovered_at": "2026-08-19T12:00:39.133Z",
+      "company_id": "CMP-008",
+      "company": "JPMorgan Chase & Co",
+      "role": "Software Engineer II - Full Stack Developer",
+      "location": "Columbus, OH, United States",
+      "experience": "No required experience above 3 years detected",
+      "posted": "2026-08-19T11:40:56.000Z",
+      "job_id": "210778811",
+      "job_url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210778811",
+      "source_url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs?lastSelectedFacet=POSTING_DATES&location=United+States&locationId=300000000289738&locationLevel=country&mode=location&selectedCategoriesFacet=300000086152753&selectedPostingDatesFacet=7",
+      "match_reason": "Eligible technical role; No required experience above 3 years detected; sponsorship: Not Mentioned; Not an internship",
+      "description_snippet": "You’re ready to gain the skills and experience needed to grow within your role and advance your career — and we have the perfect software engineering opportunity for you. As a Software Engineer II at JPMorganChase within the JPMorgan Chase Asset & Wealth Management, you are part of an agile Tools Team that works to enhance, design, and deliver the software components of the firm’s state-of-the-art technology products in a secure, stable, and scalable way. As an emerging member of a software engineering team, you execute software solutions through the design, development, and technical troubleshooting of multiple components within a technical product, application, or system, while gaining the skills and experience needed to grow within your role. Job responsibilities Executes standard software solution, design, development, and technical troubleshooting Writes secure and high-quality cod…",
+      "key": "04b13616e46c5feba90aaeb1",
+      "active_status": "Active",
+      "job_type": "Full time",
+      "required_experience_years": null,
+      "preferred_experience_years": null,
+      "sponsorship_status": "Not Mentioned",
+      "sponsorship_evidence": "No sponsorship restriction found",
+      "experience_evidence": "No explicit required-years statement detected"
+    }
+  ],
   "health_alerts": [
     {
-      "run_at": "2026-08-19T11:39:00.542Z",
+      "run_at": "2026-08-19T11:56:46.182Z",
       "company_id": "CMP-005",
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "source_url": "https://jobs.fidelity.com/en/jobs/?search=software&team=Technology&pagesize=20&origin=filtered#results",
@@ -19,8 +42,8 @@
       "eligible_count": 0,
       "rejected_count": 19,
       "zero_streak": 0,
-      "degraded_streak": 3,
-      "last_candidate_at": "2026-08-19T11:39:00.542Z",
+      "degraded_streak": 4,
+      "last_candidate_at": "2026-08-19T11:56:46.182Z",
       "last_healthy_at": "2026-08-19T07:50:17.446Z",
       "diagnostic": "1 jobs await detail evaluation"
     }
