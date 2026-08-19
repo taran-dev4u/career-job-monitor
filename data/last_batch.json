@@ -1,6 +1,28 @@
 {
-  "run_at": "2026-08-19T10:44:21.835Z",
+  "run_at": "2026-08-19T11:43:46.991Z",
   "suppressed": false,
   "jobs": [],
-  "health_alerts": []
+  "health_alerts": [
+    {
+      "run_at": "2026-08-19T11:39:00.542Z",
+      "company_id": "CMP-005",
+      "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
+      "source_url": "https://jobs.fidelity.com/en/jobs/?search=software&team=Technology&pagesize=20&origin=filtered#results",
+      "resolved_url": "https://jobs.fidelity.com/en/jobs/?search=software&team=Technology&pagesize=20&origin=filtered#results",
+      "adapter": "Phenom",
+      "http_status": 200,
+      "status": "Degraded",
+      "candidate_count": 20,
+      "detail_success_count": 19,
+      "detail_error_count": 0,
+      "pending_detail_count": 1,
+      "eligible_count": 0,
+      "rejected_count": 19,
+      "zero_streak": 0,
+      "degraded_streak": 3,
+      "last_candidate_at": "2026-08-19T11:39:00.542Z",
+      "last_healthy_at": "2026-08-19T07:50:17.446Z",
+      "diagnostic": "1 jobs await detail evaluation"
+    }
+  ]
 }
