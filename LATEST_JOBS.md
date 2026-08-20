@@ -1,17 +1,18 @@
 # Latest Eligible Jobs — Filtered
 
-Updated: **2026-08-20T22:37:30.126Z UTC** / **Aug 20, 2026, 6:37 PM Eastern**
+Updated: **2026-08-20T23:00:48.984Z UTC** / **Aug 20, 2026, 7:00 PM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
 > Newest discovered jobs are always shown first.
 
-Source health: **14 healthy**, **0 confirmed empty**, **3 degraded**, **0 broken**.
+Source health: **15 healthy**, **0 confirmed empty**, **2 degraded**, **0 broken**.
 
 ## Apply Now
 
 | First Seen | Company | Role | Location | Type | Posted | Required | Preferred | Sponsorship | Apply |
 |---|---|---|---|---|---|---:|---:|---|---|
+| 2026-08-20T23:00:25.679Z | Microsoft | Software Engineer II - Finance Data & Experiences | Redmond, WA,US, US | FULL_TIME | 2026-08-20T22:31:48 | Not stated | Not stated | Not Mentioned | [Apply](https://apply.careers.microsoft.com/careers/job/1970393556962912) |
 | 2026-08-20T22:36:38.714Z | COMPUNNEL SOFTWARE GROUP, INC | VINOF 510 ANDROID DEVELOPER | Not stated | Not specified | Not stated | Not stated | Not stated | Unclear | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=2XAScaJTRTev5VtDrkt0Lg%3d%3d&Source=4414&EntityGroup=2321) |
 | 2026-08-20T22:36:38.714Z | COMPUNNEL SOFTWARE GROUP, INC | VINOF 511 iOS DEVELOPER | Not stated | Not specified | Not stated | Not stated | Not stated | Unclear | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=1noleQo3qZihe3RJEM8sAA%3d%3d&Source=4414&EntityGroup=2321) |
 | 2026-08-20T22:36:38.714Z | COMPUNNEL SOFTWARE GROUP, INC | VINOF 512 AWS CLOUD ENGINEER | Not stated | Not specified | Not stated | Not stated | Not stated | Unclear | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=ICLbfcSKsy63cNDwRNQwbA%3d%3d&Source=4414&EntityGroup=2321) |
@@ -30,7 +31,6 @@ Source health: **14 healthy**, **0 confirmed empty**, **3 degraded**, **0 broken
 | 2026-08-20T18:51:34.691Z | Apple Inc | Software Development Engineer: Screen Sharing Experiences | Not stated | Not specified | Aug 20, 2026 | 3+ years | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678056-0836/software-development-engineer-screen-sharing-experiences?team=SFTWR) |
 | 2026-08-20T18:51:34.691Z | Apple Inc | Software Engineer (Transactional), AI & Data Platforms (AiDP) | Not stated | Not specified | Aug 20, 2026 | 3+ years | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200679104-3956/software-engineer-transactional-ai-data-platforms-aidp?team=SFTWR) |
 | 2026-08-20T18:01:09.104Z | JPMorgan Chase & Co | Software Engineer III - AI/ML Platform Engineer | Jersey City, NJ, United States | Full time | 2026-08-20T17:50:04.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210780965) |
-| 2026-08-20T17:37:26.860Z | Apple Inc | Software Engineer (Java Middleware), eBusiness | Not stated | Not specified | Aug 20, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678154-3956/software-engineer-java-middleware-ebusiness?team=SFTWR) |
 | 2026-08-20T17:37:26.860Z | Apple Inc | Software Engineer (Java Middleware), eBusiness | Not stated | Not specified | Aug 20, 2026 | 2+ years | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678157-3956/software-engineer-java-middleware-ebusiness?team=SFTWR) |
 | 2026-08-20T15:41:42.876Z | JPMorgan Chase & Co | Java React Full-Stack Software Engineer III | Jersey City, NJ, United States | Full time | 2026-08-20T15:22:28.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210758685) |
 | 2026-08-20T15:41:42.876Z | JPMorgan Chase & Co | Java Software Engineer III | Jersey City, NJ, United States | Full time | 2026-08-20T14:56:55.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210758037) |
@@ -69,6 +69,7 @@ Source health: **14 healthy**, **0 confirmed empty**, **3 degraded**, **0 broken
 | 2026-08-20T08:44:57.513Z | Apple Inc | Product Data Scientist, Employee Experience & Productivity, IS&T | Not stated | Not specified | Aug 19, 2026 | 3+ years | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200677976-3956/product-data-scientist-employee-experience-productivity-is-t?team=SFTWR) |
 | 2026-08-20T08:44:57.513Z | Apple Inc | Software Image Quality Engineer, Creativity Apps | Not stated | Not specified | Aug 19, 2026 | Not stated | 4+ years | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678561-0836/software-image-quality-engineer-creativity-apps?team=SFTWR) |
 | 2026-08-20T08:44:07.198Z | Meta Platforms, Inc | Embedded Software Engineer | Redmond, WA, US | Full-time | 2026-08-05T07:13:23-07:00 | Not stated | Not stated | Not Mentioned | [Apply](https://www.metacareers.com/profile/job_details/4535026343380190/) |
+| 2026-08-19T15:49:47.740Z | Oracle America, Inc | Software Developer 4 | Seattle, WA, United States | Not specified | 2026-08-19T15:34:09.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://careers.oracle.com/en/sites/jobsearch/job/336278) |
 | 2026-08-18T16:41:03.547Z | Amazon.com Services LLC | Software Development Engineer, iOS | Not stated | Not specified | Posted: August 7, 2026 (Updated 13 days ago) | Not stated | 1+ years | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10505107/software-development-engineer-ios) |
 | 2026-08-18T14:47:33.519Z | Qualcomm Technologies, Inc | Computer Vision Engineer | San Diego, CA,US, US | FULL_TIME | 2026-07-29T00:00:00 | Not stated | 4+ years | Not Mentioned | [Apply](https://careers.qualcomm.com/careers/job/446720178575) |
 | 2026-08-18T14:16:58.737Z | Microsoft | Member of Technical Staff, Microsoft Robotics (Robot Learning) | Redmond, WA,US, US; Redmond, WA,US, US | FULL_TIME | 2026-05-29T17:31:13 | Not stated | Not stated | Not Mentioned | [Apply](https://apply.careers.microsoft.com/careers/job/1970393556866699) |
@@ -93,7 +94,6 @@ Source health: **14 healthy**, **0 confirmed empty**, **3 degraded**, **0 broken
 | 2026-08-18T13:52:08.595Z | Microsoft | Software Engineering - CTJ - Poly | Redmond, WA,US, US; Reston, VA,US, US; Jessup, MD,US, US | FULL_TIME | 2026-08-07T20:31:58 | Not stated | Not stated | Not Mentioned | [Apply](https://apply.careers.microsoft.com/careers/job/1970393556858723) |
 | 2026-08-18T13:52:08.595Z | Microsoft | Software Engineer II - CTJ - Poly | Reston, VA,US, US; Redmond, WA,US, US; Jessup, MD,US, US | FULL_TIME | 2026-08-04T23:52:35 | Not stated | Not stated | Not Mentioned | [Apply](https://apply.careers.microsoft.com/careers/job/1970393556955702) |
 | 2026-08-18T13:52:08.595Z | Microsoft | Software Engineer II - CTJ - Poly | Reston, VA,US, US; Redmond, WA,US, US | FULL_TIME | 2026-06-02T22:30:42 | Not stated | Not stated | Not Mentioned | [Apply](https://apply.careers.microsoft.com/careers/job/1970393556863430) |
-| 2026-08-18T13:52:08.595Z | Microsoft | Software Engineer II - CTJ - Poly | US; Redmond, WA,US, US; Reston, VA,US, US; Jessup, MD,US, US | FULL_TIME | 2026-03-25T18:52:23 | Not stated | Not stated | Not Mentioned | [Apply](https://apply.careers.microsoft.com/careers/job/1970393556852481) |
 | 2026-08-18T13:52:08.595Z | Microsoft | Software Engineer - CTJ - Poly | Reston, VA,US, US; Redmond, WA,US, US; Jessup, MD,US, US; Reston, VA,US, US; Redmond, WA,US, US; Jessup, MD,US, US | FULL_TIME | 2026-03-18T21:56:24 | Not stated | Not stated | Not Mentioned | [Apply](https://apply.careers.microsoft.com/careers/job/1970393556824773) |
 | 2026-08-18T13:51:21.036Z | Cisco Systems, Inc | AI Software Engineer II - (United States) | Research Triangle Park, North Carolina, United States of America | FULL_TIME | 2026-08-15 | Not stated | Not stated | Not Mentioned | [Apply](https://careers.cisco.com/global/en/job/2020810/AI-Software-Engineer-II-United-States) |
 | 2026-08-18T13:50:36.662Z | Qualcomm Technologies, Inc | Linux Peripheral Software Engineer | Santa Clara, CA,US, US | FULL_TIME | 2026-08-06T00:00:00 | Not stated | 3+ years | Not Mentioned | [Apply](https://careers.qualcomm.com/careers/job/446720280499) |
@@ -110,22 +110,22 @@ Source health: **14 healthy**, **0 confirmed empty**, **3 degraded**, **0 broken
 
 | ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |
 |---|---|---|---:|---:|---:|---|---|
-| CMP-003 | Google LLC | Healthy | 2 | 0 | 0 | 2026-08-20T22:35:22.683Z |  |
-| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-20T22:35:29.572Z |  |
-| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-20T22:35:35.119Z |  |
-| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-20T22:35:44.671Z |  |
-| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-20T22:35:58.295Z |  |
-| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-20T22:36:08.954Z |  |
-| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-20T22:36:10.476Z |  |
-| CMP-010 | Oracle America, Inc | Degraded | 0 | 0 | 1 | 2026-08-20T21:57:49.769Z | Page loaded but zero jobs were not explicitly confirmed |
-| CMP-011 | Microsoft Corporation | Healthy | 23 | 0 | 0 | 2026-08-20T22:36:24.472Z |  |
-| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-20T22:36:26.585Z |  |
+| CMP-003 | Google LLC | Healthy | 2 | 0 | 0 | 2026-08-20T22:59:09.032Z |  |
+| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-20T22:59:16.143Z |  |
+| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-20T22:59:21.071Z |  |
+| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-20T22:59:30.141Z |  |
+| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-20T22:59:39.644Z |  |
+| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-20T22:59:45.229Z |  |
+| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-20T22:59:47.918Z |  |
+| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-20T22:59:59.235Z |  |
+| CMP-011 | Microsoft Corporation | Healthy | 23 | 0 | 0 | 2026-08-20T23:00:01.646Z |  |
+| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-20T23:00:07.649Z |  |
+| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-20T23:00:22.076Z |  |
 | CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Degraded | 20 | 0 | 0 | 2026-08-19T07:50:17.446Z | 1 jobs await detail evaluation |
-| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 20 | 0 | 0 | 2026-08-20T22:36:42.559Z |  |
-| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-20T22:36:44.663Z |  |
-| CMP-016 | Microsoft | Healthy | 20 | 0 | 0 | 2026-08-20T22:36:51.967Z |  |
-| CMP-017 | Goldman Sachs | Healthy | 18 | 0 | 0 | 2026-08-20T22:36:53.416Z |  |
+| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 20 | 0 | 0 | 2026-08-20T23:00:30.734Z |  |
+| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-20T23:00:33.615Z |  |
+| CMP-016 | Microsoft | Healthy | 20 | 0 | 0 | 2026-08-20T23:00:39.672Z |  |
+| CMP-017 | Goldman Sachs | Healthy | 18 | 0 | 0 | 2026-08-20T23:00:43.992Z |  |
 | CMP-006 | IBM Corporation | Degraded | 30 | 0 | 0 | 2026-08-20T20:01:48.469Z | 3 jobs await detail evaluation |
-| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-20T22:37:30.047Z |  |
 
 > “Degraded” means extraction could not prove the source was complete. Review the unfiltered dashboard or workbook audit sheets for every decision.

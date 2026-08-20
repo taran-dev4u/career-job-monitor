@@ -3248,5 +3248,27 @@
     "sponsorship_status": "Unclear",
     "sponsorship_evidence": "Send Resume with Legal Status for Work Authorization Job Benefits: Health/Dental Benefits, Retirement Benefits, Other Benefits Apply by Email: Attn: Vinayak Rampalli Compunnel Software Group, Inc.",
     "experience_evidence": "No explicit required-years statement detected"
+  },
+  {
+    "discovered_at": "2026-08-20T23:00:48.984Z",
+    "company_id": "CMP-016",
+    "company": "Microsoft",
+    "role": "Software Engineer II - Finance Data & Experiences",
+    "location": "Redmond, WA,US, US",
+    "experience": "No required experience above 3 years detected",
+    "posted": "2026-08-20T22:31:48",
+    "job_id": "1970393556962912",
+    "job_url": "https://apply.careers.microsoft.com/careers/job/1970393556962912",
+    "source_url": "https://apply.careers.microsoft.com/careers?start=0&location=United+States&pid=1970393556867395&sort_by=timestamp&filter_include_remote=1&filter_profession=software+engineering%2Cresearch%252C%2520applied%252C%2520%2526%2520data%2520sciences&filter_seniority=Entry",
+    "match_reason": "Eligible technical role; No required experience above 3 years detected; sponsorship: Not Mentioned; Not an internship",
+    "description_snippet": "Design, build, test, and maintain reliable data pipelines, data transformations, and data services that support business reporting, analytics, AI, and product experiences. Partner with stakeholders across Finance, Sales, Marketing, Business Operations, and Product Engineering to understand requirements and translate them into clear, incremental technical deliverables. Develop and maintain code, data processing logic, and automation using modern engineering practices, with a focus on extensibility, maintainability, reliability, and testability. Explore design options for data and software solutions, document tradeoffs, and incorporate feedback from more experienced engineers and partner teams. Build and improve data quality checks, validation, monitoring, and telemetry to detect issues early and improve trust in business-critical data assets. Participate in code reviews and data pipeline…",
+    "key": "24d0ed4cc7f9582bfbc20a88",
+    "active_status": "Active",
+    "job_type": "FULL_TIME",
+    "required_experience_years": null,
+    "preferred_experience_years": null,
+    "sponsorship_status": "Not Mentioned",
+    "sponsorship_evidence": "No sponsorship restriction found",
+    "experience_evidence": "No explicit required-years statement detected"
   }
 ]
