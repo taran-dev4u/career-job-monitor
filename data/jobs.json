@@ -2654,5 +2654,27 @@
     "sponsorship_status": "Not Mentioned",
     "sponsorship_evidence": "No sponsorship restriction found",
     "experience_evidence": "No explicit required-years statement detected"
+  },
+  {
+    "discovered_at": "2026-08-20T18:02:22.857Z",
+    "company_id": "CMP-008",
+    "company": "JPMorgan Chase & Co",
+    "role": "Software Engineer III - AI/ML Platform Engineer",
+    "location": "Jersey City, NJ, United States",
+    "experience": "No required experience above 3 years detected",
+    "posted": "2026-08-20T17:50:04.000Z",
+    "job_id": "210780965",
+    "job_url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210780965",
+    "source_url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs?lastSelectedFacet=POSTING_DATES&location=United+States&locationId=300000000289738&locationLevel=country&mode=location&selectedCategoriesFacet=300000086152753&selectedPostingDatesFacet=7",
+    "match_reason": "Eligible technical role; No required experience above 3 years detected; sponsorship: Not Mentioned; Not an internship",
+    "description_snippet": "Join a team where your engineering work accelerates how machine learning is built, governed, and delivered across JPMorgan Chase. You will help create platform capabilities that make it easier for teams to move from ideas to production with confidence. If you enjoy building scalable systems and improving developer experience, this role offers meaningful impact and career growth. As a Software Engineer III at JPMorgan Chase within the Corporate Artificial Intelligence and Machine Learning Data Platforms team, you will build and enhance products that support the machine learning lifecycle—spanning model operations, data development (such as processing and data annotation), and governance tooling. You will collaborate closely with engineers, system architects, product managers, data scientists, and research partners to deliver reliable, secure, and user-friendly platform services. Job resp…",
+    "key": "37756b93ce5b970a14b10375",
+    "active_status": "Active",
+    "job_type": "Full time",
+    "required_experience_years": null,
+    "preferred_experience_years": null,
+    "sponsorship_status": "Not Mentioned",
+    "sponsorship_evidence": "No sponsorship restriction found",
+    "experience_evidence": "No explicit required-years statement detected"
   }
 ]
