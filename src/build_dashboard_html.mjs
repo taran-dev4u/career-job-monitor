@@ -110,7 +110,7 @@ async function build() {
   // All configured companies, so a zero-candidate source is still visible.
   const healthById = new Map(health.map(h => [h.company_id, h]));
   const allCompanies = companies.map(c => ({
-    id: c.id, name: c.company,
+    id: c.id, name: c.company, url: c.career_url || "",
     status: healthById.get(c.id)?.status || "Unknown",
     candidates: healthById.get(c.id)?.candidate_count ?? 0
   }));
@@ -289,39 +289,67 @@ footer{color:var(--muted);font-size:12px;margin-top:28px;text-align:center}
 .act button.on-applied{background:var(--good);color:#fff;border-color:transparent}
 .act button.on-dismiss{background:var(--muted);color:#fff;border-color:transparent}
 tr.dismissed{opacity:.45}
+
+/* sticky nav */
+.appbar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--page) 92%,transparent);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--border);margin:-20px -20px 16px;padding:10px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.appbar h1{font-size:18px;margin:0;font-weight:660;letter-spacing:-0.01em;white-space:nowrap}
+.nav{display:flex;gap:4px;flex-wrap:wrap}
+.nav a{padding:5px 12px;border-radius:999px;font-size:13px;color:var(--ink2);font-weight:550}
+.nav a:hover{background:color-mix(in srgb,var(--brand) 12%,transparent);color:var(--ink);text-decoration:none}
+.appbar .sub{font-size:12px;color:var(--muted)}
+.appbar .spacer{flex:1}
+th{top:52px}
+section, details.panel{scroll-margin-top:64px}
+details.panel > summary{cursor:pointer;font-size:15px;font-weight:640;list-style:none;
+  display:flex;align-items:center;gap:8px;padding:2px 0}
+details.panel > summary::-webkit-details-marker{display:none}
+details.panel > summary::before{content:"▸";color:var(--muted);font-size:12px;transition:transform .15s}
+details.panel[open] > summary::before{transform:rotate(90deg)}
+details.panel > summary .cnt{font-size:12px;color:var(--muted);font-weight:500;margin-left:auto}
+.linkbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.linkbar a{font-size:12px;padding:5px 11px;border:1px solid var(--border);border-radius:8px;color:var(--ink2);background:var(--card)}
+.linkbar a:hover{border-color:var(--baseline);color:var(--ink);text-decoration:none}
+.carlinks{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:6px;margin-top:10px}
+.carlinks a{font-size:12px;padding:6px 10px;border:1px solid var(--border);border-radius:8px;color:var(--ink2);
+  background:var(--surface);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;gap:6px;align-items:center}
+.carlinks a:hover{border-color:var(--baseline);color:var(--ink);text-decoration:none}
+.carlinks .d{flex:none}
+#toTop{position:fixed;right:18px;bottom:18px;z-index:30;width:42px;height:42px;border-radius:50%;
+  border:1px solid var(--border);background:var(--brand);color:#fff;font-size:18px;cursor:pointer;
+  opacity:0;pointer-events:none;transition:opacity .2s;box-shadow:0 2px 10px rgba(0,0,0,.2)}
+#toTop.show{opacity:1;pointer-events:auto}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header class="top">
+  <div class="appbar">
     <h1>Career Job Monitor</h1>
-    <span class="sub" id="updated"></span>
+    <nav class="nav">
+      <a href="#jobs">Jobs</a>
+      <a href="#trends">Trends</a>
+      <a href="#sources">Sources</a>
+      <a href="#careerpages">Career pages</a>
+    </nav>
     <span class="spacer"></span>
+    <span class="sub" id="updated"></span>
     <button class="ghost" id="themeBtn">◐ Theme</button>
-  </header>
-  <div class="links">
-    <a href="https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml" target="_blank" rel="noopener">Workflow runs ↗</a>
-    <a href="https://github.com/taran-dev4u/career-job-monitor/issues" target="_blank" rel="noopener">Alerts ↗</a>
-    <a href="https://github.com/taran-dev4u/career-job-monitor/blob/main/LATEST_JOBS.md" target="_blank" rel="noopener">LATEST_JOBS.md ↗</a>
   </div>
 
   <div id="banner"></div>
   <div class="tiles" id="tiles"></div>
 
-  <div class="grid2">
-    <div class="panel">
-      <h2>New eligible jobs per run</h2>
-      <div class="chart" id="chartNew"></div>
-      <div class="legend">Genuinely new accepted roles surfaced each scan (last runs).</div>
-    </div>
-    <div class="panel">
-      <h2>Jobs extracted per run</h2>
-      <div class="chart" id="chartExtracted"></div>
-      <div class="legend">Total candidates evaluated each scan.</div>
-    </div>
+  <div class="linkbar">
+    <a href="https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml" target="_blank" rel="noopener">▶ Workflow runs</a>
+    <a href="https://github.com/taran-dev4u/career-job-monitor/blob/main/LATEST_JOBS.md" target="_blank" rel="noopener">📄 Latest jobs (md)</a>
+    <a href="https://github.com/taran-dev4u/career-job-monitor/blob/main/ALL_EXTRACTED_JOBS.md" target="_blank" rel="noopener">🗂 All extracted (md)</a>
+    <a href="https://github.com/taran-dev4u/career-job-monitor/raw/main/outputs/job-monitor/Job_Monitor.xlsx" target="_blank" rel="noopener">⬇ Excel workbook</a>
+    <a href="https://www.linkedin.com/jobs/" target="_blank" rel="noopener">in LinkedIn Jobs</a>
+    <a href="https://github.com/taran-dev4u/career-job-monitor" target="_blank" rel="noopener">⌥ Repo</a>
   </div>
 
-  <div class="panel">
+  <section id="jobs" class="panel">
     <h2>Jobs</h2>
     <div class="filters">
       <input type="search" id="q" placeholder="Search role, company, location…">
@@ -353,16 +381,30 @@ tr.dismissed{opacity:.45}
       <span class="count" id="rowCount"></span>
     </div>
     <div class="tablewrap">
-      <table id="jobs">
+      <table id="jobsTable">
         <thead><tr id="head"></tr></thead>
         <tbody id="body"></tbody>
       </table>
     </div>
-  </div>
+  </section>
 
-  <div class="panel">
-    <h2>Source health</h2>
-    <div class="tablewrap">
+  <details id="trends" class="panel" open>
+    <summary>Trends <span class="cnt">new &amp; extracted per scan</span></summary>
+    <div class="grid2" style="margin-top:12px">
+      <div>
+        <div class="legend" style="margin:0 0 4px">New eligible jobs per run</div>
+        <div class="chart" id="chartNew"></div>
+      </div>
+      <div>
+        <div class="legend" style="margin:0 0 4px">Jobs extracted per run</div>
+        <div class="chart" id="chartExtracted"></div>
+      </div>
+    </div>
+  </details>
+
+  <details id="sources" class="panel">
+    <summary>Source health <span class="cnt" id="srcCnt"></span></summary>
+    <div class="tablewrap" style="margin-top:12px">
       <table class="health-table">
         <thead><tr>
           <th>ID</th><th>Company</th><th>Status</th><th>Cand.</th><th>Eligible</th>
@@ -371,10 +413,16 @@ tr.dismissed{opacity:.45}
         <tbody id="healthBody"></tbody>
       </table>
     </div>
-  </div>
+  </details>
+
+  <details id="careerpages" class="panel">
+    <summary>Company career pages <span class="cnt" id="cpCnt"></span></summary>
+    <div class="carlinks" id="carlinks"></div>
+  </details>
 
   <footer id="foot"></footer>
 </div>
+<button id="toTop" title="Back to top">↑</button>
 <div class="tooltip" id="tt"></div>
 
 <script>
@@ -601,11 +649,32 @@ $("#themeBtn").onclick=()=>{
   draw();
 };
 
+// ---- company career-page links + section counts --------------------------
+function careerLinks(){
+  const list=(DATA.allCompanies||[]).filter(c=>c.url);
+  $("#cpCnt").textContent=list.length+" companies";
+  const down=(DATA.downSources||[]).length;
+  $("#srcCnt").textContent=(DATA.kpis.healthy||0)+" healthy"+(down?", "+down+" need attention":"");
+  $("#carlinks").innerHTML=list.map(c=>{
+    const cls=c.status==="Healthy"?"d-good":c.status==="Degraded"?"d-warn":c.status==="Broken"?"d-crit":"d-neutral";
+    return '<a href="'+esc(c.url)+'" target="_blank" rel="noopener" title="'+esc(c.name)+'"><span class="dot '+cls+'"></span>'+esc(c.name)+'</a>';
+  }).join("");
+}
+
+// ---- theme ----------------------------------------------------------------
+
 // ---- boot -----------------------------------------------------------------
-companyOptions(); head(); render(); healthRows(); draw();
+companyOptions(); head(); render(); healthRows(); careerLinks(); draw();
 ["q","fCompany","fDecision","fSpons","fEligible","fRecovered","fStatus","fHideDismissed"].forEach(id=>{
   const el=$("#"+id); el.addEventListener(id==="q"?"input":"change",render);
 });
+// Charts live inside the collapsible Trends panel — redraw when it opens so the
+// SVG picks up a real width.
+$("#trends").addEventListener("toggle",()=>{ if($("#trends").open) draw(); });
+// Back-to-top button.
+const toTop=$("#toTop");
+toTop.onclick=()=>window.scrollTo({top:0,behavior:"smooth"});
+window.addEventListener("scroll",()=>{ toTop.classList.toggle("show", window.scrollY>400); });
 $("#foot").textContent="Generated "+fmtDate(DATA.generatedAt)+" · "+DATA.candidates.length+" extracted records · "+DATA.acceptedHistory+" accepted in history";
 window.addEventListener("resize",()=>{ clearTimeout(window.__r); window.__r=setTimeout(draw,150); });
 </script>

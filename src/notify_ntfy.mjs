@@ -18,7 +18,7 @@ import { fileURLToPath } from "node:url";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const TOPIC = process.env.NTFY_TOPIC;
 const SERVER = (process.env.NTFY_SERVER || "https://ntfy.sh").replace(/\/$/, "");
-const MAX_PER_RUN = 12;
+const MAX_PER_RUN = 20;
 
 async function readJson(file, fallback) {
   try { return JSON.parse(await fs.readFile(file, "utf8")); }
@@ -40,17 +40,20 @@ async function main() {
 
   if (!jobs.length && !alerts.length) { console.log("No new jobs or health alerts to push."); return; }
 
+  const label = j => `${j.role || j.title || "New role"} — ${j.company || ""}`.trim();
   const send = jobs.slice(0, MAX_PER_RUN);
   let ok = 0;
   for (const j of send) {
     const role = j.role || j.title || "New role";
-    const company = j.company || "";
+    const company = j.company || "Unknown company";
     const loc = j.location && !/search for jobs/i.test(j.location) ? j.location : "US";
-    const spons = j.sponsorship_status ? ` · sponsorship: ${j.sponsorship_status}` : "";
+    const spons = j.sponsorship_status ? ` · ${j.sponsorship_status}` : "";
+    const posted = j.posted && !/not stated/i.test(j.posted) ? ` · ${j.posted}` : "";
     try {
       await push({
-        title: `${role} — ${company}`,
-        message: `${loc}${spons}\nTap to apply.`,
+        // Title carries company + role so the alert is meaningful on its own.
+        title: `🆕 ${role} · ${company}`,
+        message: `${company}\n${loc}${spons}${posted}\nTap to apply →`,
         click: j.job_url,
         tags: "briefcase",
         priority: 4
@@ -59,7 +62,9 @@ async function main() {
     } catch (e) { console.error(`ntfy job push failed: ${e.message}`); }
   }
   if (jobs.length > send.length) {
-    try { await push({ title: `+${jobs.length - send.length} more new jobs`, message: "Open the dashboard for the full list.", tags: "sparkles", priority: 3 }); } catch {}
+    // Even the overflow names the roles/companies, never a bare count.
+    const extra = jobs.slice(MAX_PER_RUN).map(label).join("\n");
+    try { await push({ title: `+${jobs.length - send.length} more new jobs`, message: extra, tags: "sparkles", priority: 3 }); } catch {}
   }
   if (alerts.length) {
     const names = [...new Set(alerts.map(a => a.company))].join(", ");

@@ -111,7 +111,9 @@ async function runOnce() {
   let browser;
   try {
     browser = await startBrowser(config.headless !== false);
-    for (const company of companies) {
+    const CONCURRENCY = Math.max(1, Number(config.scan_concurrency || 4));
+
+    async function scanOne(company) {
       const previous = healthById.get(company.id) || {};
       try {
         const result = await scanCompany(browser, company, config, state, suppressNotifications);
@@ -136,8 +138,19 @@ async function runOnce() {
         health.push({ run_at: new Date().toISOString(), company_id: company.id, company: company.company, source_url: company.career_url, resolved_url: "", adapter: adapterName(company.career_url), http_status: 0, status: "Broken", candidate_count: 0, detail_success_count: 0, detail_error_count: 0, pending_detail_count: 0, eligible_count: 0, rejected_count: 0, zero_streak: Number(previous.zero_streak || 0) + 1, degraded_streak: 0, last_candidate_at: previous.last_candidate_at || "", last_healthy_at: previous.last_healthy_at || "", diagnostic: error.message });
         console.error(`${company.id} ${company.company}: Broken; ${error.message}`);
       }
-      await writeJsonAtomic(dataPath("state.json"), state);
     }
+
+    // Bounded-concurrency pool: scan up to CONCURRENCY companies at once (each in
+    // its own browser context) instead of strictly one-at-a-time. This cuts a run
+    // from ~10 min to ~2-3 min. JS is single-threaded so the shared state/arrays
+    // are mutated safely; each company owns distinct keys. State is written once
+    // after all companies finish.
+    const queue = [...companies];
+    const workers = Array.from({ length: Math.min(CONCURRENCY, queue.length) }, async () => {
+      while (queue.length) { const company = queue.shift(); if (company) await scanOne(company); }
+    });
+    await Promise.all(workers);
+    await writeJsonAtomic(dataPath("state.json"), state);
   } finally { if (browser) await browser.close().catch(error => console.error(`Browser shutdown warning: ${error.message}`)); }
 
   const runAt = new Date().toISOString();

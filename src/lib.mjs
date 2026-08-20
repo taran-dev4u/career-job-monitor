@@ -26,8 +26,10 @@ export function extractJobId(url, text = "") {
   const patterns = [
     /\b((?:REQ|JR|JOB)[-_ ]?\d{4,})\b/i,
     /\/details\/([A-Za-z0-9_-]{4,})(?:\/|$|\?)/i,
-    /(?:[?&]|\/)(?:job(?:id)?|req(?:uisition)?(?:id)?|position(?:id)?|pid)[=\/_-]([A-Za-z0-9-]{4,})/i,
-    /\/(?:job|jobs)\/[^?#]*?((?:REQ|JR|R)?[-_]?\d{4,})(?:\/|$|\?)/i
+    /\/roles?\/([A-Za-z0-9_-]{4,})(?:\/|$|\?|#)/i,          // higher.gs.com/roles/176741
+    /(?:[?&]|\/)(?:job(?:id)?|req(?:uisition)?(?:id)?|position(?:id)?|posting(?:id)?|gh_jid|pid|id)[=\/_-]([A-Za-z0-9-]{4,})/i,
+    /\/(?:job|jobs|position|posting|opening|vacancy|careers?)\/[^?#]*?((?:REQ|JR|R)?[-_]?\d{4,})(?:\/|$|\?|#)/i,
+    /\/(\d{6,})(?:[/?#-]|$)/                                 // trailing numeric ID in the path
   ];
   for (const input of [url, text]) for (const pattern of patterns) {
     const match = String(input).match(pattern);
