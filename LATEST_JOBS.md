@@ -1,6 +1,6 @@
 # Latest Eligible Jobs — Filtered
 
-Updated: **2026-08-20T16:45:38.576Z UTC** / **Aug 20, 2026, 12:45 PM Eastern**
+Updated: **2026-08-20T17:39:18.182Z UTC** / **Aug 20, 2026, 1:39 PM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
@@ -12,6 +12,9 @@ Source health: **16 healthy**, **0 confirmed empty**, **1 degraded**, **0 broken
 
 | First Seen | Company | Role | Location | Type | Posted | Required | Preferred | Sponsorship | Apply |
 |---|---|---|---|---|---|---:|---:|---|---|
+| 2026-08-20T17:38:51.117Z | COMPUNNEL SOFTWARE GROUP, INC | Front-End Software Engineer AWS | Not stated | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=QwteLKj0jrgbK3xFZSwdCg%3d%3d&Source=4414&EntityGroup=2321) |
+| 2026-08-20T17:37:26.860Z | Apple Inc | Software Engineer (Java Middleware), eBusiness | Not stated | Not specified | Aug 20, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678154-3956/software-engineer-java-middleware-ebusiness?team=SFTWR) |
+| 2026-08-20T17:37:26.860Z | Apple Inc | Software Engineer (Java Middleware), eBusiness | Not stated | Not specified | Aug 20, 2026 | 2+ years | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678157-3956/software-engineer-java-middleware-ebusiness?team=SFTWR) |
 | 2026-08-20T16:44:52.373Z | COMPUNNEL SOFTWARE GROUP, INC | Full Stack Developer with AI Experience | Not stated | Not specified | Not stated | Not stated | 2+ years | Not Mentioned | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=G%2b2iMroEl74la2P7fDffjA%3d%3d&Source=4414&EntityGroup=2321) |
 | 2026-08-20T16:44:52.373Z | COMPUNNEL SOFTWARE GROUP, INC | Full Stack Developer with AI Experience | Not stated | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=Hz5q2yYXSvL6CiYnOGYJ9g%3d%3d&Source=4414&EntityGroup=2321) |
 | 2026-08-20T15:41:42.876Z | JPMorgan Chase & Co | Java React Full-Stack Software Engineer III | Jersey City, NJ, United States | Full time | 2026-08-20T15:22:28.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210758685) |
@@ -109,22 +112,22 @@ Source health: **16 healthy**, **0 confirmed empty**, **1 degraded**, **0 broken
 
 | ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |
 |---|---|---|---:|---:|---:|---|---|
-| CMP-003 | Google LLC | Healthy | 2 | 0 | 0 | 2026-08-20T16:42:50.143Z |  |
-| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-20T16:43:25.028Z |  |
-| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-20T16:43:26.456Z |  |
-| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-20T16:43:50.905Z |  |
-| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-20T16:44:01.912Z |  |
+| CMP-003 | Google LLC | Healthy | 2 | 0 | 0 | 2026-08-20T17:37:35.301Z |  |
+| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-20T17:37:47.047Z |  |
+| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-20T17:38:05.505Z |  |
+| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-20T17:38:13.007Z |  |
+| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-20T17:38:14.664Z |  |
+| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-20T17:38:22.000Z |  |
+| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-20T17:38:22.885Z |  |
+| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-20T17:38:35.790Z |  |
+| CMP-011 | Microsoft Corporation | Healthy | 24 | 0 | 0 | 2026-08-20T17:38:36.754Z |  |
+| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-20T17:38:44.800Z |  |
 | CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Degraded | 20 | 0 | 0 | 2026-08-19T07:50:17.446Z | 2 jobs await detail evaluation |
-| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-20T16:44:13.896Z |  |
-| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-20T16:44:26.052Z |  |
-| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-20T16:44:34.522Z |  |
-| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-20T16:44:34.726Z |  |
-| CMP-011 | Microsoft Corporation | Healthy | 24 | 0 | 0 | 2026-08-20T16:44:52.373Z |  |
-| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-20T16:44:58.834Z |  |
-| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-20T16:45:27.794Z |  |
-| CMP-016 | Microsoft | Healthy | 20 | 0 | 0 | 2026-08-20T16:45:27.883Z |  |
-| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 40 | 0 | 0 | 2026-08-20T16:45:36.111Z |  |
-| CMP-017 | Goldman Sachs | Healthy | 18 | 0 | 0 | 2026-08-20T16:45:36.383Z |  |
-| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-20T16:45:38.495Z |  |
+| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-20T17:38:56.815Z |  |
+| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 20 | 0 | 0 | 2026-08-20T17:39:00.515Z |  |
+| CMP-016 | Microsoft | Healthy | 20 | 0 | 0 | 2026-08-20T17:39:06.545Z |  |
+| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-20T17:39:07.026Z |  |
+| CMP-017 | Goldman Sachs | Healthy | 18 | 0 | 0 | 2026-08-20T17:39:09.045Z |  |
+| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-20T17:39:18.108Z |  |
 
 > “Degraded” means extraction could not prove the source was complete. Review the unfiltered dashboard or workbook audit sheets for every decision.
