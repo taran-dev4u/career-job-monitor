@@ -17,7 +17,7 @@ concurrency:
 jobs:
   monitor:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 40
 
     steps:
       - name: Check out repository
@@ -48,10 +48,11 @@ jobs:
       - name: Verify generated workbook
         run: npm run build-workbook:ci -- --verify
 
-      - name: Publish GitHub job and source-health alerts
+      - name: Push new-job alerts to ntfy (phone push, no email)
+        if: always()
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: node src/github_notify.mjs
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: node src/notify_ntfy.mjs
 
       - name: Upload current workbook
         if: always()
@@ -67,7 +68,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/state.json data/jobs.json data/runs.json data/current_candidates.json data/decision_history.json data/source_health.json data/last_batch.json LATEST_JOBS.md ALL_EXTRACTED_JOBS.md outputs/job-monitor/Job_Monitor.xlsx
+          git add data/state.json data/jobs.json data/runs.json data/current_candidates.json data/decision_history.json data/source_health.json data/last_batch.json LATEST_JOBS.md ALL_EXTRACTED_JOBS.md outputs/job-monitor/Job_Monitor.xlsx outputs/job-monitor/dashboard.html index.html .nojekyll
           if git diff --cached --quiet; then
             echo "No persistent changes to commit."
             exit 0
