@@ -1,10 +1,10 @@
 {
-  "run_at": "2026-08-20T13:05:28.938Z",
+  "run_at": "2026-08-20T13:54:41.090Z",
   "suppressed": false,
   "jobs": [],
   "health_alerts": [
     {
-      "run_at": "2026-08-20T13:05:04.537Z",
+      "run_at": "2026-08-20T13:54:36.307Z",
       "company_id": "CMP-005",
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "source_url": "https://jobs.fidelity.com/en/jobs/?search=software&team=Technology&pagesize=20&origin=filtered#results",
@@ -19,8 +19,8 @@
       "eligible_count": 0,
       "rejected_count": 18,
       "zero_streak": 0,
-      "degraded_streak": 15,
-      "last_candidate_at": "2026-08-20T13:05:04.537Z",
+      "degraded_streak": 16,
+      "last_candidate_at": "2026-08-20T13:54:36.307Z",
       "last_healthy_at": "2026-08-19T07:50:17.446Z",
       "diagnostic": "2 jobs await detail evaluation"
     }
