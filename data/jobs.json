@@ -2038,5 +2038,27 @@
     "sponsorship_status": "Not Mentioned",
     "sponsorship_evidence": "No sponsorship restriction found",
     "experience_evidence": "No explicit required-years statement detected"
+  },
+  {
+    "discovered_at": "2026-08-20T10:40:25.758Z",
+    "company_id": "CMP-008",
+    "company": "JPMorgan Chase & Co",
+    "role": "Site Reliability Engineer III",
+    "location": "Plano, TX, United States",
+    "experience": "Entry / early career",
+    "posted": "2026-08-20T10:31:42.000Z",
+    "job_id": "210774920",
+    "job_url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210774920",
+    "source_url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs?lastSelectedFacet=POSTING_DATES&location=United+States&locationId=300000000289738&locationLevel=country&mode=location&selectedCategoriesFacet=300000086152753&selectedPostingDatesFacet=7",
+    "match_reason": "Eligible technical role; Entry / early career; sponsorship: Not Mentioned; Not an internship",
+    "description_snippet": "There’s nothing more exciting than being at the center of a rapidly growing field in technology and applying your skillsets to drive innovation and modernize the world's most complex and mission-critical systems. As a Site Reliability Engineer III at JPMorgan Chase within the Employee Platforms, you will solve complex and broad business problems with simple and straightforward solutions. Through code and cloud infrastructure, you will configure, maintain, monitor, and optimize applications and their associated infrastructure to independently decompose and iteratively improve on existing solutions. You are a significant contributor to your team by sharing your knowledge of end-to-end operations, availability, reliability, and scalability of your application or platform. Job responsibilities Guides and assists others in the areas of building appropriate level designs and gaining consensus…",
+    "key": "f59000568223e57abb0cebc0",
+    "active_status": "Active",
+    "job_type": "Full time",
+    "required_experience_years": null,
+    "preferred_experience_years": null,
+    "sponsorship_status": "Not Mentioned",
+    "sponsorship_evidence": "No sponsorship restriction found",
+    "experience_evidence": "Entry / early-career language detected"
   }
 ]

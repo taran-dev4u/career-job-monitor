@@ -1,6 +1,6 @@
 # Latest Eligible Jobs — Filtered
 
-Updated: **2026-08-20T09:44:23.769Z UTC** / **Aug 20, 2026, 5:44 AM Eastern**
+Updated: **2026-08-20T10:40:25.758Z UTC** / **Aug 20, 2026, 6:40 AM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
@@ -12,6 +12,7 @@ Source health: **16 healthy**, **0 confirmed empty**, **1 degraded**, **0 broken
 
 | First Seen | Company | Role | Location | Type | Posted | Required | Preferred | Sponsorship | Apply |
 |---|---|---|---|---|---|---:|---:|---|---|
+| 2026-08-20T10:39:11.190Z | JPMorgan Chase & Co | Site Reliability Engineer III | Plano, TX, United States | Full time | 2026-08-20T10:31:42.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210774920) |
 | 2026-08-20T09:15:43.877Z | Goldman Sachs | Engineering-L2-Dallas-Analyst-Software Engineering | Not stated | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/181810) |
 | 2026-08-20T09:15:43.877Z | Goldman Sachs | Asset & Wealth Management - AI Solutions Engineer - Associate - Dallas | Not stated | Not specified | Not stated | 3+ years | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/168764) |
 | 2026-08-20T09:15:43.877Z | Goldman Sachs | Compliance Engineering, Site Reliability Engineer SRE, Associate, Dallas | Not stated | Not specified | Not stated | Not stated | 4+ years | Not Mentioned | [Apply](https://higher.gs.com/roles/170770) |
@@ -21,7 +22,6 @@ Source health: **16 healthy**, **0 confirmed empty**, **1 degraded**, **0 broken
 | 2026-08-20T09:15:43.877Z | Goldman Sachs | Corporate Treasury, New York, Associate, Software Engineering | Not stated | Not specified | Not stated | 1+ years | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/176999) |
 | 2026-08-20T09:15:43.877Z | Goldman Sachs | Corporate Treasury, New York, Associate, Software Engineering | Not stated | Not specified | Not stated | Not stated | 3+ years | Not Mentioned | [Apply](https://higher.gs.com/roles/178036) |
 | 2026-08-20T09:15:43.877Z | Goldman Sachs | Risk-Dallas-Associate-Software Engineering | Not stated | Not specified | Not stated | 3+ years | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/180914) |
-| 2026-08-20T09:15:43.877Z | Goldman Sachs | Risk-Salt Lake City-Associate-Software Engineering | Not stated | Not specified | Not stated | 3+ years | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/179691) |
 | 2026-08-20T09:15:43.877Z | Goldman Sachs | Software Engineer, Global Banking & Markets, AI/ML Technology | Not stated | Not specified | Not stated | Not stated | 2+ years | Not Mentioned | [Apply](https://higher.gs.com/roles/177423) |
 | 2026-08-20T09:15:43.877Z | Goldman Sachs | Software Engineer, Global Banking & Markets, Electronic Trading | Not stated | Not specified | Not stated | 3+ years | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/180700) |
 | 2026-08-20T09:15:43.877Z | Goldman Sachs | Software Engineering - Data, Lakehouse and AI Data Platform Engineer - Associate - Dallas | Not stated | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/179758) |
@@ -93,22 +93,22 @@ Source health: **16 healthy**, **0 confirmed empty**, **1 degraded**, **0 broken
 
 | ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |
 |---|---|---|---:|---:|---:|---|---|
-| CMP-003 | Google LLC | Healthy | 3 | 0 | 0 | 2026-08-20T09:42:26.659Z |  |
-| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-20T09:42:38.502Z |  |
-| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-20T09:43:05.606Z |  |
-| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-20T09:43:14.854Z |  |
-| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-20T09:43:24.546Z |  |
-| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-20T09:43:24.713Z |  |
-| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-20T09:43:32.913Z |  |
-| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-20T09:43:34.111Z |  |
-| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-20T09:43:43.169Z |  |
+| CMP-003 | Google LLC | Healthy | 3 | 0 | 0 | 2026-08-20T10:38:45.319Z |  |
+| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-20T10:38:52.120Z |  |
+| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-20T10:38:57.004Z |  |
+| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-20T10:39:11.190Z |  |
+| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-20T10:39:22.002Z |  |
+| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-20T10:39:25.171Z |  |
+| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-20T10:39:30.385Z |  |
+| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-20T10:39:34.819Z |  |
+| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-20T10:39:43.613Z |  |
+| CMP-011 | Microsoft Corporation | Healthy | 25 | 0 | 0 | 2026-08-20T10:39:49.735Z |  |
 | CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Degraded | 20 | 0 | 0 | 2026-08-19T07:50:17.446Z | 1 jobs await detail evaluation |
-| CMP-011 | Microsoft Corporation | Healthy | 25 | 0 | 0 | 2026-08-20T09:43:52.271Z |  |
-| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 20 | 0 | 0 | 2026-08-20T09:43:59.423Z |  |
-| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-20T09:44:02.552Z |  |
-| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-20T09:44:03.561Z |  |
-| CMP-016 | Microsoft | Healthy | 20 | 0 | 0 | 2026-08-20T09:44:08.492Z |  |
-| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-20T09:44:11.838Z |  |
-| CMP-017 | Goldman Sachs | Healthy | 18 | 0 | 0 | 2026-08-20T09:44:23.691Z |  |
+| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 20 | 0 | 0 | 2026-08-20T10:40:05.492Z |  |
+| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-20T10:40:08.148Z |  |
+| CMP-016 | Microsoft | Healthy | 20 | 0 | 0 | 2026-08-20T10:40:14.690Z |  |
+| CMP-017 | Goldman Sachs | Healthy | 17 | 0 | 0 | 2026-08-20T10:40:17.374Z |  |
+| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-20T10:40:18.326Z |  |
+| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-20T10:40:25.693Z |  |
 
 > “Degraded” means extraction could not prove the source was complete. Review the unfiltered dashboard or workbook audit sheets for every decision.
