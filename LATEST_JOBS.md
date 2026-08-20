@@ -1,17 +1,18 @@
 # Latest Eligible Jobs — Filtered
 
-Updated: **2026-08-20T09:16:51.589Z UTC** / **Aug 20, 2026, 5:16 AM Eastern**
+Updated: **2026-08-20T09:44:23.769Z UTC** / **Aug 20, 2026, 5:44 AM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
 > Newest discovered jobs are always shown first.
 
-Source health: **14 healthy**, **0 confirmed empty**, **3 degraded**, **0 broken**.
+Source health: **16 healthy**, **0 confirmed empty**, **1 degraded**, **0 broken**.
 
 ## Apply Now
 
 | First Seen | Company | Role | Location | Type | Posted | Required | Preferred | Sponsorship | Apply |
 |---|---|---|---|---|---|---:|---:|---|---|
+| 2026-08-20T09:15:43.877Z | Goldman Sachs | Engineering-L2-Dallas-Analyst-Software Engineering | Not stated | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/181810) |
 | 2026-08-20T09:15:43.877Z | Goldman Sachs | Asset & Wealth Management - AI Solutions Engineer - Associate - Dallas | Not stated | Not specified | Not stated | 3+ years | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/168764) |
 | 2026-08-20T09:15:43.877Z | Goldman Sachs | Compliance Engineering, Site Reliability Engineer SRE, Associate, Dallas | Not stated | Not specified | Not stated | Not stated | 4+ years | Not Mentioned | [Apply](https://higher.gs.com/roles/170770) |
 | 2026-08-20T09:15:43.877Z | Goldman Sachs | Compliance Engineering, Software Engineer, Associate, Dallas | Not stated | Not specified | Not stated | 3+ years | Not stated | Unclear | [Apply](https://higher.gs.com/roles/179368) |
@@ -48,8 +49,10 @@ Source health: **14 healthy**, **0 confirmed empty**, **3 degraded**, **0 broken
 | 2026-08-20T08:44:57.513Z | Apple Inc | AI/ML Engineer (GenAI), Wireless Technologies & Ecosystems | Not stated | Not specified | Aug 19, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678755-3543/ai-ml-engineer-genai-wireless-technologies-ecosystems?team=SFTWR) |
 | 2026-08-20T08:44:57.513Z | Apple Inc | AIOps Software Engineer - Strategic Data Solutions | Not stated | Not specified | Aug 19, 2026 | Not stated | 5+ years | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200675234-0157/aiops-software-engineer-strategic-data-solutions?team=SFTWR) |
 | 2026-08-20T08:44:57.513Z | Apple Inc | Camera Imaging Software Engineer, Camera & Photos | Not stated | Not specified | Aug 19, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200653138-0836/camera-imaging-software-engineer-camera-photos?team=SFTWR) |
+| 2026-08-20T08:44:57.513Z | Apple Inc | Cloud Media Engineer | Not stated | Not specified | Aug 19, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678579-0836/cloud-media-engineer?team=SFTWR) |
 | 2026-08-20T08:44:57.513Z | Apple Inc | Machine Learning Engineer - On-Device Adaptive Control | Not stated | Not specified | Aug 19, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200679038-3337/machine-learning-engineer-on-device-adaptive-control?team=SFTWR) |
 | 2026-08-20T08:44:57.513Z | Apple Inc | Product Data Scientist, Employee Experience & Productivity, IS&T | Not stated | Not specified | Aug 19, 2026 | 3+ years | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200677976-3956/product-data-scientist-employee-experience-productivity-is-t?team=SFTWR) |
+| 2026-08-20T08:44:57.513Z | Apple Inc | Software Engineer, Employee Experience & Productivity | Not stated | Not specified | Aug 19, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678553-0670/software-engineer-employee-experience-productivity?team=SFTWR) |
 | 2026-08-20T08:44:57.513Z | Apple Inc | Software Engineer, Safari Continuity | Not stated | Not specified | Aug 19, 2026 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200669039-0836/software-engineer-safari-continuity?team=SFTWR) |
 | 2026-08-20T08:44:57.513Z | Apple Inc | Software Image Quality Engineer, Creativity Apps | Not stated | Not specified | Aug 19, 2026 | Not stated | 4+ years | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678561-0836/software-image-quality-engineer-creativity-apps?team=SFTWR) |
 | 2026-08-20T08:44:57.513Z | Apple Inc | Software QA Engineer, Wireless Technologies & Ecosystems | Not stated | Not specified | Aug 19, 2026 | 2+ years | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200654506-0836/software-qa-engineer-wireless-technologies-ecosystems?team=SFTWR) |
@@ -90,22 +93,22 @@ Source health: **14 healthy**, **0 confirmed empty**, **3 degraded**, **0 broken
 
 | ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |
 |---|---|---|---:|---:|---:|---|---|
-| CMP-003 | Google LLC | Healthy | 3 | 0 | 0 | 2026-08-20T09:13:48.313Z |  |
-| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-20T09:13:48.738Z |  |
-| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-20T09:14:13.889Z |  |
-| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-20T09:14:23.289Z |  |
+| CMP-003 | Google LLC | Healthy | 3 | 0 | 0 | 2026-08-20T09:42:26.659Z |  |
+| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-20T09:42:38.502Z |  |
+| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-20T09:43:05.606Z |  |
+| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-20T09:43:14.854Z |  |
+| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-20T09:43:24.546Z |  |
+| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-20T09:43:24.713Z |  |
+| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-20T09:43:32.913Z |  |
+| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-20T09:43:34.111Z |  |
+| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-20T09:43:43.169Z |  |
 | CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Degraded | 20 | 0 | 0 | 2026-08-19T07:50:17.446Z | 1 jobs await detail evaluation |
-| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-20T09:15:12.541Z |  |
-| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-20T09:15:21.917Z |  |
-| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-20T09:15:22.255Z |  |
-| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-20T09:15:25.545Z |  |
-| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-20T09:15:31.065Z |  |
-| CMP-004 | Apple Inc | Degraded | 40 | 0 | 0 | 2026-08-19T15:45:21.825Z | 6 jobs await detail evaluation |
-| CMP-011 | Microsoft Corporation | Healthy | 25 | 0 | 0 | 2026-08-20T09:15:40.964Z |  |
-| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-20T09:15:43.876Z |  |
-| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-20T09:15:45.748Z |  |
-| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 40 | 0 | 0 | 2026-08-20T09:15:46.715Z |  |
-| CMP-016 | Microsoft | Healthy | 20 | 0 | 0 | 2026-08-20T09:15:50.763Z |  |
-| CMP-017 | Goldman Sachs | Degraded | 18 | 0 | 0 | 2026-08-20T08:56:16.362Z | 3 jobs await detail evaluation |
+| CMP-011 | Microsoft Corporation | Healthy | 25 | 0 | 0 | 2026-08-20T09:43:52.271Z |  |
+| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 20 | 0 | 0 | 2026-08-20T09:43:59.423Z |  |
+| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-20T09:44:02.552Z |  |
+| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-20T09:44:03.561Z |  |
+| CMP-016 | Microsoft | Healthy | 20 | 0 | 0 | 2026-08-20T09:44:08.492Z |  |
+| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-20T09:44:11.838Z |  |
+| CMP-017 | Goldman Sachs | Healthy | 18 | 0 | 0 | 2026-08-20T09:44:23.691Z |  |
 
 > “Degraded” means extraction could not prove the source was complete. Review the unfiltered dashboard or workbook audit sheets for every decision.
