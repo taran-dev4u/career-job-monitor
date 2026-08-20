@@ -148,7 +148,12 @@ async function build() {
   const html = renderHtml(payload);
   await fs.mkdir(path.dirname(OUT), { recursive: true });
   await fs.writeFile(OUT, html, "utf8");
-  console.log(`Wrote dashboard: ${OUT}`);
+  // Also publish to the repo root as index.html so GitHub Pages serves it at a
+  // clean URL (https://<user>.github.io/<repo>/). .nojekyll stops Pages from
+  // running Jekyll over the file.
+  await fs.writeFile(path.join(ROOT, "index.html"), html, "utf8");
+  await fs.writeFile(path.join(ROOT, ".nojekyll"), "", "utf8");
+  console.log(`Wrote dashboard: ${OUT} and ${path.join(ROOT, "index.html")}`);
   console.log(`  eligible-active ${eligibleActive} · extracted ${trimmed.length} · rejected ${rejected} · pending ${pending}`);
   console.log(`  sources ${payload.kpis.healthy} healthy / ${payload.kpis.degraded} degraded / ${payload.kpis.broken} broken`);
 }
