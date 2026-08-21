@@ -1,10 +1,33 @@
 {
-  "run_at": "2026-08-21T13:53:15.817Z",
+  "run_at": "2026-08-21T14:45:12.884Z",
   "suppressed": false,
-  "jobs": [],
+  "jobs": [
+    {
+      "discovered_at": "2026-08-21T14:45:12.884Z",
+      "company_id": "CMP-015",
+      "company": "COMPUNNEL SOFTWARE GROUP, INC",
+      "role": "Backend Developer Java",
+      "location": "",
+      "experience": "No required experience above 3 years detected",
+      "posted": "",
+      "job_id": "DeciqG3bOGkBVclUrBXMYw",
+      "job_url": "https://staffline.compunnel.com/Support/UploadResume?JobId=DeciqG3bOGkBVclUrBXMYw%3d%3d&Source=4414&EntityGroup=2321",
+      "source_url": "https://www.compunnel.com/job-search/?keyword=&location_id=1&location=United+States",
+      "match_reason": "Eligible technical role; No required experience above 3 years detected; sponsorship: Not Mentioned; Not an internship",
+      "description_snippet": "Submit Resume Back Submit Backend Developer Java Georgia, Atlanta 08/21/2026 Contract Active Job Description: Job Summary We are seeking a responsible and self-motivated Backend Developer to build and maintain robust server-side applications. The ideal candidate will work closely with front-end developers, product managers, and team leads to deliver scalable software solutions while continuously developing their technical skills. Key Responsibilities • Design, develop, and maintain high-performance backend services using Java and Spring Boot. • Collaborate with front-end engineers, product managers, and project leaders to align technical specifications with business requirements. • Write clean, maintainable, and efficient code following modern Java development standards. • Apply backend architecture, API integration, and database management best practices. • Actively participate in team…",
+      "key": "cd431c32b1920aa537a6ce11",
+      "active_status": "Active",
+      "job_type": "Not specified",
+      "required_experience_years": null,
+      "preferred_experience_years": null,
+      "sponsorship_status": "Not Mentioned",
+      "sponsorship_evidence": "No sponsorship restriction found",
+      "experience_evidence": "No explicit required-years statement detected"
+    }
+  ],
   "health_alerts": [
     {
-      "run_at": "2026-08-21T13:52:53.544Z",
+      "run_at": "2026-08-21T14:44:34.160Z",
       "company_id": "CMP-005",
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "source_url": "https://jobs.fidelity.com/en/jobs/?search=software&team=Technology&pagesize=20&origin=filtered#results",
@@ -19,13 +42,13 @@
       "eligible_count": 0,
       "rejected_count": 19,
       "zero_streak": 0,
-      "degraded_streak": 46,
-      "last_candidate_at": "2026-08-21T13:52:53.544Z",
+      "degraded_streak": 47,
+      "last_candidate_at": "2026-08-21T14:44:34.160Z",
       "last_healthy_at": "2026-08-19T07:50:17.446Z",
       "diagnostic": "1 jobs await detail evaluation"
     },
     {
-      "run_at": "2026-08-21T13:53:15.739Z",
+      "run_at": "2026-08-21T14:44:57.922Z",
       "company_id": "CMP-006",
       "company": "IBM Corporation",
       "source_url": "https://www.ibm.com/careers/search?field_keyword_08[0]=Software%20Engineering&field_keyword_08[1]=Data%20%26%20Analytics&field_keyword_18[0]=Professional&field_keyword_05[0]=United%20States&sort=dcdate_desc",
@@ -40,8 +63,8 @@
       "eligible_count": 0,
       "rejected_count": 26,
       "zero_streak": 0,
-      "degraded_streak": 22,
-      "last_candidate_at": "2026-08-21T13:53:15.739Z",
+      "degraded_streak": 23,
+      "last_candidate_at": "2026-08-21T14:44:57.923Z",
       "last_healthy_at": "2026-08-20T20:01:48.469Z",
       "diagnostic": "4 jobs await detail evaluation"
     }

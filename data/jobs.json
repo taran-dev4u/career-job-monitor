@@ -3424,5 +3424,27 @@
     "sponsorship_status": "Not Mentioned",
     "sponsorship_evidence": "No sponsorship restriction found",
     "experience_evidence": "3 years of experience in Site Reliability Engineering, DevOps, or a related field."
+  },
+  {
+    "discovered_at": "2026-08-21T14:45:12.884Z",
+    "company_id": "CMP-015",
+    "company": "COMPUNNEL SOFTWARE GROUP, INC",
+    "role": "Backend Developer Java",
+    "location": "",
+    "experience": "No required experience above 3 years detected",
+    "posted": "",
+    "job_id": "DeciqG3bOGkBVclUrBXMYw",
+    "job_url": "https://staffline.compunnel.com/Support/UploadResume?JobId=DeciqG3bOGkBVclUrBXMYw%3d%3d&Source=4414&EntityGroup=2321",
+    "source_url": "https://www.compunnel.com/job-search/?keyword=&location_id=1&location=United+States",
+    "match_reason": "Eligible technical role; No required experience above 3 years detected; sponsorship: Not Mentioned; Not an internship",
+    "description_snippet": "Submit Resume Back Submit Backend Developer Java Georgia, Atlanta 08/21/2026 Contract Active Job Description: Job Summary We are seeking a responsible and self-motivated Backend Developer to build and maintain robust server-side applications. The ideal candidate will work closely with front-end developers, product managers, and team leads to deliver scalable software solutions while continuously developing their technical skills. Key Responsibilities • Design, develop, and maintain high-performance backend services using Java and Spring Boot. • Collaborate with front-end engineers, product managers, and project leaders to align technical specifications with business requirements. • Write clean, maintainable, and efficient code following modern Java development standards. • Apply backend architecture, API integration, and database management best practices. • Actively participate in team…",
+    "key": "cd431c32b1920aa537a6ce11",
+    "active_status": "Active",
+    "job_type": "Not specified",
+    "required_experience_years": null,
+    "preferred_experience_years": null,
+    "sponsorship_status": "Not Mentioned",
+    "sponsorship_evidence": "No sponsorship restriction found",
+    "experience_evidence": "No explicit required-years statement detected"
   }
 ]
