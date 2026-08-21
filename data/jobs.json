@@ -3490,5 +3490,27 @@
     "sponsorship_status": "Not Mentioned",
     "sponsorship_evidence": "No sponsorship restriction found",
     "experience_evidence": "Applies technical troubleshooting to break down solutions and solve technical problems of basic complexity Gathers, analyzes, and draws conclusions from large, diverse data sets to identify problems and contribute to dec"
+  },
+  {
+    "discovered_at": "2026-08-21T16:45:35.367Z",
+    "company_id": "CMP-015",
+    "company": "COMPUNNEL SOFTWARE GROUP, INC",
+    "role": "Palantir Data Engineer Level III/IV",
+    "location": "",
+    "experience": "No required experience above 3 years detected",
+    "posted": "",
+    "job_id": "skXZPTueaGzKGHsDTj47aA",
+    "job_url": "https://staffline.compunnel.com/Support/UploadResume?JobId=skXZPTueaGzKGHsDTj47aA%3d%3d&Source=4414&EntityGroup=2321",
+    "source_url": "https://www.compunnel.com/job-search/?keyword=&location_id=1&location=United+States",
+    "match_reason": "Eligible technical role; No required experience above 3 years detected; sponsorship: Not Mentioned; Not an internship",
+    "description_snippet": "Submit Resume Back Submit Palantir Data Engineer Level III/IV North Carolina, Charlotte 08/21/2026 Contract Active Job Description: Job Summary We are seeking a Palantir Data Engineer Level III/IV with strong experience in data engineering, software development, cloud platforms, and modern data technologies. The ideal candidate will have hands-on experience with Palantir, AWS, Databricks, Apache Hive, Snowflake, Python, microservices architecture, and REST API development. Required Qualifications • Hands-on experience with Palantir software. • Strong experience with Amazon Web Services (AWS). • Experience with Apache Hive. • Strong experience with the Databricks Platform. • Experience designing and developing Microservices Architecture. • Strong Python experience for data analysis. • Strong Python software development experience. • Experience with REST API development. • Strong experien…",
+    "key": "0e045015c927ec09d97b747d",
+    "active_status": "Active",
+    "job_type": "Not specified",
+    "required_experience_years": null,
+    "preferred_experience_years": null,
+    "sponsorship_status": "Not Mentioned",
+    "sponsorship_evidence": "No sponsorship restriction found",
+    "experience_evidence": "No explicit required-years statement detected"
   }
 ]
