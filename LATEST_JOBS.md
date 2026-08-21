@@ -1,6 +1,6 @@
 # Latest Eligible Jobs — Filtered
 
-Updated: **2026-08-21T04:13:36.728Z UTC** / **Aug 21, 2026, 12:13 AM Eastern**
+Updated: **2026-08-21T05:09:19.973Z UTC** / **Aug 21, 2026, 1:09 AM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
@@ -95,7 +95,6 @@ Source health: **15 healthy**, **0 confirmed empty**, **2 degraded**, **0 broken
 | 2026-08-18T13:52:08.595Z | Microsoft | Software Engineer - CTJ - Poly | Reston, VA,US, US; Redmond, WA,US, US; Jessup, MD,US, US; Reston, VA,US, US; Redmond, WA,US, US; Jessup, MD,US, US | FULL_TIME | 2026-03-18T21:56:24 | Not stated | Not stated | Not Mentioned | [Apply](https://apply.careers.microsoft.com/careers/job/1970393556824773) |
 | 2026-08-18T13:51:21.036Z | Cisco Systems, Inc | AI Software Engineer II - (United States) | Research Triangle Park, North Carolina, United States of America | FULL_TIME | 2026-08-15 | Not stated | Not stated | Not Mentioned | [Apply](https://careers.cisco.com/global/en/job/2020810/AI-Software-Engineer-II-United-States) |
 | 2026-08-18T13:50:36.662Z | Qualcomm Technologies, Inc | Linux Peripheral Software Engineer | Santa Clara, CA,US, US | FULL_TIME | 2026-08-06T00:00:00 | Not stated | 3+ years | Not Mentioned | [Apply](https://careers.qualcomm.com/careers/job/446720280499) |
-| 2026-08-18T13:50:36.662Z | Qualcomm Technologies, Inc | #Software Engineer - Edge AI/Gen AI | San Diego, CA,US, US | FULL_TIME | 2026-08-05T00:00:00 | Not stated | 1+ years | Not Mentioned | [Apply](https://careers.qualcomm.com/careers/job/446720282038) |
 | 2026-08-18T13:50:36.661Z | Qualcomm Technologies, Inc | Engineer, Machine Learning (On-Device Software) | San Diego, CA,US, US | FULL_TIME | 2026-08-17T00:00:00 | Not stated | 1+ years | Not Mentioned | [Apply](https://careers.qualcomm.com/careers/job/446720467301) |
 | 2026-08-18T13:49:41.370Z | Amazon.com Services LLC | Assoc Delivery Cons, AI/ML, A2C ProServe Shared Delivery | Not stated | Not specified | Posted: February 6, 2026 (Updated 3 months ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10495910/assoc-delivery-cons-ai-ml-a2c-proserve-shared-delivery) |
 | 2026-08-18T13:49:41.370Z | Amazon.com Services LLC | Data Engineer I, Sales Data Services (SDS) | Not stated | Not specified | Posted: February 6, 2026 (Updated 3 months ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10492413/data-engineer-i-sales-data-services-sds) |
@@ -109,22 +108,22 @@ Source health: **15 healthy**, **0 confirmed empty**, **2 degraded**, **0 broken
 
 | ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |
 |---|---|---|---:|---:|---:|---|---|
-| CMP-003 | Google LLC | Healthy | 2 | 0 | 0 | 2026-08-21T04:11:58.829Z |  |
-| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-21T04:12:05.819Z |  |
-| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-21T04:12:10.953Z |  |
-| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-21T04:12:20.622Z |  |
-| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-21T04:12:30.025Z |  |
-| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-21T04:12:35.046Z |  |
-| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-21T04:12:38.262Z |  |
-| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-21T04:12:44.388Z |  |
-| CMP-011 | Microsoft Corporation | Healthy | 23 | 0 | 0 | 2026-08-21T04:12:52.520Z |  |
-| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-21T04:12:53.200Z |  |
-| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 20 | 0 | 0 | 2026-08-21T04:13:08.875Z |  |
-| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-21T04:13:12.456Z |  |
+| CMP-003 | Google LLC | Healthy | 2 | 0 | 0 | 2026-08-21T05:07:39.495Z |  |
+| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-21T05:07:46.676Z |  |
+| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-21T05:07:51.521Z |  |
+| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-21T05:08:00.971Z |  |
+| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-21T05:08:10.533Z |  |
+| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-21T05:08:15.990Z |  |
+| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-21T05:08:18.858Z |  |
+| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-21T05:08:25.530Z |  |
+| CMP-011 | Microsoft Corporation | Healthy | 23 | 0 | 0 | 2026-08-21T05:08:32.562Z |  |
+| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-21T05:08:34.583Z |  |
+| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 20 | 0 | 0 | 2026-08-21T05:08:50.366Z |  |
+| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-21T05:08:53.146Z |  |
 | CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Degraded | 20 | 0 | 0 | 2026-08-19T07:50:17.446Z | 1 jobs await detail evaluation |
-| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-21T04:13:19.763Z |  |
-| CMP-016 | Microsoft | Healthy | 20 | 0 | 0 | 2026-08-21T04:13:22.127Z |  |
-| CMP-017 | Goldman Sachs | Healthy | 18 | 0 | 0 | 2026-08-21T04:13:23.450Z |  |
+| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-21T05:09:00.836Z |  |
+| CMP-016 | Microsoft | Healthy | 20 | 0 | 0 | 2026-08-21T05:09:02.778Z |  |
+| CMP-017 | Goldman Sachs | Healthy | 18 | 0 | 0 | 2026-08-21T05:09:05.595Z |  |
 | CMP-006 | IBM Corporation | Degraded | 30 | 0 | 0 | 2026-08-20T20:01:48.469Z | 4 jobs await detail evaluation |
 
 > “Degraded” means extraction could not prove the source was complete. Review the unfiltered dashboard or workbook audit sheets for every decision.
