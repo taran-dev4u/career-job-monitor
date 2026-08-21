@@ -1,6 +1,6 @@
 # All Extracted Jobs — Unfiltered
 
-Updated: **2026-08-21T05:09:19.973Z UTC** / **Aug 21, 2026, 1:09 AM Eastern**
+Updated: **2026-08-21T05:45:53.187Z UTC** / **Aug 21, 2026, 1:45 AM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
@@ -14,6 +14,7 @@ This view intentionally includes rejected jobs. Use the **Decision** and **Reaso
 
 | First Seen | Company | Role | Location | Posted | Sponsorship | Required | Decision | Reasons | Apply |
 |---|---|---|---|---|---|---:|---|---|---|
+| 2026-08-21T05:44:34.306Z | JPMorgan Chase & Co | Software Engineer III | Seattle, WA, United States | 2026-08-21T05:25:59.000Z | Not Mentioned | 3+ years | Included | — | [Open](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210782266) |
 | 2026-08-21T03:11:49.394Z | Oracle America, Inc | Senior Principal Software Developer | and 1 more | Not stated | Not Mentioned | Not stated | Rejected | Excluded: senior | [Open](https://careers.oracle.com/en/sites/jobsearch/job/334432) |
 | 2026-08-21T03:11:49.394Z | Oracle America, Inc | Lead Principal Core Infrastructure Engineer | United States | 2026-08-20T20:18:30.000Z | Not Mentioned | Not stated | Rejected | Excluded: principal | [Open](https://careers.oracle.com/en/sites/jobsearch/job/343610) |
 | 2026-08-21T03:11:32.211Z | JPMorgan Chase & Co | Software Engineer III | Jersey City, NJ, United States | 2026-08-21T02:48:34.000Z | Not Mentioned | Not stated | Included | — | [Open](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210760315) |
@@ -50,7 +51,6 @@ This view intentionally includes rejected jobs. Use the **Decision** and **Reaso
 | 2026-08-20T22:35:44.671Z | JPMorgan Chase & Co | Senior Director of Software Engineering - CCB Risk Technology Feature Platform Engineering | Plano, TX, United States | 2026-08-20T21:56:47.000Z | Not Mentioned | 5+ years | Rejected | Excluded: senior; Requires 5+ years | [Open](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210780390) |
 | 2026-08-20T21:57:29.749Z | JPMorgan Chase & Co | Lead Software Engineer - Agentic AI | Jersey City, NJ, United States | 2026-08-20T21:42:35.000Z | Not Mentioned | Not stated | Rejected | Excluded: lead | [Open](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210778106) |
 | 2026-08-20T21:57:29.749Z | JPMorgan Chase & Co | Senior Manager of Software Engineering | NY, United States | 2026-08-20T21:41:31.000Z | Not Mentioned | Not stated | Rejected | Excluded: senior | [Open](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210782995) |
-| 2026-08-20T21:57:29.749Z | JPMorgan Chase & Co | Site Reliability Engineer III | Jersey City, NJ, United States | 2026-08-20T21:41:09.000Z | Not Mentioned | Not stated | Included | — | [Open](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210783304) |
 | 2026-08-20T21:57:29.749Z | JPMorgan Chase & Co | Senior Lead Software Engineer | Jersey City, NJ, United States | 2026-08-20T21:40:48.000Z | Not Mentioned | Not stated | Rejected | Excluded: senior | [Open](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210782996) |
 | 2026-08-20T21:57:29.749Z | JPMorgan Chase & Co | Software Engineer II .Net | Irvine, CA, United States | 2026-08-20T21:39:53.000Z | Not Mentioned | Not stated | Included | — | [Open](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210781563) |
 | 2026-08-20T21:57:29.749Z | JPMorgan Chase & Co | Manager of Software Engineering | Austin, TX, United States | 2026-08-20T21:38:16.000Z | Not Mentioned | Not stated | Rejected | Excluded: manager | [Open](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210782698) |

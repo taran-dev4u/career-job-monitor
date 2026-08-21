@@ -1,6 +1,6 @@
 # Latest Eligible Jobs — Filtered
 
-Updated: **2026-08-21T05:09:19.973Z UTC** / **Aug 21, 2026, 1:09 AM Eastern**
+Updated: **2026-08-21T05:45:53.187Z UTC** / **Aug 21, 2026, 1:45 AM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
@@ -12,6 +12,7 @@ Source health: **15 healthy**, **0 confirmed empty**, **2 degraded**, **0 broken
 
 | First Seen | Company | Role | Location | Type | Posted | Required | Preferred | Sponsorship | Apply |
 |---|---|---|---|---|---|---:|---:|---|---|
+| 2026-08-21T05:44:34.306Z | JPMorgan Chase & Co | Software Engineer III | Seattle, WA, United States | Full time | 2026-08-21T05:25:59.000Z | 3+ years | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210782266) |
 | 2026-08-21T03:11:32.211Z | JPMorgan Chase & Co | Software Engineer III | Jersey City, NJ, United States | Full time | 2026-08-21T02:48:34.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210760315) |
 | 2026-08-21T01:48:25.642Z | Apple Inc | Software Engineer (Data Analytics), AI & Data Platforms (AiDP) | Not stated | Not specified | Aug 21, 2026 | 3+ years | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200677745-3956/software-engineer-data-analytics-ai-data-platforms-aidp?team=SFTWR) |
 | 2026-08-21T01:48:25.642Z | Apple Inc | Software Engineer (Data Analytics), AI & Data Platforms (AiDP) | Not stated | Not specified | Aug 21, 2026 | 3+ years | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200677993-3956/software-engineer-data-analytics-ai-data-platforms-aidp?team=SFTWR) |
@@ -24,7 +25,6 @@ Source health: **15 healthy**, **0 confirmed empty**, **2 degraded**, **0 broken
 | 2026-08-20T22:36:38.714Z | COMPUNNEL SOFTWARE GROUP, INC | VINOF 512 AWS CLOUD ENGINEER | Not stated | Not specified | Not stated | Not stated | Not stated | Unclear | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=ICLbfcSKsy63cNDwRNQwbA%3d%3d&Source=4414&EntityGroup=2321) |
 | 2026-08-20T22:36:38.714Z | COMPUNNEL SOFTWARE GROUP, INC | VINOF 517 DEVOPS ENGINEER | Not stated | Not specified | Not stated | Not stated | Not stated | Unclear | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=aBpn49QVd3JYAEFZXqXvuA%3d%3d&Source=4414&EntityGroup=2321) |
 | 2026-08-20T22:35:44.671Z | JPMorgan Chase & Co | Java Python AWS Software Engineer III (ML) - Agentic Treasury | Jersey City, NJ, United States | Full time | 2026-08-20T22:18:33.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210777996) |
-| 2026-08-20T21:57:29.749Z | JPMorgan Chase & Co | Site Reliability Engineer III | Jersey City, NJ, United States | Full time | 2026-08-20T21:41:09.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210783304) |
 | 2026-08-20T21:57:29.749Z | JPMorgan Chase & Co | Software Engineer II .Net | Irvine, CA, United States | Full time | 2026-08-20T21:39:53.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210781563) |
 | 2026-08-20T20:37:25.337Z | Apple Inc | 3D Computer Vision Research Engineer, Apple Maps | Not stated | Not specified | Aug 20, 2026 | 2+ years | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200670346-0836/3d-computer-vision-research-engineer-apple-maps?team=MLAI) |
 | 2026-08-20T20:00:27.524Z | JPMorgan Chase & Co | Software Engineer III - Asset Management Investment Platform (AMIP) | Columbus, OH, United States | Full time | 2026-08-20T19:41:05.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210780231) |
@@ -108,22 +108,22 @@ Source health: **15 healthy**, **0 confirmed empty**, **2 degraded**, **0 broken
 
 | ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |
 |---|---|---|---:|---:|---:|---|---|
-| CMP-003 | Google LLC | Healthy | 2 | 0 | 0 | 2026-08-21T05:07:39.495Z |  |
-| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-21T05:07:46.676Z |  |
-| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-21T05:07:51.521Z |  |
-| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-21T05:08:00.971Z |  |
-| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-21T05:08:10.533Z |  |
-| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-21T05:08:15.990Z |  |
-| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-21T05:08:18.858Z |  |
-| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-21T05:08:25.530Z |  |
-| CMP-011 | Microsoft Corporation | Healthy | 23 | 0 | 0 | 2026-08-21T05:08:32.562Z |  |
-| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-21T05:08:34.583Z |  |
-| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 20 | 0 | 0 | 2026-08-21T05:08:50.366Z |  |
-| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-21T05:08:53.146Z |  |
+| CMP-003 | Google LLC | Healthy | 2 | 0 | 0 | 2026-08-21T05:44:12.911Z |  |
+| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-21T05:44:20.161Z |  |
+| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-21T05:44:24.965Z |  |
+| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-21T05:44:34.306Z |  |
+| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-21T05:44:48.307Z |  |
+| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-21T05:44:48.420Z |  |
+| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-21T05:44:56.772Z |  |
+| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-21T05:44:58.069Z |  |
+| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-21T05:45:06.630Z |  |
+| CMP-011 | Microsoft Corporation | Healthy | 23 | 0 | 0 | 2026-08-21T05:45:10.359Z |  |
+| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 20 | 0 | 0 | 2026-08-21T05:45:26.010Z |  |
+| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-21T05:45:26.981Z |  |
 | CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Degraded | 20 | 0 | 0 | 2026-08-19T07:50:17.446Z | 1 jobs await detail evaluation |
-| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-21T05:09:00.836Z |  |
-| CMP-016 | Microsoft | Healthy | 20 | 0 | 0 | 2026-08-21T05:09:02.778Z |  |
-| CMP-017 | Goldman Sachs | Healthy | 18 | 0 | 0 | 2026-08-21T05:09:05.595Z |  |
+| CMP-016 | Microsoft | Healthy | 20 | 0 | 0 | 2026-08-21T05:45:36.204Z |  |
+| CMP-017 | Goldman Sachs | Healthy | 18 | 0 | 0 | 2026-08-21T05:45:37.862Z |  |
+| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-21T05:45:41.584Z |  |
 | CMP-006 | IBM Corporation | Degraded | 30 | 0 | 0 | 2026-08-20T20:01:48.469Z | 4 jobs await detail evaluation |
 
 > “Degraded” means extraction could not prove the source was complete. Review the unfiltered dashboard or workbook audit sheets for every decision.

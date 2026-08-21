@@ -1,10 +1,33 @@
 {
-  "run_at": "2026-08-21T05:09:19.973Z",
+  "run_at": "2026-08-21T05:45:53.187Z",
   "suppressed": false,
-  "jobs": [],
+  "jobs": [
+    {
+      "discovered_at": "2026-08-21T05:45:53.187Z",
+      "company_id": "CMP-008",
+      "company": "JPMorgan Chase & Co",
+      "role": "Software Engineer III",
+      "location": "Seattle, WA, United States",
+      "experience": "3+ years required",
+      "posted": "2026-08-21T05:25:59.000Z",
+      "job_id": "210782266",
+      "job_url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210782266",
+      "source_url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs?lastSelectedFacet=POSTING_DATES&location=United+States&locationId=300000000289738&locationLevel=country&mode=location&selectedCategoriesFacet=300000086152753&selectedPostingDatesFacet=7",
+      "match_reason": "Eligible technical role; 3+ years required; sponsorship: Not Mentioned; Not an internship",
+      "description_snippet": "There’s nothing more exciting than being at the center of a rapidly growing field in technology and applying your skillsets to drive innovation and modernize the world's most complex and mission-critical systems. As a Software Engineer III - DevOps Engineer at JPMorgan Chase within the Commercial and Investment Bank, you will solve complex and broad business problems with simple and straightforward solutions. Through code and cloud infrastructure, you will configure, maintain, monitor, and optimize applications and their associated infrastructure to independently decompose and iteratively improve on existing solutions. You are a significant contributor to your team by sharing your knowledge of end-to-end operations, availability, reliability, and scalability of your application or platform. Job Responsibilities Design, implement, and manage scalable, reliable, and secure cloud infrastru…",
+      "key": "3d5f4c2f49d6170c622005a4",
+      "active_status": "Active",
+      "job_type": "Full time",
+      "required_experience_years": 3,
+      "preferred_experience_years": null,
+      "sponsorship_status": "Not Mentioned",
+      "sponsorship_evidence": "No sponsorship restriction found",
+      "experience_evidence": "3 years of experience in Site Reliability Engineering, DevOps, or a related field."
+    }
+  ],
   "health_alerts": [
     {
-      "run_at": "2026-08-21T05:08:56.372Z",
+      "run_at": "2026-08-21T05:45:28.786Z",
       "company_id": "CMP-005",
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "source_url": "https://jobs.fidelity.com/en/jobs/?search=software&team=Technology&pagesize=20&origin=filtered#results",
@@ -19,13 +42,13 @@
       "eligible_count": 0,
       "rejected_count": 19,
       "zero_streak": 0,
-      "degraded_streak": 36,
-      "last_candidate_at": "2026-08-21T05:08:56.372Z",
+      "degraded_streak": 37,
+      "last_candidate_at": "2026-08-21T05:45:28.786Z",
       "last_healthy_at": "2026-08-19T07:50:17.446Z",
       "diagnostic": "1 jobs await detail evaluation"
     },
     {
-      "run_at": "2026-08-21T05:09:19.908Z",
+      "run_at": "2026-08-21T05:45:53.093Z",
       "company_id": "CMP-006",
       "company": "IBM Corporation",
       "source_url": "https://www.ibm.com/careers/search?field_keyword_08[0]=Software%20Engineering&field_keyword_08[1]=Data%20%26%20Analytics&field_keyword_18[0]=Professional&field_keyword_05[0]=United%20States&sort=dcdate_desc",
@@ -40,8 +63,8 @@
       "eligible_count": 0,
       "rejected_count": 26,
       "zero_streak": 0,
-      "degraded_streak": 12,
-      "last_candidate_at": "2026-08-21T05:09:19.908Z",
+      "degraded_streak": 13,
+      "last_candidate_at": "2026-08-21T05:45:53.093Z",
       "last_healthy_at": "2026-08-20T20:01:48.469Z",
       "diagnostic": "4 jobs await detail evaluation"
     }
