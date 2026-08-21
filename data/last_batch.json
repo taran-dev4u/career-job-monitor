@@ -1,10 +1,10 @@
 {
-  "run_at": "2026-08-21T07:01:14.807Z",
+  "run_at": "2026-08-21T07:52:25.445Z",
   "suppressed": false,
   "jobs": [],
   "health_alerts": [
     {
-      "run_at": "2026-08-21T07:00:49.685Z",
+      "run_at": "2026-08-21T07:52:03.812Z",
       "company_id": "CMP-005",
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "source_url": "https://jobs.fidelity.com/en/jobs/?search=software&team=Technology&pagesize=20&origin=filtered#results",
@@ -19,13 +19,13 @@
       "eligible_count": 0,
       "rejected_count": 19,
       "zero_streak": 0,
-      "degraded_streak": 38,
-      "last_candidate_at": "2026-08-21T07:00:49.685Z",
+      "degraded_streak": 39,
+      "last_candidate_at": "2026-08-21T07:52:03.812Z",
       "last_healthy_at": "2026-08-19T07:50:17.446Z",
       "diagnostic": "1 jobs await detail evaluation"
     },
     {
-      "run_at": "2026-08-21T07:01:14.730Z",
+      "run_at": "2026-08-21T07:52:25.370Z",
       "company_id": "CMP-006",
       "company": "IBM Corporation",
       "source_url": "https://www.ibm.com/careers/search?field_keyword_08[0]=Software%20Engineering&field_keyword_08[1]=Data%20%26%20Analytics&field_keyword_18[0]=Professional&field_keyword_05[0]=United%20States&sort=dcdate_desc",
@@ -40,8 +40,8 @@
       "eligible_count": 0,
       "rejected_count": 26,
       "zero_streak": 0,
-      "degraded_streak": 14,
-      "last_candidate_at": "2026-08-21T07:01:14.730Z",
+      "degraded_streak": 15,
+      "last_candidate_at": "2026-08-21T07:52:25.370Z",
       "last_healthy_at": "2026-08-20T20:01:48.469Z",
       "diagnostic": "4 jobs await detail evaluation"
     }
