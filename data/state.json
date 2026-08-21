@@ -245,7 +245,7 @@
       "last_seen_at": "2026-08-18T14:09:28.565Z"
     }
   },
-  "last_run_at": "2026-08-21T23:32:45.665Z",
+  "last_run_at": "2026-08-21T23:53:20.992Z",
   "discovered": {
     "5accecfd1c70de86465f1600": {
       "first_seen_at": "2026-08-18T13:49:41.370Z",
@@ -1333,7 +1333,7 @@
     "2390cb6b94d23680830818e7": {
       "first_seen_at": "2026-08-18T14:11:53.300Z",
       "url": "https://us.microsoft.talentnet.community/jobs/f4532b26-e087-4350-87fb-4d19657daf62",
-      "last_seen_at": "2026-08-21T23:31:48.582Z"
+      "last_seen_at": "2026-08-21T23:52:39.382Z"
     },
     "793ee9864416aba70a615059": {
       "first_seen_at": "2026-08-18T14:11:53.300Z",
@@ -1348,7 +1348,7 @@
     "8563efc7609901861e628183": {
       "first_seen_at": "2026-08-18T14:11:53.300Z",
       "url": "https://us.microsoft.talentnet.community/jobs/cdbf9700-d917-422e-9f80-2cdca64ac9eb",
-      "last_seen_at": "2026-08-21T23:31:48.582Z"
+      "last_seen_at": "2026-08-21T23:52:39.382Z"
     },
     "8e994158b4af99324f42b3db": {
       "first_seen_at": "2026-08-18T14:11:53.300Z",
@@ -1358,12 +1358,12 @@
     "869abcedb1b3f1901a5629f2": {
       "first_seen_at": "2026-08-18T14:11:53.300Z",
       "url": "https://us.microsoft.talentnet.community/jobs/34f95062-d9c7-4972-926f-70688106db7e",
-      "last_seen_at": "2026-08-21T23:31:48.582Z"
+      "last_seen_at": "2026-08-21T23:52:39.382Z"
     },
     "d8b46fc84bdbc24e9dade04a": {
       "first_seen_at": "2026-08-18T14:11:53.300Z",
       "url": "https://us.microsoft.talentnet.community/jobs/8681f9cf-8224-44ee-9f4a-2642cfe306eb",
-      "last_seen_at": "2026-08-21T23:31:48.582Z"
+      "last_seen_at": "2026-08-21T23:52:39.382Z"
     },
     "c5e4452124f4682a18cc831d": {
       "first_seen_at": "2026-08-18T14:11:53.300Z",
@@ -1378,7 +1378,7 @@
     "02623db2ead3319b858c3997": {
       "first_seen_at": "2026-08-18T14:11:53.300Z",
       "url": "https://us.microsoft.talentnet.community/jobs/c7698015-23d8-49e0-8e5f-82774dfb36ab",
-      "last_seen_at": "2026-08-21T23:31:48.582Z"
+      "last_seen_at": "2026-08-21T23:52:39.382Z"
     },
     "f48fa957fbc69336053d4cf9": {
       "first_seen_at": "2026-08-18T14:11:53.300Z",
@@ -1388,7 +1388,7 @@
     "08899b565a5e86671421b2f1": {
       "first_seen_at": "2026-08-18T14:11:53.300Z",
       "url": "https://us.microsoft.talentnet.community/jobs/aeabc7bc-1a8a-4780-9c68-dbf7cbc1abcf",
-      "last_seen_at": "2026-08-21T23:31:48.582Z"
+      "last_seen_at": "2026-08-21T23:52:39.382Z"
     },
     "3e12d3b435106779f7a05796": {
       "first_seen_at": "2026-08-18T14:11:53.300Z",
@@ -1398,7 +1398,7 @@
     "3d2cf450a65633ea10ae4463": {
       "first_seen_at": "2026-08-18T14:11:53.300Z",
       "url": "https://us.microsoft.talentnet.community/jobs/0874e94a-af42-4a23-b5a8-909e8cc6f152",
-      "last_seen_at": "2026-08-21T23:31:48.582Z"
+      "last_seen_at": "2026-08-21T23:52:39.382Z"
     },
     "a728ecd4194b82cc35e65b64": {
       "first_seen_at": "2026-08-18T14:11:53.300Z",
@@ -1413,7 +1413,7 @@
     "326059d39ebec26c60fea125": {
       "first_seen_at": "2026-08-18T14:11:53.300Z",
       "url": "https://us.microsoft.talentnet.community/jobs/8e037649-3195-4816-9883-6e0ccb939be0",
-      "last_seen_at": "2026-08-21T23:31:48.582Z"
+      "last_seen_at": "2026-08-21T23:52:39.382Z"
     },
     "ce7a1d86a985fc46c337e900": {
       "first_seen_at": "2026-08-18T14:11:53.300Z",
@@ -1423,7 +1423,7 @@
     "5a73cf7ae628550c9db7def7": {
       "first_seen_at": "2026-08-18T14:11:53.300Z",
       "url": "https://us.microsoft.talentnet.community/jobs/816749ee-e28b-4e87-b14d-006b5dd368e0",
-      "last_seen_at": "2026-08-21T23:31:48.582Z"
+      "last_seen_at": "2026-08-21T23:52:39.382Z"
     },
     "d3324d20e776d79eb976380e": {
       "first_seen_at": "2026-08-18T14:11:53.300Z",
@@ -1433,17 +1433,17 @@
     "7d7d8f17b0faf4e17a239b5e": {
       "first_seen_at": "2026-08-18T14:11:53.300Z",
       "url": "https://us.microsoft.talentnet.community/jobs/6b818340-9771-479a-a0a5-b9c88b2685ef",
-      "last_seen_at": "2026-08-21T23:31:48.582Z"
+      "last_seen_at": "2026-08-21T23:52:39.382Z"
     },
     "01bde04b8e9ca73c6b368edd": {
       "first_seen_at": "2026-08-18T14:11:53.300Z",
       "url": "https://us.microsoft.talentnet.community/jobs/15a97932-4147-490f-98e0-a7aa3d656fd9",
-      "last_seen_at": "2026-08-21T23:31:48.582Z"
+      "last_seen_at": "2026-08-21T23:52:39.382Z"
     },
     "cd4fd732ae98fd93c54fb2ac": {
       "first_seen_at": "2026-08-18T14:11:53.300Z",
       "url": "https://us.microsoft.talentnet.community/jobs/45cd805b-1520-46a3-addd-bbcdb661e121",
-      "last_seen_at": "2026-08-21T23:31:48.582Z"
+      "last_seen_at": "2026-08-21T23:52:39.382Z"
     },
     "174296c5608c8c551bce3ff5": {
       "first_seen_at": "2026-08-18T14:13:10.768Z",
@@ -2303,12 +2303,12 @@
     "43a11655ff9e2f613c4b0ca3": {
       "first_seen_at": "2026-08-18T14:32:39.219Z",
       "url": "https://us.microsoft.talentnet.community/jobs/0125d1df-b3ca-4ac4-81a8-aa6c44edd09e",
-      "last_seen_at": "2026-08-21T23:31:48.582Z"
+      "last_seen_at": "2026-08-21T23:52:39.382Z"
     },
     "6927e9a22593851f5bbbcdf9": {
       "first_seen_at": "2026-08-18T14:32:39.219Z",
       "url": "https://us.microsoft.talentnet.community/jobs/bacb6017-3d73-4900-ae84-c0874a406b0e",
-      "last_seen_at": "2026-08-21T23:31:48.582Z"
+      "last_seen_at": "2026-08-21T23:52:39.382Z"
     },
     "d08cd5402ed3c42f615dcfc0": {
       "first_seen_at": "2026-08-18T14:36:30.819Z",
@@ -2418,97 +2418,97 @@
     "0a414e349aa36b02a22fcdbc": {
       "first_seen_at": "2026-08-18T13:49:41.370Z",
       "url": "https://www.amazon.jobs/en/jobs/10502486/software-engineer-i-payments",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "42faabf9e05f0b0da645f072": {
       "first_seen_at": "2026-08-18T13:49:41.370Z",
       "url": "https://www.amazon.jobs/en/jobs/10490741/software-development-engineer-i-ai-ml-network-infrastructure-annapurna-labs",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "39a51ad87b04e63a5fb16d35": {
       "first_seen_at": "2026-08-18T13:49:41.370Z",
       "url": "https://www.amazon.jobs/en/jobs/10495910/assoc-delivery-cons-ai-ml-a2c-proserve-shared-delivery",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "d8ea2634d61f26a324af1f44": {
       "first_seen_at": "2026-08-18T14:01:20.411Z",
       "url": "https://www.amazon.jobs/en/jobs/10490811/systems-development-engineer-amazon-core-search",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "fb4677a817f9009b3ebff712": {
       "first_seen_at": "2026-08-18T13:49:41.370Z",
       "url": "https://www.amazon.jobs/en/jobs/10492413/data-engineer-i-sales-data-services-sds",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "9845ddf5de955412cd3cd1be": {
       "first_seen_at": "2026-08-18T13:49:41.370Z",
       "url": "https://www.amazon.jobs/en/jobs/10496112/data-engineer-i-sales-data-services-sds",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "278c327de84606320f9dc161": {
       "first_seen_at": "2026-08-18T13:49:41.370Z",
       "url": "https://www.amazon.jobs/en/jobs/10481932/efa-network-software-engineer-i-annapurna-labs",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "a8b56b6bd740c72ca5a84ab1": {
       "first_seen_at": "2026-08-18T14:01:20.411Z",
       "url": "https://www.amazon.jobs/en/jobs/10486763/associate-delivery-consultant-aiml-proserve-a2c-delivery-a2c-proserve-shared-delivery-sdt",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "d4d4450e17ddae9e693d7ba3": {
       "first_seen_at": "2026-08-18T13:49:41.370Z",
       "url": "https://www.amazon.jobs/en/jobs/10489298/software-development-engineer",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "a93f9d19a181ca00e6c63782": {
       "first_seen_at": "2026-08-18T14:01:20.411Z",
       "url": "https://www.amazon.jobs/en/jobs/10475663/software-dev-engineer-i-graviton-software-annapurna-labs",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "f331e8d6b85abfefcadf6312": {
       "first_seen_at": "2026-08-18T14:01:20.411Z",
       "url": "https://www.amazon.jobs/en/jobs/10475662/post-silicon-systems-validation-engineer-i-annapurna-labs",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "d4fcd709d709757085c73721": {
       "first_seen_at": "2026-08-18T14:01:20.411Z",
       "url": "https://www.amazon.jobs/en/jobs/10475661/post-silicon-systems-validation-engineer-i-annapurna-labs",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "3fc017cea4d3d7f04488cd3b": {
       "first_seen_at": "2026-08-18T14:01:20.411Z",
       "url": "https://www.amazon.jobs/en/jobs/10473725/associate-delivery-consultant-aiml-a2c-proserve-shared-delivery-sdt",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "d6c99c30a7f268e66a4ab10a": {
       "first_seen_at": "2026-08-18T14:01:20.411Z",
       "url": "https://www.amazon.jobs/en/jobs/10473722/associate-delivery-consultant-aiml-a2c-proserve-shared-delivery-sdt",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "0ca0eebbe14a739f1761bbe8": {
       "first_seen_at": "2026-08-18T14:01:20.411Z",
       "url": "https://www.amazon.jobs/en/jobs/10468973/software-engineer-i-discovery",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "08b8a5f32284e8499cbfb3da": {
       "first_seen_at": "2026-08-18T14:02:47.273Z",
       "url": "https://www.metacareers.com/jobs/1466388538850943",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "ae1ec90fe36b4e06cb612080": {
       "first_seen_at": "2026-08-18T14:02:47.273Z",
       "url": "https://www.metacareers.com/jobs/1714132979779125",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "c5c1e2235f37334a6e07824e": {
       "first_seen_at": "2026-08-18T14:02:47.273Z",
       "url": "https://www.metacareers.com/jobs/2082780019279407",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "6ff9cf64fece5f418668a58d": {
       "first_seen_at": "2026-08-18T14:02:47.273Z",
       "url": "https://www.metacareers.com/jobs/1298625432375018",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "b7663cad0fa281366aa4a1ef": {
       "first_seen_at": "2026-08-18T14:02:47.273Z",
@@ -2583,7 +2583,7 @@
     "e2f645612f27889932099412": {
       "first_seen_at": "2026-08-18T14:05:15.694Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=127140",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "e2cb95aff45892ed85f1e387": {
       "first_seen_at": "2026-08-18T14:05:15.694Z",
@@ -2593,27 +2593,27 @@
     "54e068c261ff6e0540a8f6d8": {
       "first_seen_at": "2026-08-18T13:50:36.661Z",
       "url": "https://careers.qualcomm.com/careers/job/446720467301",
-      "last_seen_at": "2026-08-21T23:31:17.007Z"
+      "last_seen_at": "2026-08-21T23:52:12.294Z"
     },
     "df3dbdf244d50c4c7c76d83a": {
       "first_seen_at": "2026-08-18T14:06:49.813Z",
       "url": "https://careers.qualcomm.com/careers/job/446720417490",
-      "last_seen_at": "2026-08-21T23:31:17.007Z"
+      "last_seen_at": "2026-08-21T23:52:12.294Z"
     },
     "24a561d3cc39190a9145d797": {
       "first_seen_at": "2026-08-18T13:50:36.662Z",
       "url": "https://careers.qualcomm.com/careers/job/446720415661",
-      "last_seen_at": "2026-08-21T23:31:17.007Z"
+      "last_seen_at": "2026-08-21T23:52:12.294Z"
     },
     "a034f0a3b4f2485f412f8203": {
       "first_seen_at": "2026-08-18T13:50:36.662Z",
       "url": "https://careers.qualcomm.com/careers/job/446720343659",
-      "last_seen_at": "2026-08-21T23:31:17.007Z"
+      "last_seen_at": "2026-08-21T23:52:12.294Z"
     },
     "1d67649286bc203c9f13a054": {
       "first_seen_at": "2026-08-18T13:50:36.662Z",
       "url": "https://careers.qualcomm.com/careers/job/446720246481",
-      "last_seen_at": "2026-08-21T23:31:17.007Z"
+      "last_seen_at": "2026-08-21T23:52:12.294Z"
     },
     "ea18370eba2af7bc67eebf17": {
       "first_seen_at": "2026-08-18T14:06:49.813Z",
@@ -2623,12 +2623,12 @@
     "e822c8a9ca17e04f5f8aa0ad": {
       "first_seen_at": "2026-08-18T13:50:36.662Z",
       "url": "https://careers.qualcomm.com/careers/job/446718891857",
-      "last_seen_at": "2026-08-21T23:31:17.007Z"
+      "last_seen_at": "2026-08-21T23:52:12.294Z"
     },
     "1cb1f7da101e0adfa5fca167": {
       "first_seen_at": "2026-08-18T13:50:36.662Z",
       "url": "https://careers.qualcomm.com/careers/job/446720280499",
-      "last_seen_at": "2026-08-21T23:31:17.007Z"
+      "last_seen_at": "2026-08-21T23:52:12.294Z"
     },
     "400f2e4f04fc88981039a3b8": {
       "first_seen_at": "2026-08-18T00:29:03.343Z",
@@ -2643,27 +2643,27 @@
     "17b8234cd0fa819e992fd979": {
       "first_seen_at": "2026-08-18T14:06:49.813Z",
       "url": "https://careers.qualcomm.com/careers/job/446719164923",
-      "last_seen_at": "2026-08-21T23:31:17.007Z"
+      "last_seen_at": "2026-08-21T23:52:12.294Z"
     },
     "48d8b1bc698bb5484b2fba4e": {
       "first_seen_at": "2026-08-18T13:50:36.662Z",
       "url": "https://careers.qualcomm.com/careers/job/446716946988",
-      "last_seen_at": "2026-08-21T23:31:17.007Z"
+      "last_seen_at": "2026-08-21T23:52:12.294Z"
     },
     "fdf06c48a828f750dac5501b": {
       "first_seen_at": "2026-08-18T13:50:36.662Z",
       "url": "https://careers.qualcomm.com/careers/job/446718036580",
-      "last_seen_at": "2026-08-21T23:31:17.007Z"
+      "last_seen_at": "2026-08-21T23:52:12.294Z"
     },
     "ba7d2d485a16b60102ed0f2b": {
       "first_seen_at": "2026-08-18T14:06:49.813Z",
       "url": "https://careers.qualcomm.com/careers/job/446718450778",
-      "last_seen_at": "2026-08-21T23:31:17.007Z"
+      "last_seen_at": "2026-08-21T23:52:12.294Z"
     },
     "05a35a47e31b08cb567ca2bd": {
       "first_seen_at": "2026-08-18T14:06:49.813Z",
       "url": "https://careers.qualcomm.com/careers/job/446716320059",
-      "last_seen_at": "2026-08-21T23:31:17.007Z"
+      "last_seen_at": "2026-08-21T23:52:12.294Z"
     },
     "75c74e6c3767dbc57d984a36": {
       "first_seen_at": "2026-08-18T14:08:11.649Z",
@@ -2743,27 +2743,27 @@
     "2b61fc4883d92ae6256121cd": {
       "first_seen_at": "2026-08-18T14:09:28.565Z",
       "url": "https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Senior-Middleware-Software-Development-Engineer_JR0286296",
-      "last_seen_at": "2026-08-21T23:31:40.128Z"
+      "last_seen_at": "2026-08-21T23:52:31.111Z"
     },
     "0894bb786c116f632a19268f": {
       "first_seen_at": "2026-08-18T14:09:28.565Z",
       "url": "https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Senior-Software-Application-Development-Engineer_JR0282933-1",
-      "last_seen_at": "2026-08-21T23:31:40.128Z"
+      "last_seen_at": "2026-08-21T23:52:31.111Z"
     },
     "02331e34a50466a2f1fc407e": {
       "first_seen_at": "2026-08-18T14:09:28.565Z",
       "url": "https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-California-Santa-Clara/AI-Infrastructure-Engineer_JR0286233",
-      "last_seen_at": "2026-08-21T23:31:40.128Z"
+      "last_seen_at": "2026-08-21T23:52:31.111Z"
     },
     "b172b7e05e5f22b7425fd3f7": {
       "first_seen_at": "2026-08-18T14:09:28.565Z",
       "url": "https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-California-Folsom/Data-Center-Manager_JR0284697-1",
-      "last_seen_at": "2026-08-21T23:31:40.128Z"
+      "last_seen_at": "2026-08-21T23:52:31.111Z"
     },
     "f24558d540e8bf05417ae8fa": {
       "first_seen_at": "2026-08-18T14:09:28.565Z",
       "url": "https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Texas-Austin/Software-Enabling-and-Optimization-Architect_JR0285886",
-      "last_seen_at": "2026-08-21T23:31:40.128Z"
+      "last_seen_at": "2026-08-21T23:52:31.111Z"
     },
     "d4c33fd66c6b92ef0b0a1aac": {
       "first_seen_at": "2026-08-18T14:10:36.736Z",
@@ -2838,17 +2838,17 @@
     "7cac370b3b0dfb9d4a80f790": {
       "first_seen_at": "2026-08-18T14:11:53.300Z",
       "url": "https://us.microsoft.talentnet.community/jobs/cbe15b2e-6a12-4938-810a-83f3283f8406",
-      "last_seen_at": "2026-08-21T23:31:48.582Z"
+      "last_seen_at": "2026-08-21T23:52:39.382Z"
     },
     "e09be7e279cb8cfdd9d2cf09": {
       "first_seen_at": "2026-08-18T13:51:21.036Z",
       "url": "https://careers.cisco.com/global/en/job/2020810/AI-Software-Engineer-II-United-States",
-      "last_seen_at": "2026-08-21T23:31:54.966Z"
+      "last_seen_at": "2026-08-21T23:52:41.788Z"
     },
     "1b8a76c0e035a739dae9fda4": {
       "first_seen_at": "2026-08-18T14:13:10.768Z",
       "url": "https://careers.cisco.com/global/en/job/2020283/Electrical-Engineer",
-      "last_seen_at": "2026-08-21T23:31:54.966Z"
+      "last_seen_at": "2026-08-21T23:52:41.788Z"
     },
     "47202aeaf92e3ee72ab77e4c": {
       "first_seen_at": "2026-08-18T13:51:21.036Z",
@@ -2863,17 +2863,17 @@
     "7292b9149196c47dc3fb29db": {
       "first_seen_at": "2026-08-18T14:13:32.851Z",
       "url": "https://careers.usbank.com/global/en/job/2026-0006294/Wealth-Management-Advisor-San-Jose-CA",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "d5c9825c9071c6cae8e92076": {
       "first_seen_at": "2026-08-18T14:13:32.851Z",
       "url": "https://careers.usbank.com/global/en/job/2025-0010215/Wealth-Management-Advisor-Farmington-MO",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "d58ae106762ee3d95e1b4daa": {
       "first_seen_at": "2026-08-18T14:13:32.851Z",
       "url": "https://careers.usbank.com/global/en/job/2026-0014328/Wealth-Management-Advisor",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "e422406367c52fd25b9133c7": {
       "first_seen_at": "2026-08-18T14:13:32.851Z",
@@ -2883,32 +2883,32 @@
     "6f9ba944f93387bad9e38d9e": {
       "first_seen_at": "2026-08-18T14:13:32.851Z",
       "url": "https://careers.usbank.com/global/en/job/2026-0006184/Core-Banking-developer",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "861810027e82e64d180d16a3": {
       "first_seen_at": "2026-08-18T14:13:32.851Z",
       "url": "https://careers.usbank.com/global/en/job/2026-0005037/Wealth-Management-Advisor-Queen-Anne-WA",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "28fbece1b2c39d85d07fd4fd": {
       "first_seen_at": "2026-08-18T14:13:32.851Z",
       "url": "https://careers.usbank.com/global/en/job/2026-0015393/Client-Relationship-Consultant-Banker-multiple-levels-West-Los-Angeles-CA",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "92e61c78f07e979a0072a5a9": {
       "first_seen_at": "2026-08-18T14:13:32.851Z",
       "url": "https://careers.usbank.com/global/en/job/2026-0000537/Associate-Wealth-Management-Advisor-Gresham-OR",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "5ded669cdfeedab87a0af445": {
       "first_seen_at": "2026-08-18T14:13:32.851Z",
       "url": "https://careers.usbank.com/global/en/job/2026-0018587/Mortgage-Branch-Manager",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "f3c375593f2251eaa40ff885": {
       "first_seen_at": "2026-08-18T14:13:32.851Z",
       "url": "https://careers.usbank.com/global/en/job/2026-0006182/Senior-Integration-Engineer",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "ed81d882ee43ce3508bf76f9": {
       "first_seen_at": "2026-08-18T14:13:32.851Z",
@@ -2923,12 +2923,12 @@
     "348e96c147554f7fb4e18040": {
       "first_seen_at": "2026-08-18T14:13:32.851Z",
       "url": "https://careers.usbank.com/global/en/job/2026-0016341/Credit-Risk-Insights-Analyst",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "7bfe34f07bbc5c1a3ede3252": {
       "first_seen_at": "2026-08-18T14:13:32.851Z",
       "url": "https://careers.usbank.com/global/en/job/2026-0014384/Mortgage-Sales-Supervisor",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "746d585daae8e3e952686266": {
       "first_seen_at": "2026-08-18T14:14:54.300Z",
@@ -2948,7 +2948,7 @@
     "9f9c508997d9ca4a6c9200b1": {
       "first_seen_at": "2026-08-18T14:14:54.300Z",
       "url": "https://www.wellsfargojobs.com/en/jobs/r-552419/lead-software-engineer",
-      "last_seen_at": "2026-08-21T23:32:03.745Z"
+      "last_seen_at": "2026-08-21T23:52:51.368Z"
     },
     "b33d03fe5e421b0d462ec7bd": {
       "first_seen_at": "2026-08-18T14:14:54.300Z",
@@ -2958,7 +2958,7 @@
     "a13eb57d033de9619c49ca24": {
       "first_seen_at": "2026-08-18T14:14:54.300Z",
       "url": "https://www.wellsfargojobs.com/en/jobs/r-555612/lead-infrastructure-engineer-devsecops-engineering",
-      "last_seen_at": "2026-08-21T23:32:03.745Z"
+      "last_seen_at": "2026-08-21T23:52:51.368Z"
     },
     "8879cadeb72de65b8b3911ab": {
       "first_seen_at": "2026-08-18T14:14:54.300Z",
@@ -2968,12 +2968,12 @@
     "8ee73c95ccdf886117ce7439": {
       "first_seen_at": "2026-08-18T14:14:54.300Z",
       "url": "https://www.wellsfargojobs.com/en/jobs/r-568078/lead-java-payments-engineer",
-      "last_seen_at": "2026-08-21T23:32:03.745Z"
+      "last_seen_at": "2026-08-21T23:52:51.368Z"
     },
     "e723f8f96ed0c827d9710c45": {
       "first_seen_at": "2026-08-18T14:14:54.300Z",
       "url": "https://www.wellsfargojobs.com/en/jobs/r-550245/senior-data-engineer",
-      "last_seen_at": "2026-08-21T23:32:03.745Z"
+      "last_seen_at": "2026-08-21T23:52:51.368Z"
     },
     "a16d251af7e2e71fd5eee5b3": {
       "first_seen_at": "2026-08-18T14:14:54.300Z",
@@ -3038,12 +3038,12 @@
     "52fa8b69bca0249972644c06": {
       "first_seen_at": "2026-08-18T13:52:08.595Z",
       "url": "https://apply.careers.microsoft.com/careers/job/1970393556940403",
-      "last_seen_at": "2026-08-21T23:32:20.508Z"
+      "last_seen_at": "2026-08-21T23:53:04.355Z"
     },
     "a4d14f1eb8298711b4496338": {
       "first_seen_at": "2026-08-18T13:52:08.595Z",
       "url": "https://apply.careers.microsoft.com/careers/job/1970393556960190",
-      "last_seen_at": "2026-08-21T23:32:20.508Z"
+      "last_seen_at": "2026-08-21T23:53:04.355Z"
     },
     "823f27c3206a1b31290c4bc9": {
       "first_seen_at": "2026-08-18T13:52:08.595Z",
@@ -3053,7 +3053,7 @@
     "73236903462adebea90ac3aa": {
       "first_seen_at": "2026-08-18T13:52:08.595Z",
       "url": "https://apply.careers.microsoft.com/careers/job/1970393556944958",
-      "last_seen_at": "2026-08-21T23:32:20.508Z"
+      "last_seen_at": "2026-08-21T23:53:04.355Z"
     },
     "20d9958cc0367fc9c74c821d": {
       "first_seen_at": "2026-08-18T13:52:08.595Z",
@@ -3088,47 +3088,47 @@
     "22438cd24fd221d147b62caa": {
       "first_seen_at": "2026-08-18T14:16:58.737Z",
       "url": "https://apply.careers.microsoft.com/careers/job/1970393556947844",
-      "last_seen_at": "2026-08-21T23:32:20.508Z"
+      "last_seen_at": "2026-08-21T23:53:04.355Z"
     },
     "472cc5fa93eec7e8025822b7": {
       "first_seen_at": "2026-08-18T14:16:58.737Z",
       "url": "https://apply.careers.microsoft.com/careers/job/1970393556866169",
-      "last_seen_at": "2026-08-21T23:32:20.508Z"
+      "last_seen_at": "2026-08-21T23:53:04.355Z"
     },
     "4be95562273cb26f3b3da254": {
       "first_seen_at": "2026-08-18T13:52:08.595Z",
       "url": "https://apply.careers.microsoft.com/careers/job/1970393556863430",
-      "last_seen_at": "2026-08-21T23:32:20.508Z"
+      "last_seen_at": "2026-08-21T23:53:04.355Z"
     },
     "4774821ed114e2ff91d36770": {
       "first_seen_at": "2026-08-18T13:52:08.595Z",
       "url": "https://apply.careers.microsoft.com/careers/job/1970393556955702",
-      "last_seen_at": "2026-08-21T23:32:20.508Z"
+      "last_seen_at": "2026-08-21T23:53:04.355Z"
     },
     "f2ade444e3b6378eef28f031": {
       "first_seen_at": "2026-08-18T14:16:58.737Z",
       "url": "https://apply.careers.microsoft.com/careers/job/1970393556863239",
-      "last_seen_at": "2026-08-21T23:32:20.508Z"
+      "last_seen_at": "2026-08-21T23:53:04.355Z"
     },
     "85e92e521ad3175c7e8e521a": {
       "first_seen_at": "2026-08-18T14:01:20.411Z",
       "url": "https://www.amazon.jobs/en/jobs/10469294/associate-delivery-consultant-security-proserve-a2c-delivery-a2c",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "2cb5e49ce793f7534e91c678": {
       "first_seen_at": "2026-08-18T14:01:20.411Z",
       "url": "https://www.amazon.jobs/en/jobs/10471862/associate-delivery-consultant-security-proserve-a2c-delivery-a2c",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "92967df8595e749b9602714b": {
       "first_seen_at": "2026-08-18T14:01:20.411Z",
       "url": "https://www.amazon.jobs/en/jobs/10469289/associate-delivery-consultant-aiml-proserve-a2c-delivery-proserve-a2c",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "d810a239df91e01997d8c319": {
       "first_seen_at": "2026-08-18T14:01:20.411Z",
       "url": "https://www.amazon.jobs/en/jobs/10471861/associate-delivery-consultant-aiml-professional-services-a2c-delivery",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "aeef4c97111633d73c38b2f0": {
       "first_seen_at": "2026-08-18T14:01:20.411Z",
@@ -3138,47 +3138,47 @@
     "3df21d8e22cf1dfab3b9831c": {
       "first_seen_at": "2026-08-18T14:01:20.411Z",
       "url": "https://www.amazon.jobs/en/jobs/10471860/associate-delivery-consultant-aiml-professional-services-a2c-delivery",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "d3ca80e993caa91cb7a2a9ba": {
       "first_seen_at": "2026-08-18T14:01:20.411Z",
       "url": "https://www.amazon.jobs/en/jobs/10468541/assoc-delivery-cons-ai-ml-a2c-proserve-shared-delivery",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "066b40ae1f3de282a10de046": {
       "first_seen_at": "2026-08-18T14:01:20.411Z",
       "url": "https://www.amazon.jobs/en/jobs/10468545/associate-engagement-manager-proserve-a2c-delivery-a2c-proserve-shared-delivery-sdt",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "276ac730fa4401698ea9ef63": {
       "first_seen_at": "2026-08-18T14:01:20.411Z",
       "url": "https://www.amazon.jobs/en/jobs/10468625/associate-engagement-manager-proserve-a2c-delivery-a2c-proserve-shared-delivery-sdt",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "5ecc55c4828c2ca15c749593": {
       "first_seen_at": "2026-08-18T14:01:20.411Z",
       "url": "https://www.amazon.jobs/en/jobs/10464055/software-development-engineer-i-ml-infra-services-annapurna-labs",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "6dada789ac843bd331fbd59f": {
       "first_seen_at": "2026-08-18T14:01:20.411Z",
       "url": "https://www.amazon.jobs/en/jobs/10467953/associate-delivery-consultant-aiml-proserve-a2c-delivery-associate-to-consultant-a2c",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "59458269fb894cc1d7b8e321": {
       "first_seen_at": "2026-08-18T14:01:20.411Z",
       "url": "https://www.amazon.jobs/en/jobs/10468627/associate-delivery-consultant-aiml-a2c-proserve-shared-delivery-sdt",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "7285c8217d2c10e4b5d984f1": {
       "first_seen_at": "2026-08-18T14:01:20.411Z",
       "url": "https://www.amazon.jobs/en/jobs/10463410/associate-delivery-consultant-aiml-proserve-a2c-delivery-associate-to-consultant-a2c",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "1bcb23bc69187e3608e171e7": {
       "first_seen_at": "2026-08-18T14:01:20.411Z",
       "url": "https://www.amazon.jobs/en/jobs/10452115/robotics-software-development-engineer",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "37b26de37097812e7a4d47d8": {
       "first_seen_at": "2026-08-18T14:01:20.411Z",
@@ -3268,37 +3268,37 @@
     "cbdca08f73a0288dbe9cb8d8": {
       "first_seen_at": "2026-08-18T14:26:35.278Z",
       "url": "https://jobs.fidelity.com/en/jobs/2132370/principal-software-engineerdeveloper",
-      "last_seen_at": "2026-08-21T23:31:04.677Z"
+      "last_seen_at": "2026-08-21T23:51:35.054Z"
     },
     "af1159aea150ffdf2902dbdc": {
       "first_seen_at": "2026-08-18T14:26:35.278Z",
       "url": "https://jobs.fidelity.com/en/jobs/2132373/principal-software-engineerdeveloper",
-      "last_seen_at": "2026-08-21T23:31:04.677Z"
+      "last_seen_at": "2026-08-21T23:51:35.054Z"
     },
     "5f001b347323df5cc07c0a5e": {
       "first_seen_at": "2026-08-18T14:26:35.278Z",
       "url": "https://jobs.fidelity.com/en/jobs/2132391/principal-software-engineerdeveloper",
-      "last_seen_at": "2026-08-21T23:31:04.677Z"
+      "last_seen_at": "2026-08-21T23:51:35.054Z"
     },
     "1071893306430458adc9ea17": {
       "first_seen_at": "2026-08-18T14:26:35.278Z",
       "url": "https://jobs.fidelity.com/en/jobs/2132414/principal-software-engineerdeveloper",
-      "last_seen_at": "2026-08-21T23:31:04.677Z"
+      "last_seen_at": "2026-08-21T23:51:35.054Z"
     },
     "636d31e50a583819bca2e80b": {
       "first_seen_at": "2026-08-18T14:26:35.278Z",
       "url": "https://jobs.fidelity.com/en/jobs/2133093/senior-software-engineerdeveloper",
-      "last_seen_at": "2026-08-21T23:31:04.677Z"
+      "last_seen_at": "2026-08-21T23:51:35.054Z"
     },
     "9527756ac109fe30cea3e88e": {
       "first_seen_at": "2026-08-18T14:26:35.278Z",
       "url": "https://jobs.fidelity.com/en/jobs/2133614/senior-software-engineerdeveloper",
-      "last_seen_at": "2026-08-21T23:31:04.677Z"
+      "last_seen_at": "2026-08-21T23:51:35.054Z"
     },
     "26dc768abb54e1d30fa553b5": {
       "first_seen_at": "2026-08-18T14:26:35.278Z",
       "url": "https://jobs.fidelity.com/en/jobs/2128072/principal-software-engineer",
-      "last_seen_at": "2026-08-21T23:31:04.677Z"
+      "last_seen_at": "2026-08-21T23:51:35.054Z"
     },
     "06d6175a4c1fdb13dc6397eb": {
       "first_seen_at": "2026-08-18T14:26:35.278Z",
@@ -3308,22 +3308,22 @@
     "082c60d07f00ca671927b067": {
       "first_seen_at": "2026-08-18T14:26:35.278Z",
       "url": "https://jobs.fidelity.com/en/jobs/2133108/senior-software-engineerdeveloper",
-      "last_seen_at": "2026-08-21T23:31:04.677Z"
+      "last_seen_at": "2026-08-21T23:51:35.054Z"
     },
     "7c49e5b6887fc5bfaf6f7389": {
       "first_seen_at": "2026-08-18T14:26:35.278Z",
       "url": "https://jobs.fidelity.com/en/jobs/2132381/senior-software-engineerdeveloper",
-      "last_seen_at": "2026-08-21T23:31:04.677Z"
+      "last_seen_at": "2026-08-21T23:51:35.054Z"
     },
     "ea0f84dfff39a726e3118d54": {
       "first_seen_at": "2026-08-18T14:26:35.278Z",
       "url": "https://jobs.fidelity.com/en/jobs/2133104/principal-software-engineerdeveloper",
-      "last_seen_at": "2026-08-21T23:31:04.677Z"
+      "last_seen_at": "2026-08-21T23:51:35.054Z"
     },
     "e73f40754b843b2ef833e016": {
       "first_seen_at": "2026-08-18T14:26:35.278Z",
       "url": "https://jobs.fidelity.com/en/jobs/2132389/senior-software-engineerdeveloper",
-      "last_seen_at": "2026-08-21T23:31:04.677Z"
+      "last_seen_at": "2026-08-21T23:51:35.054Z"
     },
     "875773916efc4abbe3e7621f": {
       "first_seen_at": "2026-08-18T14:26:35.278Z",
@@ -3333,12 +3333,12 @@
     "b393a2c9d8c22cfd7fb3132e": {
       "first_seen_at": "2026-08-18T14:26:35.278Z",
       "url": "https://jobs.fidelity.com/en/jobs/2132368/senior-software-engineerdeveloper",
-      "last_seen_at": "2026-08-21T23:31:04.677Z"
+      "last_seen_at": "2026-08-21T23:51:35.054Z"
     },
     "633ad83d613ca7334224ee58": {
       "first_seen_at": "2026-08-18T14:27:51.997Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=125263",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "1f7ba1134473524893f1056f": {
       "first_seen_at": "2026-08-18T14:05:15.694Z",
@@ -3418,12 +3418,12 @@
     "69f71d81a30d5a5c7490965c": {
       "first_seen_at": "2026-08-18T14:06:49.813Z",
       "url": "https://careers.qualcomm.com/careers/job/446718120116",
-      "last_seen_at": "2026-08-21T23:31:17.007Z"
+      "last_seen_at": "2026-08-21T23:52:12.294Z"
     },
     "02651a7186f1b1ba3d8e4570": {
       "first_seen_at": "2026-08-18T13:50:36.662Z",
       "url": "https://careers.qualcomm.com/careers/job/446716006569",
-      "last_seen_at": "2026-08-21T23:31:17.007Z"
+      "last_seen_at": "2026-08-21T23:52:12.294Z"
     },
     "b360049e3e47953847505c41": {
       "first_seen_at": "2026-08-18T14:06:49.813Z",
@@ -3513,12 +3513,12 @@
     "59c3af2fef0a3a540a15b7d2": {
       "first_seen_at": "2026-08-18T14:13:32.851Z",
       "url": "https://careers.usbank.com/global/en/job/2026-0019038/Mortgage-Branch-Manager",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "8d9218b461282b5f11bafe2b": {
       "first_seen_at": "2026-08-18T14:13:32.851Z",
       "url": "https://careers.usbank.com/global/en/job/2026-0019039/Mortgage-Sales-Supervisor",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "70fb740c9c19008a91af4e21": {
       "first_seen_at": "2026-08-18T14:13:32.851Z",
@@ -3543,37 +3543,37 @@
     "25c23a1f4ca28c9091d977a5": {
       "first_seen_at": "2026-08-18T14:13:32.851Z",
       "url": "https://careers.usbank.com/global/en/job/2026-0018988/Mortgage-Loan-Originator",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "80ceae2e483e39c8cbbe306e": {
       "first_seen_at": "2026-08-18T14:13:32.851Z",
       "url": "https://careers.usbank.com/global/en/job/2026-0018991/Mortgage-Loan-Originator",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "3a3e32da49ce8855b0138caf": {
       "first_seen_at": "2026-08-18T14:13:32.851Z",
       "url": "https://careers.usbank.com/global/en/job/2026-0018343/PWM-Portfolio-Manager",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "14c3ce2f12b225290929f2c7": {
       "first_seen_at": "2026-08-18T14:13:32.851Z",
       "url": "https://careers.usbank.com/global/en/job/2026-0019578/Client-Relationship-Consultant-2-Banker-Rapid-City",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "c51703958133fda134f695b5": {
       "first_seen_at": "2026-08-18T14:13:32.851Z",
       "url": "https://careers.usbank.com/global/en/job/2025-0011337/Alternative-Investments-Accountant",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "0cec3ad6689481b6b48a04b1": {
       "first_seen_at": "2026-08-18T14:13:32.851Z",
       "url": "https://careers.usbank.com/global/en/job/2025-0004014/Wealth-Management-Advisor-Oak-Lawn-IL",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "4f9600cbb134fa8e04fc47e1": {
       "first_seen_at": "2026-08-18T14:13:32.851Z",
       "url": "https://careers.usbank.com/global/en/job/2026-0019899/Mortgage-Loan-Originator",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "d054d0db87eadf2466d17599": {
       "first_seen_at": "2026-08-18T14:13:32.851Z",
@@ -3583,12 +3583,12 @@
     "45ac1ccca4d093d426ec4397": {
       "first_seen_at": "2026-08-18T14:13:32.851Z",
       "url": "https://careers.usbank.com/global/en/job/2026-0020305/Client-Relationship-Consultant-2-Banker-West-Morton-IL",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "3d35b027d729f748e1c13671": {
       "first_seen_at": "2026-08-18T14:14:54.300Z",
       "url": "https://www.wellsfargojobs.com/en/jobs/r-554269/lead-protocol-engineer-go-cryptography",
-      "last_seen_at": "2026-08-21T23:32:03.745Z"
+      "last_seen_at": "2026-08-21T23:52:51.368Z"
     },
     "e80913a8b4ee035078cdf115": {
       "first_seen_at": "2026-08-18T14:14:54.300Z",
@@ -3683,27 +3683,27 @@
     "b7d65d01bb75129df2ab998e": {
       "first_seen_at": "2026-08-18T13:52:08.595Z",
       "url": "https://apply.careers.microsoft.com/careers/job/1970393556971567",
-      "last_seen_at": "2026-08-21T23:32:20.508Z"
+      "last_seen_at": "2026-08-21T23:53:04.355Z"
     },
     "1bb0ba030b9e75bfc4998958": {
       "first_seen_at": "2026-08-18T13:52:08.595Z",
       "url": "https://apply.careers.microsoft.com/careers/job/1970393556824773",
-      "last_seen_at": "2026-08-21T23:32:20.508Z"
+      "last_seen_at": "2026-08-21T23:53:04.355Z"
     },
     "8aa35f38f3773443f46526ae": {
       "first_seen_at": "2026-08-18T13:52:08.595Z",
       "url": "https://apply.careers.microsoft.com/careers/job/1970393556859432",
-      "last_seen_at": "2026-08-21T23:32:20.508Z"
+      "last_seen_at": "2026-08-21T23:53:04.355Z"
     },
     "658d8b3f896278dea6b8ad28": {
       "first_seen_at": "2026-08-18T14:16:58.737Z",
       "url": "https://apply.careers.microsoft.com/careers/job/1970393556874185",
-      "last_seen_at": "2026-08-21T23:32:20.508Z"
+      "last_seen_at": "2026-08-21T23:53:04.355Z"
     },
     "c0f5933960828aeb78246afb": {
       "first_seen_at": "2026-08-18T14:16:58.737Z",
       "url": "https://apply.careers.microsoft.com/careers/job/1970393556828219",
-      "last_seen_at": "2026-08-21T23:32:20.508Z"
+      "last_seen_at": "2026-08-21T23:53:04.355Z"
     },
     "1d99cd63a2416ff4a75a90a0": {
       "first_seen_at": "2026-08-18T14:24:50.526Z",
@@ -3783,27 +3783,27 @@
     "ff91e0a98cd8424888b08fff": {
       "first_seen_at": "2026-08-18T14:26:35.278Z",
       "url": "https://jobs.fidelity.com/en/jobs/2133097/senior-software-engineerdeveloper",
-      "last_seen_at": "2026-08-21T23:31:04.677Z"
+      "last_seen_at": "2026-08-21T23:51:35.054Z"
     },
     "1a8834564e5d2d0104bcdaba": {
       "first_seen_at": "2026-08-18T14:26:35.278Z",
       "url": "https://jobs.fidelity.com/en/jobs/2132406/director-software-engineering",
-      "last_seen_at": "2026-08-21T23:31:04.677Z"
+      "last_seen_at": "2026-08-21T23:51:35.054Z"
     },
     "eee7351babcdae2c426b0793": {
       "first_seen_at": "2026-08-18T14:26:35.278Z",
       "url": "https://jobs.fidelity.com/en/jobs/2132418/principal-software-engineerdeveloper",
-      "last_seen_at": "2026-08-21T23:31:04.677Z"
+      "last_seen_at": "2026-08-21T23:51:35.054Z"
     },
     "667a45af78ec0c0844caf241": {
       "first_seen_at": "2026-08-18T14:26:35.278Z",
       "url": "https://jobs.fidelity.com/en/jobs/2132375/senior-software-engineerdeveloper",
-      "last_seen_at": "2026-08-21T23:31:04.677Z"
+      "last_seen_at": "2026-08-21T23:51:35.054Z"
     },
     "553fd135cb6eddf0842c75f4": {
       "first_seen_at": "2026-08-18T14:26:35.278Z",
       "url": "https://jobs.fidelity.com/en/jobs/2133090/principal-software-engineerdeveloper",
-      "last_seen_at": "2026-08-21T23:31:04.677Z"
+      "last_seen_at": "2026-08-21T23:51:35.054Z"
     },
     "d26f0274c352408916c42951": {
       "first_seen_at": "2026-08-18T14:47:33.519Z",
@@ -3813,12 +3813,12 @@
     "f0e3fe56f0d541951cb21033": {
       "first_seen_at": "2026-08-18T14:47:33.519Z",
       "url": "https://careers.qualcomm.com/careers/job/446720178575",
-      "last_seen_at": "2026-08-21T22:33:15.405Z"
+      "last_seen_at": "2026-08-21T23:52:12.294Z"
     },
     "c24db2d2eec553c44ef8e12b": {
       "first_seen_at": "2026-08-18T14:47:33.519Z",
       "url": "https://careers.qualcomm.com/careers/job/446720416779",
-      "last_seen_at": "2026-08-21T22:33:15.405Z"
+      "last_seen_at": "2026-08-21T23:52:12.294Z"
     },
     "724edb7f93f696c212838cc4": {
       "first_seen_at": "2026-08-18T14:08:11.649Z",
@@ -4048,12 +4048,12 @@
     "c540c5dcefd23c77f82d85b4": {
       "first_seen_at": "2026-08-18T15:45:07.271Z",
       "url": "https://www.wellsfargojobs.com/en/jobs/r-559816/lead-specialty-software-engineer-servicenow-wsd",
-      "last_seen_at": "2026-08-21T23:32:03.745Z"
+      "last_seen_at": "2026-08-21T23:52:51.368Z"
     },
     "a6fbe6532b5d3922bffaf219": {
       "first_seen_at": "2026-08-18T15:45:07.271Z",
       "url": "https://www.wellsfargojobs.com/en/jobs/r-559960/lead-infrastructure-engineer-solace",
-      "last_seen_at": "2026-08-21T23:32:03.745Z"
+      "last_seen_at": "2026-08-21T23:52:51.368Z"
     },
     "b6db9cd70bdaec7b075f75a3": {
       "first_seen_at": "2026-08-18T15:45:07.271Z",
@@ -4093,7 +4093,7 @@
     "e7bb6ddf9caca14823526725": {
       "first_seen_at": "2026-08-18T16:41:03.547Z",
       "url": "https://www.amazon.jobs/en/jobs/10505107/software-development-engineer-ios",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "216c6b0eec749526ddd5f465": {
       "first_seen_at": "2026-08-18T16:42:22.701Z",
@@ -4238,12 +4238,12 @@
     "c38c7f8d26c36f9ca12780fd": {
       "first_seen_at": "2026-08-18T18:04:57.749Z",
       "url": "https://us.microsoft.talentnet.community/jobs/e901330d-12ff-4465-ad3a-fc781057b0ab",
-      "last_seen_at": "2026-08-21T23:31:48.582Z"
+      "last_seen_at": "2026-08-21T23:52:39.382Z"
     },
     "da9498c7008b990b6a0556ae": {
       "first_seen_at": "2026-08-18T18:04:57.749Z",
       "url": "https://us.microsoft.talentnet.community/jobs/f2efcb80-15f3-4e20-88a7-27c7c83af28f",
-      "last_seen_at": "2026-08-21T23:31:48.582Z"
+      "last_seen_at": "2026-08-21T23:52:39.382Z"
     },
     "00fb52e644aa193462c94242": {
       "first_seen_at": "2026-08-18T18:06:09.714Z",
@@ -4383,7 +4383,7 @@
     "dba5dcb05584ce271ac72786": {
       "first_seen_at": "2026-08-18T19:57:48.890Z",
       "url": "https://www.wellsfargojobs.com/en/jobs/r-564936/lead-specialty-software-engineer-gcp-platform",
-      "last_seen_at": "2026-08-21T23:32:03.745Z"
+      "last_seen_at": "2026-08-21T23:52:51.368Z"
     },
     "bf7fa0cc5b0d8c59252bd08b": {
       "first_seen_at": "2026-08-18T19:57:48.890Z",
@@ -4503,7 +4503,7 @@
     "e9bbe0bdc091ee4c6a668c24": {
       "first_seen_at": "2026-08-18T21:56:38.022Z",
       "url": "https://www.wellsfargojobs.com/en/jobs/r-568388/lead-information-security-engineer",
-      "last_seen_at": "2026-08-21T23:32:03.745Z"
+      "last_seen_at": "2026-08-21T23:52:51.368Z"
     },
     "9c76d45e5386c6308341a1b0": {
       "first_seen_at": "2026-08-18T21:56:38.022Z",
@@ -4623,7 +4623,7 @@
     "cad5daa73e7d422be6d623e2": {
       "first_seen_at": "2026-08-19T03:12:49.223Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210779937",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "e3f21eb274d807dd1c6739d4": {
       "first_seen_at": "2026-08-19T03:12:49.223Z",
@@ -4778,7 +4778,7 @@
     "f714c94ff51b1096509b5534": {
       "first_seen_at": "2026-08-19T13:56:31.126Z",
       "url": "https://www.wellsfargojobs.com/en/jobs/r-551679/senior-java-software-engineer",
-      "last_seen_at": "2026-08-21T23:32:03.745Z"
+      "last_seen_at": "2026-08-21T23:52:51.368Z"
     },
     "e848dba2a8d62b435bc8911a": {
       "first_seen_at": "2026-08-19T13:56:54.845Z",
@@ -4793,7 +4793,7 @@
     "cd6e7e787ba9d5edf7642a17": {
       "first_seen_at": "2026-08-19T14:48:22.811Z",
       "url": "https://careers.qualcomm.com/careers/job/446720501756",
-      "last_seen_at": "2026-08-21T23:31:17.007Z"
+      "last_seen_at": "2026-08-21T23:52:12.294Z"
     },
     "77f0bd3519f3b170c93e6169": {
       "first_seen_at": "2026-08-19T14:49:42.358Z",
@@ -4908,37 +4908,37 @@
     "cd2b09c3f736551ed58bb67c": {
       "first_seen_at": "2026-08-20T08:44:07.198Z",
       "url": "https://www.metacareers.com/jobs/4535026343380190",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "1b4f84f791c5a450681675cf": {
       "first_seen_at": "2026-08-20T08:44:57.513Z",
       "url": "https://jobs.apple.com/en-us/details/200678194-1435/sr-ios-software-engineer-creative-apps?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "cca9f2bc84da28d5a7d1efd6": {
       "first_seen_at": "2026-08-20T08:44:57.513Z",
       "url": "https://jobs.apple.com/en-us/details/200678194-0836/sr-ios-software-engineer-creative-apps?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "f7f738b79f9cf73bd195c943": {
       "first_seen_at": "2026-08-20T08:44:57.513Z",
       "url": "https://jobs.apple.com/en-us/details/200678194-3543/sr-ios-software-engineer-creative-apps?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "245b0c71445c1a184fd8e535": {
       "first_seen_at": "2026-08-20T08:44:57.513Z",
       "url": "https://jobs.apple.com/en-us/details/200678194-3337/sr-ios-software-engineer-creative-apps?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "4ff0cf4a6c0ce9558a89d2ac": {
       "first_seen_at": "2026-08-20T08:44:57.513Z",
       "url": "https://jobs.apple.com/en-us/details/200678194-3673/sr-ios-software-engineer-creative-apps?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "a4bc48131ce8d3822749b0ee": {
       "first_seen_at": "2026-08-20T08:44:57.513Z",
       "url": "https://jobs.apple.com/en-us/details/200678192-1435/ios-software-engineer-creative-apps?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "b9eec8578c99f59a15287b71": {
       "first_seen_at": "2026-08-20T08:44:57.513Z",
@@ -5088,27 +5088,27 @@
     "7187cd23b7ccbb0aeb715ab6": {
       "first_seen_at": "2026-08-20T08:47:00.625Z",
       "url": "https://jobs.fidelity.com/en/jobs/2133131/principal-software-engineerdeveloper",
-      "last_seen_at": "2026-08-21T23:31:04.677Z"
+      "last_seen_at": "2026-08-21T23:51:35.054Z"
     },
     "d9adb9781bdc3e115d1281ce": {
       "first_seen_at": "2026-08-20T08:47:00.625Z",
       "url": "https://jobs.fidelity.com/en/jobs/2132396/principal-software-engineerdeveloper",
-      "last_seen_at": "2026-08-21T23:31:04.677Z"
+      "last_seen_at": "2026-08-21T23:51:35.054Z"
     },
     "b166b34b6edae1446f319c6c": {
       "first_seen_at": "2026-08-20T08:48:14.294Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=128543",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "1ecb92dba5c88824701cc35b": {
       "first_seen_at": "2026-08-20T08:48:14.294Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=128174",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "66d4548bffad8ab85986aea3": {
       "first_seen_at": "2026-08-20T08:48:14.294Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=126956",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "506e58cff1c9b4496ddba06e": {
       "first_seen_at": "2026-08-20T08:49:53.151Z",
@@ -5228,7 +5228,7 @@
     "52c62e80954b3a989cdc4cd9": {
       "first_seen_at": "2026-08-20T08:51:08.045Z",
       "url": "https://intel.wd1.myworkdayjobs.com/en-US/External/job/Virtual-US/Software-Engineering-Manager_JR0284770",
-      "last_seen_at": "2026-08-21T23:31:40.128Z"
+      "last_seen_at": "2026-08-21T23:52:31.111Z"
     },
     "a86c7a772bb05dfaef5bb264": {
       "first_seen_at": "2026-08-20T08:51:24.263Z",
@@ -5258,22 +5258,22 @@
     "5077863cc5acca7e0a3a1db3": {
       "first_seen_at": "2026-08-20T08:52:14.738Z",
       "url": "https://us.microsoft.talentnet.community/jobs/7f2a5cf8-d515-4950-8534-b4a1b2ff0e28",
-      "last_seen_at": "2026-08-21T23:31:48.582Z"
+      "last_seen_at": "2026-08-21T23:52:39.382Z"
     },
     "f8667d26c77e6db13711da11": {
       "first_seen_at": "2026-08-20T08:52:14.738Z",
       "url": "https://us.microsoft.talentnet.community/jobs/4efcd73b-051b-4937-8c73-ea1c2bcb629f",
-      "last_seen_at": "2026-08-21T23:31:48.582Z"
+      "last_seen_at": "2026-08-21T23:52:39.382Z"
     },
     "8cf304120ca7db5ce5c30be4": {
       "first_seen_at": "2026-08-20T08:52:58.042Z",
       "url": "https://careers.usbank.com/global/en/job/2026-0017887/Client-Relationship-Consultant-3-Banker-21st-Street-Topeka-KS",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "104d79c4549169f05f5b584c": {
       "first_seen_at": "2026-08-20T08:52:58.042Z",
       "url": "https://careers.usbank.com/global/en/job/2026-0020368/Financial-Accounting-Analyst",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "527cb256c99e02d06eccc1c9": {
       "first_seen_at": "2026-08-20T08:52:58.042Z",
@@ -5283,27 +5283,27 @@
     "7f3b0eb486341b379be0264b": {
       "first_seen_at": "2026-08-20T08:52:58.042Z",
       "url": "https://careers.usbank.com/global/en/job/2026-0018315/Small-Business-Specialist-3-4-Louisville-KY",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "8cee47e7bf9fb2963a23114e": {
       "first_seen_at": "2026-08-20T08:52:58.042Z",
       "url": "https://careers.usbank.com/global/en/job/2026-0021279/Small-Business-Specialist-3-Eugene-Main-OR",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "73e172b9b06d3f85256a5c27": {
       "first_seen_at": "2026-08-20T08:52:58.042Z",
       "url": "https://careers.usbank.com/global/en/job/2026-0021281/Small-Business-Specialist-3-Westminster-CO",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "3d21ad5bc7b16aa4d4923ef1": {
       "first_seen_at": "2026-08-20T08:52:58.042Z",
       "url": "https://careers.usbank.com/global/en/job/2026-0021267/Small-Business-Specialist-3-Highlands-Ranch-CO",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "cdf711415d97bf82811e8771": {
       "first_seen_at": "2026-08-20T08:53:45.674Z",
       "url": "https://www.wellsfargojobs.com/en/jobs/r-568315/lead-software-engineer",
-      "last_seen_at": "2026-08-21T23:32:03.745Z"
+      "last_seen_at": "2026-08-21T23:52:51.368Z"
     },
     "0932f8e345f6b97b20badd8b": {
       "first_seen_at": "2026-08-20T08:53:45.674Z",
@@ -5313,7 +5313,7 @@
     "80f44d5923fed1901bea9a07": {
       "first_seen_at": "2026-08-20T08:53:45.674Z",
       "url": "https://www.wellsfargojobs.com/en/jobs/r-565843/principal-engineer-aws-cloud-security",
-      "last_seen_at": "2026-08-21T23:32:03.745Z"
+      "last_seen_at": "2026-08-21T23:52:51.368Z"
     },
     "a42124fd1dbee4ac3cda9b6f": {
       "first_seen_at": "2026-08-20T08:53:45.674Z",
@@ -5388,22 +5388,22 @@
     "982950beba561519caad384b": {
       "first_seen_at": "2026-08-20T08:55:40.881Z",
       "url": "https://apply.careers.microsoft.com/careers/job/1970393556860973",
-      "last_seen_at": "2026-08-21T23:32:20.508Z"
+      "last_seen_at": "2026-08-21T23:53:04.355Z"
     },
     "ff5d3045bc33a9fd58334950": {
       "first_seen_at": "2026-08-20T08:55:40.881Z",
       "url": "https://apply.careers.microsoft.com/careers/job/1970393556928331",
-      "last_seen_at": "2026-08-21T23:32:20.508Z"
+      "last_seen_at": "2026-08-21T23:53:04.355Z"
     },
     "49956cfbb6b406ec024e843c": {
       "first_seen_at": "2026-08-20T08:55:40.881Z",
       "url": "https://apply.careers.microsoft.com/careers/job/1970393556960240",
-      "last_seen_at": "2026-08-21T23:32:20.508Z"
+      "last_seen_at": "2026-08-21T23:53:04.355Z"
     },
     "e7631514a03b4e45ef953102": {
       "first_seen_at": "2026-08-20T09:13:28.499Z",
       "url": "https://www.google.com/about/careers/applications/jobs/results/78703249065943750-software-engineer-early-career-campus?location=United%20States&hl=en&target_level=EARLY&sort_by=date&employment_type=FULL_TIME&q=%22Software%20Engineer%22",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "1e4b9b516c0f99c95177d7e4": {
       "first_seen_at": "2026-08-20T09:13:28.499Z",
@@ -5418,112 +5418,112 @@
     "bd5561b774ee3fe48d44d597": {
       "first_seen_at": "2026-08-20T09:15:43.877Z",
       "url": "https://higher.gs.com/roles/178036",
-      "last_seen_at": "2026-08-21T23:32:22.174Z"
+      "last_seen_at": "2026-08-21T23:53:07.273Z"
     },
     "982419a3d635e00946b06303": {
       "first_seen_at": "2026-08-20T09:15:43.877Z",
       "url": "https://higher.gs.com/roles/180700",
-      "last_seen_at": "2026-08-21T23:32:22.174Z"
+      "last_seen_at": "2026-08-21T23:53:07.273Z"
     },
     "129f4910dc69092d5e1aa1fd": {
       "first_seen_at": "2026-08-20T09:15:43.877Z",
       "url": "https://higher.gs.com/roles/170257",
-      "last_seen_at": "2026-08-21T23:32:22.174Z"
+      "last_seen_at": "2026-08-21T23:53:07.273Z"
     },
     "baa7dc29d25ee4966809c723": {
       "first_seen_at": "2026-08-20T09:15:43.877Z",
       "url": "https://higher.gs.com/roles/176999",
-      "last_seen_at": "2026-08-21T23:32:22.174Z"
+      "last_seen_at": "2026-08-21T23:53:07.273Z"
     },
     "fb0f4ab20bd0dd3bcb6099ce": {
       "first_seen_at": "2026-08-20T09:15:43.877Z",
       "url": "https://higher.gs.com/roles/170256",
-      "last_seen_at": "2026-08-21T23:32:22.174Z"
+      "last_seen_at": "2026-08-21T23:53:07.273Z"
     },
     "269c1e0aa04a9f68f9d770aa": {
       "first_seen_at": "2026-08-20T09:15:43.877Z",
       "url": "https://higher.gs.com/roles/179368",
-      "last_seen_at": "2026-08-21T23:32:22.174Z"
+      "last_seen_at": "2026-08-21T23:53:07.273Z"
     },
     "c213803a1101012cf116f9bc": {
       "first_seen_at": "2026-08-20T09:15:43.877Z",
       "url": "https://higher.gs.com/roles/179691",
-      "last_seen_at": "2026-08-21T23:32:22.174Z"
+      "last_seen_at": "2026-08-21T23:53:07.273Z"
     },
     "d7a97e2cb196165c9a2dfc35": {
       "first_seen_at": "2026-08-20T09:15:43.877Z",
       "url": "https://higher.gs.com/roles/180914",
-      "last_seen_at": "2026-08-21T23:32:22.174Z"
+      "last_seen_at": "2026-08-21T23:53:07.273Z"
     },
     "78fb58cfd08be69148fb6af8": {
       "first_seen_at": "2026-08-20T09:15:43.877Z",
       "url": "https://higher.gs.com/roles/164029",
-      "last_seen_at": "2026-08-21T23:32:22.174Z"
+      "last_seen_at": "2026-08-21T23:53:07.273Z"
     },
     "90735ba5681cb031fd2a441a": {
       "first_seen_at": "2026-08-20T09:15:43.877Z",
       "url": "https://higher.gs.com/roles/180303",
-      "last_seen_at": "2026-08-21T23:32:22.174Z"
+      "last_seen_at": "2026-08-21T23:53:07.273Z"
     },
     "7231cabcbca449c42881925e": {
       "first_seen_at": "2026-08-20T09:15:43.877Z",
       "url": "https://higher.gs.com/roles/170770",
-      "last_seen_at": "2026-08-21T23:32:22.174Z"
+      "last_seen_at": "2026-08-21T23:53:07.273Z"
     },
     "a6cf381af5f1372a8c1e797f": {
       "first_seen_at": "2026-08-20T09:15:43.877Z",
       "url": "https://higher.gs.com/roles/179758",
-      "last_seen_at": "2026-08-21T23:32:22.174Z"
+      "last_seen_at": "2026-08-21T23:53:07.273Z"
     },
     "8fd1b33f673fea0620c03994": {
       "first_seen_at": "2026-08-20T09:15:43.877Z",
       "url": "https://higher.gs.com/roles/177423",
-      "last_seen_at": "2026-08-21T23:32:22.174Z"
+      "last_seen_at": "2026-08-21T23:53:07.273Z"
     },
     "16a5f0099bd8c63b491b9914": {
       "first_seen_at": "2026-08-20T09:15:43.877Z",
       "url": "https://higher.gs.com/roles/164034",
-      "last_seen_at": "2026-08-21T23:32:22.174Z"
+      "last_seen_at": "2026-08-21T23:53:07.273Z"
     },
     "ed95bc3847bb9518967c7683": {
       "first_seen_at": "2026-08-20T09:15:43.877Z",
       "url": "https://higher.gs.com/roles/168764",
-      "last_seen_at": "2026-08-21T23:32:22.174Z"
+      "last_seen_at": "2026-08-21T23:53:07.273Z"
     },
     "3a7f1e569bc777ec9106f310": {
       "first_seen_at": "2026-08-20T09:15:43.877Z",
       "url": "https://higher.gs.com/roles/181810",
-      "last_seen_at": "2026-08-21T23:32:22.174Z"
+      "last_seen_at": "2026-08-21T23:53:07.273Z"
     },
     "eac88b016ac2fc1e5879fb7e": {
       "first_seen_at": "2026-08-20T09:15:43.877Z",
       "url": "https://higher.gs.com/roles/152248",
-      "last_seen_at": "2026-08-21T23:32:22.174Z"
+      "last_seen_at": "2026-08-21T23:53:07.273Z"
     },
     "8ab8d53cac5714b0171e8ff4": {
       "first_seen_at": "2026-08-20T09:15:43.877Z",
       "url": "https://higher.gs.com/roles/119977",
-      "last_seen_at": "2026-08-21T23:32:22.174Z"
+      "last_seen_at": "2026-08-21T23:53:07.273Z"
     },
     "f59000568223e57abb0cebc0": {
       "first_seen_at": "2026-08-20T10:39:11.190Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210774920",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "a08263bf043c7b1b26dbbd8a": {
       "first_seen_at": "2026-08-20T10:39:43.614Z",
       "url": "https://careers.usbank.com/global/en/job/2026-0021263/Small-Business-Specialist-3-Hood-River-OR",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "0c284e869085586dbf92a01a": {
       "first_seen_at": "2026-08-20T11:56:51.680Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210768340",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "07a1c7318381cfbd374475c1": {
       "first_seen_at": "2026-08-20T11:56:51.680Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210768991",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "5764cc9275807d4c687210fd": {
       "first_seen_at": "2026-08-20T13:04:09.040Z",
@@ -5543,7 +5543,7 @@
     "19f166e7164c4aabc6508803": {
       "first_seen_at": "2026-08-20T13:53:35.657Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210773795",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "1df5852b276d1fb1534fcc56": {
       "first_seen_at": "2026-08-20T13:53:35.657Z",
@@ -5558,12 +5558,12 @@
     "614ed27d732275123aa09745": {
       "first_seen_at": "2026-08-20T14:44:59.168Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210746672",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "ae2e0f4f61d1969495a12400": {
       "first_seen_at": "2026-08-20T14:44:59.168Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210759104",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "3bf771ee65a2de52927d6229": {
       "first_seen_at": "2026-08-20T14:45:43.483Z",
@@ -5603,22 +5603,22 @@
     "ef24822f7cf3fda6b08b6bab": {
       "first_seen_at": "2026-08-20T15:41:42.876Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210758037",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "aa71961fcd8b83713ce8006c": {
       "first_seen_at": "2026-08-20T15:41:42.876Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210758685",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "467a6132e2c1e27e203e2e78": {
       "first_seen_at": "2026-08-20T15:41:42.876Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210760840",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "d59ccb505221cbab33541237": {
       "first_seen_at": "2026-08-20T15:41:42.876Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210774658",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "404ba95629cbecce0849bdb8": {
       "first_seen_at": "2026-08-20T15:41:42.876Z",
@@ -5638,7 +5638,7 @@
     "3c16895509f9350aaf60b7a6": {
       "first_seen_at": "2026-08-20T15:42:52.143Z",
       "url": "https://www.wellsfargojobs.com/en/jobs/r-569099/lead-software-engineer",
-      "last_seen_at": "2026-08-21T23:32:03.745Z"
+      "last_seen_at": "2026-08-21T23:52:51.368Z"
     },
     "1807729fdc2a529200af95df": {
       "first_seen_at": "2026-08-20T15:42:56.602Z",
@@ -5653,7 +5653,7 @@
     "bc64fb796522967a3a695885": {
       "first_seen_at": "2026-08-20T15:42:52.143Z",
       "url": "https://www.wellsfargojobs.com/en/jobs/r-520295/lead-cryptography-engineer-mpc-confidential-computing",
-      "last_seen_at": "2026-08-21T23:32:03.745Z"
+      "last_seen_at": "2026-08-21T23:52:51.368Z"
     },
     "06f2509190fff92ead3c4a77": {
       "first_seen_at": "2026-08-20T15:42:56.602Z",
@@ -5743,7 +5743,7 @@
     "dc48718dd0b490a442bce4f3": {
       "first_seen_at": "2026-08-20T17:37:26.860Z",
       "url": "https://jobs.apple.com/en-us/details/200678157-3956/software-engineer-java-middleware-ebusiness?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "80ee650504a587d81f0ccc61": {
       "first_seen_at": "2026-08-20T17:37:26.860Z",
@@ -5753,12 +5753,12 @@
     "18280bf3e4e05d98a9fc23e6": {
       "first_seen_at": "2026-08-20T17:37:47.047Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=123328",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "3dec2c0d79883f45e847d89b": {
       "first_seen_at": "2026-08-20T17:37:26.860Z",
       "url": "https://jobs.apple.com/en-us/details/200679102-3337/sr-software-development-engineer-ase-storage?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "c3d3e1c6f27fa7e66b1c3a66": {
       "first_seen_at": "2026-08-20T17:38:22.001Z",
@@ -5773,7 +5773,7 @@
     "e986b1338aa2852c8fd86250": {
       "first_seen_at": "2026-08-20T18:00:55.491Z",
       "url": "https://careers.qualcomm.com/careers/job/446720426705",
-      "last_seen_at": "2026-08-21T23:31:17.007Z"
+      "last_seen_at": "2026-08-21T23:52:12.294Z"
     },
     "37756b93ce5b970a14b10375": {
       "first_seen_at": "2026-08-20T18:01:09.104Z",
@@ -5798,27 +5798,27 @@
     "ec2b005b280ae78ac972d742": {
       "first_seen_at": "2026-08-20T18:51:34.691Z",
       "url": "https://jobs.apple.com/en-us/details/200678056-0836/software-development-engineer-screen-sharing-experiences?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "856ae7eba10c2a4335fd9873": {
       "first_seen_at": "2026-08-20T18:51:34.691Z",
       "url": "https://jobs.apple.com/en-us/details/200678849-0836/software-development-engineer-in-test-coreos-quality-engineer?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "12d7e9a0d3a7bb51114a0e1b": {
       "first_seen_at": "2026-08-20T18:51:34.691Z",
       "url": "https://jobs.apple.com/en-us/details/200679104-3956/software-engineer-transactional-ai-data-platforms-aidp?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "64d2f112b852819cef955c96": {
       "first_seen_at": "2026-08-20T18:52:19.172Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210749231",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "7feebbe188e09ed089d9b6b6": {
       "first_seen_at": "2026-08-20T18:52:19.172Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210773784",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "9e63eff266210ea1be8c07f7": {
       "first_seen_at": "2026-08-20T18:52:19.172Z",
@@ -5858,22 +5858,22 @@
     "a12205f7a3f9c3b73d7afdd2": {
       "first_seen_at": "2026-08-20T19:37:34.820Z",
       "url": "https://jobs.apple.com/en-us/details/200679268-3337/machine-learning-research-engineer-ase-search?team=MLAI",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "85e271ae9fdaabc900b4c5c6": {
       "first_seen_at": "2026-08-20T19:37:34.820Z",
       "url": "https://jobs.apple.com/en-us/details/200662330-0836/darwin-runtime-engineer-core-os?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "fda4d8a6eb08770f68c46b69": {
       "first_seen_at": "2026-08-20T19:37:34.820Z",
       "url": "https://jobs.apple.com/en-us/details/200646833-0836/software-development-engineer-frameworks-ai-ml-wireless-technologies-ecosystems?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "a691b475ac754e2e552f96fd": {
       "first_seen_at": "2026-08-20T19:38:17.885Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210691782",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "2aaf1af6b189db8cdc9f5413": {
       "first_seen_at": "2026-08-20T19:38:17.885Z",
@@ -5883,7 +5883,7 @@
     "777e086cb0f10a0382e2cf75": {
       "first_seen_at": "2026-08-20T19:38:17.885Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210774895",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "9667e984bce5a6b27277c5ba": {
       "first_seen_at": "2026-08-20T19:38:28.571Z",
@@ -5963,52 +5963,52 @@
     "b96c78bc1c5fdd3ef64edc95": {
       "first_seen_at": "2026-08-20T20:37:25.337Z",
       "url": "https://jobs.apple.com/en-us/details/200670346-0836/3d-computer-vision-research-engineer-apple-maps?team=MLAI",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "5c61ff8fe3fde2f57e810316": {
       "first_seen_at": "2026-08-20T20:37:25.337Z",
       "url": "https://jobs.apple.com/en-us/details/200648466-0836/sr-machine-learning-research-engineer-siri-speech?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "7a9be55189e9e49f1065e6d2": {
       "first_seen_at": "2026-08-20T20:37:25.337Z",
       "url": "https://jobs.apple.com/en-us/details/200663638-0836/sr-machine-learning-research-engineer-siri-speech?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "86e3d98aa1c9df570df442f5": {
       "first_seen_at": "2026-08-20T20:37:45.708Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=129769",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "3c8e0dba4d459754d874bb8c": {
       "first_seen_at": "2026-08-20T20:37:45.708Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=129760",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "762a0cf79e6d40bb061e2148": {
       "first_seen_at": "2026-08-20T20:37:45.708Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=129788",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "342954d18980c8eea975ae3f": {
       "first_seen_at": "2026-08-20T20:37:45.708Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=129764",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "6e9cfbeb0cead56623f04d8f": {
       "first_seen_at": "2026-08-20T20:38:08.112Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210766662",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "e79b57170cf3c64cbbd85c96": {
       "first_seen_at": "2026-08-20T20:37:45.708Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=129768",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "e662dc166047455c1f6eeaa4": {
       "first_seen_at": "2026-08-20T20:37:45.708Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=129751",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "655876ecc482f8769b5ae3d4": {
       "first_seen_at": "2026-08-20T20:38:17.986Z",
@@ -6023,27 +6023,27 @@
     "77f2e9aaf1b210870f9cb0e7": {
       "first_seen_at": "2026-08-20T20:37:45.708Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=129753",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "fbe72cabcafce41a4b8d8676": {
       "first_seen_at": "2026-08-20T20:37:45.708Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=128247",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "21aa05ef7f257fe317fc307e": {
       "first_seen_at": "2026-08-20T20:37:45.708Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=129765",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "7cb030d01eee12892c63cce5": {
       "first_seen_at": "2026-08-20T20:37:45.708Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=129761",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "60f21470c8d93eb1a57d540e": {
       "first_seen_at": "2026-08-20T20:37:45.708Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=129750",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "dcd5a84d55d4f02041362690": {
       "first_seen_at": "2026-08-20T20:38:50.756Z",
@@ -6053,7 +6053,7 @@
     "66224e439632242e4b376445": {
       "first_seen_at": "2026-08-20T20:37:45.708Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=129742",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "552c972c9b55dca0e1e1e809": {
       "first_seen_at": "2026-08-20T20:38:50.756Z",
@@ -6068,7 +6068,7 @@
     "487d9c07c20508a544a676be": {
       "first_seen_at": "2026-08-20T20:37:45.708Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=129739",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "8313b9963dbd837d4e42fe96": {
       "first_seen_at": "2026-08-20T20:38:50.756Z",
@@ -6078,7 +6078,7 @@
     "4a78505942524e290fed05de": {
       "first_seen_at": "2026-08-20T20:37:45.708Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=129762",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "d27e49aad3f765dda961baf1": {
       "first_seen_at": "2026-08-20T20:38:50.756Z",
@@ -6093,17 +6093,17 @@
     "abd3e0d4e104951a1b41a84d": {
       "first_seen_at": "2026-08-20T20:37:45.708Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=129756",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "cf26e976d7da4f29cdb52a2c": {
       "first_seen_at": "2026-08-20T20:37:45.708Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=129740",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "9b7fd686e49b5c4bf04f0cbb": {
       "first_seen_at": "2026-08-20T20:37:45.708Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=129785",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "82d8990d9b70713b84d1cc25": {
       "first_seen_at": "2026-08-20T20:38:50.756Z",
@@ -6203,12 +6203,12 @@
     "08a396a34e7c08b3e70cabeb": {
       "first_seen_at": "2026-08-20T21:34:53.149Z",
       "url": "https://jobs.apple.com/en-us/details/200679313-3543/senior-data-analyst-os-stability?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "01557be7b32380c12e1cf4fc": {
       "first_seen_at": "2026-08-20T21:34:53.149Z",
       "url": "https://jobs.apple.com/en-us/details/200678677-0157/manager-engineering-program-management-customer-systems?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "d1d08be188f842a4badea333": {
       "first_seen_at": "2026-08-20T21:35:41.531Z",
@@ -6228,7 +6228,7 @@
     "3b0982bb6b4c064cc0a287fc": {
       "first_seen_at": "2026-08-20T21:56:59.912Z",
       "url": "https://jobs.apple.com/en-us/details/200679261-0836/wireless-tools-automation-engineer?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "fcc19834266b1e82e5d29d3d": {
       "first_seen_at": "2026-08-20T21:57:29.749Z",
@@ -6278,7 +6278,7 @@
     "99274d2bb3afe4bd09e9c901": {
       "first_seen_at": "2026-08-20T22:35:44.671Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210775716",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "c34ab88e120686d77e319c05": {
       "first_seen_at": "2026-08-20T22:35:44.671Z",
@@ -6353,37 +6353,37 @@
     "24d0ed4cc7f9582bfbc20a88": {
       "first_seen_at": "2026-08-20T23:00:25.679Z",
       "url": "https://apply.careers.microsoft.com/careers/job/1970393556962912",
-      "last_seen_at": "2026-08-21T23:32:20.508Z"
+      "last_seen_at": "2026-08-21T23:53:04.355Z"
     },
     "9c3cddc679da4dfae159984a": {
       "first_seen_at": "2026-08-20T23:33:17.993Z",
       "url": "https://jobs.apple.com/en-us/details/200679096-3543/software-engineer-in-test-system-experience-t3e?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "fb1eafaf7dfff8115855f822": {
       "first_seen_at": "2026-08-20T23:33:17.993Z",
       "url": "https://jobs.apple.com/en-us/details/200674937-0836/senior-os-software-engineer-field-engagement-analytics?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "18feab29b99ed0cbedb6b1cf": {
       "first_seen_at": "2026-08-20T23:33:17.993Z",
       "url": "https://jobs.apple.com/en-us/details/200673955-3543/software-engineer-customer-feedback?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "94033396277b2618b2bfcff1": {
       "first_seen_at": "2026-08-20T23:33:17.993Z",
       "url": "https://jobs.apple.com/en-us/details/200657383-3543/full-stack-software-engineer-device-telemetry?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "39819026337cece258cf90c9": {
       "first_seen_at": "2026-08-20T23:33:17.993Z",
       "url": "https://jobs.apple.com/en-us/details/200668263-3543/full-stack-ai-systems-engineer?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "47283e6c1f9ad2a09b7f81b2": {
       "first_seen_at": "2026-08-20T23:33:38.501Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=129871",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "a4388619e1cc05e0fc6fc493": {
       "first_seen_at": "2026-08-20T23:34:04.803Z",
@@ -6393,12 +6393,12 @@
     "185a810a298450365719e338": {
       "first_seen_at": "2026-08-20T23:33:38.501Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=128351",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "fb1515428fe29793d52b8e4e": {
       "first_seen_at": "2026-08-20T23:33:38.501Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=129866",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "b31697dcefa9581a6377150c": {
       "first_seen_at": "2026-08-20T23:54:31.901Z",
@@ -6503,42 +6503,42 @@
     "bf1ede21308ffa3d3c75a3db": {
       "first_seen_at": "2026-08-21T01:48:25.642Z",
       "url": "https://jobs.apple.com/en-us/details/200677993-3956/software-engineer-data-analytics-ai-data-platforms-aidp?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "f079da0d81095d009db909fa": {
       "first_seen_at": "2026-08-21T01:48:25.642Z",
       "url": "https://jobs.apple.com/en-us/details/200677745-3956/software-engineer-data-analytics-ai-data-platforms-aidp?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "248d76b003232b34c36b3323": {
       "first_seen_at": "2026-08-21T01:49:11.727Z",
       "url": "https://careers.oracle.com/en/sites/jobsearch/job/338770",
-      "last_seen_at": "2026-08-21T23:31:40.906Z"
+      "last_seen_at": "2026-08-21T23:52:32.338Z"
     },
     "fd22858a139126a44d80db86": {
       "first_seen_at": "2026-08-21T01:49:11.727Z",
       "url": "https://careers.oracle.com/en/sites/jobsearch/job/338771",
-      "last_seen_at": "2026-08-21T23:31:40.906Z"
+      "last_seen_at": "2026-08-21T23:52:32.338Z"
     },
     "59d6f8c89e909bdf89f40142": {
       "first_seen_at": "2026-08-21T01:49:11.727Z",
       "url": "https://careers.oracle.com/en/sites/jobsearch/job/338773",
-      "last_seen_at": "2026-08-21T23:31:40.906Z"
+      "last_seen_at": "2026-08-21T23:52:32.338Z"
     },
     "53fce9550ffc025f89d1de46": {
       "first_seen_at": "2026-08-21T03:11:32.211Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210760315",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "5a517eaa4b595874b26a59fa": {
       "first_seen_at": "2026-08-21T03:11:32.211Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210777175",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "6fb46926a175199bf06f77c9": {
       "first_seen_at": "2026-08-21T03:11:49.394Z",
       "url": "https://careers.oracle.com/en/sites/jobsearch/job/334432",
-      "last_seen_at": "2026-08-21T23:31:40.906Z"
+      "last_seen_at": "2026-08-21T23:52:32.338Z"
     },
     "70ef63c71903d5fc03618403": {
       "first_seen_at": "2026-08-21T03:11:49.394Z",
@@ -6558,57 +6558,57 @@
     "b6a374f4e2e339056e7cd002": {
       "first_seen_at": "2026-08-21T08:52:48.233Z",
       "url": "https://careers.usbank.com/global/en/job/2026-0021313/Small-Business-Specialist-3-Ladd-Bush-OR",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "7a838021551a5abc7d9ef3ec": {
       "first_seen_at": "2026-08-21T11:56:37.738Z",
       "url": "https://www.wellsfargojobs.com/en/jobs/r-564955/principal-engineer-performance-testing",
-      "last_seen_at": "2026-08-21T23:32:03.745Z"
+      "last_seen_at": "2026-08-21T23:52:51.368Z"
     },
     "59989e1d8092eed09fd57f5f": {
       "first_seen_at": "2026-08-21T13:02:52.464Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210776436",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "acae50849ac7f3ee461b0abb": {
       "first_seen_at": "2026-08-21T13:51:58.378Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210768009",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "78e2952772ec7c141ed79a9e": {
       "first_seen_at": "2026-08-21T13:51:58.378Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210777680",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "984f6cb88966cad87bab0c10": {
       "first_seen_at": "2026-08-21T13:51:58.378Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210778999",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "7d737ba53f659b4c0cb0a86d": {
       "first_seen_at": "2026-08-21T13:51:58.378Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210783281",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "d712e077cccf2254936109c8": {
       "first_seen_at": "2026-08-21T14:43:24.961Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=129763",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "cdcd769a4dfbed813f7120ed": {
       "first_seen_at": "2026-08-21T14:43:24.961Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=129758",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "078bc38add66da950c50208e": {
       "first_seen_at": "2026-08-21T14:44:21.313Z",
       "url": "https://www.wellsfargojobs.com/en/jobs/r-568242/senior-software-engineer",
-      "last_seen_at": "2026-08-21T23:32:03.745Z"
+      "last_seen_at": "2026-08-21T23:52:51.368Z"
     },
     "fe638716b15ef75b7312f7d1": {
       "first_seen_at": "2026-08-21T14:44:21.313Z",
       "url": "https://www.wellsfargojobs.com/en/jobs/r-566295/senior-information-security-engineer-aws-cloud-security",
-      "last_seen_at": "2026-08-21T23:32:03.745Z"
+      "last_seen_at": "2026-08-21T23:52:51.368Z"
     },
     "5ce605a3662b3c71a61e13ee": {
       "first_seen_at": "2026-08-21T14:44:21.313Z",
@@ -6658,7 +6658,7 @@
     "a7bd00bf7ca3452cd130d8b2": {
       "first_seen_at": "2026-08-21T15:42:26.233Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210761973",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "495bbb171a8f759f0608b809": {
       "first_seen_at": "2026-08-21T15:42:26.233Z",
@@ -6668,7 +6668,7 @@
     "63671db2a6aa95df1e5746cc": {
       "first_seen_at": "2026-08-21T15:42:26.233Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210774904",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "09a31a790dfc17df9095cd5b": {
       "first_seen_at": "2026-08-21T15:42:36.152Z",
@@ -6678,7 +6678,7 @@
     "6b5cdf33725d55e33236967c": {
       "first_seen_at": "2026-08-21T15:42:26.233Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210781847",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "2a3a50fd793961504faa0cab": {
       "first_seen_at": "2026-08-21T15:42:36.152Z",
@@ -6688,7 +6688,7 @@
     "f3276e82f5fa28ab7d3a1c8b": {
       "first_seen_at": "2026-08-21T15:42:51.747Z",
       "url": "https://us.microsoft.talentnet.community/jobs/ca4873b3-e6a3-493b-90cc-ee27880f07ae",
-      "last_seen_at": "2026-08-21T23:31:48.582Z"
+      "last_seen_at": "2026-08-21T23:52:39.382Z"
     },
     "aa5db17d67fb92edc342eb70": {
       "first_seen_at": "2026-08-21T15:43:27.027Z",
@@ -6723,17 +6723,17 @@
     "b248ec57e91960e6cffae9bd": {
       "first_seen_at": "2026-08-21T16:44:07.900Z",
       "url": "https://careers.oracle.com/en/sites/jobsearch/job/343628",
-      "last_seen_at": "2026-08-21T23:31:40.906Z"
+      "last_seen_at": "2026-08-21T23:52:32.338Z"
     },
     "f3900566933c6cb6e9e6af5e": {
       "first_seen_at": "2026-08-21T16:44:07.900Z",
       "url": "https://careers.oracle.com/en/sites/jobsearch/job/338546",
-      "last_seen_at": "2026-08-21T23:31:40.906Z"
+      "last_seen_at": "2026-08-21T23:52:32.338Z"
     },
     "37fad4e73ce62e224ec0d3e3": {
       "first_seen_at": "2026-08-21T16:44:07.900Z",
       "url": "https://careers.oracle.com/en/sites/jobsearch/job/333297",
-      "last_seen_at": "2026-08-21T23:31:40.906Z"
+      "last_seen_at": "2026-08-21T23:52:32.338Z"
     },
     "698612a149bf656275ac81e0": {
       "first_seen_at": "2026-08-21T16:44:49.267Z",
@@ -6743,12 +6743,12 @@
     "0e045015c927ec09d97b747d": {
       "first_seen_at": "2026-08-21T16:44:49.267Z",
       "url": "https://staffline.compunnel.com/Support/UploadResume?JobId=skXZPTueaGzKGHsDTj47aA%3d%3d&Source=4414&EntityGroup=2321",
-      "last_seen_at": "2026-08-21T23:32:19.495Z"
+      "last_seen_at": "2026-08-21T23:52:53.561Z"
     },
     "46250c98695b4ef7cd4759fe": {
       "first_seen_at": "2026-08-21T16:44:49.267Z",
       "url": "https://staffline.compunnel.com/Support/UploadResume?JobId=Ki13azHm6FPIhvccw3xu8g%3d%3d&Source=4414&EntityGroup=2321",
-      "last_seen_at": "2026-08-21T23:32:19.495Z"
+      "last_seen_at": "2026-08-21T23:52:53.561Z"
     },
     "a78edb523dfa6c67bae0b35d": {
       "first_seen_at": "2026-08-21T16:44:49.267Z",
@@ -6758,7 +6758,7 @@
     "3670f65c22bd9a10c0db66bc": {
       "first_seen_at": "2026-08-21T17:36:39.862Z",
       "url": "https://jobs.apple.com/en-us/details/200672239-1242/aiml-machine-learning-researcher-mlr?team=MLAI",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "0a529aa32fd4b28be30e2c7f": {
       "first_seen_at": "2026-08-21T17:36:39.862Z",
@@ -6768,17 +6768,17 @@
     "f11c8b530f4bdb596d75cbe0": {
       "first_seen_at": "2026-08-21T17:37:17.797Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210779343",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "76ab0b7800a2e3702a451089": {
       "first_seen_at": "2026-08-21T17:37:32.026Z",
       "url": "https://careers.oracle.com/en/sites/jobsearch/job/343710",
-      "last_seen_at": "2026-08-21T23:31:40.906Z"
+      "last_seen_at": "2026-08-21T23:52:32.338Z"
     },
     "517a9748e391513175c13a58": {
       "first_seen_at": "2026-08-21T17:37:32.026Z",
       "url": "https://careers.oracle.com/en/sites/jobsearch/job/332618",
-      "last_seen_at": "2026-08-21T23:31:40.906Z"
+      "last_seen_at": "2026-08-21T23:52:32.338Z"
     },
     "f9e6b86db236aa074b7b7ad6": {
       "first_seen_at": "2026-08-21T17:37:32.026Z",
@@ -6788,17 +6788,17 @@
     "296f4647587c09aac7cf56e5": {
       "first_seen_at": "2026-08-21T17:38:05.283Z",
       "url": "https://staffline.compunnel.com/Support/UploadResume?JobId=pvYTDgmyKfGpvHDCJ0iLHA%3d%3d&Source=4414&EntityGroup=2321",
-      "last_seen_at": "2026-08-21T23:32:19.495Z"
+      "last_seen_at": "2026-08-21T23:52:53.561Z"
     },
     "820c267005a481e8aad33e28": {
       "first_seen_at": "2026-08-21T17:38:07.242Z",
       "url": "https://apply.careers.microsoft.com/careers/job/1970393556972157",
-      "last_seen_at": "2026-08-21T23:32:20.508Z"
+      "last_seen_at": "2026-08-21T23:53:04.355Z"
     },
     "6f403d3a0de4c9e03b560a7d": {
       "first_seen_at": "2026-08-21T17:38:05.283Z",
       "url": "https://staffline.compunnel.com/Support/UploadResume?JobId=V%2bloVT1cbGMdo9%2buMsb4Sw%3d%3d&Source=4414&EntityGroup=2321",
-      "last_seen_at": "2026-08-21T23:32:19.495Z"
+      "last_seen_at": "2026-08-21T23:52:53.561Z"
     },
     "03c57ba00cce4fe9d813a060": {
       "first_seen_at": "2026-08-21T17:38:05.283Z",
@@ -6808,37 +6808,37 @@
     "0a5af95ff3b16e2acb71558c": {
       "first_seen_at": "2026-08-21T18:00:18.064Z",
       "url": "https://jobs.apple.com/en-us/details/200663909-0836/machine-learning-ml-data-scientist-ise-analytics-and-user-studies-input-experience?team=MLAI",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "d114862e2abfbd2533b47a25": {
       "first_seen_at": "2026-08-21T18:00:18.063Z",
       "url": "https://www.amazon.jobs/en/jobs/10428762/front-end-engineer-2026-us",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "72b7ab9ab6fccc2da88a5360": {
       "first_seen_at": "2026-08-21T18:00:18.064Z",
       "url": "https://jobs.apple.com/en-us/details/200606538-0836/software-screening-integration-engineer-generative-ai-experiences-software-special-projects?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "3ce0ce5a45796c48c2570660": {
       "first_seen_at": "2026-08-21T18:01:02.566Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210727128",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "a4499ffa4730cd751088aa5f": {
       "first_seen_at": "2026-08-21T18:01:02.566Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210778261",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "21ee6ef3e94ec88232a73226": {
       "first_seen_at": "2026-08-21T18:01:38.053Z",
       "url": "https://www.wellsfargojobs.com/en/jobs/r-548423/lead-software-engineer",
-      "last_seen_at": "2026-08-21T23:32:03.745Z"
+      "last_seen_at": "2026-08-21T23:52:51.368Z"
     },
     "6611ce5b0b59be72f9890bf7": {
       "first_seen_at": "2026-08-21T18:01:44.885Z",
       "url": "https://staffline.compunnel.com/Support/UploadResume?JobId=JEXjMFMGFWTA0sUDmrUcPA%3d%3d&Source=4414&EntityGroup=2321",
-      "last_seen_at": "2026-08-21T23:32:19.495Z"
+      "last_seen_at": "2026-08-21T23:52:53.561Z"
     },
     "7ef022de1ac5551fcccf3be7": {
       "first_seen_at": "2026-08-21T18:01:44.885Z",
@@ -6868,37 +6868,37 @@
     "84b47b8e149ca03242d070db": {
       "first_seen_at": "2026-08-21T18:48:09.338Z",
       "url": "https://jobs.apple.com/en-us/details/200678429-3956/software-development-engineer-in-test-apps-identity-management-services?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "9da103f1f3dec7469da24749": {
       "first_seen_at": "2026-08-21T18:48:09.338Z",
       "url": "https://jobs.apple.com/en-us/details/200674800-3401/network-reliability-engineer-infrastructure-services?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "17fbb38489b000f9df34ba08": {
       "first_seen_at": "2026-08-21T18:48:36.301Z",
       "url": "https://careers.qualcomm.com/careers/job/446720498633",
-      "last_seen_at": "2026-08-21T23:31:17.007Z"
+      "last_seen_at": "2026-08-21T23:52:12.294Z"
     },
     "b89fe968e8d2778e239d8f02": {
       "first_seen_at": "2026-08-21T18:49:10.348Z",
       "url": "https://careers.cisco.com/global/en/job/2022072/Software-Engineer-II-Full-Time-United-States-ENG-CPO-WTG-ETR",
-      "last_seen_at": "2026-08-21T23:31:54.966Z"
+      "last_seen_at": "2026-08-21T23:52:41.788Z"
     },
     "f6f375f195dd51e20f08f530": {
       "first_seen_at": "2026-08-21T18:49:10.348Z",
       "url": "https://careers.cisco.com/global/en/job/2022055/Software-Engineer-III-Full-Time-United-States-ENG-CPO-WTG-ETR",
-      "last_seen_at": "2026-08-21T23:31:54.966Z"
+      "last_seen_at": "2026-08-21T23:52:41.788Z"
     },
     "edf2f7564facd97938408ab8": {
       "first_seen_at": "2026-08-21T18:49:17.957Z",
       "url": "https://careers.usbank.com/global/en/job/2026-0021151/Small-Business-Relationship-Manager-Seattle-WA",
-      "last_seen_at": "2026-08-21T23:32:02.138Z"
+      "last_seen_at": "2026-08-21T23:52:50.671Z"
     },
     "52941874596d2e4e071da5a3": {
       "first_seen_at": "2026-08-21T18:49:27.173Z",
       "url": "https://www.wellsfargojobs.com/en/jobs/r-555118/lead-software-engineer",
-      "last_seen_at": "2026-08-21T23:32:03.745Z"
+      "last_seen_at": "2026-08-21T23:52:51.368Z"
     },
     "52d43db01aee4c487b539023": {
       "first_seen_at": "2026-08-21T18:49:35.418Z",
@@ -6908,22 +6908,22 @@
     "7641557d96563fcef8fd4ee3": {
       "first_seen_at": "2026-08-21T18:49:43.117Z",
       "url": "https://apply.careers.microsoft.com/careers/job/1970393556979045",
-      "last_seen_at": "2026-08-21T23:32:20.508Z"
+      "last_seen_at": "2026-08-21T23:53:04.355Z"
     },
     "5b26e295975194de16466c72": {
       "first_seen_at": "2026-08-21T19:31:12.997Z",
       "url": "https://jobs.apple.com/en-us/details/200673082-0836/software-engineer-apple-services-engineering-commerce?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "76dbc14e95fd1274503473e0": {
       "first_seen_at": "2026-08-21T19:31:12.997Z",
       "url": "https://jobs.apple.com/en-us/details/200668356-0836/research-operations-engineer-applied-sensing-and-health-sensing-connectivity?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "bab484fa36284f9fd6bfb476": {
       "first_seen_at": "2026-08-21T19:31:21.386Z",
       "url": "https://jobs.fidelity.com/en/jobs/2129233/director-software-engineering",
-      "last_seen_at": "2026-08-21T23:31:04.677Z"
+      "last_seen_at": "2026-08-21T23:51:35.054Z"
     },
     "1bb0b57e3d83769af94a9e5a": {
       "first_seen_at": "2026-08-21T19:32:07.074Z",
@@ -6933,37 +6933,37 @@
     "99f038bc07c2310ad1d37164": {
       "first_seen_at": "2026-08-21T19:32:07.074Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210781669",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "a109da675be71e7fb66a665a": {
       "first_seen_at": "2026-08-21T19:32:25.893Z",
       "url": "https://careers.oracle.com/en/sites/jobsearch/job/336894",
-      "last_seen_at": "2026-08-21T23:31:40.906Z"
+      "last_seen_at": "2026-08-21T23:52:32.338Z"
     },
     "47faf1f04eaf58eb7c8013c3": {
       "first_seen_at": "2026-08-21T19:51:38.188Z",
       "url": "https://staffline.compunnel.com/Support/UploadResume?JobId=GWGwfTaTTAb4KBnSD3Vxcw%3d%3d&Source=4414&EntityGroup=2321",
-      "last_seen_at": "2026-08-21T23:32:19.495Z"
+      "last_seen_at": "2026-08-21T23:52:53.561Z"
     },
     "3ccc70e8e14f981475ec1123": {
       "first_seen_at": "2026-08-21T20:33:27.325Z",
       "url": "https://jobs.apple.com/en-us/details/200623729-0836/software-engineer-watch-software?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "9f3babf9e4f12400dfbd70dc": {
       "first_seen_at": "2026-08-21T20:33:47.653Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=129703",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "5dd7d5f2e370487fb55dfca5": {
       "first_seen_at": "2026-08-21T20:33:59.382Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210776966",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "cae71446af291976117a53f0": {
       "first_seen_at": "2026-08-21T20:34:13.304Z",
       "url": "https://careers.oracle.com/en/sites/jobsearch/job/336711",
-      "last_seen_at": "2026-08-21T23:31:40.906Z"
+      "last_seen_at": "2026-08-21T23:52:32.338Z"
     },
     "531afba4d16f9993299d491e": {
       "first_seen_at": "2026-08-21T20:34:52.662Z",
@@ -6973,32 +6973,32 @@
     "ea6ced13e3904eaec812d41a": {
       "first_seen_at": "2026-08-21T20:34:52.662Z",
       "url": "https://staffline.compunnel.com/Support/UploadResume?JobId=LMgLX2jFAM4tjXtRRbLruw%3d%3d&Source=4414&EntityGroup=2321",
-      "last_seen_at": "2026-08-21T23:32:19.495Z"
+      "last_seen_at": "2026-08-21T23:52:53.561Z"
     },
     "b4d0abd723d6ab13ee4e0994": {
       "first_seen_at": "2026-08-21T20:54:12.101Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210771537",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "87bcb6d4af2e5c4effd3c863": {
       "first_seen_at": "2026-08-21T20:54:12.101Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210775950",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "dc00b9ec7451088022b6e50c": {
       "first_seen_at": "2026-08-21T20:54:32.583Z",
       "url": "https://us.microsoft.talentnet.community/jobs/ff4f344b-e86f-4094-9b48-18ae1d40bbf0",
-      "last_seen_at": "2026-08-21T23:31:48.582Z"
+      "last_seen_at": "2026-08-21T23:52:39.382Z"
     },
     "d48884b20c2dbd508f8a6b07": {
       "first_seen_at": "2026-08-21T20:54:32.583Z",
       "url": "https://us.microsoft.talentnet.community/jobs/a32b40d1-f6c3-4a54-9303-5b1eed8059ad",
-      "last_seen_at": "2026-08-21T23:31:48.582Z"
+      "last_seen_at": "2026-08-21T23:52:39.382Z"
     },
     "4c25eb8aeec4ccabb6ed4d86": {
       "first_seen_at": "2026-08-21T20:54:54.974Z",
       "url": "https://staffline.compunnel.com/Support/UploadResume?JobId=iFsGwIH5rr3FVLLpjYA1%2fQ%3d%3d&Source=4414&EntityGroup=2321",
-      "last_seen_at": "2026-08-21T23:32:19.495Z"
+      "last_seen_at": "2026-08-21T23:52:53.561Z"
     },
     "b06d8bdef98468e0d21addcc": {
       "first_seen_at": "2026-08-21T20:54:54.974Z",
@@ -7013,7 +7013,7 @@
     "87f9e5dbd22df428a9b6c922": {
       "first_seen_at": "2026-08-21T20:54:54.480Z",
       "url": "https://www.wellsfargojobs.com/en/jobs/r-569261/lead-systems-operations-engineer",
-      "last_seen_at": "2026-08-21T23:32:03.745Z"
+      "last_seen_at": "2026-08-21T23:52:51.368Z"
     },
     "dee12fb00bfe9076b9a702b8": {
       "first_seen_at": "2026-08-21T20:54:54.974Z",
@@ -7023,27 +7023,27 @@
     "070d1aefefecbd0ffd2a7fbc": {
       "first_seen_at": "2026-08-21T21:32:24.135Z",
       "url": "https://careers.oracle.com/en/sites/jobsearch/job/340620",
-      "last_seen_at": "2026-08-21T23:31:40.906Z"
+      "last_seen_at": "2026-08-21T23:52:32.338Z"
     },
     "4a6f7365d87da096f9f5a4bb": {
       "first_seen_at": "2026-08-21T21:51:55.605Z",
       "url": "https://jobs.apple.com/en-us/details/200648327-0836/backend-software-engineer-find-my?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "cc53453045e4fe8ffc1a9791": {
       "first_seen_at": "2026-08-21T21:52:38.934Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210767811",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "2d4594167392e4c9501635d7": {
       "first_seen_at": "2026-08-21T21:52:38.934Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210782644",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "7a48117289db6b2dbde17dd1": {
       "first_seen_at": "2026-08-21T21:52:49.748Z",
       "url": "https://careers.oracle.com/en/sites/jobsearch/job/335766",
-      "last_seen_at": "2026-08-21T23:31:40.906Z"
+      "last_seen_at": "2026-08-21T23:52:32.338Z"
     },
     "e38f4906568b25a5c471ebc3": {
       "first_seen_at": "2026-08-21T21:53:19.177Z",
@@ -7053,57 +7053,67 @@
     "74b32aaceec7d810ca8858bb": {
       "first_seen_at": "2026-08-21T21:53:20.557Z",
       "url": "https://apply.careers.microsoft.com/careers/job/1970393556627516",
-      "last_seen_at": "2026-08-21T23:32:20.508Z"
+      "last_seen_at": "2026-08-21T23:53:04.355Z"
     },
     "e778a0e26763431645f62c5b": {
       "first_seen_at": "2026-08-21T22:32:40.920Z",
       "url": "https://jobs.apple.com/en-us/details/200676105-3337/machine-learning-engineer-on-device-control-and-optimization?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "1da5782af8e0bc34338d4ba0": {
       "first_seen_at": "2026-08-21T22:32:40.920Z",
       "url": "https://jobs.apple.com/en-us/details/200678449-3337/software-engineer?team=SFTWR",
-      "last_seen_at": "2026-08-21T23:30:56.259Z"
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     },
     "340383c967929bdc52b83679": {
       "first_seen_at": "2026-08-21T22:33:24.680Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210779898",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "7c1bbfd8914af28d781b2b9c": {
       "first_seen_at": "2026-08-21T22:33:24.680Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210783624",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "993e74ce6ee5174082891a19": {
       "first_seen_at": "2026-08-21T22:34:06.610Z",
       "url": "https://staffline.compunnel.com/Support/UploadResume?JobId=sneebwJvkoakjMMZUqWM5w%3d%3d&Source=4414&EntityGroup=2321",
-      "last_seen_at": "2026-08-21T23:32:19.495Z"
+      "last_seen_at": "2026-08-21T23:52:53.561Z"
     },
     "fcc2559c140129da9a248179": {
       "first_seen_at": "2026-08-21T22:34:06.610Z",
       "url": "https://staffline.compunnel.com/Support/UploadResume?JobId=lAVVj9lBmbOw1Q3xOSctQw%3d%3d&Source=4414&EntityGroup=2321",
-      "last_seen_at": "2026-08-21T23:32:19.495Z"
+      "last_seen_at": "2026-08-21T23:52:53.561Z"
     },
     "2b77481c8587c96625d95e02": {
       "first_seen_at": "2026-08-21T22:53:53.232Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210779309",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "ba82019660c87b72990315a4": {
       "first_seen_at": "2026-08-21T23:31:26.530Z",
       "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210782251",
-      "last_seen_at": "2026-08-21T23:31:26.530Z"
+      "last_seen_at": "2026-08-21T23:52:21.925Z"
     },
     "51be0139245187a08156d0bd": {
       "first_seen_at": "2026-08-21T23:31:11.909Z",
       "url": "https://careers.ibm.com/careers/JobDetail?jobId=129449",
-      "last_seen_at": "2026-08-21T23:31:11.909Z"
+      "last_seen_at": "2026-08-21T23:51:47.418Z"
     },
     "6f4160d31e62d9510d0076a8": {
       "first_seen_at": "2026-08-21T23:31:40.906Z",
       "url": "https://careers.oracle.com/en/sites/jobsearch/job/343738",
-      "last_seen_at": "2026-08-21T23:31:40.906Z"
+      "last_seen_at": "2026-08-21T23:52:32.338Z"
+    },
+    "e0ee3c1a9e702cb2aed199cb": {
+      "first_seen_at": "2026-08-21T23:51:26.596Z",
+      "url": "https://jobs.apple.com/en-us/details/200666537-0836/software-engineer-in-natural-language-processing-nlp-and-machine-learning-ml?team=SFTWR",
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
+    },
+    "5498e5de1f0854ce5c61b66d": {
+      "first_seen_at": "2026-08-21T23:51:26.596Z",
+      "url": "https://jobs.apple.com/en-us/details/200666537-3337/software-engineer-in-natural-language-processing-nlp-and-machine-learning-ml?team=SFTWR",
+      "last_seen_at": "2026-08-21T23:51:26.596Z"
     }
   },
   "evaluated": {
@@ -23783,12 +23793,12 @@
       }
     },
     "08b8a5f32284e8499cbfb3da": {
-      "last_evaluated_at": "2026-08-21T23:30:56.259Z",
+      "last_evaluated_at": "2026-08-21T23:51:26.596Z",
       "description_hash": "92142be15828aba58969fd08eb8c7016efb7651fa378acedbd427ddf6caf8f2a",
       "record": {
         "key": "08b8a5f32284e8499cbfb3da",
         "first_seen_at": "2026-08-18T14:02:47.273Z",
-        "last_verified_at": "2026-08-21T23:30:56.259Z",
+        "last_verified_at": "2026-08-21T23:51:26.596Z",
         "company_id": "CMP-002",
         "company": "Meta Platforms, Inc",
         "title": "Software Engineer, Systems ML (Technical Leadership)",
@@ -23821,12 +23831,12 @@
       }
     },
     "ae1ec90fe36b4e06cb612080": {
-      "last_evaluated_at": "2026-08-21T23:30:56.259Z",
+      "last_evaluated_at": "2026-08-21T23:51:26.596Z",
       "description_hash": "fa0f7e722678b1b6478e7dd8f4b62cd28d6f8ff8e667fe06038073ae2e9816b7",
       "record": {
         "key": "ae1ec90fe36b4e06cb612080",
         "first_seen_at": "2026-08-18T14:02:47.273Z",
-        "last_verified_at": "2026-08-21T23:30:56.259Z",
+        "last_verified_at": "2026-08-21T23:51:26.596Z",
         "company_id": "CMP-002",
         "company": "Meta Platforms, Inc",
         "title": "Embedded Software Engineer",
@@ -23857,12 +23867,12 @@
       }
     },
     "c5c1e2235f37334a6e07824e": {
-      "last_evaluated_at": "2026-08-21T23:30:56.259Z",
+      "last_evaluated_at": "2026-08-21T23:51:26.596Z",
       "description_hash": "8b5cc65d2810b2d04df61dc00a16f9b9256d3d67dc7958bc0e1b7e7bd2b6644f",
       "record": {
         "key": "c5c1e2235f37334a6e07824e",
         "first_seen_at": "2026-08-18T14:02:47.273Z",
-        "last_verified_at": "2026-08-21T23:30:56.259Z",
+        "last_verified_at": "2026-08-21T23:51:26.596Z",
         "company_id": "CMP-002",
         "company": "Meta Platforms, Inc",
         "title": "Software Engineer, Systems",
@@ -23895,12 +23905,12 @@
       }
     },
     "6ff9cf64fece5f418668a58d": {
-      "last_evaluated_at": "2026-08-21T23:30:56.259Z",
+      "last_evaluated_at": "2026-08-21T23:51:26.596Z",
       "description_hash": "8b7776a1a8d5540a6dadaff0447fa0ae1c2e17e007e6fb2deaf229c1db702bc7",
       "record": {
         "key": "6ff9cf64fece5f418668a58d",
         "first_seen_at": "2026-08-18T14:02:47.273Z",
-        "last_verified_at": "2026-08-21T23:30:56.259Z",
+        "last_verified_at": "2026-08-21T23:51:26.596Z",
         "company_id": "CMP-002",
         "company": "Meta Platforms, Inc",
         "title": "Software Engineer, Principal",
@@ -29693,12 +29703,12 @@
       }
     },
     "cbdca08f73a0288dbe9cb8d8": {
-      "last_evaluated_at": "2026-08-21T23:31:04.677Z",
+      "last_evaluated_at": "2026-08-21T23:51:35.054Z",
       "description_hash": "241ff2052739523b1fb6e0308a76606ce0b3ddaadd8a2e6d832a8b4e35668be1",
       "record": {
         "key": "cbdca08f73a0288dbe9cb8d8",
         "first_seen_at": "2026-08-18T14:26:35.278Z",
-        "last_verified_at": "2026-08-21T23:31:04.677Z",
+        "last_verified_at": "2026-08-21T23:51:35.054Z",
         "company_id": "CMP-005",
         "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
         "title": "Principal Software Engineer/Developer",
@@ -29732,12 +29742,12 @@
       }
     },
     "af1159aea150ffdf2902dbdc": {
-      "last_evaluated_at": "2026-08-21T23:31:04.677Z",
+      "last_evaluated_at": "2026-08-21T23:51:35.054Z",
       "description_hash": "ef37623402028747b5e1e99d34befaed43252014d9a730c00e82a0dd399c2219",
       "record": {
         "key": "af1159aea150ffdf2902dbdc",
         "first_seen_at": "2026-08-18T14:26:35.278Z",
-        "last_verified_at": "2026-08-21T23:31:04.677Z",
+        "last_verified_at": "2026-08-21T23:51:35.054Z",
         "company_id": "CMP-005",
         "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
         "title": "Principal Software Engineer/Developer",
@@ -29771,12 +29781,12 @@
       }
     },
     "5f001b347323df5cc07c0a5e": {
-      "last_evaluated_at": "2026-08-21T23:31:04.677Z",
+      "last_evaluated_at": "2026-08-21T23:51:35.054Z",
       "description_hash": "0df1726ad09bbccdbb7e21048e5753e670b44bc9389cbd1e17a912e6643ad689",
       "record": {
         "key": "5f001b347323df5cc07c0a5e",
         "first_seen_at": "2026-08-18T14:26:35.278Z",
-        "last_verified_at": "2026-08-21T23:31:04.677Z",
+        "last_verified_at": "2026-08-21T23:51:35.054Z",
         "company_id": "CMP-005",
         "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
         "title": "Principal Software Engineer/Developer",
@@ -29810,12 +29820,12 @@
       }
     },
     "1071893306430458adc9ea17": {
-      "last_evaluated_at": "2026-08-21T23:31:04.677Z",
+      "last_evaluated_at": "2026-08-21T23:51:35.054Z",
       "description_hash": "cae63a097a0d34a90f59a380f31d4f00c16916e43d1a3243ecfc2b83253ec3ea",
       "record": {
         "key": "1071893306430458adc9ea17",
         "first_seen_at": "2026-08-18T14:26:35.278Z",
-        "last_verified_at": "2026-08-21T23:31:04.677Z",
+        "last_verified_at": "2026-08-21T23:51:35.054Z",
         "company_id": "CMP-005",
         "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
         "title": "Principal Software Engineer/Developer",
@@ -29849,12 +29859,12 @@
       }
     },
     "636d31e50a583819bca2e80b": {
-      "last_evaluated_at": "2026-08-21T23:31:04.677Z",
+      "last_evaluated_at": "2026-08-21T23:51:35.054Z",
       "description_hash": "3d5f6f07b67641e52065d9dc45731261596b103c62ec2a277e1ab49df9989612",
       "record": {
         "key": "636d31e50a583819bca2e80b",
         "first_seen_at": "2026-08-18T14:26:35.278Z",
-        "last_verified_at": "2026-08-21T23:31:04.677Z",
+        "last_verified_at": "2026-08-21T23:51:35.054Z",
         "company_id": "CMP-005",
         "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
         "title": "Senior Software Engineer/Developer",
@@ -29888,12 +29898,12 @@
       }
     },
     "9527756ac109fe30cea3e88e": {
-      "last_evaluated_at": "2026-08-21T23:31:04.677Z",
+      "last_evaluated_at": "2026-08-21T23:51:35.054Z",
       "description_hash": "a7a06c3f9ff99b97af77dfc638fb0220ba177b67f69687698bff6b5d3d0865ce",
       "record": {
         "key": "9527756ac109fe30cea3e88e",
         "first_seen_at": "2026-08-18T14:26:35.278Z",
-        "last_verified_at": "2026-08-21T23:31:04.677Z",
+        "last_verified_at": "2026-08-21T23:51:35.054Z",
         "company_id": "CMP-005",
         "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
         "title": "Senior Software Engineer/Developer",
@@ -30005,12 +30015,12 @@
       }
     },
     "082c60d07f00ca671927b067": {
-      "last_evaluated_at": "2026-08-21T23:31:04.677Z",
+      "last_evaluated_at": "2026-08-21T23:51:35.054Z",
       "description_hash": "544fd1c4221e8beb369231df86f0136dab56ab2ee29ecc011ade0ac424f3a306",
       "record": {
         "key": "082c60d07f00ca671927b067",
         "first_seen_at": "2026-08-18T14:26:35.278Z",
-        "last_verified_at": "2026-08-21T23:31:04.677Z",
+        "last_verified_at": "2026-08-21T23:51:35.054Z",
         "company_id": "CMP-005",
         "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
         "title": "Senior Software Engineer/Developer",
@@ -30044,12 +30054,12 @@
       }
     },
     "7c49e5b6887fc5bfaf6f7389": {
-      "last_evaluated_at": "2026-08-21T23:31:04.677Z",
+      "last_evaluated_at": "2026-08-21T23:51:35.054Z",
       "description_hash": "e23979dc6ce8ea0c57f6f7f96a4eb60147d87a62d9b6fc18e03b02e8e5a71cbc",
       "record": {
         "key": "7c49e5b6887fc5bfaf6f7389",
         "first_seen_at": "2026-08-18T14:26:35.278Z",
-        "last_verified_at": "2026-08-21T23:31:04.677Z",
+        "last_verified_at": "2026-08-21T23:51:35.054Z",
         "company_id": "CMP-005",
         "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
         "title": "Senior Software Engineer/Developer",
@@ -30083,12 +30093,12 @@
       }
     },
     "ea0f84dfff39a726e3118d54": {
-      "last_evaluated_at": "2026-08-21T23:31:04.677Z",
+      "last_evaluated_at": "2026-08-21T23:51:35.054Z",
       "description_hash": "5664564bc7c68d4377041b4925e18c592d02cab9ca1120ebe8c309e434fec7fe",
       "record": {
         "key": "ea0f84dfff39a726e3118d54",
         "first_seen_at": "2026-08-18T14:26:35.278Z",
-        "last_verified_at": "2026-08-21T23:31:04.677Z",
+        "last_verified_at": "2026-08-21T23:51:35.054Z",
         "company_id": "CMP-005",
         "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
         "title": "Principal Software Engineer/Developer",
@@ -30122,12 +30132,12 @@
       }
     },
     "e73f40754b843b2ef833e016": {
-      "last_evaluated_at": "2026-08-21T23:31:04.677Z",
+      "last_evaluated_at": "2026-08-21T23:51:35.054Z",
       "description_hash": "0f010fcb451daf890b4be35a24a77efcf7ef2d3259c9cbdd06c06c62499b34bb",
       "record": {
         "key": "e73f40754b843b2ef833e016",
         "first_seen_at": "2026-08-18T14:26:35.278Z",
-        "last_verified_at": "2026-08-21T23:31:04.677Z",
+        "last_verified_at": "2026-08-21T23:51:35.054Z",
         "company_id": "CMP-005",
         "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
         "title": "Senior Software Engineer/Developer",
@@ -30200,12 +30210,12 @@
       }
     },
     "b393a2c9d8c22cfd7fb3132e": {
-      "last_evaluated_at": "2026-08-21T23:31:04.677Z",
+      "last_evaluated_at": "2026-08-21T23:51:35.054Z",
       "description_hash": "fd15dbce4998cf33269496d3bee8fde9fc5b21ebcebc7439f949e3fbcd6ef02d",
       "record": {
         "key": "b393a2c9d8c22cfd7fb3132e",
         "first_seen_at": "2026-08-18T14:26:35.278Z",
-        "last_verified_at": "2026-08-21T23:31:04.677Z",
+        "last_verified_at": "2026-08-21T23:51:35.054Z",
         "company_id": "CMP-005",
         "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
         "title": "Senior Software Engineer/Developer",
@@ -33716,12 +33726,12 @@
       }
     },
     "eee7351babcdae2c426b0793": {
-      "last_evaluated_at": "2026-08-21T23:31:04.677Z",
+      "last_evaluated_at": "2026-08-21T23:51:35.054Z",
       "description_hash": "7eb8fda4d6e49f08d4fe8db56f4d05cbaedd70b2655932df13e5b5bbfb0ff665",
       "record": {
         "key": "eee7351babcdae2c426b0793",
         "first_seen_at": "2026-08-18T14:26:35.278Z",
-        "last_verified_at": "2026-08-21T23:31:04.677Z",
+        "last_verified_at": "2026-08-21T23:51:35.054Z",
         "company_id": "CMP-005",
         "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
         "title": "Principal Software Engineer/Developer",
@@ -33794,12 +33804,12 @@
       }
     },
     "553fd135cb6eddf0842c75f4": {
-      "last_evaluated_at": "2026-08-21T23:31:04.677Z",
+      "last_evaluated_at": "2026-08-21T23:51:35.054Z",
       "description_hash": "97c60922cfdc9de043363a9e7f4cb70f6397dd7cc618b0b505f1fdb83e861c87",
       "record": {
         "key": "553fd135cb6eddf0842c75f4",
         "first_seen_at": "2026-08-18T14:26:35.278Z",
-        "last_verified_at": "2026-08-21T23:31:04.677Z",
+        "last_verified_at": "2026-08-21T23:51:35.054Z",
         "company_id": "CMP-005",
         "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
         "title": "Principal Software Engineer/Developer",
@@ -42177,12 +42187,12 @@
       }
     },
     "cd2b09c3f736551ed58bb67c": {
-      "last_evaluated_at": "2026-08-21T23:30:56.259Z",
+      "last_evaluated_at": "2026-08-21T23:51:26.596Z",
       "description_hash": "f4afc5b385b2fcc7745bc40f509af970ee25c350f0ecededf525a2e62f951447",
       "record": {
         "key": "cd2b09c3f736551ed58bb67c",
         "first_seen_at": "2026-08-20T08:44:07.198Z",
-        "last_verified_at": "2026-08-21T23:30:56.259Z",
+        "last_verified_at": "2026-08-21T23:51:26.596Z",
         "company_id": "CMP-002",
         "company": "Meta Platforms, Inc",
         "title": "Embedded Software Engineer",
@@ -42774,12 +42784,12 @@
       }
     },
     "7187cd23b7ccbb0aeb715ab6": {
-      "last_evaluated_at": "2026-08-21T23:31:04.677Z",
+      "last_evaluated_at": "2026-08-21T23:51:35.054Z",
       "description_hash": "18308a0ead7c1a5f4d01668b2b6a4b0d6dd171ea1a04880ebb1331cc64ae15dc",
       "record": {
         "key": "7187cd23b7ccbb0aeb715ab6",
         "first_seen_at": "2026-08-20T08:47:00.625Z",
-        "last_verified_at": "2026-08-21T23:31:04.677Z",
+        "last_verified_at": "2026-08-21T23:51:35.054Z",
         "company_id": "CMP-005",
         "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
         "title": "Principal Software Engineer/Developer",
@@ -48520,12 +48530,12 @@
       }
     },
     "18280bf3e4e05d98a9fc23e6": {
-      "last_evaluated_at": "2026-08-21T23:31:11.909Z",
+      "last_evaluated_at": "2026-08-21T23:51:47.418Z",
       "description_hash": "68b96c3462a005b22483ef6c53e2333a43d29bab661e8ef26ece8f80fb8d234c",
       "record": {
         "key": "18280bf3e4e05d98a9fc23e6",
         "first_seen_at": "2026-08-20T17:37:47.047Z",
-        "last_verified_at": "2026-08-21T23:31:11.909Z",
+        "last_verified_at": "2026-08-21T23:51:47.418Z",
         "company_id": "CMP-006",
         "company": "IBM Corporation",
         "title": "Senior Engineering Manager - Experience Foundations - Confluent",
@@ -50222,12 +50232,12 @@
       }
     },
     "86e3d98aa1c9df570df442f5": {
-      "last_evaluated_at": "2026-08-21T23:31:11.909Z",
+      "last_evaluated_at": "2026-08-21T23:51:47.418Z",
       "description_hash": "59a9986b943215afcf71b64133d8e1e791f1b3acaccdb463b136a22bfd176fef",
       "record": {
         "key": "86e3d98aa1c9df570df442f5",
         "first_seen_at": "2026-08-20T20:37:45.708Z",
-        "last_verified_at": "2026-08-21T23:31:11.909Z",
+        "last_verified_at": "2026-08-21T23:51:47.418Z",
         "company_id": "CMP-006",
         "company": "IBM Corporation",
         "title": "TSR Band 7",
@@ -50260,12 +50270,12 @@
       }
     },
     "3c8e0dba4d459754d874bb8c": {
-      "last_evaluated_at": "2026-08-21T23:31:11.909Z",
+      "last_evaluated_at": "2026-08-21T23:51:47.418Z",
       "description_hash": "8dacc1b52967fc7d4daa76d73343816e2fc443ba51dfffa3a7c114e1fd332a52",
       "record": {
         "key": "3c8e0dba4d459754d874bb8c",
         "first_seen_at": "2026-08-20T20:37:45.708Z",
-        "last_verified_at": "2026-08-21T23:31:11.909Z",
+        "last_verified_at": "2026-08-21T23:51:47.418Z",
         "company_id": "CMP-006",
         "company": "IBM Corporation",
         "title": "TSR Band 6",
@@ -50298,12 +50308,12 @@
       }
     },
     "762a0cf79e6d40bb061e2148": {
-      "last_evaluated_at": "2026-08-21T23:31:11.909Z",
+      "last_evaluated_at": "2026-08-21T23:51:47.418Z",
       "description_hash": "9f24e97145ee35bb04404c856007fe057fcf550521030755a03976c221c30d20",
       "record": {
         "key": "762a0cf79e6d40bb061e2148",
         "first_seen_at": "2026-08-20T20:37:45.708Z",
-        "last_verified_at": "2026-08-21T23:31:11.909Z",
+        "last_verified_at": "2026-08-21T23:51:47.418Z",
         "company_id": "CMP-006",
         "company": "IBM Corporation",
         "title": "Senior Data Engineer - AI & Analytics Infrastructure",
@@ -50336,12 +50346,12 @@
       }
     },
     "342954d18980c8eea975ae3f": {
-      "last_evaluated_at": "2026-08-21T23:31:11.909Z",
+      "last_evaluated_at": "2026-08-21T23:51:47.418Z",
       "description_hash": "495cefb6b1bf61d26e52d8130d5a0bff1ae37d1a677221ff7ebde16ba688d8c9",
       "record": {
         "key": "342954d18980c8eea975ae3f",
         "first_seen_at": "2026-08-20T20:37:45.708Z",
-        "last_verified_at": "2026-08-21T23:31:11.909Z",
+        "last_verified_at": "2026-08-21T23:51:47.418Z",
         "company_id": "CMP-006",
         "company": "IBM Corporation",
         "title": "TSR Band 6",
@@ -50412,12 +50422,12 @@
       }
     },
     "e79b57170cf3c64cbbd85c96": {
-      "last_evaluated_at": "2026-08-21T23:31:11.909Z",
+      "last_evaluated_at": "2026-08-21T23:51:47.418Z",
       "description_hash": "53875705cc0187421aeecccf9af33cf87eb93d70ce493aab21b082ac64d59ee7",
       "record": {
         "key": "e79b57170cf3c64cbbd85c96",
         "first_seen_at": "2026-08-20T20:37:45.708Z",
-        "last_verified_at": "2026-08-21T23:31:11.909Z",
+        "last_verified_at": "2026-08-21T23:51:47.418Z",
         "company_id": "CMP-006",
         "company": "IBM Corporation",
         "title": "TSR Band 7",
@@ -50450,12 +50460,12 @@
       }
     },
     "e662dc166047455c1f6eeaa4": {
-      "last_evaluated_at": "2026-08-21T23:31:11.909Z",
+      "last_evaluated_at": "2026-08-21T23:51:47.418Z",
       "description_hash": "d02127e44b7e348a86f0f94f51b57158e7968dd3897d7c162d5ffc9058062f79",
       "record": {
         "key": "e662dc166047455c1f6eeaa4",
         "first_seen_at": "2026-08-20T20:37:45.708Z",
-        "last_verified_at": "2026-08-21T23:31:11.909Z",
+        "last_verified_at": "2026-08-21T23:51:47.418Z",
         "company_id": "CMP-006",
         "company": "IBM Corporation",
         "title": "TSR Band 7",
@@ -50565,12 +50575,12 @@
       }
     },
     "77f2e9aaf1b210870f9cb0e7": {
-      "last_evaluated_at": "2026-08-21T23:31:11.909Z",
+      "last_evaluated_at": "2026-08-21T23:51:47.418Z",
       "description_hash": "5ff3765f633438f7f597a98e6a601ed6fd14c09c9b252aeae359369713233dad",
       "record": {
         "key": "77f2e9aaf1b210870f9cb0e7",
         "first_seen_at": "2026-08-20T20:37:45.708Z",
-        "last_verified_at": "2026-08-21T23:31:11.909Z",
+        "last_verified_at": "2026-08-21T23:51:47.418Z",
         "company_id": "CMP-006",
         "company": "IBM Corporation",
         "title": "TSR Band 7",
@@ -50603,12 +50613,12 @@
       }
     },
     "fbe72cabcafce41a4b8d8676": {
-      "last_evaluated_at": "2026-08-21T23:31:11.909Z",
+      "last_evaluated_at": "2026-08-21T23:51:47.418Z",
       "description_hash": "e243ef73cd99cf4c821ecf1fcd7ba6724c4e78e2279e4fd687890ced59ff7ec3",
       "record": {
         "key": "fbe72cabcafce41a4b8d8676",
         "first_seen_at": "2026-08-20T20:37:45.708Z",
-        "last_verified_at": "2026-08-21T23:31:11.909Z",
+        "last_verified_at": "2026-08-21T23:51:47.418Z",
         "company_id": "CMP-006",
         "company": "IBM Corporation",
         "title": "(Confluent) Staff Software Engineer II - Confluent Cloud Infrastructure & Platform",
@@ -50641,12 +50651,12 @@
       }
     },
     "21aa05ef7f257fe317fc307e": {
-      "last_evaluated_at": "2026-08-21T23:31:11.909Z",
+      "last_evaluated_at": "2026-08-21T23:51:47.418Z",
       "description_hash": "e02c84b401afd4543df834314ef2c690b9cc9617a0f33c331c95da9397ed10c6",
       "record": {
         "key": "21aa05ef7f257fe317fc307e",
         "first_seen_at": "2026-08-20T20:37:45.708Z",
-        "last_verified_at": "2026-08-21T23:31:11.909Z",
+        "last_verified_at": "2026-08-21T23:51:47.418Z",
         "company_id": "CMP-006",
         "company": "IBM Corporation",
         "title": "TSR Band 7",
@@ -52974,12 +52984,12 @@
       }
     },
     "9c3cddc679da4dfae159984a": {
-      "last_evaluated_at": "2026-08-20T23:33:17.993Z",
+      "last_evaluated_at": "2026-08-21T23:51:26.596Z",
       "description_hash": "362bc0b413806688277d0f48e1c571339c8b42a73ca7b27af20546cf313041c5",
       "record": {
         "key": "9c3cddc679da4dfae159984a",
         "first_seen_at": "2026-08-20T23:33:17.993Z",
-        "last_verified_at": "2026-08-20T23:33:17.993Z",
+        "last_verified_at": "2026-08-21T23:51:26.596Z",
         "company_id": "CMP-004",
         "company": "Apple Inc",
         "title": "Software Engineer in Test - System Experience, T3E",
@@ -53010,12 +53020,12 @@
       }
     },
     "fb1eafaf7dfff8115855f822": {
-      "last_evaluated_at": "2026-08-20T23:33:17.993Z",
+      "last_evaluated_at": "2026-08-21T23:51:26.596Z",
       "description_hash": "251aff538d0eff5d0c3f698b4319ab3c86335d978b460499bc1b5f8f0b9d7c9d",
       "record": {
         "key": "fb1eafaf7dfff8115855f822",
         "first_seen_at": "2026-08-20T23:33:17.993Z",
-        "last_verified_at": "2026-08-20T23:33:17.993Z",
+        "last_verified_at": "2026-08-21T23:51:26.596Z",
         "company_id": "CMP-004",
         "company": "Apple Inc",
         "title": "Senior OS Software Engineer, Field Engagement & Analytics",
@@ -53048,12 +53058,12 @@
       }
     },
     "18feab29b99ed0cbedb6b1cf": {
-      "last_evaluated_at": "2026-08-20T23:33:17.993Z",
+      "last_evaluated_at": "2026-08-21T23:51:26.596Z",
       "description_hash": "241fde23528d59b49b9004bb37300c91cc78bea4c326bb714b8e5850d621e478",
       "record": {
         "key": "18feab29b99ed0cbedb6b1cf",
         "first_seen_at": "2026-08-20T23:33:17.993Z",
-        "last_verified_at": "2026-08-20T23:33:17.993Z",
+        "last_verified_at": "2026-08-21T23:51:26.596Z",
         "company_id": "CMP-004",
         "company": "Apple Inc",
         "title": "Software Engineer - Customer Feedback",
@@ -53086,12 +53096,12 @@
       }
     },
     "94033396277b2618b2bfcff1": {
-      "last_evaluated_at": "2026-08-20T23:33:17.993Z",
+      "last_evaluated_at": "2026-08-21T23:51:26.596Z",
       "description_hash": "b29a587934684654492e32b9ea7c1357e0e42df1294c8d506c80c63f865b51a3",
       "record": {
         "key": "94033396277b2618b2bfcff1",
         "first_seen_at": "2026-08-20T23:33:17.993Z",
-        "last_verified_at": "2026-08-20T23:33:17.993Z",
+        "last_verified_at": "2026-08-21T23:51:26.596Z",
         "company_id": "CMP-004",
         "company": "Apple Inc",
         "title": "Full-Stack Software Engineer - Device Telemetry",
@@ -53122,12 +53132,12 @@
       }
     },
     "47283e6c1f9ad2a09b7f81b2": {
-      "last_evaluated_at": "2026-08-21T23:31:11.909Z",
+      "last_evaluated_at": "2026-08-21T23:51:47.418Z",
       "description_hash": "8d98eb65bcfdbb1e453be345739c91cf77760d64314cc15de39ffcc48f33ae11",
       "record": {
         "key": "47283e6c1f9ad2a09b7f81b2",
         "first_seen_at": "2026-08-20T23:33:38.501Z",
-        "last_verified_at": "2026-08-21T23:31:11.909Z",
+        "last_verified_at": "2026-08-21T23:51:47.418Z",
         "company_id": "CMP-006",
         "company": "IBM Corporation",
         "title": "Application Architect Salesforce",
@@ -53161,12 +53171,12 @@
       }
     },
     "39819026337cece258cf90c9": {
-      "last_evaluated_at": "2026-08-20T23:33:17.993Z",
+      "last_evaluated_at": "2026-08-21T23:51:26.596Z",
       "description_hash": "3ac1c8ae0d3774f217ab94accfc76a0ffb47e59930b929fff365fdaccee0c361",
       "record": {
         "key": "39819026337cece258cf90c9",
         "first_seen_at": "2026-08-20T23:33:17.993Z",
-        "last_verified_at": "2026-08-20T23:33:17.993Z",
+        "last_verified_at": "2026-08-21T23:51:26.596Z",
         "company_id": "CMP-004",
         "company": "Apple Inc",
         "title": "Full Stack AI Systems Engineer",
@@ -54540,12 +54550,12 @@
       }
     },
     "d712e077cccf2254936109c8": {
-      "last_evaluated_at": "2026-08-21T23:31:11.909Z",
+      "last_evaluated_at": "2026-08-21T23:51:47.418Z",
       "description_hash": "f9ab81972bfdb63955edd7eba042d78626ea882ea699acf9b6a3d0391226fa9a",
       "record": {
         "key": "d712e077cccf2254936109c8",
         "first_seen_at": "2026-08-21T14:43:24.961Z",
-        "last_verified_at": "2026-08-21T23:31:11.909Z",
+        "last_verified_at": "2026-08-21T23:51:47.418Z",
         "company_id": "CMP-006",
         "company": "IBM Corporation",
         "title": "TSR Band 6",
@@ -54578,12 +54588,12 @@
       }
     },
     "cdcd769a4dfbed813f7120ed": {
-      "last_evaluated_at": "2026-08-21T23:31:11.909Z",
+      "last_evaluated_at": "2026-08-21T23:51:47.418Z",
       "description_hash": "297f2617dbe8286a8545eef17e57afbe50fe2455270ba2e0b3629661bc5be4d4",
       "record": {
         "key": "cdcd769a4dfbed813f7120ed",
         "first_seen_at": "2026-08-21T14:43:24.961Z",
-        "last_verified_at": "2026-08-21T23:31:11.909Z",
+        "last_verified_at": "2026-08-21T23:51:47.418Z",
         "company_id": "CMP-006",
         "company": "IBM Corporation",
         "title": "TSR Band 6",
@@ -57014,12 +57024,12 @@
       }
     },
     "bab484fa36284f9fd6bfb476": {
-      "last_evaluated_at": "2026-08-21T23:31:04.677Z",
+      "last_evaluated_at": "2026-08-21T23:51:35.054Z",
       "description_hash": "19a43e7b352e3758800031f33a75b8021f7d11033cbba13a0ac97550ac55ebf1",
       "record": {
         "key": "bab484fa36284f9fd6bfb476",
         "first_seen_at": "2026-08-21T19:31:21.386Z",
-        "last_verified_at": "2026-08-21T23:31:04.677Z",
+        "last_verified_at": "2026-08-21T23:51:35.054Z",
         "company_id": "CMP-005",
         "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
         "title": "Director, Software Engineering",
@@ -57316,12 +57326,12 @@
       }
     },
     "9f3babf9e4f12400dfbd70dc": {
-      "last_evaluated_at": "2026-08-21T23:31:11.909Z",
+      "last_evaluated_at": "2026-08-21T23:51:47.418Z",
       "description_hash": "2a2c02bdf8d3e865f7faf6668c08cac06b550c93be47e9ad3661db0caf535f93",
       "record": {
         "key": "9f3babf9e4f12400dfbd70dc",
         "first_seen_at": "2026-08-21T20:33:47.653Z",
-        "last_verified_at": "2026-08-21T23:31:11.909Z",
+        "last_verified_at": "2026-08-21T23:51:47.418Z",
         "company_id": "CMP-006",
         "company": "IBM Corporation",
         "title": "Software Engineer",
@@ -58385,12 +58395,12 @@
       }
     },
     "51be0139245187a08156d0bd": {
-      "last_evaluated_at": "2026-08-21T23:31:11.909Z",
+      "last_evaluated_at": "2026-08-21T23:51:47.418Z",
       "description_hash": "e8bef70dcaf6ae5428c84664a290fc94b0374de070e0ba9a74b75e67861cbe9a",
       "record": {
         "key": "51be0139245187a08156d0bd",
         "first_seen_at": "2026-08-21T23:31:11.909Z",
-        "last_verified_at": "2026-08-21T23:31:11.909Z",
+        "last_verified_at": "2026-08-21T23:51:47.418Z",
         "company_id": "CMP-006",
         "company": "IBM Corporation",
         "title": "Senior Operations Research/ System Analyst (ORSA)",
@@ -58456,6 +58466,78 @@
         "experience_evidence": "No explicit required-years statement detected",
         "sponsorship_status": "Unclear",
         "sponsorship_evidence": "Sponsors cross-group innovation in resilience, capacity modeling, and interoperability.",
+        "student_enrollment": "Not an internship",
+        "enrollment_evidence": "",
+        "job_type": "Not specified"
+      }
+    },
+    "e0ee3c1a9e702cb2aed199cb": {
+      "last_evaluated_at": "2026-08-21T23:51:26.596Z",
+      "description_hash": "c388452f91c5162d5bd8763c6f8b14d0378fe5be8d180ae8516f64e871ab0c6a",
+      "record": {
+        "key": "e0ee3c1a9e702cb2aed199cb",
+        "first_seen_at": "2026-08-21T23:51:26.596Z",
+        "last_verified_at": "2026-08-21T23:51:26.596Z",
+        "company_id": "CMP-004",
+        "company": "Apple Inc",
+        "title": "Software Engineer in Natural Language Processing (NLP) and Machine Learning (ML)",
+        "location": "",
+        "posted": "Aug 21, 2026",
+        "job_id": "200666537-0836",
+        "job_url": "https://jobs.apple.com/en-us/details/200666537-0836/software-engineer-in-natural-language-processing-nlp-and-machine-learning-ml?team=SFTWR",
+        "source_url": "https://jobs.apple.com/en-us/search?location=united-states-USA&team=machine-learning-infrastructure-MLAI-MLI+deep-learning-and-reinforcement-learning-MLAI-DLRL+natural-language-processing-and-speech-technologies-MLAI-NLP+computer-vision-MLAI-CV+apps-and-frameworks-SFTWR-AF+cloud-and-infrastructure-SFTWR-CLD+core-operating-systems-SFTWR-COS+devops-and-site-reliability-SFTWR-DSR+engineering-project-management-SFTWR-EPM+information-systems-and-technology-SFTWR-ISTECH+machine-learning-and-ai-SFTWR-MCHLN+wireless-software-SFTWR-WSFT+applied-research-MLAI-AR",
+        "description_extracted": true,
+        "description_hash": "c388452f91c5162d5bd8763c6f8b14d0378fe5be8d180ae8516f64e871ab0c6a",
+        "description_snippet": "Back to search results Software Engineer in Natural Language Processing (NLP) and Machine Learning (ML) Cupertino, California, United States Software and Services Cupertino, California, United States Seattle, Washington, United States Work Locations (2) Submit Resume Summary Posted: Aug 21, 2026 Role Number: 200666537-0836 Are you interested in building amazing Generative AI experiences that will touch the lives of billions of people by utilizing state-of-the-art NLP and machine learning? Do you enjoy collaboration and team work to accomplish innovative ML driven user experiences? We are looking for a Software Engineer who is passionate about translating expertise in NLP and ML into impactful applications for users. The role allows you to be a highly multi-functional engineer with plenty of opportunities to collaborate cross-functionally and get high visibility for your work. Our team i…",
+        "active_status": "Active",
+        "accepted": true,
+        "decision": "Included",
+        "exclusion_reasons": [],
+        "role_relevant": true,
+        "seniority": "Allowed",
+        "role_evidence": "software engineer",
+        "required_experience_years": null,
+        "preferred_experience_years": null,
+        "experience_label": "No required experience above 3 years detected",
+        "experience_evidence": "No explicit required-years statement detected",
+        "sponsorship_status": "Not Mentioned",
+        "sponsorship_evidence": "No sponsorship restriction found",
+        "student_enrollment": "Not an internship",
+        "enrollment_evidence": "",
+        "job_type": "Not specified"
+      }
+    },
+    "5498e5de1f0854ce5c61b66d": {
+      "last_evaluated_at": "2026-08-21T23:51:26.596Z",
+      "description_hash": "fdcd951caf7e87ceaf2f6ce9e84eef466cccbfcea86f4ab39a3ec6d9a787d361",
+      "record": {
+        "key": "5498e5de1f0854ce5c61b66d",
+        "first_seen_at": "2026-08-21T23:51:26.596Z",
+        "last_verified_at": "2026-08-21T23:51:26.596Z",
+        "company_id": "CMP-004",
+        "company": "Apple Inc",
+        "title": "Software Engineer in Natural Language Processing (NLP) and Machine Learning (ML)",
+        "location": "",
+        "posted": "Aug 21, 2026",
+        "job_id": "200666537-3337",
+        "job_url": "https://jobs.apple.com/en-us/details/200666537-3337/software-engineer-in-natural-language-processing-nlp-and-machine-learning-ml?team=SFTWR",
+        "source_url": "https://jobs.apple.com/en-us/search?location=united-states-USA&team=machine-learning-infrastructure-MLAI-MLI+deep-learning-and-reinforcement-learning-MLAI-DLRL+natural-language-processing-and-speech-technologies-MLAI-NLP+computer-vision-MLAI-CV+apps-and-frameworks-SFTWR-AF+cloud-and-infrastructure-SFTWR-CLD+core-operating-systems-SFTWR-COS+devops-and-site-reliability-SFTWR-DSR+engineering-project-management-SFTWR-EPM+information-systems-and-technology-SFTWR-ISTECH+machine-learning-and-ai-SFTWR-MCHLN+wireless-software-SFTWR-WSFT+applied-research-MLAI-AR",
+        "description_extracted": true,
+        "description_hash": "fdcd951caf7e87ceaf2f6ce9e84eef466cccbfcea86f4ab39a3ec6d9a787d361",
+        "description_snippet": "Back to search results Software Engineer in Natural Language Processing (NLP) and Machine Learning (ML) Seattle, Washington, United States Software and Services Cupertino, California, United States Seattle, Washington, United States Work Locations (2) Submit Resume Summary Posted: Aug 21, 2026 Role Number: 200666537-3337 Are you interested in building amazing Generative AI experiences that will touch the lives of billions of people by utilizing state-of-the-art NLP and machine learning? Do you enjoy collaboration and team work to accomplish innovative ML driven user experiences? We are looking for a Software Engineer who is passionate about translating expertise in NLP and ML into impactful applications for users. The role allows you to be a highly multi-functional engineer with plenty of opportunities to collaborate cross-functionally and get high visibility for your work. Our team is …",
+        "active_status": "Active",
+        "accepted": true,
+        "decision": "Included",
+        "exclusion_reasons": [],
+        "role_relevant": true,
+        "seniority": "Allowed",
+        "role_evidence": "software engineer",
+        "required_experience_years": null,
+        "preferred_experience_years": null,
+        "experience_label": "No required experience above 3 years detected",
+        "experience_evidence": "No explicit required-years statement detected",
+        "sponsorship_status": "Not Mentioned",
+        "sponsorship_evidence": "No sponsorship restriction found",
         "student_enrollment": "Not an internship",
         "enrollment_evidence": "",
         "job_type": "Not specified"
@@ -59625,6 +59707,14 @@
     },
     "7c1bbfd8914af28d781b2b9c": {
       "notified_at": "2026-08-21T22:34:33.905Z",
+      "reason": "new eligible job"
+    },
+    "e0ee3c1a9e702cb2aed199cb": {
+      "notified_at": "2026-08-21T23:53:20.992Z",
+      "reason": "new eligible job"
+    },
+    "5498e5de1f0854ce5c61b66d": {
+      "notified_at": "2026-08-21T23:53:20.992Z",
       "reason": "new eligible job"
     }
   },
