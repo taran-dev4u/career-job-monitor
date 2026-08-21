@@ -1,6 +1,6 @@
 # All Extracted Jobs — Unfiltered
 
-Updated: **2026-08-21T19:33:08.417Z UTC** / **Aug 21, 2026, 3:33 PM Eastern**
+Updated: **2026-08-21T19:52:06.768Z UTC** / **Aug 21, 2026, 3:52 PM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
@@ -14,6 +14,7 @@ This view intentionally includes rejected jobs. Use the **Decision** and **Reaso
 
 | First Seen | Company | Role | Location | Posted | Sponsorship | Required | Decision | Reasons | Apply |
 |---|---|---|---|---|---|---:|---|---|---|
+| 2026-08-21T19:51:38.188Z | COMPUNNEL SOFTWARE GROUP, INC | Lead AWS DeVops Engineer or Lead AWS DevSecOps Engineer | Not stated | Not stated | Not Mentioned | 6+ years | Rejected | Excluded: lead; Requires 6+ years | [Open](https://staffline.compunnel.com/Support/UploadResume?JobId=GWGwfTaTTAb4KBnSD3Vxcw%3d%3d&Source=4414&EntityGroup=2321) |
 | 2026-08-21T19:32:25.893Z | Oracle America, Inc | Support Engineer 1 | Not stated | Not stated | Not Available | Not stated | Rejected | Not a configured technical discipline; Not Available | [Open](https://careers.oracle.com/en/sites/jobsearch/job/336894) |
 | 2026-08-21T19:32:07.074Z | JPMorgan Chase & Co | Lead Software Engineer - Fullstack Java and React with Cloud | Jersey City, NJ, United States | 2026-08-21T19:20:21.000Z | Not Mentioned | Not stated | Rejected | Excluded: lead | [Open](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210781669) |
 | 2026-08-21T19:32:07.074Z | JPMorgan Chase & Co | Java & AWS Software Engineer III | Plano, TX, United States | 2026-08-21T18:36:47.000Z | Not Mentioned | Not stated | Included | — | [Open](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210767819) |
@@ -49,7 +50,6 @@ This view intentionally includes rejected jobs. Use the **Decision** and **Reaso
 | 2026-08-21T17:37:17.797Z | JPMorgan Chase & Co | Experienced Software Engineer Java / Python (Full Stack or Back End) | Locations | Not stated | Available | Not stated | Included | — | [Open](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210779343) |
 | 2026-08-21T17:36:39.862Z | Apple Inc | AIML - Machine Learning Researcher, MLR | Not stated | Aug 21, 2026 | Not Mentioned | Not stated | Included | — | [Open](https://jobs.apple.com/en-us/details/200672239-1242/aiml-machine-learning-researcher-mlr?team=MLAI) |
 | 2026-08-21T16:44:49.267Z | COMPUNNEL SOFTWARE GROUP, INC | Palantir Data Engineer Level III/IV | Not stated | Not stated | Not Mentioned | Not stated | Included | — | [Open](https://staffline.compunnel.com/Support/UploadResume?JobId=skXZPTueaGzKGHsDTj47aA%3d%3d&Source=4414&EntityGroup=2321) |
-| 2026-08-21T16:44:49.267Z | COMPUNNEL SOFTWARE GROUP, INC | Senior /Lead .Net Fullstack Developer Angular/ Azure Cloud | Not stated | Not stated | Not Mentioned | Not stated | Rejected | Excluded: senior | [Open](https://staffline.compunnel.com/Support/UploadResume?JobId=Ki13azHm6FPIhvccw3xu8g%3d%3d&Source=4414&EntityGroup=2321) |
 | 2026-08-21T16:44:07.900Z | Oracle America, Inc | Data Center Construction Quality Assurance & Quality Control (QA/QC) | and 1 more | Not stated | Not Available | Not stated | Rejected | Not a configured technical discipline; Not Available | [Open](https://careers.oracle.com/en/sites/jobsearch/job/333297) |
 | 2026-08-21T16:44:07.900Z | Oracle America, Inc | Senior Core Infrastructure Engineer (Nashville) | and 3 more | Not stated | Not Mentioned | Not stated | Rejected | Excluded: senior | [Open](https://careers.oracle.com/en/sites/jobsearch/job/338546) |
 | 2026-08-21T16:44:07.900Z | Oracle America, Inc | Lead Principal Platform Software Engineer, Shepherd — IC5 | Nashville, TN, United States | 2026-08-21T15:58:18.000Z | Not Mentioned | Not stated | Rejected | Excluded: principal | [Open](https://careers.oracle.com/en/sites/jobsearch/job/343628) |
