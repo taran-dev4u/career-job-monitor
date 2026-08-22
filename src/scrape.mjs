@@ -5,7 +5,7 @@ const GENERIC_TITLES = /^(?:jobs?|careers?|search results?|view jobs?|learn more
 const NAVIGATION_URL = /\/(?:search|results?|saved-jobs?|job-search|recommendations|alerts)\/?$/i;
 const LISTING_PATH = /\/(?:[a-z]{2}\/)?jobs\/?$/i;
 const JOB_URL_HINT = /\/jobs?\/(?!search(?:\/|\?|$)|results?(?:\/|\?|$)|saved-jobs?(?:\/|\?|$))|\/details\/|\/roles\/|JobDetail|[?&](?:job_?id|requisition_?id|position_?id|pid)=/i;
-const EXPLICIT_ZERO = /\b(?:0|zero)\s+(?:open\s+)?jobs?\b|\bno\s+(?:matching\s+)?(?:jobs?|positions?|results?)\s+(?:were\s+)?found\b|\bwe couldn't find any jobs\b/i;
+const EXPLICIT_ZERO = /\b(?:0|zero)\s+(?:opens+)?jobs?\b|\bnos+(?:matchings+)?(?:jobs?|positions?|results?)\s+(?:weres+)?found\b|\bwe couldn't find any jobs\b/i;
 
 const ADAPTERS = [
   [/amazon\.jobs/i, "Amazon"], [/metacareers\.com/i, "Meta"], [/google\.com\/about\/careers/i, "Google"],
@@ -150,7 +150,12 @@ async function readDetail(context, candidate, company, config, now) {
       return {
         title: posting?.title || firstText(["[data-automation-id='jobPostingHeader']", "[class*='job-title']", "[class*='jobTitle']", "meta[property='og:title']", "h1", "h2"]),
         location: jsonLocation || firstText(["[data-automation-id='locations']", "[class*='job-location']", "[class*='jobLocation']", "[class*='location']"]),
-        posted: posting?.datePosted || firstText(["time", "[class*='posted']", "[data-automation-id='postedOn']"]),
+        posted: posting?.datePosted ||
+          document.querySelector("meta[property='article:published_time']")?.getAttribute("content") ||
+          document.querySelector("meta[name='date']")?.getAttribute("content") ||
+          document.querySelector("meta[name='dcterms.date']")?.getAttribute("content") ||
+          document.querySelector("time[datetime]")?.getAttribute("datetime") ||
+          firstText(["time", "[class*='posted']", "[data-automation-id='postedOn']", "[itemprop='datePosted']"]),
         employmentType: Array.isArray(posting?.employmentType) ? posting.employmentType.join(", ") : posting?.employmentType || "",
         validThrough: posting?.validThrough || "", body, finalUrl: location.href,
         closedText: /no longer available|position has been filled|job has expired|posting is closed/i.test(body)
@@ -162,16 +167,20 @@ async function readDetail(context, candidate, company, config, now) {
     const description = clean(data.body || candidate.context);
     const location = clean(data.location || (company.id === "CMP-002" ? candidate.context : ""));
     const eligibility = evaluateEligibility({ title, context: candidate.context, description, config });
-    if (company.id === "CMP-002" && location && !/United States|,\s*US(?:;|$)|\bRemote\b/i.test(location)) {
+    if (company.id === "CMP-002" && location && !/United States|,s*US(?:;|$)|Remote/i.test(location)) {
       eligibility.accepted = false;
       eligibility.decision = "Rejected";
       eligibility.exclusion_reasons.push("Location is outside the United States");
     }
     if (expired) { eligibility.accepted = false; eligibility.decision = "Rejected"; eligibility.exclusion_reasons.push("Job is expired or closed"); }
+    const finalJobUrl = data.finalUrl || candidate.href;
+    const finalJobId = candidate.external_id || extractJobId(finalJobUrl, `${title} ${description}`);
+    const canonicalKey = stableJobIdentityKey(company.id, finalJobId, finalJobUrl);
+
     return {
-      key: candidate.key, first_seen_at: now, last_verified_at: now, company_id: company.id, company: company.company,
+      key: canonicalKey, first_seen_at: now, last_verified_at: now, company_id: company.id, company: company.company,
       title, location: /search for jobs/i.test(location) ? "" : location, posted: clean(data.posted),
-      job_id: candidate.external_id || extractJobId(candidate.href, `${title} ${description}`), job_url: data.finalUrl || candidate.href,
+      job_id: finalJobId, job_url: finalJobUrl,
       source_url: company.career_url, description_extracted: Boolean(description), description_hash: hashText(description),
       description_snippet: compactSnippet(description), active_status: expired ? "Expired" : "Active",
       ...eligibility, job_type: data.employmentType ? clean(data.employmentType) : detectJobType(`${title} ${candidate.context}`)
@@ -245,7 +254,8 @@ export async function scanCompany(browser, company, config, state, suppressNotif
           records.push(record);
           evaluations.push({ ...record, evaluated_at: now });
           state.evaluated[candidate.key] = { last_evaluated_at: now, description_hash: record.description_hash, record };
-          if (notificationDecision(state.notified, candidate.key, record, suppressNotifications, now)) newJobs.push(record);
+          state.evaluated[record.key] = { last_evaluated_at: now, description_hash: record.description_hash, record };
+          if (notificationDecision(state.notified, record, suppressNotifications, now)) newJobs.push(record);
         } catch (error) {
           detailErrors += 1;
           records.push({ key: candidate.key, first_seen_at: discovered.first_seen_at, last_verified_at: now, company_id: company.id, company: company.company, title: candidate.title, location: "", posted: "", job_id: candidate.external_id || extractJobId(candidate.href), job_url: candidate.href, source_url: company.career_url, description_extracted: false, description_hash: "", description_snippet: "", active_status: "Unknown", accepted: false, decision: "Extraction Error", exclusion_reasons: [error.message], role_relevant: null, seniority: "Unknown", required_experience_years: null, preferred_experience_years: null, experience_label: "Not evaluated", experience_evidence: "", sponsorship_status: "Unclear", sponsorship_evidence: "", student_enrollment: "Unknown", enrollment_evidence: "", job_type: "Not specified" });

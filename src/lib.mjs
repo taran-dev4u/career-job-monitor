@@ -197,23 +197,105 @@ export function evaluateEligibility({ title, context = "", description = "", con
     job_type: detectJobType(combined)
   };
 }
+export function formatTimeUtc(iso) {
+  if (!iso) return "";
+  try {
+    const d = new Date(iso);
+    if (isNaN(d.getTime())) return "";
+    return d.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZone: "UTC", hour12: true });
+  } catch { return ""; }
+}
+
+export function formatDateUtc(iso) {
+  if (!iso) return "";
+  try {
+    const d = new Date(iso);
+    if (isNaN(d.getTime())) return "";
+    return d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" });
+  } catch { return ""; }
+}
+
+export function formatScanIntervalWindow(startIso, endIso) {
+  const startD = startIso ? new Date(startIso) : null;
+  const endD = endIso ? new Date(endIso) : new Date();
+  const startTime = startD && !isNaN(startD.getTime())
+    ? startD.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZone: "UTC", hour12: true })
+    : "";
+  const endTime = endD && !isNaN(endD.getTime())
+    ? endD.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZone: "UTC", hour12: true })
+    : "";
+  if (startTime && endTime) return `${startTime} – ${endTime} UTC`;
+  if (endTime) return `Around ${endTime} UTC`;
+  return "Current 30-min scan interval";
+}
+
+export function formatReleaseTimeline(rawPosted, discoveredAt, windowStart) {
+  const cleanPosted = clean(rawPosted);
+  let parsedDate = null;
+  if (cleanPosted && !/not stated|recently/i.test(cleanPosted)) {
+    const d = new Date(cleanPosted);
+    if (!isNaN(d.getTime())) parsedDate = d;
+  }
+  
+  const intervalWindow = formatScanIntervalWindow(windowStart, discoveredAt);
+
+  if (parsedDate) {
+    const hasSpecificTime = /T\d{2}:\d{2}/.test(cleanPosted) || /:\d{2}/.test(cleanPosted);
+    const dateStr = formatDateUtc(parsedDate);
+    const timeStr = formatTimeUtc(parsedDate);
+    const exactLabel = hasSpecificTime && timeStr ? `${dateStr} at ${timeStr} UTC (Exact ATS timestamp)` : dateStr;
+    return {
+      posted_display: exactLabel,
+      discovery_window: intervalWindow,
+      is_exact: hasSpecificTime
+    };
+  }
+
+  return {
+    posted_display: cleanPosted && !/not stated/i.test(cleanPosted) ? cleanPosted : "Recently Released",
+    discovery_window: intervalWindow,
+    is_exact: false
+  };
+}
+
 export function compactSnippet(text, max = 900) { const value = clean(text); return value.length <= max ? value : `${value.slice(0, max - 1)}…`; }
 export function isOlderThan(iso, milliseconds) { return !iso || Date.now() - new Date(iso).getTime() >= milliseconds; }
+
+export function getJobIdentityKeys(companyId, jobId, url, existingKey) {
+  const keys = new Set();
+  if (existingKey) keys.add(existingKey);
+  if (companyId && url) keys.add(stableJobKey(companyId, url));
+  if (companyId && jobId) keys.add(stableJobIdentityKey(companyId, jobId, url));
+  return [...keys];
+}
 
 export function markBaselinePending(notified, key, now) {
   notified[key] ||= { notified_at: now, reason: "baseline pending first evaluation" };
 }
 
-export function notificationDecision(notified, key, record, suppress, now) {
-  const marker = notified[key];
+export function notificationDecision(notified, recordOrKey, extraRecord, suppress, now) {
+  // Support both (notified, record, suppress, now) and legacy (notified, key, record, suppress, now)
+  const record = (typeof recordOrKey === "object" && recordOrKey !== null) ? recordOrKey : (extraRecord || {});
+  const directKey = typeof recordOrKey === "string" ? recordOrKey : record.key;
+  const keys = getJobIdentityKeys(record.company_id, record.job_id, record.job_url || record.href, directKey);
+  const marker = keys.map(k => notified[k]).find(Boolean);
+
   if (marker?.reason === "baseline pending first evaluation") {
-    if (record.accepted) notified[key] = { notified_at: now, reason: "baseline eligible after pending evaluation" };
-    else delete notified[key];
+    for (const k of keys) {
+      if (record.accepted) notified[k] = { notified_at: now, reason: "baseline eligible after pending evaluation" };
+      else delete notified[k];
+    }
     return false;
   }
   if (suppress) {
-    if (record.accepted && !marker) notified[key] = { notified_at: now, reason: "notification-suppressed eligible baseline" };
+    if (record.accepted && !marker) {
+      for (const k of keys) notified[k] = { notified_at: now, reason: "notification-suppressed eligible baseline" };
+    }
     return false;
   }
-  return Boolean(record.accepted && !marker);
+  if (record.accepted && !marker) {
+    for (const k of keys) notified[k] = { notified_at: now, reason: "new eligible job" };
+    return true;
+  }
+  return false;
 }

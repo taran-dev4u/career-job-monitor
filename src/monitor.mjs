@@ -1,7 +1,7 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawn } from "node:child_process";
-import { extractJobId, readJson, stableJobIdentityKey, writeCsvAtomic, writeJsonAtomic } from "./lib.mjs";
+import { clean, extractJobId, formatScanIntervalWindow, getJobIdentityKeys, readJson, stableJobIdentityKey, writeCsvAtomic, writeJsonAtomic } from "./lib.mjs";
 import { scanCompany, startBrowser, adapterName } from "./scrape.mjs";
 import { writeDashboards } from "./dashboard.mjs";
 
@@ -39,11 +39,14 @@ async function rebuildDashboard() {
   }
 }
 
-function asHistoricalJob(record, discoveredAt) {
+function asHistoricalJob(record, discoveredAt, windowStart) {
+  const windowStr = formatScanIntervalWindow(windowStart, discoveredAt);
   return {
     discovered_at: discoveredAt, company_id: record.company_id, company: record.company, role: record.title,
     location: record.location, experience: record.experience_label, posted: record.posted, job_id: record.job_id,
     job_url: record.job_url, source_url: record.source_url,
+    discovery_window: windowStr,
+    discovery_window_start: windowStart,
     match_reason: `Eligible technical role; ${record.experience_label}; sponsorship: ${record.sponsorship_status}; ${record.student_enrollment}`,
     description_snippet: record.description_snippet, key: record.key, active_status: record.active_status,
     job_type: record.job_type, required_experience_years: record.required_experience_years,
@@ -154,14 +157,32 @@ async function runOnce() {
   } finally { if (browser) await browser.close().catch(error => console.error(`Browser shutdown warning: ${error.message}`)); }
 
   const runAt = new Date().toISOString();
+  const lastRunAt = state.last_run_at || new Date(Date.now() - 30 * 60_000).toISOString();
   const uniqueExisting = new Set(jobs.map(identityKey));
+  const uniqueUrls = new Set(jobs.map(j => (j.job_url || "").replace(/#.*$/, "").replace(/\/$/, "")));
+  const uniqueIds = new Set(jobs.filter(j => j.company_id && j.job_id).map(j => `${j.company_id}:${clean(j.job_id).toLowerCase()}`));
   const added = [];
+
   for (const record of addedRecords) {
     const dedup = identityKey(record);
-    if (uniqueExisting.has(dedup)) { state.notified[record.key] ||= { notified_at: runAt, reason: "deduplicated against history" }; continue; }
+    const normalizedUrl = (record.job_url || "").replace(/#.*$/, "").replace(/\/$/, "");
+    const companyJobId = record.company_id && record.job_id ? `${record.company_id}:${clean(record.job_id).toLowerCase()}` : "";
+    const isDuplicate = uniqueExisting.has(dedup) || (normalizedUrl && uniqueUrls.has(normalizedUrl)) || (companyJobId && uniqueIds.has(companyJobId));
+
+    const keys = getJobIdentityKeys(record.company_id, record.job_id, record.job_url, record.key);
+
+    if (isDuplicate) {
+      for (const k of keys) state.notified[k] ||= { notified_at: runAt, reason: "deduplicated against history" };
+      continue;
+    }
+
     uniqueExisting.add(dedup);
-    added.push(asHistoricalJob(record, runAt));
-    state.notified[record.key] = { notified_at: runAt, reason: "new eligible job" };
+    if (normalizedUrl) uniqueUrls.add(normalizedUrl);
+    if (companyJobId) uniqueIds.add(companyJobId);
+
+    const histJob = asHistoricalJob(record, runAt, lastRunAt);
+    added.push(histJob);
+    for (const k of keys) state.notified[k] = { notified_at: runAt, reason: "new eligible job" };
   }
   state.initialized = true;
   state.reliability_baseline_complete = true;

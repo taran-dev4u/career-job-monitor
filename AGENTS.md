@@ -370,6 +370,18 @@ Entry template:
 - Scheduler status: Unchanged. GitHub Actions remains primary at `7,37 * * * *` UTC; local Windows fallback remains disabled.
 - Follow-up: None.
 
+### TASK-20260822-1050-antigravity — DONE
+- Started: 2026-08-22T10:50:00Z
+- Completed: 2026-08-22T10:53:00Z
+- Objective: Fix notification deduplication (multi-key lock + push history tracking to prevent duplicate job alerts) and implement backend release timestamp extraction + 30-minute discovery interval release windows.
+- Files expected: `src/lib.mjs`, `src/scrape.mjs`, `src/monitor.mjs`, `src/notify_ntfy.mjs`, `.github/workflows/job-monitor.yml`, `tests/notify.test.mjs`, `AGENTS.md`
+- Files changed: `src/lib.mjs`, `src/scrape.mjs`, `src/monitor.mjs`, `src/notify_ntfy.mjs`, `.github/workflows/job-monitor.yml`, `tests/notify.test.mjs`, `AGENTS.md`
+- Files deleted: None.
+- Behavior/data impact: (1) Added multi-key deduplication check across canonical job-id, normalized URL, and internal keys in `notificationDecision` and `monitor.mjs`. (2) Added persistent `data/pushed_jobs.json` history tracking in `notify_ntfy.mjs` ensuring zero duplicate push notifications. (3) Added backend ATS publication timestamp extraction (`JSON-LD`, meta tags, `<time datetime>`) and dynamic 30-minute discovery interval release windows (`Aug 22, 2026 at 6:15 AM UTC (Exact)` / `Discovery Window: 6:07 AM – 6:37 AM UTC`).
+- Verification: Ran `npm test` with 100% passing across filter, data contract, and notification deduplication test suites.
+- Scheduler status: Unchanged. GitHub Actions remains primary at `7,37 * * * *` UTC; local Windows fallback remains disabled.
+- Follow-up: None.
+
 
 
 

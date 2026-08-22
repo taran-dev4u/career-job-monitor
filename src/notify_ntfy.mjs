@@ -12,6 +12,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { clean, formatReleaseTimeline } from "./lib.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const MAX_PER_RUN = 20;
@@ -29,13 +30,18 @@ export function buildJobPayload(job, topic) {
   const type = job.job_type && job.job_type !== "Not specified" ? job.job_type : "Full-time";
   const reqId = job.job_id ? job.job_id : "N/A";
   const spons = job.sponsorship_status || "Not Mentioned";
-  const posted = job.posted && !/not stated/i.test(job.posted) ? job.posted : "Recently posted";
   const exp = job.required_experience_years !== null && job.required_experience_years !== undefined
     ? `${job.required_experience_years} yr(s) required`
     : job.experience && !/no required/i.test(job.experience)
       ? job.experience
       : "0–3 yrs (Eligible)";
   const jobUrl = job.job_url || "";
+
+  const timeline = formatReleaseTimeline(
+    job.posted,
+    job.discovered_at,
+    job.discovery_window_start || job.scan_window?.start
+  );
 
   // Clean description snippet up to 280 chars
   let snippet = (job.description_snippet || "").replace(/\s+/g, " ").trim();
@@ -47,7 +53,8 @@ export function buildJobPayload(job, topic) {
     `💼 **Type:** ${type}  |  🆔 **Job ID:** \`${reqId}\``,
     `⏱️ **Experience:** ${exp}`,
     `🛂 **Sponsorship:** ${spons}`,
-    `📅 **Posted:** ${posted}`
+    `📅 **Released:** ${timeline.posted_display}`,
+    `⚡ **Discovery Window:** ${job.discovery_window || timeline.discovery_window}`
   ];
 
   if (snippet) {
@@ -177,7 +184,8 @@ export async function sendBatchNotifications({
   server = "https://ntfy.sh",
   token = "",
   maxPerRun = MAX_PER_RUN,
-  fetchFn = pushNtfy
+  fetchFn = pushNtfy,
+  pushedLogPath = path.join(ROOT, "data", "pushed_jobs.json")
 }) {
   if (!topic) {
     console.log("NTFY_TOPIC not configured — skipping ntfy notifications.");
@@ -189,8 +197,22 @@ export async function sendBatchNotifications({
     return { ok: 0, total: 0, alerts: 0, skipped: true, reason: "NO_TOPIC" };
   }
 
-  const jobs = Array.isArray(batch?.jobs) ? batch.jobs : [];
+  const allJobs = Array.isArray(batch?.jobs) ? batch.jobs : [];
   const alerts = Array.isArray(batch?.health_alerts) ? batch.health_alerts : [];
+
+  const pushedLog = await readJson(pushedLogPath, {});
+  const nowIso = new Date().toISOString();
+
+  // Deduplicate against previously pushed jobs
+  const jobs = allJobs.filter(j => {
+    const urlKey = (j.job_url || "").replace(/#.*$/, "").replace(/\/$/, "");
+    const idKey = j.company_id && j.job_id ? `${j.company_id}:${clean(j.job_id).toLowerCase()}` : "";
+    const canonicalKey = j.key || "";
+    if (canonicalKey && pushedLog[canonicalKey]) return false;
+    if (urlKey && pushedLog[urlKey]) return false;
+    if (idKey && pushedLog[idKey]) return false;
+    return true;
+  });
 
   if (!jobs.length && !alerts.length) {
     console.log("ntfy: No new jobs or health alerts to push.");
@@ -205,9 +227,25 @@ export async function sendBatchNotifications({
     try {
       await fetchFn(server, payload, token);
       ok++;
+      const urlKey = (j.job_url || "").replace(/#.*$/, "").replace(/\/$/, "");
+      const idKey = j.company_id && j.job_id ? `${j.company_id}:${clean(j.job_id).toLowerCase()}` : "";
+      if (j.key) pushedLog[j.key] = nowIso;
+      if (urlKey) pushedLog[urlKey] = nowIso;
+      if (idKey) pushedLog[idKey] = nowIso;
     } catch (e) {
       console.error(`ntfy job push failed for "${payload.title}": ${e.message}`);
     }
+  }
+
+  // Prune entries older than 30 days and save pushed log
+  try {
+    const thirtyDaysAgo = Date.now() - 30 * 86_400_000;
+    for (const [k, v] of Object.entries(pushedLog)) {
+      if (new Date(v).getTime() < thirtyDaysAgo) delete pushedLog[k];
+    }
+    await fs.writeFile(pushedLogPath, JSON.stringify(pushedLog, null, 2), "utf8");
+  } catch (error) {
+    console.error(`Failed to update pushed_jobs.json: ${error.message}`);
   }
 
   if (jobs.length > send.length) {
@@ -250,4 +288,3 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.a
     console.error(`ntfy notifier warning: ${e.stack || e.message}`);
   });
 }
-

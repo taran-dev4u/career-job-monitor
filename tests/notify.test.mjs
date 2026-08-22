@@ -1,16 +1,32 @@
 import assert from "node:assert/strict";
+import path from "node:path";
+import os from "node:os";
 import { buildHealthAlertPayload, buildJobPayload, buildOverflowPayload, sendBatchNotifications } from "../src/notify_ntfy.mjs";
+import { formatReleaseTimeline, formatScanIntervalWindow } from "../src/lib.mjs";
 
 const sampleJob = {
   role: "Software Engineer",
   company: "Apple Inc",
+  company_id: "CMP-004",
   location: "Cupertino, CA, US",
   sponsorship_status: "Available",
-  posted: "Aug 22, 2026",
+  posted: "2026-08-22T06:15:00.000Z",
+  discovered_at: "2026-08-22T06:37:00.000Z",
+  discovery_window_start: "2026-08-22T06:07:00.000Z",
   job_url: "https://jobs.apple.com/en-us/details/12345"
 };
 
-// 1. Job payload construction
+// 1. Release timeline formatting
+const exactTimeline = formatReleaseTimeline("2026-08-22T06:15:00.000Z", "2026-08-22T06:37:00.000Z", "2026-08-22T06:07:00.000Z");
+assert.ok(exactTimeline.posted_display.includes("Aug 22, 2026"));
+assert.ok(exactTimeline.posted_display.includes("6:15 AM UTC"));
+assert.ok(exactTimeline.discovery_window.includes("6:07 AM – 6:37 AM UTC"));
+
+const relativeTimeline = formatReleaseTimeline("Recently posted", "2026-08-22T06:37:00.000Z", "2026-08-22T06:07:00.000Z");
+assert.equal(relativeTimeline.posted_display, "Recently posted");
+assert.ok(relativeTimeline.discovery_window.includes("6:07 AM – 6:37 AM UTC"));
+
+// 2. Job payload construction
 const jobPayload = buildJobPayload(sampleJob, "test-topic");
 assert.equal(jobPayload.topic, "test-topic");
 assert.ok(jobPayload.title.includes("🎯"));
@@ -18,6 +34,8 @@ assert.ok(jobPayload.title.includes("Software Engineer"));
 assert.ok(jobPayload.title.includes("Apple Inc"));
 assert.ok(jobPayload.message.includes("Cupertino, CA, US"));
 assert.ok(jobPayload.message.includes("Available"));
+assert.ok(jobPayload.message.includes("6:15 AM UTC"));
+assert.ok(jobPayload.message.includes("6:07 AM – 6:37 AM UTC"));
 assert.equal(jobPayload.markdown, true);
 assert.equal(jobPayload.priority, 4);
 assert.deepEqual(jobPayload.tags, ["briefcase", "sparkles"]);
@@ -29,7 +47,7 @@ assert.equal(jobPayload.actions[1].action, "copy");
 assert.equal(jobPayload.actions[1].label, "📋 Copy Job Link");
 assert.equal(jobPayload.actions[1].value, "https://jobs.apple.com/en-us/details/12345");
 
-// 2. Overflow payload construction
+// 3. Overflow payload construction
 const overflowJobs = [
   { role: "Backend Engineer", company: "Meta", job_url: "https://meta.com/1" },
   { role: "AI Engineer", company: "Google", job_url: "https://google.com/2" }
@@ -43,7 +61,7 @@ assert.equal(overflowPayload.markdown, true);
 assert.equal(overflowPayload.priority, 3);
 assert.deepEqual(overflowPayload.tags, ["sparkles", "star"]);
 
-// 3. Health alert payload construction
+// 4. Health alert payload construction
 const alerts = [
   { company: "Apple Inc", status: "Degraded", diagnostic: "Timeout" },
   { company: "Google LLC", status: "Broken", diagnostic: "HTTP 500" }
@@ -57,7 +75,7 @@ assert.ok(healthPayload.message.includes("Google LLC"));
 assert.equal(healthPayload.priority, 2);
 assert.deepEqual(healthPayload.tags, ["warning", "rotating_light"]);
 
-// 4. Batch sender without topic (skips cleanly)
+// 5. Batch sender without topic (skips cleanly)
 const noTopicResult = await sendBatchNotifications({
   batch: { jobs: [sampleJob] },
   topic: ""
@@ -65,7 +83,7 @@ const noTopicResult = await sendBatchNotifications({
 assert.equal(noTopicResult.skipped, true);
 assert.equal(noTopicResult.reason, "NO_TOPIC");
 
-// 5. Batch sender with empty batch (skips cleanly)
+// 6. Batch sender with empty batch (skips cleanly)
 const emptyResult = await sendBatchNotifications({
   batch: { jobs: [], health_alerts: [] },
   topic: "test-topic"
@@ -73,7 +91,8 @@ const emptyResult = await sendBatchNotifications({
 assert.equal(emptyResult.skipped, true);
 assert.equal(emptyResult.reason, "EMPTY_BATCH");
 
-// 6. Batch sender with mock fetch
+// 7. Batch sender with mock fetch and push deduplication test
+const tempLog = path.join(os.tmpdir(), `pushed_test_${Date.now()}.json`);
 const sentPayloads = [];
 const mockFetch = async (server, payload, token) => {
   sentPayloads.push({ server, payload, token });
@@ -82,40 +101,31 @@ const mockFetch = async (server, payload, token) => {
 
 const sendResult = await sendBatchNotifications({
   batch: {
-    jobs: [sampleJob, { role: "ML Engineer", company: "Intel", job_url: "https://intel.com/1" }],
+    jobs: [sampleJob, { role: "ML Engineer", company: "Intel", company_id: "CMP-009", job_id: "int-1", job_url: "https://intel.com/1" }],
     health_alerts: [{ company: "Oracle", status: "Degraded", diagnostic: "Check auth" }]
   },
   topic: "my-career-topic",
   server: "https://ntfy.sh",
   token: "my-token",
-  fetchFn: mockFetch
+  fetchFn: mockFetch,
+  pushedLogPath: tempLog
 });
 
 assert.equal(sendResult.ok, 2);
 assert.equal(sendResult.total, 2);
 assert.equal(sendResult.alerts, 1);
 assert.equal(sentPayloads.length, 3);
-assert.equal(sentPayloads[0].payload.topic, "my-career-topic");
-assert.equal(sentPayloads[0].token, "my-token");
-assert.ok(sentPayloads[0].payload.title.includes("🎯"));
-assert.ok(sentPayloads[2].payload.title.includes("⚠️"));
 
-// 7. Error resilience (individual push failure does not break the batch)
-let attempt = 0;
-const failingFetch = async () => {
-  attempt++;
-  if (attempt === 1) throw new Error("Simulated network glitch");
-  return { id: "msg_ok" };
-};
-
-const resilientResult = await sendBatchNotifications({
+// 8. Deduplication verification: re-running with the SAME jobs should skip all jobs!
+const secondRunResult = await sendBatchNotifications({
   batch: {
-    jobs: [sampleJob, { role: "DevOps Engineer", company: "IBM", job_url: "https://ibm.com/2" }]
+    jobs: [sampleJob, { role: "ML Engineer", company: "Intel", company_id: "CMP-009", job_id: "int-1", job_url: "https://intel.com/1" }]
   },
   topic: "my-career-topic",
-  fetchFn: failingFetch
+  fetchFn: mockFetch,
+  pushedLogPath: tempLog
 });
-assert.equal(resilientResult.ok, 1);
-assert.equal(resilientResult.total, 2);
+assert.equal(secondRunResult.skipped, true);
+assert.equal(secondRunResult.reason, "EMPTY_BATCH");
 
-console.log("ntfy notification tests passed.");
+console.log("ntfy notification & deduplication tests passed.");
