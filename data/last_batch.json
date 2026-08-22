@@ -1,10 +1,31 @@
 {
-  "run_at": "2026-08-22T08:41:14.806Z",
+  "run_at": "2026-08-22T09:28:38.213Z",
   "suppressed": false,
   "jobs": [],
   "health_alerts": [
     {
-      "run_at": "2026-08-22T08:41:14.730Z",
+      "run_at": "2026-08-22T09:28:09.170Z",
+      "company_id": "CMP-014",
+      "company": "WELLS FARGO BANK, N.A",
+      "source_url": "https://www.wellsfargojobs.com/en/jobs/?search=software+engineer&country=United+States+of+America&team=Data+%26+Analytics&team=Technology&type=Full+time&pagesize=20#results",
+      "resolved_url": "https://www.wellsfargojobs.com/en/jobs/?search=software+engineer&country=United+States+of+America&team=Data+%26+Analytics&team=Technology&type=Full+time&pagesize=20#results",
+      "adapter": "Phenom",
+      "http_status": 429,
+      "status": "Broken",
+      "candidate_count": 0,
+      "detail_success_count": 0,
+      "detail_error_count": 0,
+      "pending_detail_count": 0,
+      "eligible_count": 0,
+      "rejected_count": 0,
+      "zero_streak": 1,
+      "degraded_streak": 0,
+      "last_candidate_at": "2026-08-22T08:40:52.461Z",
+      "last_healthy_at": "2026-08-22T08:40:52.461Z",
+      "diagnostic": ""
+    },
+    {
+      "run_at": "2026-08-22T09:28:38.136Z",
       "company_id": "CMP-006",
       "company": "IBM Corporation",
       "source_url": "https://www.ibm.com/careers/search?field_keyword_08[0]=Software%20Engineering&field_keyword_08[1]=Data%20%26%20Analytics&field_keyword_18[0]=Professional&field_keyword_05[0]=United%20States&sort=dcdate_desc",
@@ -19,8 +40,8 @@
       "eligible_count": 1,
       "rejected_count": 25,
       "zero_streak": 0,
-      "degraded_streak": 47,
-      "last_candidate_at": "2026-08-22T08:41:14.730Z",
+      "degraded_streak": 48,
+      "last_candidate_at": "2026-08-22T09:28:38.136Z",
       "last_healthy_at": "2026-08-20T20:01:48.469Z",
       "diagnostic": "4 jobs await detail evaluation"
     }
