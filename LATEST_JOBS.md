@@ -1,12 +1,12 @@
 # Latest Eligible Jobs — Filtered
 
-Updated: **2026-08-22T05:59:19.270Z UTC** / **Aug 22, 2026, 1:59 AM Eastern**
+Updated: **2026-08-22T06:54:32.687Z UTC** / **Aug 22, 2026, 2:54 AM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
 > Newest discovered jobs are always shown first.
 
-Source health: **16 healthy**, **0 confirmed empty**, **1 degraded**, **0 broken**.
+Source health: **15 healthy**, **0 confirmed empty**, **2 degraded**, **0 broken**.
 
 ## Apply Now
 
@@ -107,22 +107,22 @@ Source health: **16 healthy**, **0 confirmed empty**, **1 degraded**, **0 broken
 
 | ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |
 |---|---|---|---:|---:|---:|---|---|
-| CMP-003 | Google LLC | Healthy | 1 | 0 | 0 | 2026-08-22T05:57:21.743Z |  |
-| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-22T05:57:33.046Z |  |
-| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-22T05:57:40.453Z |  |
-| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-22T05:57:49.676Z |  |
-| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-22T05:57:58.076Z |  |
-| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-22T05:57:59.190Z |  |
-| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-22T05:58:06.412Z |  |
-| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-22T05:58:08.566Z |  |
-| CMP-012 | Cisco Systems, Inc | Healthy | 4 | 0 | 0 | 2026-08-22T05:58:17.008Z |  |
-| CMP-011 | Microsoft Corporation | Healthy | 22 | 0 | 0 | 2026-08-22T05:58:20.667Z |  |
-| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-22T05:58:38.960Z |  |
-| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 40 | 0 | 0 | 2026-08-22T05:58:39.889Z |  |
-| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-08-22T05:58:48.953Z |  |
-| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-22T05:58:50.489Z |  |
-| CMP-017 | Goldman Sachs | Healthy | 18 | 0 | 0 | 2026-08-22T05:58:58.130Z |  |
+| CMP-003 | Google LLC | Healthy | 1 | 0 | 0 | 2026-08-22T06:52:52.975Z |  |
+| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-22T06:52:59.996Z |  |
+| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-22T06:53:04.759Z |  |
+| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-22T06:53:14.016Z |  |
+| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-22T06:53:24.080Z |  |
+| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-22T06:53:31.651Z |  |
+| CMP-009 | Intel Corporation | Degraded | 0 | 0 | 1 | 2026-08-22T05:58:06.412Z | Page loaded but zero jobs were not explicitly confirmed |
+| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-22T06:53:42.495Z |  |
+| CMP-011 | Microsoft Corporation | Healthy | 22 | 0 | 0 | 2026-08-22T06:53:47.135Z |  |
+| CMP-012 | Cisco Systems, Inc | Healthy | 4 | 0 | 0 | 2026-08-22T06:53:52.098Z |  |
+| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 20 | 0 | 0 | 2026-08-22T06:54:07.689Z |  |
+| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-22T06:54:07.867Z |  |
+| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-22T06:54:09.950Z |  |
+| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-08-22T06:54:16.867Z |  |
+| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-22T06:54:17.963Z |  |
+| CMP-017 | Goldman Sachs | Healthy | 18 | 0 | 0 | 2026-08-22T06:54:19.277Z |  |
 | CMP-006 | IBM Corporation | Degraded | 30 | 0 | 0 | 2026-08-20T20:01:48.469Z | 4 jobs await detail evaluation |
-| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-22T05:59:19.179Z |  |
 
 > “Degraded” means extraction could not prove the source was complete. Review the unfiltered dashboard or workbook audit sheets for every decision.
