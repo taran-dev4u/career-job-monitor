@@ -1,6 +1,6 @@
 # All Extracted Jobs — Unfiltered
 
-Updated: **2026-08-22T09:36:01.818Z UTC** / **Aug 22, 2026, 5:36 AM Eastern**
+Updated: **2026-08-22T09:56:28.727Z UTC** / **Aug 22, 2026, 5:56 AM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
@@ -162,9 +162,6 @@ This view intentionally includes rejected jobs. Use the **Decision** and **Reaso
 | 2026-08-20T11:56:51.680Z | JPMorgan Chase & Co | Lead Software Engineer - Privilege Access Management | Plano, TX, United States | 2026-08-20T11:41:52.000Z | Not Mentioned | Not stated | Rejected | Excluded: lead | [Open](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210768340) |
 | 2026-08-20T10:39:43.614Z | U.S. Bank National Association | Small Business Specialist 3 - Hood River, OR | Hood River, OR, United States | 2026-07-16T00:00:00.000+0000 | Not Mentioned | Not stated | Rejected | Not a configured technical discipline | [Open](https://careers.usbank.com/global/en/job/2026-0021263/Small-Business-Specialist-3-Hood-River-OR) |
 | 2026-08-20T10:39:11.190Z | JPMorgan Chase & Co | Site Reliability Engineer III | Plano, TX, United States | 2026-08-20T10:31:42.000Z | Not Mentioned | Not stated | Included | — | [Open](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210774920) |
-| 2026-08-20T09:15:43.877Z | Goldman Sachs | Asset & Wealth Management - AI Solutions Engineer - Associate - Dallas | Not stated | Not stated | Not Mentioned | 3+ years | Included | — | [Open](https://higher.gs.com/roles/168764) |
-| 2026-08-20T09:15:43.877Z | Goldman Sachs | Engineering-L2-Dallas-Analyst-Software Engineering | Not stated | Not stated | Not Mentioned | Not stated | Included | — | [Open](https://higher.gs.com/roles/181810) |
-| 2026-08-20T09:15:43.877Z | Goldman Sachs | Software Engineer - FCO Technology Team - Analyst - SLC | Not stated | Not stated | Not Mentioned | 4+ years | Rejected | Requires 4+ years | [Open](https://higher.gs.com/roles/119977) |
 | 2026-08-20T09:15:43.877Z | Goldman Sachs | Asset & Wealth Management - Android Mobile Engineer - Marcus - Associate - Richardson | Not stated | Not stated | Not Mentioned | 6+ years | Rejected | Requires 6+ years | [Open](https://higher.gs.com/roles/164029) |
 | 2026-08-20T09:15:43.877Z | Goldman Sachs | Asset & Wealth Management - iOS Mobile Engineer - Marcus - Associate - Richardson | Not stated | Not stated | Not Mentioned | 6+ years | Rejected | Requires 6+ years | [Open](https://higher.gs.com/roles/164034) |
 | 2026-08-20T09:15:43.877Z | Goldman Sachs | AWS Solutions Architect, Global Banking & Markets, Cloud Platform | Not stated | Not stated | Not Mentioned | 5+ years | Rejected | Not a configured technical discipline; Excluded: architect; Requires 5+ years | [Open](https://higher.gs.com/roles/152248) |
@@ -180,6 +177,9 @@ This view intentionally includes rejected jobs. Use the **Decision** and **Reaso
 | 2026-08-20T09:15:43.877Z | Goldman Sachs | Software Engineer, Global Banking & Markets, Electronic Trading | Not stated | Not stated | Not Mentioned | 3+ years | Included | — | [Open](https://higher.gs.com/roles/180700) |
 | 2026-08-20T09:15:43.877Z | Goldman Sachs | Software Engineering - Data, Lakehouse and AI Data Platform Engineer - Associate - Dallas | Not stated | Not stated | Not Mentioned | Not stated | Included | — | [Open](https://higher.gs.com/roles/179758) |
 | 2026-08-20T09:15:43.877Z | Goldman Sachs | Tax, Salt Lake City, Associate, Software Engineering | Not stated | Not stated | Not Mentioned | 1+ years | Included | — | [Open](https://higher.gs.com/roles/180303) |
+| 2026-08-20T09:15:43.877Z | Goldman Sachs | Asset & Wealth Management - AI Solutions Engineer - Associate - Dallas | Not stated | Not stated | Not Mentioned | 3+ years | Included | — | [Open](https://higher.gs.com/roles/168764) |
+| 2026-08-20T09:15:43.877Z | Goldman Sachs | Engineering-L2-Dallas-Analyst-Software Engineering | Not stated | Not stated | Not Mentioned | Not stated | Included | — | [Open](https://higher.gs.com/roles/181810) |
+| 2026-08-20T09:15:43.877Z | Goldman Sachs | Software Engineer - FCO Technology Team - Analyst - SLC | Not stated | Not stated | Not Mentioned | 4+ years | Rejected | Requires 4+ years | [Open](https://higher.gs.com/roles/119977) |
 | 2026-08-20T09:13:28.499Z | Google LLC | Software Engineer, Early Career, Campus | Not stated | Not stated | Not Mentioned | Not stated | Included | — | [Open](https://www.google.com/about/careers/applications/jobs/results/78703249065943750-software-engineer-early-career-campus?location=United%20States&hl=en&target_level=EARLY&sort_by=date&employment_type=FULL_TIME&q=%22Software%20Engineer%22) |
 | 2026-08-20T08:55:40.881Z | Microsoft | Software Engineer - CTJ - Poly | Reston, VA,US, US; Jessup, MD,US, US | 2026-08-19T19:38:50 | Not Mentioned | Not stated | Included | — | [Open](https://apply.careers.microsoft.com/careers/job/1970393556860973) |
 | 2026-08-20T08:55:40.881Z | Microsoft | Software Engineer | US | 2026-08-19T17:44:34 | Not Mentioned | Not stated | Included | — | [Open](https://apply.careers.microsoft.com/careers/job/1970393556928331) |
