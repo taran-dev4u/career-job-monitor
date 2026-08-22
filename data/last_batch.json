@@ -1,10 +1,10 @@
 {
-  "run_at": "2026-08-22T06:54:32.687Z",
+  "run_at": "2026-08-22T07:40:08.088Z",
   "suppressed": false,
   "jobs": [],
   "health_alerts": [
     {
-      "run_at": "2026-08-22T06:54:32.606Z",
+      "run_at": "2026-08-22T07:40:01.838Z",
       "company_id": "CMP-006",
       "company": "IBM Corporation",
       "source_url": "https://www.ibm.com/careers/search?field_keyword_08[0]=Software%20Engineering&field_keyword_08[1]=Data%20%26%20Analytics&field_keyword_18[0]=Professional&field_keyword_05[0]=United%20States&sort=dcdate_desc",
@@ -19,8 +19,8 @@
       "eligible_count": 1,
       "rejected_count": 25,
       "zero_streak": 0,
-      "degraded_streak": 45,
-      "last_candidate_at": "2026-08-22T06:54:32.606Z",
+      "degraded_streak": 46,
+      "last_candidate_at": "2026-08-22T07:40:01.838Z",
       "last_healthy_at": "2026-08-20T20:01:48.469Z",
       "diagnostic": "4 jobs await detail evaluation"
     }
