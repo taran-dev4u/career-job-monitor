@@ -25,11 +25,27 @@ async function readJson(file, fallback) {
   catch (e) { if (e.code === "ENOENT") return fallback; throw e; }
 }
 
+// IMPORTANT: publish via ntfy's JSON endpoint, not the header-based shorthand
+// (POST body + Title/Tags/Priority/Click headers). HTTP headers must be
+// ISO-8859-1/ByteString — Node's fetch() throws a TypeError the instant a
+// header value contains a character outside that range. Every job title here
+// includes an emoji ("🆕 ..."), and the health-alert title includes "⚠", so
+// with the header-based approach EVERY push threw before ever reaching the
+// network. The surrounding try/catch swallowed the error and just logged it,
+// so the workflow still showed green and nothing ever arrived on the phone.
+// The JSON body has no such restriction and is ntfy's documented way to send
+// full UTF-8 titles/messages. See https://docs.ntfy.sh/publish/#publish-as-json
 async function push({ title, message, click, tags, priority }) {
-  const headers = { Title: title, Tags: tags || "briefcase", Priority: String(priority || 3) };
-  if (click) headers.Click = click;
-  const res = await fetch(`${SERVER}/${encodeURIComponent(TOPIC)}`, { method: "POST", headers, body: message });
-  if (!res.ok) throw new Error(`ntfy ${res.status} ${res.statusText}`);
+  const payload = { topic: TOPIC, title, message };
+  if (click) payload.click = click;
+  if (tags) payload.tags = Array.isArray(tags) ? tags : [tags];
+  if (priority) payload.priority = priority;
+  const res = await fetch(SERVER, {
+    method: "POST",
+    headers: { "Content-Type": "application/json; charset=utf-8" },
+    body: JSON.stringify(payload)
+  });
+  if (!res.ok) throw new Error(`ntfy ${res.status} ${res.statusText}: ${(await res.text()).slice(0, 200)}`);
 }
 
 async function main() {
