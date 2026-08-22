@@ -1,6 +1,6 @@
 # Latest Eligible Jobs — Filtered
 
-Updated: **2026-08-22T16:34:51.603Z UTC** / **Aug 22, 2026, 12:34 PM Eastern**
+Updated: **2026-08-22T16:56:01.551Z UTC** / **Aug 22, 2026, 12:56 PM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
@@ -94,22 +94,22 @@ Source health: **15 healthy**, **0 confirmed empty**, **1 degraded**, **1 broken
 
 | ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |
 |---|---|---|---:|---:|---:|---|---|
-| CMP-003 | Google LLC | Healthy | 1 | 0 | 0 | 2026-08-22T16:33:36.782Z |  |
-| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-22T16:33:44.028Z |  |
-| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-22T16:33:48.856Z |  |
-| CMP-006 | IBM Corporation | Degraded | 0 | 0 | 1 | 2026-08-20T08:49:43.845Z | Page loaded but zero jobs were not explicitly confirmed |
-| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-22T16:33:58.415Z |  |
-| CMP-008 | JPMorgan Chase & Co | Broken | 0 | 0 | 1 | 2026-08-22T15:49:54.655Z |  |
-| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-22T16:34:06.635Z |  |
-| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-22T16:34:10.830Z |  |
-| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-22T16:34:14.113Z |  |
-| CMP-012 | Cisco Systems, Inc | Healthy | 4 | 0 | 0 | 2026-08-22T16:34:19.371Z |  |
-| CMP-011 | Microsoft Corporation | Healthy | 22 | 0 | 0 | 2026-08-22T16:34:20.418Z |  |
-| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-22T16:34:31.199Z |  |
-| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-22T16:34:34.314Z |  |
-| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-08-22T16:34:40.837Z |  |
-| CMP-017 | Goldman Sachs | Healthy | 18 | 0 | 0 | 2026-08-22T16:34:42.885Z |  |
-| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 40 | 0 | 0 | 2026-08-22T16:34:49.646Z |  |
-| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-22T16:34:51.532Z |  |
+| CMP-003 | Google LLC | Healthy | 1 | 0 | 0 | 2026-08-22T16:54:24.170Z |  |
+| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-22T16:54:30.788Z |  |
+| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-22T16:54:35.449Z |  |
+| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-22T16:54:45.454Z |  |
+| CMP-008 | JPMorgan Chase & Co | Broken | 0 | 0 | 2 | 2026-08-22T15:49:54.655Z |  |
+| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-22T16:54:59.677Z |  |
+| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-22T16:55:02.010Z |  |
+| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-22T16:55:09.125Z |  |
+| CMP-011 | Microsoft Corporation | Healthy | 22 | 0 | 0 | 2026-08-22T16:55:16.007Z |  |
+| CMP-012 | Cisco Systems, Inc | Healthy | 4 | 0 | 0 | 2026-08-22T16:55:18.179Z |  |
+| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 20 | 0 | 0 | 2026-08-22T16:55:33.990Z |  |
+| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-22T16:55:36.644Z |  |
+| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-22T16:55:40.072Z |  |
+| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-22T16:55:44.880Z |  |
+| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-08-22T16:55:46.186Z |  |
+| CMP-017 | Goldman Sachs | Healthy | 18 | 0 | 0 | 2026-08-22T16:55:48.867Z |  |
+| CMP-006 | IBM Corporation | Degraded | 30 | 0 | 0 | 2026-08-20T08:49:43.845Z | 10 jobs await detail evaluation |
 
 > “Degraded” means extraction could not prove the source was complete. Review the unfiltered dashboard or workbook audit sheets for every decision.

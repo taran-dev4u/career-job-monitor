@@ -1,28 +1,6 @@
 {
-  "run_at": "2026-08-22T16:34:51.603Z",
+  "run_at": "2026-08-22T16:56:01.551Z",
   "suppressed": false,
   "jobs": [],
-  "health_alerts": [
-    {
-      "run_at": "2026-08-22T16:34:01.749Z",
-      "company_id": "CMP-008",
-      "company": "JPMorgan Chase & Co",
-      "source_url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs?lastSelectedFacet=POSTING_DATES&location=United+States&locationId=300000000289738&locationLevel=country&mode=location&selectedCategoriesFacet=300000086152753&selectedPostingDatesFacet=7",
-      "resolved_url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs?lastSelectedFacet=POSTING_DATES&location=United+States&locationId=300000000289738&locationLevel=country&mode=location&selectedCategoriesFacet=300000086152753&selectedPostingDatesFacet=7",
-      "adapter": "Oracle Recruiting",
-      "http_status": 503,
-      "status": "Broken",
-      "candidate_count": 0,
-      "detail_success_count": 0,
-      "detail_error_count": 0,
-      "pending_detail_count": 0,
-      "eligible_count": 0,
-      "rejected_count": 0,
-      "zero_streak": 1,
-      "degraded_streak": 0,
-      "last_candidate_at": "2026-08-22T15:49:54.655Z",
-      "last_healthy_at": "2026-08-22T15:49:54.655Z",
-      "diagnostic": ""
-    }
-  ]
+  "health_alerts": []
 }
