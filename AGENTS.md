@@ -382,6 +382,18 @@ Entry template:
 - Scheduler status: Unchanged. GitHub Actions remains primary at `7,37 * * * *` UTC; local Windows fallback remains disabled.
 - Follow-up: None.
 
+### TASK-20260822-1715-antigravity — DONE
+- Started: 2026-08-22T17:15:00Z
+- Completed: 2026-08-22T17:18:00Z
+- Objective: Diagnose all 17 company career URLs, identify broken/degraded sources, fix false-degraded status classifications, and report live Oracle Cloud maintenance outage on JPMC.
+- Files expected: `src/scrape.mjs`, `AGENTS.md`
+- Files changed: `src/scrape.mjs`, `AGENTS.md`
+- Files deleted: None.
+- Behavior/data impact: (1) Diagnosed all 17 sources with live Playwright smoke tests. (2) Fixed status classification in `scrape.mjs` so healthy sources with 0 errors are marked Healthy instead of false-degraded. (3) Identified that JPMorgan Oracle Cloud portal (`jpmc.fa.oraclecloud.com`) is currently in scheduled maintenance (HTTP 503 Planned Outage) by Oracle Cloud.
+- Verification: Ran concurrent smoke tests across all 17 companies; verified 16/17 working sources healthy with candidates extracted cleanly; `npm test` 100% passing.
+- Scheduler status: Unchanged.
+- Follow-up: None.
+
 
 
 

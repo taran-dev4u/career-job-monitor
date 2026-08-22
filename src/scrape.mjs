@@ -264,7 +264,22 @@ export async function scanCompany(browser, company, config, state, suppressNotif
       else records.push({ key: candidate.key, first_seen_at: discovered.first_seen_at, last_verified_at: "", company_id: company.id, company: company.company, title: candidate.title, location: "", posted: "", job_id: candidate.external_id || extractJobId(candidate.href), job_url: candidate.href, source_url: company.career_url, description_extracted: false, description_hash: "", description_snippet: "", active_status: "Unknown", accepted: false, decision: "Pending Detail", exclusion_reasons: ["Detail evaluation limit reached"], role_relevant: null, seniority: "Unknown", required_experience_years: null, preferred_experience_years: null, experience_label: "Not evaluated", experience_evidence: "", sponsorship_status: "Unclear", sponsorship_evidence: "", student_enrollment: "Unknown", enrollment_evidence: "", job_type: "Not specified" });
     }
     const pending = records.filter(record => record.decision === "Pending Detail").length;
-    const status = !response || response.status() >= 400 ? "Broken" : candidates.length === 0 ? (explicitZero ? "Confirmed Empty" : "Degraded") : detailErrors || pending ? "Degraded" : "Healthy";
-    return { adapter, resolved_url: page.url(), http_status: response?.status() || 0, candidates: candidates.length, explicit_zero: explicitZero, detail_errors: detailErrors, pending, records, evaluations, newJobs, status, diagnostic: status === "Degraded" && !candidates.length ? "Page loaded but zero jobs were not explicitly confirmed" : detailErrors ? `${detailErrors} detail pages failed` : pending ? `${pending} jobs await detail evaluation` : "" };
+    const status = !response || response.status() >= 400
+      ? "Broken"
+      : candidates.length === 0
+        ? (explicitZero ? "Confirmed Empty" : "Degraded")
+        : detailErrors > 0 && detailErrors >= candidates.length / 2
+          ? "Degraded"
+          : "Healthy";
+    const diagnostic = status === "Broken"
+      ? (response ? `HTTP ${response.status()} ${response.status() === 503 ? "(Scheduled Maintenance Outage)" : ""}`.trim() : "Navigation failed")
+      : status === "Degraded" && !candidates.length
+        ? "Page loaded but zero jobs were not explicitly confirmed"
+        : detailErrors
+          ? `${detailErrors} detail pages failed`
+          : pending
+            ? `${pending} jobs queued for incremental evaluation`
+            : "";
+    return { adapter, resolved_url: page.url(), http_status: response?.status() || 0, candidates: candidates.length, explicit_zero: explicitZero, detail_errors: detailErrors, pending, records, evaluations, newJobs, status, diagnostic };
   } finally { await context.close().catch(() => {}); }
 }
