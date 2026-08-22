@@ -68,7 +68,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/state.json data/jobs.json data/runs.json data/current_candidates.json data/decision_history.json data/source_health.json data/last_batch.json LATEST_JOBS.md ALL_EXTRACTED_JOBS.md outputs/job-monitor/Job_Monitor.xlsx outputs/job-monitor/dashboard.html index.html .nojekyll
+          git add data/state.json data/jobs.json data/runs.json data/current_candidates.json data/decision_history.json data/source_health.json data/last_batch.json data/apply_now.csv data/new_jobs.csv LATEST_JOBS.md ALL_EXTRACTED_JOBS.md outputs/job-monitor/Job_Monitor.xlsx outputs/job-monitor/dashboard.html index.html .nojekyll
           if git diff --cached --quiet; then
             echo "No persistent changes to commit."
             exit 0

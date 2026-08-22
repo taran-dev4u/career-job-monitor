@@ -12,6 +12,20 @@ export async function writeJsonAtomic(file, value) {
   await fs.writeFile(temp, `${JSON.stringify(value, null, 2)}\n`, "utf8");
   await fs.rename(temp, file);
 }
+export async function writeCsvAtomic(file, rows, headers) {
+  await fs.mkdir(path.dirname(file), { recursive: true });
+  const esc = val => {
+    if (val === null || val === undefined) return '""';
+    const s = String(val).replace(/"/g, '""');
+    return `"${s}"`;
+  };
+  const headerLine = headers.map(h => esc(h.label || h.key || h)).join(",");
+  const lines = rows.map(r => headers.map(h => esc(typeof h.get === "function" ? h.get(r) : r[h.key || h])).join(","));
+  const content = [headerLine, ...lines].join("\n") + "\n";
+  const temp = `${file}.tmp`;
+  await fs.writeFile(temp, content, "utf8");
+  await fs.rename(temp, file);
+}
 export function clean(value = "") { return String(value).replace(/\s+/g, " ").trim(); }
 export function hashText(value = "") { return crypto.createHash("sha256").update(clean(value)).digest("hex"); }
 export function stableJobKey(companyId, url) {
@@ -52,9 +66,9 @@ function tokenPresent(term, text) {
 // SOFTWARE/AI/DATA context, and is not in an explicitly non-software domain.
 // Recall is prioritised over precision on purpose — a false accept is a visible
 // extra row; a false reject silently loses a job.
-const ROLE_WORD = /(?:^|[^a-z])(engineer|engineering|developer|development|programmer|sde|sdet|scientist|technical staff)(?:[^a-z]|$)/i;
-const TECH_DOMAIN = /(?:^|[^a-z])(software|ml|ai|machine learning|deep learning|artificial intelligence|data|backend|back-end|front-end|frontend|full[- ]?stack|cloud|devops|devsecops|sre|site reliability|platform|infrastructure|systems?|embedded|firmware|compiler|security|network|distributed|mobile|ios|android|web|computer vision|nlp|robotics|application|applied|research|quantitative)(?:[^a-z]|$)/i;
-const NON_SOFTWARE_DOMAIN = /(?:^|[^a-z])(electrical|mechanical|optical|photonics|hardware|chemical|biomedical|bioinformatics|civil|industrial|materials|thermal|antenna|acoustic|packaging|manufacturing|fabrication|facilities|sales|account executive|marketing|recruit|talent|payroll|logistics|supply chain|construction|nurse|clinical)(?:[^a-z]|$)/i;
+const ROLE_WORD = /(?:^|[^a-z])(engineer|engineering|developer|development|programmer|programming|sde|sdet|scientist|specialist|analyst|technical staff|technologist|member of technical staff)(?:[^a-z]|$)/i;
+const TECH_DOMAIN = /(?:^|[^a-z])(software|ml|ai|machine learning|deep learning|artificial intelligence|data|database|backend|back-end|front-end|frontend|full[- ]?stack|cloud|aws|azure|gcp|devops|devsecops|sre|site reliability|platform|infrastructure|systems?|embedded|firmware|compiler|security|infosec|cybersecurity|network|distributed|mobile|ios|android|web|computer vision|nlp|robotics|application|applied|research|quantitative|quant|solutions?|integrations?|voice|telecom|workflow|graph|analytics|bi|etl|pipeline|automation|fusion|java|python|c\+\+|golang|go|rust|javascript|typescript|react|node|sql|nosql|api|microservices|fintech|algorithm|computational)(?:[^a-z]|$)/i;
+const NON_SOFTWARE_DOMAIN = /(?:^|[^a-z])(electrical(?!\s+and\s+computer)|mechanical|optical|photonics|hardware|chemical|biomedical|bioinformatics|civil|materials|thermal|antenna|acoustic|packaging|manufacturing|fabrication|facilities|account executive|marketing|recruit|talent|payroll|logistics|supply chain|construction|nurse|clinical|mortgage|wealth management|banker|accountant)(?:[^a-z]|$)/i;
 
 export function roleDecision(title, context, config) {
   const cleanTitle = clean(title).toLowerCase();
@@ -127,10 +141,11 @@ export function sponsorshipDecision(text, policy = {}) {
     /\bno\s+(?:visa|immigration|employment|work(?:\s+visa)?)?\s*sponsorship\b/i,
     /\bsponsorship\s+(?:is\s+)?(?:not available|unavailable|not offered|not provided|not supported)\b/i,
     /\bnot eligible for\b.{0,100}\bsponsorship\b/i,
-    /\b(?:do not|don't|does not|doesn't|will not|won't|cannot|can't|unable to)\s+(?:currently\s+)?(?:offer|provide|support)?\s*(?:visa|immigration|employment)?\s*sponsor(?:ship)?\b/i,
+    /\b(?:do not|don't|does not|doesn't|will not|won't|cannot|can't|unable to|not)\s+(?:currently\s+)?(?:be\s+)?(?:able to\s+)?(?:offer(?:ing)?|provide|providing|support(?:ing)?)?\s*(?:visa|immigration|employment)?\s*sponsor(?:ship)?\b/i,
     /\bwithout\s+(?:the need for\s+)?(?:(?:current|now)\s+(?:or|and)\s+(?:future|in the future)\s+)?(?:visa|immigration|employment)?\s*sponsorship\b/i,
     /\b(?:must not|will not)\s+(?:now or in the future\s+)?require\b.{0,60}\bsponsorship\b/i,
-    /\b(?:candidates?|applicants?)\b.{0,45}\b(?:requiring|who require|needing|who need)\b.{0,60}\bsponsorship\b.{0,60}\b(?:not considered|not eligible|not accepted|will not be considered)\b/i
+    /\b(?:candidates?|applicants?)\b.{0,45}\b(?:requiring|who require|needing|who need)\b.{0,60}\bsponsorship\b.{0,60}\b(?:not considered|not eligible|not accepted|will not be considered)\b/i,
+    /\bnot\s+providing\s+(?:visa|immigration|employment)?\s*sponsorship\b/i
   ];
   const available = /\b(?:offer|provide|support)\b.{0,50}\b(?:visa|immigration|employment)?\s*sponsorship\b|\bsponsorship\s+(?:is\s+)?(?:available|offered|provided|supported)\b|\bfuture sponsorship may be available\b/i;
   const find = patterns => patterns.map(pattern => ({ match: pattern.exec(source) })).find(item => item.match);

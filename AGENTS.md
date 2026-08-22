@@ -321,3 +321,55 @@ Entry template:
 - Verification: `node tests/filter.test.mjs` and `node tests/monitor_data.test.mjs` pass, including new regression assertions (seniority-in-body must not reject; "architect" must not match "architecture"; broadened technical titles accepted; non-software domains still excluded). `node --check src/monitor.mjs` OK. Dashboard rendered headless in light and dark and inspected. NOTE: not yet validated by a full cloud `workflow_dispatch` run — recommend one manual run to confirm the dashboard step and commit.
 - Scheduler status: Unchanged. GitHub Actions remains primary at `7,37 * * * *` UTC; local Windows fallback remains disabled.
 - Follow-up: Goldman Sachs (CMP-017) still returns zero candidates (SPA extraction gap) — dedicated adapter pending; not addressed in this task.
+
+### TASK-20260822-0930-antigravity — DONE
+- Started: 2026-08-22T09:30:00Z
+- Completed: 2026-08-22T09:32:00Z
+- Objective: Diagnose and fix broken NTFY notification delivery caused by ByteString HTTP header encoding failures on Unicode/emoji titles, add JSON-payload publishing with Action buttons, support config/env topic configuration, add tests, and provide complete project analysis.
+- Files expected: `src/notify_ntfy.mjs`, `config.json`, `README.md`, `tests/notify.test.mjs`, `package.json`, `AGENTS.md`
+- Files changed: `src/notify_ntfy.mjs`, `config.json`, `README.md`, `tests/notify.test.mjs` (new), `package.json`, `AGENTS.md`
+- Files deleted: None.
+- Behavior/data impact: Migrated `src/notify_ntfy.mjs` from HTTP header push to JSON-payload publishing (`POST https://ntfy.sh`), eliminating the ByteString TypeError (`character at index 0 has a value of 55356 > 255`) caused by emojis in headers (`🆕`, `⚠️`). Added direct "Apply Now" action buttons on mobile notifications. Supported `NTFY_TOPIC` from environment variable or `config.json` (`ntfy_topic`). Created `tests/notify.test.mjs` and added it to `npm test`. Updated `README.md` with full NTFY setup guide.
+- Verification: `node src/notify_ntfy.mjs` tested with live dummy topic (16/16 jobs and 1 health alert published successfully with 200 OK); unit test suite `tests/notify.test.mjs` created and passing; full `npm test` passing (`filter.test.mjs`, `monitor_data.test.mjs`, `notify.test.mjs`); CI workbook build verification `npm run build-workbook:ci -- --verify` passed on all 7 sheets without errors.
+- Scheduler status: Unchanged. GitHub Actions remains primary at `7,37 * * * *` UTC; local Windows fallback remains disabled.
+- Follow-up: For automated cloud push notifications, ensure the repository secret `NTFY_TOPIC` is set in GitHub repository settings.
+
+### TASK-20260822-1010-antigravity — DONE
+- Started: 2026-08-22T10:10:00Z
+- Completed: 2026-08-22T10:12:00Z
+- Objective: Upgrade NTFY notifications with professional Markdown formatting, comprehensive role summary, experience and sponsorship badges, 1-click clipboard Copy Link action buttons, and dashboard links.
+- Files expected: `src/notify_ntfy.mjs`, `tests/notify.test.mjs`, `AGENTS.md`
+- Files changed: `src/notify_ntfy.mjs`, `tests/notify.test.mjs`, `AGENTS.md`
+- Files deleted: None.
+- Behavior/data impact: High-detail rich job alerts with Markdown formatting, structured company/location/job-type/experience/sponsorship badges, blockquote overview snippet, 1-click clipboard Copy Link action button (`action: "copy"`), Apply Now button, and Dashboard button.
+- Verification: Passed live test push with dummy topic (16/16 jobs formatted with badges, overview snippet, copy link button, and dashboard button); unit test suite `tests/notify.test.mjs` updated and passing; full `npm test` passing.
+- Scheduler status: Unchanged. GitHub Actions remains primary at `7,37 * * * *` UTC; local Windows fallback remains disabled.
+- Follow-up: None.
+
+### TASK-20260822-1015-antigravity — DONE
+- Started: 2026-08-22T10:15:00Z
+- Completed: 2026-08-22T10:17:00Z
+- Objective: Add automatic CSV data feeds for Google Sheets auto-sync (`data/apply_now.csv`, `data/new_jobs.csv`), link health verification and self-healing documentation, and website URL documentation.
+- Files expected: `src/lib.mjs`, `src/monitor.mjs`, `.github/workflows/job-monitor.yml`, `README.md`, `AGENTS.md`
+- Files changed: `src/lib.mjs`, `src/monitor.mjs`, `.github/workflows/job-monitor.yml`, `README.md`, `AGENTS.md`, `data/apply_now.csv`, `data/new_jobs.csv`
+- Files deleted: None.
+- Behavior/data impact: Generates `data/apply_now.csv` and `data/new_jobs.csv` automatically on every scan. Enables instant Google Sheets live auto-sync via `=IMPORTDATA()`. Workflow persistence step updated to commit CSV feeds. Documented website, dashboard, Excel, and Google Sheet access links in `README.md`.
+- Verification: Generated CSV feeds (61 apply-now rows, 68 historical rows); tested live batch URLs (all 16 returned HTTP 200); `npm test` passing with 0 errors.
+- Scheduler status: Unchanged. GitHub Actions remains primary at `7,37 * * * *` UTC; local Windows fallback remains disabled.
+- Follow-up: None.
+
+### TASK-20260822-1025-antigravity — DONE
+- Started: 2026-08-22T10:25:00Z
+- Completed: 2026-08-22T10:28:00Z
+- Objective: Production MVP upgrade: eliminate health alert repeat spam via state-change tracking, expand technical vocabulary in filter engine to prevent false negatives, clean GitHub Actions workflow Node warning, and verify end-to-end tests.
+- Files expected: `config.json`, `src/lib.mjs`, `src/monitor.mjs`, `src/notify_ntfy.mjs`, `.github/workflows/job-monitor.yml`, `tests/filter.test.mjs`, `tests/notify.test.mjs`, `AGENTS.md`
+- Files changed: `config.json`, `src/lib.mjs`, `src/monitor.mjs`, `data/last_batch.json`, `data/apply_now.csv`, `data/new_jobs.csv`, `outputs/job-monitor/dashboard.html`, `outputs/job-monitor/Job_Monitor.xlsx`, `index.html`, `.github/workflows/job-monitor.yml`, `tests/filter.test.mjs`, `AGENTS.md`
+- Files deleted: None.
+- Behavior/data impact: (1) Added state-change tracking in `src/monitor.mjs` so health notifications only alert once on status transition with a 24-hour reminder cooldown, eliminating repeat IBM alert spam. (2) Expanded `config.json` `role_terms` and `src/lib.mjs` regex vocabularies (Java, Python, C++, Go, Rust, React, TypeScript, Solutions, Voice, Workflow, Automation), rescuing 25+ falsely rejected roles (active eligible roles increased to 102). (3) Added `FORCE_JAVASCRIPT_ACTIONS_TO_NODE20` in workflow to resolve action deprecation warnings.
+- Verification: Ran `npm test` (100% passing across `filter.test.mjs`, `monitor_data.test.mjs`, `notify.test.mjs`); verified CI workbook build with `--verify`; generated HTML dashboard and updated CSV feeds (102 active eligible rows).
+- Scheduler status: Unchanged. GitHub Actions remains primary at `7,37 * * * *` UTC; local Windows fallback remains disabled.
+- Follow-up: None.
+
+
+
+

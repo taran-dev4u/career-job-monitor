@@ -32,26 +32,50 @@ powershell.exe -ExecutionPolicy Bypass -File .\scripts\run_once.ps1
 
 Install the 30-minute Windows scheduled task:
 
-```powershell
-powershell.exe -ExecutionPolicy Bypass -File .\scripts\install_scheduled_task.ps1
+```powershell.exe -ExecutionPolicy Bypass -File .\scripts\install_scheduled_task.ps1
 ```
 
 Remove it:
 
-```powershell
-powershell.exe -ExecutionPolicy Bypass -File .\scripts\uninstall_scheduled_task.ps1
+```powershell.exe -ExecutionPolicy Bypass -File .\scripts\uninstall_scheduled_task.ps1
 ```
+
+## Mobile Push Notifications (ntfy.sh)
+
+Get instant phone notifications whenever new eligible jobs are found without checking email or GitHub issues:
+
+1. **Install the ntfy app** on your phone (iOS App Store or Android Google Play / F-Droid), or open [ntfy.sh](https://ntfy.sh) in your browser.
+2. **Subscribe to a private topic** name (e.g. `taran-career-jobs-secret789`).
+3. **Configure the topic**:
+   - **In GitHub Actions**: Add a secret named `NTFY_TOPIC` with your topic name in [GitHub Repository Secrets](https://github.com/taran-dev4u/career-job-monitor/settings/secrets/actions).
+   - **For local runs**: Set `"ntfy_topic": "your-secret-topic"` in `config.json` or set `$env:NTFY_TOPIC="your-secret-topic"`.
+4. When a new job matching your criteria is discovered, an instant push notification is sent to your phone with direct **Apply Now** action buttons!
+
+## Google Sheets Live Auto-Sync
+
+You can view and track jobs directly inside **Google Sheets** on your phone, tablet, or PC without downloading files:
+
+1. Create a new [Google Sheet](https://sheets.new).
+2. In cell **`A1`**, paste this formula:
+   ```text
+   =IMPORTDATA("https://raw.githubusercontent.com/taran-dev4u/career-job-monitor/main/data/apply_now.csv")
+   ```
+3. Google Sheets will automatically import and keep the job list refreshed with direct clickable Apply URLs! You can add your own adjacent columns (e.g. *Application Status*, *Date Applied*, *Notes*).
+
+## Access Links & Dashboards
+
+- **Live Interactive Website:** https://taran-dev4u.github.io/career-job-monitor/
+- **Filtered Eligible Jobs (Markdown):** https://github.com/taran-dev4u/career-job-monitor/blob/main/LATEST_JOBS.md
+- **All Extracted Snapshot (Markdown):** https://github.com/taran-dev4u/career-job-monitor/blob/main/ALL_EXTRACTED_JOBS.md
+- **Excel 7-Sheet Workbook (.xlsx):** https://github.com/taran-dev4u/career-job-monitor/raw/main/outputs/job-monitor/Job_Monitor.xlsx
+- **Live CSV Feed for Google Sheets:** https://raw.githubusercontent.com/taran-dev4u/career-job-monitor/main/data/apply_now.csv
+- **Private Repository:** https://github.com/taran-dev4u/career-job-monitor
+- **Workflow Runs:** https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml
 
 ## GitHub Actions
 
-The workflow at `.github/workflows/job-monitor.yml` runs at minutes 7 and 37 of every UTC hour and can also be started manually from the Actions tab. It installs Chromium, runs tests, scans all sources, rebuilds and verifies the seven-sheet workbook, publishes GitHub issues, uploads the workbook as a 30-day artifact, and commits the dashboard plus runtime JSON/workbook back to `main`.
+The workflow at `.github/workflows/job-monitor.yml` runs at minutes 7 and 37 of every UTC hour and can also be started manually from the Actions tab. It installs Chromium, runs tests, scans all sources, rebuilds and verifies the seven-sheet workbook, pushes mobile notifications via ntfy, uploads the workbook as a 30-day artifact, and commits the dashboard plus runtime JSON/CSVs/workbook back to `main`.
 
-- Private repository: https://github.com/taran-dev4u/career-job-monitor
-- Latest jobs: https://github.com/taran-dev4u/career-job-monitor/blob/main/LATEST_JOBS.md
-- All extracted jobs: https://github.com/taran-dev4u/career-job-monitor/blob/main/ALL_EXTRACTED_JOBS.md
-- Workflow runs: https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml
-- Alerts: https://github.com/taran-dev4u/career-job-monitor/issues
-
-The workflow uses the repository-scoped `GITHUB_TOKEN` with `contents: write` and `issues: write`; no personal token or career-site credentials are stored. A non-empty batch creates a `[New Jobs]` issue with direct Apply links and mentions `@taran-dev4u`. Broken sources, or sources degraded for three consecutive runs, create one deduplicated `source-health` issue which closes automatically after recovery. No new-job issue is created for an empty batch.
+The workflow uses the repository-scoped `GITHUB_TOKEN` with `contents: write` and `issues: write`; no personal token or career-site credentials are stored. When new jobs are found, instant mobile push alerts are delivered via ntfy. Broken sources, or sources degraded for three consecutive runs, trigger health notifications.
 
 GitHub schedules are best-effort and may start late during platform congestion. The local Windows task must remain disabled while the cloud workflow is active. Career sites change frequently; `Confirmed Empty` means the source explicitly reported no matches, while `Degraded` or `Broken` means zero results cannot be trusted or extraction failed. Inspect `LATEST_JOBS.md`, `Source Health`, `Decision Audit`, and `monitor.log` rather than assuming a zero count means no jobs.

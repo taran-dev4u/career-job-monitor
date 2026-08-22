@@ -1,7 +1,7 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawn } from "node:child_process";
-import { extractJobId, readJson, stableJobIdentityKey, writeJsonAtomic } from "./lib.mjs";
+import { extractJobId, readJson, stableJobIdentityKey, writeCsvAtomic, writeJsonAtomic } from "./lib.mjs";
 import { scanCompany, startBrowser, adapterName } from "./scrape.mjs";
 import { writeDashboards } from "./dashboard.mjs";
 
@@ -166,13 +166,51 @@ async function runOnce() {
   state.initialized = true;
   state.reliability_baseline_complete = true;
   state.last_run_at = runAt;
+  state.health_alert_state ||= {};
+  const activeAlerts = [];
+  const minStreak = Number(config.source_health_degraded_alert_streak || 3);
+  const oneDayMs = 86_400_000;
+  const nowMs = Date.now();
+
+  for (const item of health) {
+    const isAlert = item.status === "Broken" || (item.status === "Degraded" && item.degraded_streak >= minStreak);
+    const last = state.health_alert_state[item.company_id];
+    if (isAlert) {
+      const isNewTransition = !last || last.status !== item.status;
+      const cooldownExpired = last && (nowMs - new Date(last.alerted_at).getTime()) >= oneDayMs;
+      if (isNewTransition || cooldownExpired) {
+        activeAlerts.push(item);
+        state.health_alert_state[item.company_id] = { status: item.status, alerted_at: runAt };
+      }
+    } else if (last) {
+      delete state.health_alert_state[item.company_id];
+    }
+  }
+
   await writeJsonAtomic(dataPath("state.json"), state);
   await writeJsonAtomic(dataPath("jobs.json"), [...jobs, ...added]);
   await writeJsonAtomic(dataPath("current_candidates.json"), current);
   const cutoff = Date.now() - Number(config.decision_history_days || 30) * 86_400_000;
   await writeJsonAtomic(dataPath("decision_history.json"), [...priorAudit, ...evaluations].filter(item => new Date(item.evaluated_at || item.last_verified_at).getTime() >= cutoff));
   await writeJsonAtomic(dataPath("source_health.json"), health);
-  await writeJsonAtomic(dataPath("last_batch.json"), { run_at: runAt, suppressed: suppressNotifications, jobs: added, health_alerts: health.filter(item => item.status === "Broken" || (item.status === "Degraded" && item.degraded_streak >= Number(config.source_health_degraded_alert_streak || 3))) });
+  await writeJsonAtomic(dataPath("last_batch.json"), { run_at: runAt, suppressed: suppressNotifications, jobs: added, health_alerts: activeAlerts });
+
+  const csvHeaders = [
+    { label: "Company", key: "company" },
+    { label: "Role", get: r => r.title || r.role || "" },
+    { label: "Location", key: "location" },
+    { label: "Job Type", key: "job_type" },
+    { label: "Job ID", key: "job_id" },
+    { label: "Required Exp (Yrs)", get: r => r.required_experience_years ?? "" },
+    { label: "Preferred Exp (Yrs)", get: r => r.preferred_experience_years ?? "" },
+    { label: "Sponsorship", key: "sponsorship_status" },
+    { label: "Posted Date", key: "posted" },
+    { label: "Apply URL", key: "job_url" },
+    { label: "First Seen", get: r => r.first_seen_at || r.discovered_at || "" }
+  ];
+  const activeEligible = current.filter(item => item.accepted && item.active_status === "Active");
+  await writeCsvAtomic(dataPath("apply_now.csv"), activeEligible, csvHeaders);
+  await writeCsvAtomic(dataPath("new_jobs.csv"), [...jobs, ...added], csvHeaders);
   const counts = health.reduce((acc, item) => { acc[item.status] = (acc[item.status] || 0) + 1; return acc; }, {});
   runs.push({ run_at: runAt, mode: upgradeBaseline ? "reliability baseline" : configuredBaseline ? "configured baseline" : "incremental", companies_checked: companies.length, candidates_seen: current.length, evaluations_completed: evaluations.length, new_jobs_added: added.length, healthy_sources: counts.Healthy || 0, confirmed_empty_sources: counts["Confirmed Empty"] || 0, degraded_sources: counts.Degraded || 0, broken_sources: counts.Broken || 0, errors: counts.Broken || 0, duration_seconds: Math.round((Date.now() - started) / 100) / 10 });
   await writeJsonAtomic(dataPath("runs.json"), runs.slice(-500));

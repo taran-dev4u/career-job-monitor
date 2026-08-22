@@ -23,9 +23,19 @@ assert.equal(roleLooksRelevant("Software Dev Engineer I - Graviton", "United Sta
 assert.equal(roleLooksRelevant("GPU ML Engineer", "United States", config), true);
 assert.equal(roleLooksRelevant("Member of Technical Staff, Robotics", "United States", config), true);
 assert.equal(roleLooksRelevant("DevSecOps Engineer", "United States", config), true);
+assert.equal(roleLooksRelevant("Java Developer III", "United States", config), true);
+assert.equal(roleLooksRelevant("AI Solutions Engineer - Associate", "United States", config), true);
+assert.equal(roleLooksRelevant("Voice Engineer", "United States", config), true);
+assert.equal(roleLooksRelevant("Graph Workflow Engineer (TS/SCI)", "United States", config), true);
+assert.equal(roleLooksRelevant("Adobe Fusion Developer", "United States", config), true);
+assert.equal(roleLooksRelevant("Salesforce DevOps Engineer", "United States", config), true);
+assert.equal(roleLooksRelevant("Full Stack Java Developer", "United States", config), true);
+assert.equal(roleLooksRelevant("Python Data Analyst", "United States", config), true);
 // Still out of scope: non-software engineering domains.
 assert.equal(roleLooksRelevant("Electrical Engineer", "United States", config), false);
 assert.equal(roleLooksRelevant("Optical Engineer, Test Software", "United States", config), false);
+assert.equal(roleLooksRelevant("Mortgage Sales Supervisor", "United States", config), false);
+assert.equal(roleLooksRelevant("Alternative Investments Accountant", "United States", config), false);
 
 assert.equal(experienceDecision("Minimum 3 years of professional experience", 3).accepted, true);
 assert.equal(experienceDecision("At least 5 years of experience", 3).accepted, false);

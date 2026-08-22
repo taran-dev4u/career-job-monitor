@@ -1,92 +1,253 @@
-// Free instant phone alerts via ntfy.sh — replaces the GitHub-issue emails.
+// Instant phone/desktop push alerts via ntfy (https://ntfy.sh).
 //
 // Reads data/last_batch.json (the newest scan's new jobs + health alerts) and
-// pushes one notification per new eligible job to your private ntfy topic.
-// Install the "ntfy" app, subscribe to your topic, and jobs arrive instantly.
+// publishes notifications with actionable links to your private ntfy topic.
 //
-// Config comes from env (set as GitHub Actions secrets so it stays private even
-// in a public repo):
-//   NTFY_TOPIC   required — your secret topic name
-//   NTFY_SERVER  optional — defaults to https://ntfy.sh
+// Configuration priority:
+//   1. Environment variables (NTFY_TOPIC, NTFY_SERVER, NTFY_TOKEN / NTFY_AUTH)
+//   2. config.json (ntfy_topic, ntfy_server, ntfy_token)
 //
-// Non-fatal by design: any failure here never breaks a scan.
+// Non-fatal by design: any push failure is logged and never breaks a scan.
 
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const TOPIC = process.env.NTFY_TOPIC;
-const SERVER = (process.env.NTFY_SERVER || "https://ntfy.sh").replace(/\/$/, "");
 const MAX_PER_RUN = 20;
 
-async function readJson(file, fallback) {
+export async function readJson(file, fallback) {
   try { return JSON.parse(await fs.readFile(file, "utf8")); }
   catch (e) { if (e.code === "ENOENT") return fallback; throw e; }
 }
 
-// IMPORTANT: publish via ntfy's JSON endpoint, not the header-based shorthand
-// (POST body + Title/Tags/Priority/Click headers). HTTP headers must be
-// ISO-8859-1/ByteString — Node's fetch() throws a TypeError the instant a
-// header value contains a character outside that range. Every job title here
-// includes an emoji ("🆕 ..."), and the health-alert title includes "⚠", so
-// with the header-based approach EVERY push threw before ever reaching the
-// network. The surrounding try/catch swallowed the error and just logged it,
-// so the workflow still showed green and nothing ever arrived on the phone.
-// The JSON body has no such restriction and is ntfy's documented way to send
-// full UTF-8 titles/messages. See https://docs.ntfy.sh/publish/#publish-as-json
-async function push({ title, message, click, tags, priority }) {
-  const payload = { topic: TOPIC, title, message };
-  if (click) payload.click = click;
-  if (tags) payload.tags = Array.isArray(tags) ? tags : [tags];
-  if (priority) payload.priority = priority;
-  const res = await fetch(SERVER, {
+export function buildJobPayload(job, topic) {
+  const role = job.role || job.title || "New role";
+  const company = job.company || "Unknown company";
+  const companyId = job.company_id ? ` (${job.company_id})` : "";
+  const loc = job.location && !/search for jobs/i.test(job.location) ? job.location : "United States (or Remote)";
+  const type = job.job_type && job.job_type !== "Not specified" ? job.job_type : "Full-time";
+  const reqId = job.job_id ? job.job_id : "N/A";
+  const spons = job.sponsorship_status || "Not Mentioned";
+  const posted = job.posted && !/not stated/i.test(job.posted) ? job.posted : "Recently posted";
+  const exp = job.required_experience_years !== null && job.required_experience_years !== undefined
+    ? `${job.required_experience_years} yr(s) required`
+    : job.experience && !/no required/i.test(job.experience)
+      ? job.experience
+      : "0–3 yrs (Eligible)";
+  const jobUrl = job.job_url || "";
+
+  // Clean description snippet up to 280 chars
+  let snippet = (job.description_snippet || "").replace(/\s+/g, " ").trim();
+  if (snippet.length > 280) snippet = `${snippet.slice(0, 277)}…`;
+
+  const lines = [
+    `🏢 **Company:** ${company}${companyId}`,
+    `📍 **Location:** ${loc}`,
+    `💼 **Type:** ${type}  |  🆔 **Job ID:** \`${reqId}\``,
+    `⏱️ **Experience:** ${exp}`,
+    `🛂 **Sponsorship:** ${spons}`,
+    `📅 **Posted:** ${posted}`
+  ];
+
+  if (snippet) {
+    lines.push("", `📝 **Overview:**`, `> ${snippet}`);
+  }
+
+  if (jobUrl) {
+    lines.push("", `🔗 **Apply URL:** ${jobUrl}`);
+  }
+
+  const payload = {
+    topic,
+    title: `🎯 New Job: ${role} · ${company}`,
+    message: lines.join("\n"),
+    markdown: true,
+    tags: ["briefcase", "sparkles"],
+    priority: 4
+  };
+
+  if (jobUrl) {
+    payload.click = jobUrl;
+    payload.actions = [
+      {
+        action: "view",
+        label: "🚀 Apply Now",
+        url: jobUrl,
+        clear: true
+      },
+      {
+        action: "copy",
+        label: "📋 Copy Job Link",
+        value: jobUrl
+      },
+      {
+        action: "view",
+        label: "📊 Latest Jobs",
+        url: "https://github.com/taran-dev4u/career-job-monitor/blob/main/LATEST_JOBS.md"
+      }
+    ];
+  }
+
+  return payload;
+}
+
+export function buildOverflowPayload(jobs, sentCount, topic) {
+  const extraJobs = jobs.slice(sentCount);
+  const lines = [
+    `⚡ **+${extraJobs.length} more eligible jobs were discovered in this scan!**`,
+    "",
+    ...extraJobs.slice(0, 15).map(j => {
+      const role = j.role || j.title || "New role";
+      const comp = j.company || "Company";
+      const link = j.job_url ? ` · [Apply](${j.job_url})` : "";
+      return `• **${role}** — *${comp}*${link}`;
+    })
+  ];
+  if (extraJobs.length > 15) {
+    lines.push(`• ... and ${extraJobs.length - 15} more.`);
+  }
+
+  return {
+    topic,
+    title: `✨ +${extraJobs.length} More New Roles Discovered!`,
+    message: lines.join("\n"),
+    markdown: true,
+    tags: ["sparkles", "star"],
+    priority: 3,
+    actions: [
+      {
+        action: "view",
+        label: "📊 View All Jobs",
+        url: "https://github.com/taran-dev4u/career-job-monitor/blob/main/LATEST_JOBS.md"
+      }
+    ]
+  };
+}
+
+export function buildHealthAlertPayload(alerts, topic) {
+  const lines = [
+    `⚠️ **${alerts.length} career source(s) reported issues during the latest scan:**`,
+    "",
+    ...alerts.map(a => `• **${a.company || a.company_id}**: \`${a.status}\` — ${a.diagnostic || "Requires attention"}`)
+  ];
+
+  return {
+    topic,
+    title: `⚠️ ${alerts.length} Career Source(s) Need Attention`,
+    message: lines.join("\n"),
+    markdown: true,
+    tags: ["warning", "rotating_light"],
+    priority: 2,
+    actions: [
+      {
+        action: "view",
+        label: "🔍 Source Health",
+        url: "https://github.com/taran-dev4u/career-job-monitor/blob/main/LATEST_JOBS.md#source-health"
+      }
+    ]
+  };
+}
+
+export async function pushNtfy(server, payload, token) {
+  const headers = {
+    "Content-Type": "application/json"
+  };
+  if (token) {
+    headers["Authorization"] = token.startsWith("Bearer ") || token.startsWith("Basic ") ? token : `Bearer ${token}`;
+  }
+
+  const endpoint = server.replace(/\/$/, "");
+  const res = await fetch(endpoint, {
     method: "POST",
-    headers: { "Content-Type": "application/json; charset=utf-8" },
+    headers,
     body: JSON.stringify(payload)
   });
-  if (!res.ok) throw new Error(`ntfy ${res.status} ${res.statusText}: ${(await res.text()).slice(0, 200)}`);
+
+  if (!res.ok) {
+    const errorText = await res.text().catch(() => "");
+    throw new Error(`ntfy HTTP ${res.status} ${res.statusText}${errorText ? `: ${errorText}` : ""}`);
+  }
+  return await res.json().catch(() => ({}));
+}
+
+export async function sendBatchNotifications({
+  batch,
+  topic,
+  server = "https://ntfy.sh",
+  token = "",
+  maxPerRun = MAX_PER_RUN,
+  fetchFn = pushNtfy
+}) {
+  if (!topic) {
+    console.log("NTFY_TOPIC not configured — skipping ntfy notifications.");
+    console.log("To enable instant push notifications:");
+    console.log("  1. Choose a private topic name (e.g. 'my-career-jobs-secret123')");
+    console.log("  2. In GitHub Actions, add secret NTFY_TOPIC (Settings -> Secrets -> Actions)");
+    console.log("     Or in config.json, add \"ntfy_topic\": \"your-topic\"");
+    console.log("  3. Subscribe in the ntfy app (iOS/Android) or at https://ntfy.sh/<your-topic>");
+    return { ok: 0, total: 0, alerts: 0, skipped: true, reason: "NO_TOPIC" };
+  }
+
+  const jobs = Array.isArray(batch?.jobs) ? batch.jobs : [];
+  const alerts = Array.isArray(batch?.health_alerts) ? batch.health_alerts : [];
+
+  if (!jobs.length && !alerts.length) {
+    console.log("ntfy: No new jobs or health alerts to push.");
+    return { ok: 0, total: 0, alerts: 0, skipped: true, reason: "EMPTY_BATCH" };
+  }
+
+  const send = jobs.slice(0, maxPerRun);
+  let ok = 0;
+
+  for (const j of send) {
+    const payload = buildJobPayload(j, topic);
+    try {
+      await fetchFn(server, payload, token);
+      ok++;
+    } catch (e) {
+      console.error(`ntfy job push failed for "${payload.title}": ${e.message}`);
+    }
+  }
+
+  if (jobs.length > send.length) {
+    const overflowPayload = buildOverflowPayload(jobs, send.length, topic);
+    try {
+      await fetchFn(server, overflowPayload, token);
+    } catch (e) {
+      console.error(`ntfy overflow push failed: ${e.message}`);
+    }
+  }
+
+  let alertsPushed = 0;
+  if (alerts.length) {
+    const healthPayload = buildHealthAlertPayload(alerts, topic);
+    try {
+      await fetchFn(server, healthPayload, token);
+      alertsPushed = 1;
+    } catch (e) {
+      console.error(`ntfy health alert push failed: ${e.message}`);
+    }
+  }
+
+  console.log(`ntfy: pushed ${ok}/${send.length} job notifications${alerts.length ? ` + ${alerts.length} health alert(s)` : ""}.`);
+  return { ok, total: send.length, alerts: alertsPushed, skipped: false };
 }
 
 async function main() {
-  if (!TOPIC) { console.log("NTFY_TOPIC not set — skipping ntfy notifications."); return; }
+  const config = await readJson(path.join(ROOT, "config.json"), {});
+  const topic = process.env.NTFY_TOPIC || config.ntfy_topic || "";
+  const server = (process.env.NTFY_SERVER || config.ntfy_server || "https://ntfy.sh").replace(/\/$/, "");
+  const token = process.env.NTFY_TOKEN || config.ntfy_token || process.env.NTFY_AUTH || "";
+
   const batch = await readJson(path.join(ROOT, "data", "last_batch.json"), {});
-  const jobs = Array.isArray(batch.jobs) ? batch.jobs : [];
-  const alerts = Array.isArray(batch.health_alerts) ? batch.health_alerts : [];
-
-  if (!jobs.length && !alerts.length) { console.log("No new jobs or health alerts to push."); return; }
-
-  const label = j => `${j.role || j.title || "New role"} — ${j.company || ""}`.trim();
-  const send = jobs.slice(0, MAX_PER_RUN);
-  let ok = 0;
-  for (const j of send) {
-    const role = j.role || j.title || "New role";
-    const company = j.company || "Unknown company";
-    const loc = j.location && !/search for jobs/i.test(j.location) ? j.location : "US";
-    const spons = j.sponsorship_status ? ` · ${j.sponsorship_status}` : "";
-    const posted = j.posted && !/not stated/i.test(j.posted) ? ` · ${j.posted}` : "";
-    try {
-      await push({
-        // Title carries company + role so the alert is meaningful on its own.
-        title: `🆕 ${role} · ${company}`,
-        message: `${company}\n${loc}${spons}${posted}\nTap to apply →`,
-        click: j.job_url,
-        tags: "briefcase",
-        priority: 4
-      });
-      ok++;
-    } catch (e) { console.error(`ntfy job push failed: ${e.message}`); }
-  }
-  if (jobs.length > send.length) {
-    // Even the overflow names the roles/companies, never a bare count.
-    const extra = jobs.slice(MAX_PER_RUN).map(label).join("\n");
-    try { await push({ title: `+${jobs.length - send.length} more new jobs`, message: extra, tags: "sparkles", priority: 3 }); } catch {}
-  }
-  if (alerts.length) {
-    const names = [...new Set(alerts.map(a => a.company))].join(", ");
-    try { await push({ title: `⚠ ${alerts.length} source(s) need attention`, message: names, tags: "warning", priority: 2 }); } catch {}
-  }
-  console.log(`ntfy: pushed ${ok}/${send.length} job notifications${alerts.length ? ` + ${alerts.length} health alert(s)` : ""}.`);
+  await sendBatchNotifications({ batch, topic, server, token });
 }
 
-main().catch(e => { console.error(`ntfy notifier warning: ${e.stack || e.message}`); });
+// Only execute main() when invoked directly as a script
+if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1])) {
+  main().catch(e => {
+    console.error(`ntfy notifier warning: ${e.stack || e.message}`);
+  });
+}
+
