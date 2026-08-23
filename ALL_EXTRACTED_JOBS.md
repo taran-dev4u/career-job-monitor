@@ -1,6 +1,6 @@
 # All Extracted Jobs — Unfiltered
 
-Updated: **2026-08-23T23:30:36.548Z UTC** / **Aug 23, 2026, 7:30 PM Eastern**
+Updated: **2026-08-23T23:51:30.101Z UTC** / **Aug 23, 2026, 7:51 PM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
@@ -52,8 +52,8 @@ This view intentionally includes rejected jobs. Use the **Decision** and **Reaso
 | 2026-08-22T10:43:51.314Z | COMPUNNEL SOFTWARE GROUP, INC | Senior Software Engineer Agentic AI Engineering | Not stated | Not stated | Not Mentioned | 7+ years | Rejected | Excluded: senior; Requires 7+ years | [Open](https://staffline.compunnel.com/Support/UploadResume?JobId=lAVVj9lBmbOw1Q3xOSctQw%3d%3d&Source=4414&EntityGroup=2321) |
 | 2026-08-22T10:43:36.978Z | WELLS FARGO BANK, N.A | Lead Infrastructure Engineer | Not stated | Not stated | Not Mentioned | Not stated | Rejected | Excluded: lead; Job is expired or closed | [Open](https://www.wellsfargojobs.com/en/jobs/r-565590/lead-infrastructure-engineer) |
 | 2026-08-22T10:43:36.978Z | WELLS FARGO BANK, N.A | Lead Infrastructure Engineer | Not stated | Not stated | Not Mentioned | Not stated | Rejected | Excluded: lead; Job is expired or closed | [Open](https://www.wellsfargojobs.com/en/jobs/r-570024/lead-infrastructure-engineer) |
+| 2026-08-22T10:43:36.978Z | WELLS FARGO BANK, N.A | Senior Data Engineer | Not stated | Not stated | Not Mentioned | Not stated | Rejected | Excluded: senior; Job is expired or closed | [Open](https://www.wellsfargojobs.com/en/jobs/r-555078/senior-data-engineer) |
 | 2026-08-22T10:43:36.978Z | WELLS FARGO BANK, N.A | Lead Software Engineer | Not stated | 2026-08-21T00:00:00+00:00 | Not Available | 5+ years | Rejected | Excluded: lead; Requires 5+ years; Not Available | [Open](https://www.wellsfargojobs.com/en/jobs/r-555118/lead-software-engineer) |
-| 2026-08-22T10:43:36.978Z | WELLS FARGO BANK, N.A | Lead Systems Operations Engineer - Windows / Unix | Not stated | 2026-08-21T00:00:00+00:00 | Not Mentioned | Not stated | Rejected | Excluded: lead | [Open](https://www.wellsfargojobs.com/en/jobs/r-563603/lead-systems-operations-engineer-windows-unix) |
 | 2026-08-22T10:43:36.978Z | WELLS FARGO BANK, N.A | Lead Systems Operations Engineer | Not stated | 2026-08-21T00:00:00+00:00 | Not Available | 4+ years | Rejected | Excluded: lead; Requires 4+ years; Not Available | [Open](https://www.wellsfargojobs.com/en/jobs/r-569261/lead-systems-operations-engineer) |
 | 2026-08-22T10:43:36.978Z | WELLS FARGO BANK, N.A | Principal Engineer - Performance Testing | Not stated | 2026-08-21T00:00:00+00:00 | Not Mentioned | 7+ years | Rejected | Not a configured technical discipline; Excluded: principal; Requires 7+ years | [Open](https://www.wellsfargojobs.com/en/jobs/r-564955/principal-engineer-performance-testing) |
 | 2026-08-22T10:43:36.978Z | WELLS FARGO BANK, N.A | Senior Information Security Engineer - AWS Cloud Security | Not stated | 2026-08-21T00:00:00+00:00 | Not Available | Not stated | Rejected | Excluded: senior; Not Available | [Open](https://www.wellsfargojobs.com/en/jobs/r-566295/senior-information-security-engineer-aws-cloud-security) |
