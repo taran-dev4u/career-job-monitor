@@ -1,6 +1,6 @@
 # All Extracted Jobs — Unfiltered
 
-Updated: **2026-08-23T18:41:44.394Z UTC** / **Aug 23, 2026, 2:41 PM Eastern**
+Updated: **2026-08-23T19:30:09.593Z UTC** / **Aug 23, 2026, 3:30 PM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
@@ -237,9 +237,9 @@ This view intentionally includes rejected jobs. Use the **Decision** and **Reaso
 | 2026-08-18T14:26:35.278Z | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Senior Software Engineer/Developer | Durham, North Carolina, USA | 2026-07-15 | Not Available | Not stated | Rejected | Excluded: senior; Not Available | [Open](https://jobs.fidelity.com/en/jobs/2132389/senior-software-engineerdeveloper/) |
 | 2026-08-18T14:26:35.278Z | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Principal Software Engineer | Westlake, Texas, USA; Merrimack, New Hampshire, USA | 2026-06-24 | Unclear | Not stated | Rejected | Excluded: principal | [Open](https://jobs.fidelity.com/en/jobs/2128072/principal-software-engineer/) |
 | 2026-08-18T14:16:58.737Z | Microsoft | Member of Technical Staff, Microsoft Robotics (Robot Learning) | Redmond, WA,US, US; Redmond, WA,US, US | 2026-05-29T17:31:13 | Not Mentioned | Not stated | Included | — | [Open](https://apply.careers.microsoft.com/careers/job/1970393556866699) |
+| 2026-08-18T14:14:54.300Z | WELLS FARGO BANK, N.A | Principal Engineer - Secure Network Services | Not stated | Not stated | Not Mentioned | Not stated | Rejected | Excluded: principal; Job is expired or closed | [Open](https://www.wellsfargojobs.com/en/jobs/r-563298/principal-engineer-secure-network-services) |
 | 2026-08-18T14:14:54.300Z | WELLS FARGO BANK, N.A | Senior Data Engineer | Not stated | 2026-08-21T00:00:00+00:00 | Not Mentioned | 4+ years | Rejected | Excluded: senior; Requires 4+ years | [Open](https://www.wellsfargojobs.com/en/jobs/r-550245/senior-data-engineer) |
 | 2026-08-18T14:14:54.300Z | WELLS FARGO BANK, N.A | Lead Protocol Engineer (Go / Cryptography) | Not stated | 2026-08-20T00:00:00+00:00 | Not Mentioned | 3+ years | Rejected | Excluded: lead | [Open](https://www.wellsfargojobs.com/en/jobs/r-554269/lead-protocol-engineer-go-cryptography) |
-| 2026-08-18T14:14:54.300Z | WELLS FARGO BANK, N.A | Lead Java Payments Engineer | Not stated | 2026-08-17T00:00:00+00:00 | Not Available | 5+ years | Rejected | Excluded: lead; Requires 5+ years; Not Available | [Open](https://www.wellsfargojobs.com/en/jobs/r-568078/lead-java-payments-engineer) |
 | 2026-08-18T14:14:54.300Z | WELLS FARGO BANK, N.A | Lead Software Engineer | Not stated | 2026-08-04T00:00:00+00:00 | Not Available | 5+ years | Rejected | Excluded: lead; Requires 5+ years; Not Available | [Open](https://www.wellsfargojobs.com/en/jobs/r-552419/lead-software-engineer) |
 | 2026-08-18T14:13:32.851Z | U.S. Bank National Association | Mortgage Loan Originator | Bountiful, UT, United States | 2026-07-07T00:00:00.000+0000 | Not Mentioned | Not stated | Rejected | Not a configured technical discipline | [Open](https://careers.usbank.com/global/en/job/2026-0019899/Mortgage-Loan-Originator) |
 | 2026-08-18T14:13:32.851Z | U.S. Bank National Association | Wealth Management Advisor - Oak Lawn, IL | Oak Lawn, IL, United States | 2026-07-03T00:00:00.000+0000 | Not Mentioned | Not stated | Rejected | Not a configured technical discipline | [Open](https://careers.usbank.com/global/en/job/2025-0004014/Wealth-Management-Advisor-Oak-Lawn-IL) |
