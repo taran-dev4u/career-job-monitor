@@ -394,6 +394,18 @@ Entry template:
 - Scheduler status: Unchanged.
 - Follow-up: None.
 
+### TASK-20260823-2050-antigravity — DONE
+- Started: 2026-08-23T20:45:00Z
+- Completed: 2026-08-23T20:51:00Z
+- Objective: Diagnose all 17 sources after JPMC Oracle maintenance, configure dedicated ntfy topic in config.json to enable instant mobile push notifications, test live push delivery, and verify workbook/dashboard.
+- Files expected: `config.json`, `AGENTS.md`
+- Files changed: `config.json`, `outputs/job-monitor/Job_Monitor.xlsx`, `outputs/job-monitor/dashboard.html`, `index.html`, `AGENTS.md`
+- Files deleted: None.
+- Behavior/data impact: (1) Configured dedicated ntfy_topic `taran-career-jobs-2026` in `config.json` enabling instant mobile alerts for GitHub Actions and local runs without requiring manual secret setup. (2) Successfully delivered live test push notification to `https://ntfy.sh/taran-career-jobs-2026` (HTTP 200). (3) Verified all 17 companies live: 100% healthy, 349 total extracted candidates, 0 broken links.
+- Verification: Passed live ntfy push test; passed 17-company concurrent smoke test (349 candidates extracted, 0 errors); passed `npm test` 100%; CI workbook build verified 7 sheets cleanly.
+- Scheduler status: Unchanged.
+- Follow-up: None.
+
 
 
 
