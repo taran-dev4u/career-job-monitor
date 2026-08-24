@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import config from "../config.json" with { type: "json" };
-import { enrollmentDecision, evaluateEligibility, experienceDecision, extractJobId, markBaselinePending, notificationDecision, roleLooksRelevant, sponsorshipDecision, stableJobIdentityKey, stableJobKey } from "../src/lib.mjs";
+import { enrollmentDecision, evaluateEligibility, experienceDecision, extractJobId, isUsLocation, markBaselinePending, notificationDecision, parseJobDate, roleLooksRelevant, sponsorshipDecision, stableJobIdentityKey, stableJobKey } from "../src/lib.mjs";
 import parserFixtures from "./fixtures/parser_contracts.json" with { type: "json" };
 import { adapterName, jsonCandidatesFrom } from "../src/scrape.mjs";
 
@@ -60,9 +60,12 @@ assert.equal(sponsorshipDecision("Software Engineer I working on distributed sys
 
 assert.equal(enrollmentDecision("Software Engineer Intern", "Applicants must be currently enrolled in a university.").accepted, false);
 assert.equal(enrollmentDecision("Software Engineer Intern", "Open to recent graduates and graduate degree holders.").accepted, true);
-assert.equal(evaluateEligibility({ title: "AI Engineering Intern", description: "Recent graduates welcome. Preferred: 5 years. Future sponsorship may be available.", config }).accepted, true);
-assert.equal(evaluateEligibility({ title: "AI Engineering Intern", description: "You must be actively pursuing a degree.", config }).accepted, false);
-assert.equal(evaluateEligibility({ title: "Contract Software Developer", description: "Minimum 2 years. No sponsorship is available.", config }).accepted, false);
+assert.equal(evaluateEligibility({ title: "AI Engineering Intern", description: "Recent graduates welcome. Preferred: 5 years. Future sponsorship may be available.", location: "Mountain View, CA, USA", config }).accepted, true);
+assert.equal(evaluateEligibility({ title: "AI Engineering Intern", description: "You must be actively pursuing a degree.", location: "Seattle, WA, USA", config }).accepted, false);
+assert.equal(evaluateEligibility({ title: "Contract Software Developer", description: "Minimum 2 years. No sponsorship is available.", location: "Austin, TX", config }).accepted, false);
+assert.equal(evaluateEligibility({ title: "Software Engineer I", description: "Early career role.", location: "Dublin, Ireland", config }).accepted, false, "Dublin, Ireland must be rejected");
+assert.equal(evaluateEligibility({ title: "Software Engineer I", description: "Early career role.", location: "London, UK", config }).accepted, false, "London, UK must be rejected");
+assert.equal(evaluateEligibility({ title: "Software Engineer I", description: "Early career role.", location: "Bengaluru, India", config }).accepted, false, "Bengaluru, India must be rejected");
 
 assert.equal(extractJobId("https://example.com/jobs/REQ-12345"), "REQ-12345");
 assert.equal(extractJobId("https://jobs.apple.com/en-us/details/200678174-0836/software-engineer-creator-studio"), "200678174-0836");
@@ -99,4 +102,21 @@ assert.equal(notificationDecision(notificationState, "pending-rejected", { accep
 assert.equal(notificationState["pending-rejected"], undefined);
 assert.equal(notificationDecision(notificationState, "pending-rejected", { accepted: true }, false, "2026-08-19T00:30:00Z"), true);
 
-console.log("Eligibility, sponsorship, internship, deduplication, and adapter tests passed.");
+assert.equal(isUsLocation("Mountain View, CA, United States").accepted, true);
+assert.equal(isUsLocation("Cupertino, CA").accepted, true);
+assert.equal(isUsLocation("Remote - US").accepted, true);
+assert.equal(isUsLocation("Dublin, Ireland").accepted, false);
+assert.equal(isUsLocation("Cork, Ireland").accepted, false);
+assert.equal(isUsLocation("London, United Kingdom").accepted, false);
+assert.equal(isUsLocation("Bengaluru, India").accepted, false);
+assert.equal(isUsLocation("Toronto, ON, Canada").accepted, false);
+assert.equal(isUsLocation("Remote - EMEA").accepted, false);
+
+assert.equal(parseJobDate("2026-04-09").isExplicitlyOld, true);
+assert.equal(parseJobDate("February 6, 2026").isExplicitlyOld, true);
+assert.equal(parseJobDate("Posted 30+ days ago").isExplicitlyOld, true);
+assert.equal(parseJobDate("Just posted").isRecent, true);
+assert.equal(parseJobDate("Today").isRecent, true);
+assert.equal(parseJobDate("2 hours ago").isRecent, true);
+
+console.log("Eligibility, sponsorship, internship, location, date, deduplication, and adapter tests passed.");

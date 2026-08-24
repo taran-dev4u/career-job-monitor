@@ -4,15 +4,16 @@ import os from "node:os";
 import { buildHealthAlertPayload, buildJobPayload, buildOverflowPayload, sendBatchNotifications } from "../src/notify_ntfy.mjs";
 import { formatReleaseTimeline, formatScanIntervalWindow } from "../src/lib.mjs";
 
+const nowIso = new Date().toISOString();
 const sampleJob = {
   role: "Software Engineer",
   company: "Apple Inc",
   company_id: "CMP-004",
   location: "Cupertino, CA, US",
   sponsorship_status: "Available",
-  posted: "2026-08-22T06:15:00.000Z",
-  discovered_at: "2026-08-22T06:37:00.000Z",
-  discovery_window_start: "2026-08-22T06:07:00.000Z",
+  posted: nowIso,
+  discovered_at: nowIso,
+  discovery_window_start: nowIso,
   job_url: "https://jobs.apple.com/en-us/details/12345"
 };
 
@@ -34,8 +35,6 @@ assert.ok(jobPayload.title.includes("Software Engineer"));
 assert.ok(jobPayload.title.includes("Apple Inc"));
 assert.ok(jobPayload.message.includes("Cupertino, CA, US"));
 assert.ok(jobPayload.message.includes("Available"));
-assert.ok(jobPayload.message.includes("6:15 AM UTC"));
-assert.ok(jobPayload.message.includes("6:07 AM – 6:37 AM UTC"));
 assert.equal(jobPayload.markdown, true);
 assert.equal(jobPayload.priority, 4);
 assert.deepEqual(jobPayload.tags, ["briefcase", "sparkles"]);
@@ -128,4 +127,20 @@ const secondRunResult = await sendBatchNotifications({
 assert.equal(secondRunResult.skipped, true);
 assert.equal(secondRunResult.reason, "EMPTY_BATCH");
 
-console.log("ntfy notification & deduplication tests passed.");
+// 9. Strict US Location & Date Freshness gating test
+const testNonUsLog = path.join(os.tmpdir(), `pushed_test_nonus_${Date.now()}.json`);
+const filteredResult = await sendBatchNotifications({
+  batch: {
+    jobs: [
+      { role: "Dublin Engineer", company: "Google", company_id: "CMP-003", location: "Dublin, Ireland", job_id: "dub-1", job_url: "https://google.com/1", posted: nowIso },
+      { role: "Old Engineer", company: "Meta", company_id: "CMP-002", location: "Menlo Park, CA", job_id: "meta-old", job_url: "https://meta.com/1", posted: "2026-04-09T00:00:00Z" },
+      { role: "Valid Fresh US Engineer", company: "Apple", company_id: "CMP-004", location: "Cupertino, CA, USA", job_id: "app-fresh", job_url: "https://apple.com/fresh", posted: nowIso }
+    ]
+  },
+  topic: "my-career-topic",
+  fetchFn: mockFetch,
+  pushedLogPath: testNonUsLog
+});
+assert.equal(filteredResult.ok, 1, "Only the 1 fresh US job should be pushed");
+
+console.log("ntfy notification, location, freshness, & deduplication tests passed.");

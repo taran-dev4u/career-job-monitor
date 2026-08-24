@@ -12,7 +12,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { clean, formatReleaseTimeline } from "./lib.mjs";
+import { clean, formatReleaseTimeline, isUsLocation, parseJobDate } from "./lib.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const MAX_PER_RUN = 20;
@@ -203,7 +203,7 @@ export async function sendBatchNotifications({
   const pushedLog = await readJson(pushedLogPath, {});
   const nowIso = new Date().toISOString();
 
-  // Deduplicate against previously pushed jobs
+  // Deduplicate against previously pushed jobs, non-US locations, and stale publication dates (>48h old)
   const jobs = allJobs.filter(j => {
     const urlKey = (j.job_url || "").replace(/#.*$/, "").replace(/\/$/, "");
     const idKey = j.company_id && j.job_id ? `${j.company_id}:${clean(j.job_id).toLowerCase()}` : "";
@@ -211,6 +211,21 @@ export async function sendBatchNotifications({
     if (canonicalKey && pushedLog[canonicalKey]) return false;
     if (urlKey && pushedLog[urlKey]) return false;
     if (idKey && pushedLog[idKey]) return false;
+
+    // Strict US location gate
+    const locCheck = isUsLocation(j.location, j.description_snippet);
+    if (!locCheck.accepted) {
+      console.log(`ntfy: Skipping non-US job: "${j.role || j.title}" (${j.company}) - location: ${j.location}`);
+      return false;
+    }
+
+    // Strict freshness gate (reject if explicitly older than 48 hours / 2 days)
+    const dateCheck = parseJobDate(j.posted, 2);
+    if (dateCheck.isExplicitlyOld) {
+      console.log(`ntfy: Skipping older job: "${j.role || j.title}" (${j.company}) - posted: ${j.posted} (${dateCheck.ageDays}d old)`);
+      return false;
+    }
+
     return true;
   });
 

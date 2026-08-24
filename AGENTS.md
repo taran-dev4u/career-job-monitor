@@ -418,6 +418,18 @@ Entry template:
 - Scheduler status: Unchanged.
 - Follow-up: None.
 
+### TASK-20260824-1130-antigravity — DONE
+- Started: 2026-08-24T11:29:00Z
+- Completed: 2026-08-24T11:35:00Z
+- Objective: Implement strict universal US-only location enforcement across all 17 companies and strict publication date freshness gating (<48h) to prevent old/historical or non-US jobs from being pushed to mobile alerts.
+- Files expected: `src/lib.mjs`, `src/scrape.mjs`, `src/notify_ntfy.mjs`, `tests/filter.test.mjs`, `tests/notify.test.mjs`, `AGENTS.md`
+- Files changed: `src/lib.mjs`, `src/scrape.mjs`, `src/notify_ntfy.mjs`, `tests/filter.test.mjs`, `tests/notify.test.mjs`, `data/current_candidates.json`, `data/decision_history.json`, `data/runs.json`, `outputs/job-monitor/Job_Monitor.xlsx`, `outputs/job-monitor/dashboard.html`, `index.html`, `AGENTS.md`
+- Files deleted: None.
+- Behavior/data impact: (1) Added `isUsLocation` with comprehensive US state/token matching and explicit international rejection (Dublin, London, Bangalore, Toronto, EMEA, etc.). (2) Added `parseJobDate` enforcing max age 48 hours for push alerts. (3) Added pre-push gates in `sendBatchNotifications` dropping any non-US or >48h job. (4) Re-evaluated all 337 candidates: 17/17 Healthy, 0 Degraded, 0 Broken.
+- Verification: Ran `npm test` 100% passing; completed full live `node src/monitor.mjs` run (exit code 0); verified international jobs rejected in decision history.
+- Scheduler status: Unchanged.
+- Follow-up: None.
+
 
 
 

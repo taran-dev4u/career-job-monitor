@@ -174,19 +174,115 @@ export function detectJobType(text) {
   if (/\bfull[ -]?time\b/.test(value)) return "Full-time";
   return "Not specified";
 }
-export function evaluateEligibility({ title, context = "", description = "", config }) {
-  const combined = clean(`${title} ${context} ${description}`);
+export function isUsLocation(locationText = "", contextText = "") {
+  const combined = clean(`${locationText} ${contextText}`).trim();
+  if (!combined) return { accepted: true, is_us: true, reason: "No explicit location specified", evidence: "" };
+
+  // Explicit international locations & countries to reject
+  const nonUsCountries = [
+    /\b(?:ireland|dublin|cork|galway|limerick)\b/i,
+    /\b(?:united kingdom|uk\b|london|manchester|birmingham|edinburgh|belfast|cambridge,\s*uk)\b/i,
+    /\b(?:india|bengaluru|bangalore|hyderabad|pune|mumbai|gurugram|gurgaon|chennai|noida)\b/i,
+    /\b(?:canada|toronto|vancouver|montreal|ottawa|waterloo|calgary|quebec)\b/i,
+    /\b(?:germany|munich|berlin|frankfurt|hamburg)\b/i,
+    /\b(?:france|paris|lyon)\b/i,
+    /\b(?:australia|sydney|melbourne|brisbane)\b/i,
+    /\b(?:japan|tokyo|osaka)\b/i,
+    /\b(?:china|beijing|shanghai|shenzhen)\b/i,
+    /\b(?:singapore|israel|tel aviv|poland|warsaw|krakow|netherlands|amsterdam|switzerland|zurich|geneva|sweden|stockholm|brazil|sao paulo|mexico)\b/i,
+    /\bremote\s*[-–]\s*(?:emea|apac|latam|uk|ireland|india|canada|europe|asia)\b/i
+  ];
+
+  for (const pattern of nonUsCountries) {
+    if (pattern.test(combined)) {
+      const hasExplicitUs = /\b(?:united states|usa|u\.s\.a?\b|remote\s*[-–]\s*us|us remote)\b/i.test(combined) ||
+        /\b(?:al|ak|az|ar|ca|co|ct|de|fl|ga|hi|id|il|in|ia|ks|ky|la|me|md|ma|mi|mn|ms|mo|mt|ne|nv|nh|nj|nm|ny|nc|nd|oh|ok|or|pa|ri|sc|sd|tn|tx|ut|vt|va|wa|wv|wi|wy),\s*(?:united states|usa|us)\b/i.test(combined);
+
+      if (!hasExplicitUs) {
+        return { accepted: false, is_us: false, reason: "Location is outside the United States", evidence: combined.slice(0, 100) };
+      }
+    }
+  }
+
+  // Positive US check (or US State abbreviation / Remote)
+  const isUs = /\b(?:united states|usa|u\.s\.a?\b|us remote|remote\s*[-–]\s*us|remote,\s*us|anywhere in the us)\b/i.test(combined) ||
+    /,\s*(?:AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VT|VA|WA|WV|WI|WY)(?:\b|;|\/|\s)/i.test(combined) ||
+    /\b(?:Alabama|Alaska|Arizona|Arkansas|California|Colorado|Connecticut|Delaware|Florida|Georgia|Hawaii|Idaho|Illinois|Indiana|Iowa|Kansas|Kentucky|Louisiana|Maine|Maryland|Massachusetts|Michigan|Minnesota|Mississippi|Missouri|Montana|Nebraska|Nevada|New Hampshire|New Jersey|New Mexico|New York|North Carolina|North Dakota|Ohio|Oklahoma|Oregon|Pennsylvania|Rhode Island|South Carolina|South Dakota|Tennessee|Texas|Utah|Vermont|Virginia|Washington|West Virginia|Wisconsin|Wyoming)\b/i.test(combined) ||
+    /\bRemote\b/i.test(combined);
+
+  return {
+    accepted: isUs,
+    is_us: isUs,
+    reason: isUs ? "US Location" : "Location could not be confirmed as United States",
+    evidence: combined.slice(0, 100)
+  };
+}
+
+export function parseJobDate(dateStr, maxAgeDays = 2) {
+  if (!dateStr) return { hasDate: false, isRecent: true, isExplicitlyOld: false, ageDays: null, label: "Recently Released" };
+  const cleanStr = clean(String(dateStr)).trim();
+
+  // Check explicit relative old phrases
+  if (/\b(?:\d{2,}|\d+\s*(?:month|year|week)s?)\s*ago\b/i.test(cleanStr) || /\b(?:30\+|60\+|90\+)\s*days?\s*ago\b/i.test(cleanStr)) {
+    return { hasDate: true, isRecent: false, isExplicitlyOld: true, ageDays: 30, label: cleanStr };
+  }
+
+  // Check explicit relative fresh phrases
+  if (/\b(?:just posted|today|hours? ago|minutes? ago|1 day ago|yesterday|recently)\b/i.test(cleanStr)) {
+    return { hasDate: true, isRecent: true, isExplicitlyOld: false, ageDays: 0, label: cleanStr };
+  }
+
+  // Try parsing ISO date or standard date
+  const isoMatch = cleanStr.match(/\b(\d{4}-\d{2}-\d{2}(?:T\d{2}:\d{2}:\d{2}(?:\.\d+)?Z?)?)\b/);
+  const textDateMatch = cleanStr.match(/\b(?:posted:?\s*)?([A-Za-z]+ \d{1,2},? \d{4})\b/i);
+
+  let dateObj = null;
+  if (isoMatch) {
+    dateObj = new Date(isoMatch[1]);
+  } else if (textDateMatch) {
+    dateObj = new Date(textDateMatch[1]);
+  } else {
+    const directParse = new Date(cleanStr);
+    if (!isNaN(directParse.getTime()) && directParse.getFullYear() >= 2020) {
+      dateObj = directParse;
+    }
+  }
+
+  if (dateObj && !isNaN(dateObj.getTime())) {
+    const ageMs = Date.now() - dateObj.getTime();
+    const ageDays = ageMs / (1000 * 60 * 60 * 24);
+    const isExplicitlyOld = ageDays > maxAgeDays;
+    return {
+      hasDate: true,
+      timestamp: dateObj.getTime(),
+      iso: dateObj.toISOString(),
+      ageDays: Math.round(ageDays * 10) / 10,
+      isRecent: !isExplicitlyOld,
+      isExplicitlyOld,
+      label: formatDateUtc(dateObj.toISOString())
+    };
+  }
+
+  return { hasDate: false, isRecent: true, isExplicitlyOld: false, ageDays: null, label: cleanStr };
+}
+
+export function evaluateEligibility({ title, context = "", description = "", location = "", posted = "", config }) {
+  const combined = clean(`${title} ${context} ${description} ${location}`);
   const role = roleDecision(title, combined, config);
   const experience = experienceDecision(combined, config.max_experience_years);
   const sponsorship = sponsorshipDecision(combined, config.sponsorship_policy);
   const enrollment = enrollmentDecision(title, combined);
+  const locDecision = isUsLocation(location, combined);
+  const dateInfo = parseJobDate(posted, config.max_job_age_days || 2);
   const reasons = [];
   if (!role.relevant) reasons.push("Not a configured technical discipline");
   if (role.seniority !== "Allowed") reasons.push(role.seniority);
   if (!experience.accepted) reasons.push(`Requires ${experience.required_years}+ years`);
   if (!sponsorship.accepted) reasons.push(sponsorship.status);
   if (!enrollment.accepted) reasons.push("Internship requires current enrollment");
-  const accepted = role.accepted && experience.accepted && sponsorship.accepted && enrollment.accepted;
+  if (!locDecision.accepted) reasons.push("Location is outside the United States");
+
+  const accepted = role.accepted && experience.accepted && sponsorship.accepted && enrollment.accepted && locDecision.accepted;
   return {
     accepted, decision: accepted ? "Included" : "Rejected", exclusion_reasons: reasons,
     role_relevant: role.relevant, seniority: role.seniority, role_evidence: role.evidence,
@@ -194,6 +290,8 @@ export function evaluateEligibility({ title, context = "", description = "", con
     experience_label: experience.label, experience_evidence: experience.evidence,
     sponsorship_status: sponsorship.status, sponsorship_evidence: sponsorship.evidence,
     student_enrollment: enrollment.status, enrollment_evidence: enrollment.evidence,
+    is_us_location: locDecision.is_us, location_evidence: locDecision.evidence,
+    parsed_date: dateInfo,
     job_type: detectJobType(combined)
   };
 }

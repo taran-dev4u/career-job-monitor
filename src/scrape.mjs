@@ -166,12 +166,8 @@ async function readDetail(context, candidate, company, config, now) {
     const expired = !response || response.status() >= 400 || data.closedText || (data.validThrough && new Date(data.validThrough).getTime() < Date.now());
     const description = clean(data.body || candidate.context);
     const location = clean(data.location || (company.id === "CMP-002" ? candidate.context : ""));
-    const eligibility = evaluateEligibility({ title, context: candidate.context, description, config });
-    if (company.id === "CMP-002" && location && !/United States|,s*US(?:;|$)|Remote/i.test(location)) {
-      eligibility.accepted = false;
-      eligibility.decision = "Rejected";
-      eligibility.exclusion_reasons.push("Location is outside the United States");
-    }
+    const posted = clean(data.posted);
+    const eligibility = evaluateEligibility({ title, context: candidate.context, description, location, posted, config });
     if (expired) { eligibility.accepted = false; eligibility.decision = "Rejected"; eligibility.exclusion_reasons.push("Job is expired or closed"); }
     const finalJobUrl = data.finalUrl || candidate.href;
     const finalJobId = candidate.external_id || extractJobId(finalJobUrl, `${title} ${description}`);
