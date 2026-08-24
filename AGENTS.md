@@ -478,6 +478,18 @@ Entry template:
 - Scheduler status: Unchanged (GitHub Actions active on `7,37 * * * *`).
 - Follow-up: None.
 
+### TASK-20260824-2035-antigravity — DONE
+- Started: 2026-08-24T20:32:00Z
+- Completed: 2026-08-24T20:35:00Z
+- Objective: Update web dashboard to display actual company posted date instead of scraper discovery timestamp, sort by posted date by default, and verify live mobile push alerts.
+- Files expected: `src/build_dashboard_html.mjs`, `AGENTS.md`
+- Files changed: `src/build_dashboard_html.mjs`, `outputs/job-monitor/dashboard.html`, `index.html`, `AGENTS.md`
+- Files deleted: None.
+- Behavior/data impact: (1) Replaced "First seen" table column with "Posted Date" showing actual company publication dates. (2) Added date sorting (`sortKey = "posted"`, newest first). (3) Verified live push notification delivery to `ntfy.sh/taran-career-jobs-2026`.
+- Verification: Ran `npm test` 100% passing; verified live push returned HTTP 200 message ID `wNDu4dwbnQ00`; rebuilt dashboard HTML with zero errors.
+- Scheduler status: Unchanged (GitHub Actions active on `7,37 * * * *`).
+- Follow-up: None.
+
 
 
 

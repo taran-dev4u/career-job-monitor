@@ -35,7 +35,8 @@ function trimCandidate(r) {
     company: r.company,
     title: r.title || r.role || "",
     location: r.location || "",
-    posted: r.posted || "",
+    posted: r.posted || r.published_date_raw || "",
+    postedIso: r.published_date_iso || "",
     url: r.job_url || "",
     active: r.active_status || "",
     decision: r.decision || "Unknown",
@@ -514,7 +515,7 @@ function draw(){
 
 // ---- jobs table -----------------------------------------------------------
 const COLS = [
-  {id:"seen", label:"First seen", num:false},
+  {id:"posted", label:"Posted Date", num:false},
   {id:"company", label:"Company"},
   {id:"title", label:"Role"},
   {id:"location", label:"Location"},
@@ -525,7 +526,21 @@ const COLS = [
   {id:"apply", label:""},
   {id:"track", label:"Track"}
 ];
-let sortKey="seen", sortDir=-1, expanded=new Set();
+let sortKey="posted", sortDir=-1, expanded=new Set();
+
+function fmtPostedDate(r){
+  if(r.posted && r.posted !== "Not stated" && r.posted !== "Recently Released") {
+    const d = new Date(r.posted);
+    if (!isNaN(d.getTime()) && d.getFullYear() >= 2020) {
+      return d.toLocaleDateString("en-US", {month:"short", day:"numeric", year:"numeric"});
+    }
+    return esc(r.posted);
+  }
+  if(r.seen) {
+    return 'Detected ' + fmtDay(r.seen);
+  }
+  return "Recently Released";
+}
 
 function decBadge(d){
   const c = d==="Included"?"b-good": d==="Rejected"?"b-neutral": d==="Extraction Error"?"b-crit":"b-warn";
@@ -552,7 +567,7 @@ function head(){
   }).join("");
   $("#head").querySelectorAll("th[data-k]").forEach(th=>{
     th.onclick=()=>{ const k=th.getAttribute("data-k");
-      if(sortKey===k) sortDir*=-1; else { sortKey=k; sortDir=(k==="reqYears"?-1:(k==="seen"?-1:1)); }
+      if(sortKey===k) sortDir*=-1; else { sortKey=k; sortDir=(k==="reqYears"?-1:(k==="posted"?-1:1)); }
       head(); render(); };
   });
 }
@@ -575,6 +590,11 @@ function filtered(){
   }).sort((a,b)=>{
     let av=a[sortKey]??"", bv=b[sortKey]??"";
     if(sortKey==="reqYears"){ av=av===null?-1:av; bv=bv===null?-1:bv; return (av-bv)*sortDir; }
+    if(sortKey==="posted"){
+      const aDate = new Date(a.postedIso || a.posted || a.seen).getTime() || 0;
+      const bDate = new Date(b.postedIso || b.posted || b.seen).getTime() || 0;
+      if (aDate !== bDate) return (aDate - bDate) * sortDir;
+    }
     av=String(av).toLowerCase(); bv=String(bv).toLowerCase();
     return av<bv?-1*sortDir: av>bv?1*sortDir: 0;
   });
@@ -589,7 +609,7 @@ function render(){
     const status=STATUS[r.key]||"none";
     const recTag=r.recovered?'<span class="rowtag">RECOVERED</span>':'';
     out.push('<tr class="'+(status==="dismissed"?"dismissed":"")+'">'+
-      '<td class="num">'+fmtDate(r.seen)+'</td>'+
+      '<td class="num" title="Scanned at: '+fmtDate(r.seen)+'">'+fmtPostedDate(r)+'</td>'+
       '<td>'+esc(r.company)+'</td>'+
       '<td class="role">'+esc(r.title)+recTag+
         '<span class="expander" data-x="'+r.key+'">'+(open?"▲ less":"▼ why")+'</span></td>'+
