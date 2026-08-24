@@ -103,9 +103,17 @@ async function discoverCandidates(page, jsonPayloads, company, config) {
     if (/careers\.oracle\.com/i.test(company.career_url)) return `https://careers.oracle.com/en/sites/jobsearch/job/${id}`;
     return "";
   };
+  const eightfoldDetailUrl = id => {
+    try {
+      const u = new URL(company.career_url);
+      return `${u.origin}/careers/job/${id}`;
+    } catch {
+      return "";
+    }
+  };
   const unique = new Map();
   for (const rawItem of [...metaOptions, ...json, ...dom]) {
-    let href = rawItem.href || (rawItem.external_id ? oracleDetailUrl(rawItem.external_id) : "");
+    let href = rawItem.href || (rawItem.external_id ? (oracleDetailUrl(rawItem.external_id) || (adapter === "Eightfold" ? eightfoldDetailUrl(rawItem.external_id) : "")) : "");
     if (adapter === "Workday" && href) {
       const parsed = new URL(href);
       if (parsed.pathname.startsWith("/job/")) { parsed.pathname = `/en-US/External${parsed.pathname}`; href = parsed.href; }

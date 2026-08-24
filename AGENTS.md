@@ -505,6 +505,18 @@ Entry template:
 - Scheduler status: Unchanged (GitHub Actions active on `7,37 * * * *`).
 - Follow-up: None.
 
+### TASK-20260824-2105-antigravity — DONE
+- Started: 2026-08-24T20:55:00Z
+- Completed: 2026-08-24T21:05:00Z
+- Objective: Diagnose and resolve missing early-career roles at Microsoft and Amazon; broaden career URLs, implement Eightfold JSON detail URL synthesis, and ingest all fresh SWE IC & SWE II roles.
+- Files expected: `companies.json`, `src/scrape.mjs`, `tests/filter.test.mjs`, `AGENTS.md`
+- Files changed: `companies.json`, `src/scrape.mjs`, `tests/filter.test.mjs`, `data/current_candidates.json`, `data/company_jobs.json`, `data/decision_history.json`, `data/runs.json`, `data/source_health.json`, `outputs/job-monitor/Job_Monitor.xlsx`, `outputs/job-monitor/dashboard.html`, `index.html`, `AGENTS.md`
+- Files deleted: None.
+- Behavior/data impact: (1) Removed `filter_seniority=Entry` from `CMP-016` (Microsoft) and `industry_experience=less_than_1_year` from `CMP-001` (Amazon) to capture all 0–3 year SWE I / SWE II / Individual Contributor roles. (2) Added `eightfoldDetailUrl` in `src/scrape.mjs` to automatically construct valid detail links for all Eightfold API positions. (3) Verified Microsoft roles `Software Engineer-MCAPS Core` (Job 200044387), `Software Engineer II - Windows Update Platform` (Job 200045659), and `Software Engineer II` (Job 200045485) are correctly extracted and included. (4) Total active eligible roles increased to 47 in workbook / 78 in web dashboard.
+- Verification: Ran `npm test` 100% passing; completed full 17-company scan (17/17 Healthy, 0 Degraded, 0 Broken); CI workbook verification passed.
+- Scheduler status: Unchanged (GitHub Actions active on `7,37 * * * *`).
+- Follow-up: None.
+
 
 
 

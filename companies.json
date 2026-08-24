@@ -2,7 +2,7 @@
   {
     "id": "CMP-001",
     "company": "Amazon.com Services LLC",
-    "career_url": "https://www.amazon.jobs/en/search?offset=0&result_limit=10&sort=recent&category%5B%5D=software-development&job_type%5B%5D=Full-Time&country%5B%5D=USA&distanceType=Mi&radius=24km&industry_experience=less_than_1_year&is_manager%5B%5D=0&latitude=&longitude=&loc_group_id=&loc_query=United%20States&base_query=&city=&country=USA&region=&county=&query_options=&"
+    "career_url": "https://www.amazon.jobs/en/search?offset=0&result_limit=20&sort=recent&category%5B%5D=software-development&job_type%5B%5D=Full-Time&country%5B%5D=USA"
   },
   {
     "id": "CMP-002",
@@ -77,7 +77,7 @@
   {
     "id": "CMP-016",
     "company": "Microsoft",
-    "career_url": "https://apply.careers.microsoft.com/careers?start=0&location=United+States&pid=1970393556867395&sort_by=timestamp&filter_include_remote=1&filter_profession=software+engineering%2Cresearch%252C%2520applied%252C%2520%2526%2520data%2520sciences&filter_seniority=Entry"
+    "career_url": "https://apply.careers.microsoft.com/careers?start=0&location=United+States&pid=1970393556867395&sort_by=timestamp&filter_include_remote=1&filter_profession=software+engineering%2Cresearch%252C%2520applied%252C%2520%2526%2520data%2520sciences"
   },
   {
     "id": "CMP-017",

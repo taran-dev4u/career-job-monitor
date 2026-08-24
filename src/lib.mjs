@@ -177,7 +177,7 @@ export function detectJobType(text) {
 }
 export function isUsLocation(locationText = "", contextText = "") {
   const combined = clean(`${locationText} ${contextText}`).trim();
-  if (!combined) return { accepted: true, is_us: true, reason: "No explicit location specified", evidence: "" };
+  if (!combined) return { accepted: true, is_us: null, location_confidence: "Unverified", reason: "No explicit location specified", evidence: "" };
 
   // Explicit international locations & countries to reject
   const nonUsCountries = [
@@ -200,7 +200,7 @@ export function isUsLocation(locationText = "", contextText = "") {
         /\b(?:al|ak|az|ar|ca|co|ct|de|fl|ga|hi|id|il|in|ia|ks|ky|la|me|md|ma|mi|mn|ms|mo|mt|ne|nv|nh|nj|nm|ny|nc|nd|oh|ok|or|pa|ri|sc|sd|tn|tx|ut|vt|va|wa|wv|wi|wy),\s*(?:united states|usa|us)\b/i.test(combined);
 
       if (!hasExplicitUs) {
-        return { accepted: false, is_us: false, reason: "Location is outside the United States", evidence: combined.slice(0, 100) };
+        return { accepted: false, is_us: false, location_confidence: "Confirmed", reason: "Location is outside the United States", evidence: combined.slice(0, 100) };
       }
     }
   }
@@ -211,17 +211,77 @@ export function isUsLocation(locationText = "", contextText = "") {
     /\b(?:Alabama|Alaska|Arizona|Arkansas|California|Colorado|Connecticut|Delaware|Florida|Georgia|Hawaii|Idaho|Illinois|Indiana|Iowa|Kansas|Kentucky|Louisiana|Maine|Maryland|Massachusetts|Michigan|Minnesota|Mississippi|Missouri|Montana|Nebraska|Nevada|New Hampshire|New Jersey|New Mexico|New York|North Carolina|North Dakota|Ohio|Oklahoma|Oregon|Pennsylvania|Rhode Island|South Carolina|South Dakota|Tennessee|Texas|Utah|Vermont|Virginia|Washington|West Virginia|Wisconsin|Wyoming)\b/i.test(combined) ||
     /\bRemote\b/i.test(combined);
 
+  // Fail OPEN when the location simply could not be read.
+  //
+  // Nine of seventeen sources return an empty location field (Apple 40/40,
+  // Amazon 30/30, Microsoft 25/25, Wells Fargo 20/20, Goldman 18/18 blank).
+  // Every one of those is already a US-scoped search URL, so an unreadable
+  // location means "the scraper could not see it", NOT "this job is abroad".
+  // Rejecting on absence discarded 15 fully-eligible US roles.
+  //
+  // A job is only rejected as foreign when a foreign location is positively
+  // identified (the nonUsCountries loop above). Anything reaching here is
+  // accepted but flagged, so the dashboard can badge it as unverified.
+  if (isUs) {
+    return { accepted: true, is_us: true, location_confidence: "Confirmed", reason: "US Location", evidence: combined.slice(0, 100) };
+  }
   return {
-    accepted: isUs,
-    is_us: isUs,
-    reason: isUs ? "US Location" : "Location could not be confirmed as United States",
+    accepted: true,
+    is_us: null,
+    location_confidence: "Unverified",
+    reason: "Location not stated by the source; no foreign location detected",
     evidence: combined.slice(0, 100)
+  };
+}
+
+// Pull an absolute calendar date out of a free-form "posted" string, if one is
+// present. Returns a Date or null. Shared by parseJobDate so that the same
+// parsing rules apply whether the absolute date is found first or last.
+function matchAbsoluteDate(cleanStr) {
+  const mmddyyyy = cleanStr.match(/\b(\d{1,2})\/(\d{1,2})\/(\d{4})(?:,\s*(\d{1,2}:\d{2}(?:\s*[AP]M)?))?\b/i);
+  const isoMatch = cleanStr.match(/\b(\d{4}-\d{2}-\d{2}(?:T\d{2}:\d{2}:\d{2}(?:\.\d+)?Z?)?)\b/);
+  const textDateMatch = cleanStr.match(/\b(?:posted:?\s*)?([A-Za-z]+ \d{1,2},? \d{4})\b/i);
+  let dateObj = null;
+  if (mmddyyyy) {
+    const timePart = mmddyyyy[4] ? ` ${mmddyyyy[4]}` : "";
+    dateObj = new Date(`${mmddyyyy[1]}/${mmddyyyy[2]}/${mmddyyyy[3]}${timePart}`);
+  } else if (isoMatch) {
+    dateObj = new Date(isoMatch[1]);
+  } else if (textDateMatch) {
+    dateObj = new Date(textDateMatch[1]);
+  }
+  return dateObj && !isNaN(dateObj.getTime()) ? dateObj : null;
+}
+
+function describeAbsoluteDate(dateObj, maxAgeDays) {
+  const ageDays = (Date.now() - dateObj.getTime()) / 86400000;
+  const isExplicitlyOld = ageDays > maxAgeDays;
+  return {
+    hasDate: true,
+    timestamp: dateObj.getTime(),
+    iso: dateObj.toISOString(),
+    ageDays: Math.round(ageDays * 10) / 10,
+    isRecent: !isExplicitlyOld,
+    isExplicitlyOld,
+    label: formatDateUtc(dateObj.toISOString())
   };
 }
 
 export function parseJobDate(dateStr, maxAgeDays = 2) {
   if (!dateStr) return { hasDate: false, isRecent: true, isExplicitlyOld: false, ageDays: null, label: "Recently Released" };
   const cleanStr = clean(String(dateStr)).trim();
+
+  // 0. An explicit publication date always wins over a trailing relative phrase.
+  //
+  // Amazon renders "Posted: February 6, 2026 (Updated 3 months ago)". The
+  // relative matchers below would read "3 months ago" and mark the job 90 days
+  // old, even though the string states its real publication date. The "Updated"
+  // clause describes an edit, not the posting. When a string carries BOTH an
+  // absolute date and a relative phrase, the absolute date is authoritative.
+  const absoluteFirst = matchAbsoluteDate(cleanStr);
+  if (absoluteFirst && /\b\d+\s*(?:day|week|month|year)s?\s*ago\b/i.test(cleanStr)) {
+    return describeAbsoluteDate(absoluteFirst, maxAgeDays);
+  }
 
   // 1. Relative "N days ago", "N weeks ago", "N months ago", "30+ days ago"
   const daysAgoMatch = cleanStr.match(/\b(\d+)\s*days?\s*ago\b/i);
@@ -302,11 +362,26 @@ export function evaluateEligibility({ title, context = "", description = "", loc
   if (!sponsorship.accepted) reasons.push(sponsorship.status);
   if (!enrollment.accepted) reasons.push("Internship requires current enrollment");
   if (!locDecision.accepted) reasons.push("Location is outside the United States");
-  if (dateInfo.isExplicitlyOld) reasons.push(`Job posted ${dateInfo.ageDays} days ago (${dateInfo.label})`);
-
-  const accepted = role.accepted && experience.accepted && sponsorship.accepted && enrollment.accepted && locDecision.accepted && !dateInfo.isExplicitlyOld;
+  // NOTE: age is deliberately NOT part of `accepted`.
+  //
+  // Eligibility answers "can I apply to this?" — discipline, seniority,
+  // experience, sponsorship, enrollment, location. Freshness answers a
+  // different question: "should this interrupt me with a push notification?"
+  // Conflating the two meant a 3-day-old Apple SWE role was stamped Rejected
+  // and vanished from the dashboard, the CSV and the workbook, as though the
+  // candidate were unqualified for it. Postings stay open for weeks; 31 fully
+  // eligible roles were being discarded on age alone.
+  //
+  // The age signal is preserved as `is_fresh` / `age_days`, and
+  // src/notify_ntfy.mjs still gates PUSHES on it, so alert volume is unchanged.
+  const accepted = role.accepted && experience.accepted && sponsorship.accepted && enrollment.accepted && locDecision.accepted;
+  const isFresh = !dateInfo.isExplicitlyOld;
   return {
     accepted, decision: accepted ? "Included" : "Rejected", exclusion_reasons: reasons,
+    is_fresh: isFresh,
+    age_days: dateInfo.ageDays,
+    freshness_note: isFresh ? "" : `Posted ${dateInfo.ageDays} days ago (${dateInfo.label})`,
+    location_confidence: locDecision.location_confidence || "Confirmed",
     role_relevant: role.relevant, seniority: role.seniority, role_evidence: role.evidence,
     required_experience_years: experience.required_years, preferred_experience_years: experience.preferred_years,
     experience_label: experience.label, experience_evidence: experience.evidence,
