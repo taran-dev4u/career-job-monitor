@@ -147,6 +147,8 @@ async function readDetail(context, candidate, company, config, now) {
       const locations = Array.isArray(posting?.jobLocation) ? posting.jobLocation : posting?.jobLocation ? [posting.jobLocation] : [];
       const jsonLocation = locations.map(item => [item?.address?.addressLocality, item?.address?.addressRegion, item?.address?.addressCountry?.name || item?.address?.addressCountry].filter(Boolean).join(", ")).filter(Boolean).join("; ");
       const body = textFromHtml(posting?.description) || (document.querySelector("main")?.innerText || document.body?.innerText || "").replace(/\s+/g, " ").trim();
+      const labelDateMatch = body.match(/(?:posting date|posted on|posted date|date posted|published on|published date|published|post date)\s*:?\s*(\d{1,2}\/\d{1,2}\/\d{4}(?:,\s*\d{1,2}:\d{2}(?:\s*[AP]M)?)?|[A-Za-z]+ \d{1,2},? \d{4}|\d{4}-\d{2}-\d{2}|\d+\+?\s*days? ago|today|yesterday|\d+\s*(?:weeks?|months?) ago)/i);
+      const domPosted = labelDateMatch ? labelDateMatch[1] : "";
       return {
         title: posting?.title || firstText(["[data-automation-id='jobPostingHeader']", "[class*='job-title']", "[class*='jobTitle']", "meta[property='og:title']", "h1", "h2"]),
         location: jsonLocation || firstText(["[data-automation-id='locations']", "[class*='job-location']", "[class*='jobLocation']", "[class*='location']"]),
@@ -155,7 +157,8 @@ async function readDetail(context, candidate, company, config, now) {
           document.querySelector("meta[name='date']")?.getAttribute("content") ||
           document.querySelector("meta[name='dcterms.date']")?.getAttribute("content") ||
           document.querySelector("time[datetime]")?.getAttribute("datetime") ||
-          firstText(["time", "[class*='posted']", "[data-automation-id='postedOn']", "[itemprop='datePosted']"]),
+          firstText(["time", "[class*='posted']", "[data-automation-id='postedOn']", "[itemprop='datePosted']", "[class*='date']"]) ||
+          domPosted,
         employmentType: Array.isArray(posting?.employmentType) ? posting.employmentType.join(", ") : posting?.employmentType || "",
         validThrough: posting?.validThrough || "", body, finalUrl: location.href,
         closedText: /no longer available|position has been filled|job has expired|posting is closed/i.test(body)

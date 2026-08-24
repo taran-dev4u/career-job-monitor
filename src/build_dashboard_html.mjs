@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { roleDecision } from "./lib.mjs";
+import { evaluateEligibility, roleDecision } from "./lib.mjs";
 
 // ---------------------------------------------------------------------------
 // Career Job Monitor — interactive HTML dashboard generator
@@ -74,26 +74,25 @@ async function build() {
   const maxYears = Number(config.max_experience_years ?? 3);
   const trimmed = candidates.map(r => {
     const t = trimCandidate(r);
-    const role = roleDecision(t.title, `${t.snippet} ${t.title}`, config);
+    const recheck = evaluateEligibility({
+      title: t.title,
+      context: `${t.snippet} ${t.title}`,
+      description: t.snippet,
+      location: t.location,
+      posted: t.posted,
+      config
+    });
     const expOK = t.reqYears == null || t.reqYears <= maxYears;
     const spOK = !(t.spons === "Not Available" || t.spons === "OPT/CPT Not Allowed");
     const enrollOK = !t.reasons.some(x => /current enrollment/i.test(x));
     const activeOK = t.active !== "Expired" && !t.reasons.some(x => /outside the United States/i.test(x));
-    const accepted = role.accepted && expOK && spOK && enrollOK && activeOK;
+    const accepted = recheck.accepted && expOK && spOK && enrollOK && activeOK;
     const correctedDecision = accepted ? "Included"
       : t.decision === "Pending Detail" || t.decision === "Extraction Error" ? t.decision : "Rejected";
-    // Was this hidden before and is now correctly eligible?
     t.recovered = accepted && r.decision !== "Included";
     t.decision = correctedDecision;
     if (!accepted) {
-      const why = [];
-      if (!role.relevant) why.push("Not a technical role");
-      else if (role.seniority !== "Allowed") why.push(role.seniority);
-      if (!expOK) why.push(`Requires ${t.reqYears}+ years`);
-      if (!spOK) why.push(t.spons);
-      if (!enrollOK) why.push("Internship requires current enrollment");
-      if (t.active === "Expired") why.push("Expired / closed");
-      t.reasons = why.length ? why : t.reasons;
+      t.reasons = recheck.exclusion_reasons?.length ? recheck.exclusion_reasons : t.reasons;
     } else {
       t.reasons = [];
     }

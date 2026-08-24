@@ -223,22 +223,42 @@ export function parseJobDate(dateStr, maxAgeDays = 2) {
   if (!dateStr) return { hasDate: false, isRecent: true, isExplicitlyOld: false, ageDays: null, label: "Recently Released" };
   const cleanStr = clean(String(dateStr)).trim();
 
-  // Check explicit relative old phrases
-  if (/\b(?:\d{2,}|\d+\s*(?:month|year|week)s?)\s*ago\b/i.test(cleanStr) || /\b(?:30\+|60\+|90\+)\s*days?\s*ago\b/i.test(cleanStr)) {
+  // 1. Relative "N days ago", "N weeks ago", "N months ago", "30+ days ago"
+  const daysAgoMatch = cleanStr.match(/\b(\d+)\s*days?\s*ago\b/i);
+  if (daysAgoMatch) {
+    const days = Number(daysAgoMatch[1]);
+    const isOld = days > maxAgeDays;
+    return { hasDate: true, isRecent: !isOld, isExplicitlyOld: isOld, ageDays: days, label: cleanStr };
+  }
+  const weeksAgoMatch = cleanStr.match(/\b(\d+)\s*weeks?\s*ago\b/i);
+  if (weeksAgoMatch) {
+    const days = Number(weeksAgoMatch[1]) * 7;
+    return { hasDate: true, isRecent: false, isExplicitlyOld: true, ageDays: days, label: cleanStr };
+  }
+  const monthsAgoMatch = cleanStr.match(/\b(\d+)\s*months?\s*ago\b/i);
+  if (monthsAgoMatch) {
+    const days = Number(monthsAgoMatch[1]) * 30;
+    return { hasDate: true, isRecent: false, isExplicitlyOld: true, ageDays: days, label: cleanStr };
+  }
+  if (/\b(?:30\+|60\+|90\+)\s*days?\s*ago\b/i.test(cleanStr)) {
     return { hasDate: true, isRecent: false, isExplicitlyOld: true, ageDays: 30, label: cleanStr };
   }
 
-  // Check explicit relative fresh phrases
+  // 2. Relative fresh phrases: "Just posted", "Today", "Hours ago", "1 day ago", "Yesterday"
   if (/\b(?:just posted|today|hours? ago|minutes? ago|1 day ago|yesterday|recently)\b/i.test(cleanStr)) {
     return { hasDate: true, isRecent: true, isExplicitlyOld: false, ageDays: 0, label: cleanStr };
   }
 
-  // Try parsing ISO date or standard date
+  // 3. Absolute dates: MM/DD/YYYY, YYYY-MM-DD, Month DD, YYYY
+  const mmddyyyy = cleanStr.match(/\b(\d{1,2})\/(\d{1,2})\/(\d{4})(?:,\s*(\d{1,2}:\d{2}(?:\s*[AP]M)?))?\b/i);
   const isoMatch = cleanStr.match(/\b(\d{4}-\d{2}-\d{2}(?:T\d{2}:\d{2}:\d{2}(?:\.\d+)?Z?)?)\b/);
   const textDateMatch = cleanStr.match(/\b(?:posted:?\s*)?([A-Za-z]+ \d{1,2},? \d{4})\b/i);
 
   let dateObj = null;
-  if (isoMatch) {
+  if (mmddyyyy) {
+    const timePart = mmddyyyy[4] ? ` ${mmddyyyy[4]}` : "";
+    dateObj = new Date(`${mmddyyyy[1]}/${mmddyyyy[2]}/${mmddyyyy[3]}${timePart}`);
+  } else if (isoMatch) {
     dateObj = new Date(isoMatch[1]);
   } else if (textDateMatch) {
     dateObj = new Date(textDateMatch[1]);
@@ -282,8 +302,9 @@ export function evaluateEligibility({ title, context = "", description = "", loc
   if (!sponsorship.accepted) reasons.push(sponsorship.status);
   if (!enrollment.accepted) reasons.push("Internship requires current enrollment");
   if (!locDecision.accepted) reasons.push("Location is outside the United States");
+  if (dateInfo.isExplicitlyOld) reasons.push(`Job posted ${dateInfo.ageDays} days ago (${dateInfo.label})`);
 
-  const accepted = role.accepted && experience.accepted && sponsorship.accepted && enrollment.accepted && locDecision.accepted;
+  const accepted = role.accepted && experience.accepted && sponsorship.accepted && enrollment.accepted && locDecision.accepted && !dateInfo.isExplicitlyOld;
   return {
     accepted, decision: accepted ? "Included" : "Rejected", exclusion_reasons: reasons,
     role_relevant: role.relevant, seniority: role.seniority, role_evidence: role.evidence,

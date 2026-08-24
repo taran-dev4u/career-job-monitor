@@ -442,6 +442,18 @@ Entry template:
 - Scheduler status: Unchanged.
 - Follow-up: None.
 
+### TASK-20260824-1300-antigravity — DONE
+- Started: 2026-08-24T12:55:00Z
+- Completed: 2026-08-24T13:02:00Z
+- Objective: Extract DOM label-value posting dates across all ATS platforms, parse relative/absolute dates with strict 48h limit, and eliminate older job postings from the Apply Now feed and dashboard.
+- Files expected: `src/lib.mjs`, `src/scrape.mjs`, `src/build_dashboard_html.mjs`, `AGENTS.md`
+- Files changed: `src/lib.mjs`, `src/scrape.mjs`, `src/build_dashboard_html.mjs`, `data/current_candidates.json`, `data/decision_history.json`, `outputs/job-monitor/Job_Monitor.xlsx`, `outputs/job-monitor/dashboard.html`, `index.html`, `AGENTS.md`
+- Files deleted: None.
+- Behavior/data impact: (1) Added DOM label-value date extraction in `readDetail` (matching Oracle HCM, Workday, etc.). (2) Enhanced `parseJobDate` with relative days-ago and MM/DD/YYYY parsing. (3) Updated `evaluateEligibility` to reject any job older than 48 hours. (4) Re-evaluated all candidates: Apply Now feed reduced from 90 to exactly 20 genuine fresh roles released within 24-48h.
+- Verification: Ran `npm test` 100% passing; completed live `node src/monitor.mjs` run (exit code 0); confirmed older roles (such as JPMC Aug 20 role) are rejected.
+- Scheduler status: Unchanged.
+- Follow-up: None.
+
 
 
 
