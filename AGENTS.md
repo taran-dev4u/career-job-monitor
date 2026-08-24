@@ -533,3 +533,16 @@ Entry template:
 - Verification: `npm test` 100% passing, including a new regression block in `tests/filter.test.mjs` pinning all three defects (age must not disqualify; absolute date must beat "3 months ago"; blank location must fail open while Dublin/Warsaw/Bengaluru/Toronto still reject). Rebuilt dashboard: 17/17 sources Healthy, JSON payload parses, inline script syntax-checked, badge markup present. Dry-ran `sendBatchNotifications()` against all 85 included jobs with a stub transport: 21 pushes maximum (31 suppressed as older than 48h, remainder capped by `MAX_PER_RUN`), confirming the recovery cannot cause an alert flood.
 - Scheduler status: Unchanged (`7,37 * * * *`). NOTE: `data/runs.json` shows blackouts of 49h49m (20→22 Aug), 41h59m (22→24 Aug) and 17h01m (19→20 Aug) with a 45-minute median gap against a 30-minute schedule. Every run that fired succeeded; GitHub's `schedule:` trigger is dropping ticks. Not addressed in this task.
 - Follow-up: (a) External heartbeat via `workflow_dispatch` plus a "monitor silent for 2h" watchdog push, to remove the dependency on GitHub's best-effort cron. (b) Eight of seventeen `career_url` entries carry no date sort and no experience-level filter — Wells Fargo returns 20/20 Lead roles, U.S. Bank has no keyword at all and returns 28/30 non-technical, Meta points at the homepage; Goldman's `EXPERIENCE_LEVEL=Analyst|Associate` is the pattern to copy. (c) Self-audit step failing the run when a source returns zero eligible jobs for 24h or an entire company's location field comes back empty.
+
+### TASK-20260824-2115-antigravity — DONE
+- Started: 2026-08-24T21:03:00Z
+- Completed: 2026-08-24T21:10:00Z
+- Objective: Audit all 17 companies for overly restrictive search filters, optimize Google LLC search query, and run full end-to-end ingestion and workbook verification across all 17 sources.
+- Files expected: `companies.json`, `data/current_candidates.json`, `data/company_jobs.json`, `outputs/job-monitor/Job_Monitor.xlsx`, `AGENTS.md`
+- Files changed: `companies.json`, `data/current_candidates.json`, `data/company_jobs.json`, `data/decision_history.json`, `data/runs.json`, `data/source_health.json`, `outputs/job-monitor/Job_Monitor.xlsx`, `outputs/job-monitor/dashboard.html`, `index.html`, `AGENTS.md`
+- Files deleted: None.
+- Behavior/data impact: (1) Broadened Google search URL (`CMP-003`) to remove `target_level=EARLY`, increasing Google extracted candidates from 1 to 40. (2) Executed full 17-company scan: total extracted candidates increased from 342 to 382; active eligible jobs increased to 87 on the web dashboard and 87 in the workbook. (3) Verified all 17/17 sources Healthy with 0 Degraded and 0 Broken.
+- Verification: Ran `npm test` 100% passing; CI workbook verification passed across all 7 sheets; live scan completed with exit code 0.
+- Scheduler status: Unchanged (GitHub Actions active on `7,37 * * * *`).
+- Follow-up: None.
+
