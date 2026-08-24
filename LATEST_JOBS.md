@@ -1,6 +1,6 @@
 # Latest Eligible Jobs — Filtered
 
-Updated: **2026-08-24T22:37:19.845Z UTC** / **Aug 24, 2026, 6:37 PM Eastern**
+Updated: **2026-08-24T22:58:44.044Z UTC** / **Aug 24, 2026, 6:58 PM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
@@ -15,7 +15,7 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 | 2026-08-24T22:36:44.736Z | COMPUNNEL SOFTWARE GROUP, INC | Data Scientist AI Enabled Call Center Efficiency & Customer Experience | Not stated | Not specified | Upload Resume | Not stated | Not stated | Not Mentioned | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=vLitPsSu0CnM%2bl00damNKA%3d%3d&Source=4414&EntityGroup=2321) |
 | 2026-08-24T22:36:44.736Z | COMPUNNEL SOFTWARE GROUP, INC | SW 352 SYSTEMS ANALYST | Princeton, NJ | Not specified | Upload Resume | Not stated | Not stated | Unclear | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=1LxiO3gMEIDnXNUZWu6vsw%3d%3d&Source=4414&EntityGroup=2321) |
 | 2026-08-24T22:36:44.736Z | COMPUNNEL SOFTWARE GROUP, INC | SW 353 SYSTEMS ANALYST | Oracle, MS | Not specified | Upload Resume | Not stated | Not stated | Unclear | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=mIu4HqJ9SR%2fEQyRZNWzsMw%3d%3d&Source=4414&EntityGroup=2321) |
-| 2026-08-24T22:35:15.335Z | Amazon.com Services LLC | Software Development Engineer, Amazon WorkSpaces | Not stated | Not specified | Posted: August 24, 2026 (Updated 10 minutes ago) | Not stated | 3+ years | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10512990/software-development-engineer-amazon-workspaces) |
+| 2026-08-24T22:35:15.335Z | Amazon.com Services LLC | Software Development Engineer, Amazon WorkSpaces | Not stated | Not specified | Posted: August 24, 2026 (Updated 10 minutes ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10512990/software-development-engineer-amazon-workspaces) |
 | 2026-08-24T21:59:32.309Z | Microsoft | Software Engineer II | Redmond, WA,US, US | FULL_TIME | 2026-08-24T21:16:35 | Not stated | Not stated | Not Mentioned | [Apply](https://apply.careers.microsoft.com/careers/job/1970393556972090) |
 | 2026-08-24T21:59:29.456Z | COMPUNNEL SOFTWARE GROUP, INC | Data Engineer | Not stated | Not specified | Upload Resume | Not stated | Not stated | Not Mentioned | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=6G70ZFbXi5KhEn%2fsFs%2fF0Q%3d%3d&Source=4414&EntityGroup=2321) |
 | 2026-08-24T21:57:51.693Z | Apple Inc | Software Engineer - Fitness+, Watch Software | Watch Software Cupertino, California, United States | Not specified | 2026-08-24 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200679447-0836/software-engineer-fitness-watch-software?team=SFTWR) |
@@ -103,22 +103,22 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 
 | ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |
 |---|---|---|---:|---:|---:|---|---|
-| CMP-003 | Google LLC | Healthy | 40 | 0 | 0 | 2026-08-24T22:35:29.384Z |  |
-| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-24T22:35:41.575Z |  |
-| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-24T22:35:43.675Z |  |
-| CMP-007 | Qualcomm Technologies, Inc | Healthy | 20 | 0 | 0 | 2026-08-24T22:35:52.660Z |  |
-| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-24T22:36:00.114Z |  |
-| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-24T22:36:01.541Z |  |
-| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-24T22:36:08.546Z |  |
-| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-24T22:36:20.110Z |  |
-| CMP-011 | Microsoft Corporation | Healthy | 25 | 0 | 0 | 2026-08-24T22:36:27.688Z |  |
-| CMP-012 | Cisco Systems, Inc | Healthy | 4 | 0 | 0 | 2026-08-24T22:36:29.173Z |  |
-| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 20 | 0 | 0 | 2026-08-24T22:36:44.736Z |  |
-| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-24T22:36:45.924Z |  |
-| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-24T22:36:48.237Z |  |
-| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-08-24T22:36:55.036Z |  |
-| CMP-017 | Goldman Sachs | Healthy | 18 | 0 | 0 | 2026-08-24T22:36:57.164Z |  |
-| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-24T22:37:13.140Z | 10 jobs queued for incremental evaluation |
-| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-24T22:37:19.764Z |  |
+| CMP-003 | Google LLC | Healthy | 40 | 0 | 0 | 2026-08-24T22:57:09.046Z |  |
+| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-24T22:57:11.087Z |  |
+| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-24T22:57:15.581Z |  |
+| CMP-007 | Qualcomm Technologies, Inc | Healthy | 20 | 0 | 0 | 2026-08-24T22:57:24.805Z |  |
+| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-24T22:57:34.180Z |  |
+| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-24T22:57:38.117Z |  |
+| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-24T22:57:42.650Z |  |
+| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-24T22:57:47.750Z |  |
+| CMP-011 | Microsoft Corporation | Healthy | 24 | 0 | 0 | 2026-08-24T22:57:56.427Z |  |
+| CMP-012 | Cisco Systems, Inc | Healthy | 4 | 0 | 0 | 2026-08-24T22:57:56.554Z |  |
+| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 40 | 0 | 0 | 2026-08-24T22:58:12.451Z |  |
+| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-24T22:58:16.925Z |  |
+| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-24T22:58:23.171Z |  |
+| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-08-24T22:58:26.196Z |  |
+| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-24T22:58:27.734Z |  |
+| CMP-017 | Goldman Sachs | Healthy | 18 | 0 | 0 | 2026-08-24T22:58:32.323Z |  |
+| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-24T22:58:43.956Z | 10 jobs queued for incremental evaluation |
 
 > “Degraded” means extraction could not prove the source was complete. Review the unfiltered dashboard or workbook audit sheets for every decision.
