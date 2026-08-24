@@ -490,6 +490,18 @@ Entry template:
 - Scheduler status: Unchanged (GitHub Actions active on `7,37 * * * *`).
 - Follow-up: None.
 
+### TASK-20260824-2040-antigravity — DONE
+- Started: 2026-08-24T20:38:00Z
+- Completed: 2026-08-24T20:41:00Z
+- Objective: Verify canonical primary key generation across all 17 company ATS architectures and validate the dual-mode ingestion algorithm (date-explicit vs date-implicit).
+- Files expected: `src/lib.mjs`, `tests/filter.test.mjs`, `AGENTS.md`
+- Files changed: `AGENTS.md`
+- Files deleted: None.
+- Behavior/data impact: (1) Verified 17/17 ATS adapters generate distinct, collision-free primary keys in `company_jobs.json`. (2) Confirmed dual-mode handling: explicit-date platforms (Oracle HCM, Workday, Eightfold, Amazon, Apple, Phenom) enforce 48h limit regardless of DOM order; date-implicit platforms (Meta, Google, Goldman Sachs) use catalog delta detection on unseen IDs with baseline suppression.
+- Verification: Ran `npm test` 100% passing; verified canonical keys across all 17 companies.
+- Scheduler status: Unchanged (GitHub Actions active on `7,37 * * * *`).
+- Follow-up: None.
+
 
 
 
