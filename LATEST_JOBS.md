@@ -1,18 +1,19 @@
 # Latest Eligible Jobs — Filtered
 
-Updated: **2026-08-24T10:59:55.736Z UTC** / **Aug 24, 2026, 6:59 AM Eastern**
+Updated: **2026-08-24T11:03:56.723Z UTC** / **Aug 24, 2026, 7:03 AM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
 > Newest discovered jobs are always shown first.
 
-Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken**.
+Source health: **16 healthy**, **0 confirmed empty**, **1 degraded**, **0 broken**.
 
 ## Apply Now
 
 | First Seen | Company | Role | Location | Type | Posted | Required | Preferred | Sponsorship | Apply |
 |---|---|---|---|---|---|---:|---:|---|---|
 | 2026-08-24T10:51:36.291Z | JPMorgan Chase & Co | Java Full stack Software Engineer III - React/Python | Jersey City, NJ, United States | Full time | 2026-08-23T09:41:03.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210764802) |
+| 2026-08-24T10:51:36.291Z | JPMorgan Chase & Co | Software Engineer III - Machine Learning Platform | Palo Alto, CA, United States | Full time | 2026-08-20T23:16:40.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210776896) |
 | 2026-08-24T10:50:00.233Z | Apple Inc | Software Development Engineer, Compute Platform | Not stated | Not specified | 2026-08-23 | 3+ years | 1+ years | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678571-3337/software-development-engineer-compute-platform?team=SFTWR) |
 | 2026-08-22T10:44:34.190Z | Goldman Sachs | Asset & Wealth Management - AI Solutions Engineer - Associate - Dallas | Not stated | Not specified | Not stated | 3+ years | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/168764) |
 | 2026-08-22T10:44:34.190Z | Goldman Sachs | Engineering-L2-Dallas-Analyst-Software Engineering | Not stated | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/181810) |
@@ -30,8 +31,6 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 | 2026-08-22T10:44:34.190Z | Goldman Sachs | Tax, Salt Lake City, Associate, Software Engineering | Not stated | Not specified | Not stated | 1+ years | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/180303) |
 | 2026-08-22T10:44:10.594Z | Microsoft | Software Engineering IC2 | Redmond, WA,US, US | FULL_TIME | 2026-08-21T16:54:04 | Not stated | Not stated | Not Mentioned | [Apply](https://apply.careers.microsoft.com/careers/job/1970393556972157) |
 | 2026-08-22T10:44:10.594Z | Microsoft | Software Engineer II - Finance Data & Experiences | Redmond, WA,US, US | FULL_TIME | 2026-08-20T22:31:48 | Not stated | Not stated | Not Mentioned | [Apply](https://apply.careers.microsoft.com/careers/job/1970393556962912) |
-| 2026-08-22T10:43:51.314Z | COMPUNNEL SOFTWARE GROUP, INC | Database Engineer Maria DB & ServiceNow | Not stated | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=LMgLX2jFAM4tjXtRRbLruw%3d%3d&Source=4414&EntityGroup=2321) |
-| 2026-08-22T10:43:51.314Z | COMPUNNEL SOFTWARE GROUP, INC | Palantir Data Engineer Level III/IV | Not stated | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=skXZPTueaGzKGHsDTj47aA%3d%3d&Source=4414&EntityGroup=2321) |
 | 2026-08-22T10:43:10.853Z | Cisco Systems, Inc | Software Engineer II (Full Time) - United States ENG/CPO/WTG ETR | Milpitas, California, United States of America; San Jose, California, United States of America | FULL_TIME | 2026-08-22 | 2+ years | Not stated | Not Mentioned | [Apply](https://careers.cisco.com/global/en/job/2022072/Software-Engineer-II-Full-Time-United-States-ENG-CPO-WTG-ETR) |
 | 2026-08-22T10:41:53.305Z | JPMorgan Chase & Co | Experienced Software Engineer Java / Python (Full Stack or Back End) | Locations | Not specified | Not stated | Not stated | Not stated | Available | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210779343) |
 | 2026-08-22T10:41:53.305Z | JPMorgan Chase & Co | Software Engineer III - React/UI | Jersey City, NJ, United States | Full time | 2026-08-21T21:37:21.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210782644) |
@@ -75,6 +74,7 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 | 2026-08-20T08:55:40.881Z | Microsoft | Software Engineer | US | FULL_TIME | 2026-08-19T17:44:34 | Not stated | Not stated | Not Mentioned | [Apply](https://apply.careers.microsoft.com/careers/job/1970393556928331) |
 | 2026-08-20T08:55:40.881Z | Microsoft | Applied Scientist II | Mountain View, CA,US, US | FULL_TIME | 2026-08-17T23:36:42 | 2+ years | Not stated | Not Mentioned | [Apply](https://apply.careers.microsoft.com/careers/job/1970393556960240) |
 | 2026-08-18T16:41:03.547Z | Amazon.com Services LLC | Software Development Engineer, iOS | Not stated | Not specified | Posted: February 6, 2026 (Updated 3 months ago) | Not stated | 1+ years | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10505107/software-development-engineer-ios) |
+| 2026-08-18T14:47:33.519Z | Qualcomm Technologies, Inc | Computer Vision Engineer | San Diego, CA,US, US | FULL_TIME | 2026-07-29T00:00:00 | Not stated | 4+ years | Not Mentioned | [Apply](https://careers.qualcomm.com/careers/job/446720178575) |
 | 2026-08-18T14:16:58.737Z | Microsoft | Member of Technical Staff, Microsoft Robotics (Robot Learning) | Redmond, WA,US, US; Redmond, WA,US, US | FULL_TIME | 2026-05-29T17:31:13 | Not stated | Not stated | Not Mentioned | [Apply](https://apply.careers.microsoft.com/careers/job/1970393556866699) |
 | 2026-08-18T14:13:32.851Z | U.S. Bank National Association | Core Banking developer | Dublin, Ireland | Full time | 2026-04-09T00:00:00.000+0000 | Not stated | Not stated | Not Mentioned | [Apply](https://careers.usbank.com/global/en/job/2026-0006184/Core-Banking-developer) |
 | 2026-08-18T14:06:49.813Z | Qualcomm Technologies, Inc | Video Research Engineer (Multiple Levels) | San Diego, CA,US, US; Hsinchu, Hsinchu City,TW, TW; Munich, BY,DE, DE | FULL_TIME | 2026-07-30T00:00:00 | 1+ years | Not stated | Not Mentioned | [Apply](https://careers.qualcomm.com/careers/job/446716320059) |
@@ -104,22 +104,22 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 
 | ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |
 |---|---|---|---:|---:|---:|---|---|
-| CMP-003 | Google LLC | Healthy | 1 | 0 | 0 | 2026-08-24T10:56:10.371Z |  |
-| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-24T10:56:49.139Z |  |
-| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-24T10:57:31.960Z |  |
-| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-24T10:57:37.180Z |  |
-| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-24T10:57:58.222Z |  |
-| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-24T10:58:06.937Z |  |
-| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-24T10:58:16.908Z |  |
-| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-24T10:58:26.725Z |  |
-| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-24T10:58:29.059Z | 10 jobs queued for incremental evaluation |
-| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-24T10:58:36.406Z |  |
-| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-24T10:59:00.150Z | 2 jobs queued for incremental evaluation |
-| CMP-011 | Microsoft Corporation | Healthy | 22 | 0 | 0 | 2026-08-24T10:59:02.285Z |  |
-| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-24T10:59:11.977Z |  |
-| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-08-24T10:59:12.838Z |  |
-| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 40 | 0 | 0 | 2026-08-24T10:59:29.514Z |  |
-| CMP-017 | Goldman Sachs | Healthy | 18 | 0 | 0 | 2026-08-24T10:59:34.074Z |  |
-| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-24T10:59:55.155Z |  |
+| CMP-003 | Google LLC | Healthy | 1 | 0 | 0 | 2026-08-24T11:01:08.965Z |  |
+| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-24T11:01:21.062Z |  |
+| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-24T11:01:50.034Z |  |
+| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-24T11:02:11.481Z |  |
+| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-24T11:02:30.466Z |  |
+| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-24T11:02:36.348Z |  |
+| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-24T11:02:39.497Z |  |
+| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-24T11:02:46.295Z |  |
+| CMP-011 | Microsoft Corporation | Healthy | 22 | 0 | 0 | 2026-08-24T11:02:54.490Z |  |
+| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-24T11:02:55.968Z |  |
+| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-24T11:03:02.875Z | 10 jobs queued for incremental evaluation |
+| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 40 | 0 | 0 | 2026-08-24T11:03:12.704Z |  |
+| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-24T11:03:13.888Z |  |
+| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-24T11:03:15.885Z |  |
+| CMP-017 | Goldman Sachs | Healthy | 18 | 0 | 0 | 2026-08-24T11:03:23.593Z |  |
+| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-08-24T11:03:23.844Z |  |
+| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Degraded | 0 | 0 | 1 | 2026-08-24T10:59:11.977Z | Page loaded but zero jobs were not explicitly confirmed |
 
 > “Degraded” means extraction could not prove the source was complete. Review the unfiltered dashboard or workbook audit sheets for every decision.
