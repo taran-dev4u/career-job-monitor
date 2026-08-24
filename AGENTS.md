@@ -466,6 +466,18 @@ Entry template:
 - Scheduler status: Unchanged (GitHub Actions active on `7,37 * * * *`).
 - Follow-up: None.
 
+### TASK-20260824-2030-antigravity — DONE
+- Started: 2026-08-24T20:26:00Z
+- Completed: 2026-08-24T20:30:00Z
+- Objective: Implement persistent per-company job catalog (`data/company_jobs.json`), delta-based differential scanning, and lifecycle tracking to completely eliminate false alerts from older or backfilled jobs.
+- Files expected: `src/lib.mjs`, `src/monitor.mjs`, `.github/workflows/job-monitor.yml`, `tests/filter.test.mjs`, `data/company_jobs.json`, `AGENTS.md`
+- Files changed: `src/lib.mjs`, `src/monitor.mjs`, `.github/workflows/job-monitor.yml`, `tests/filter.test.mjs`, `data/company_jobs.json`, `data/current_candidates.json`, `data/decision_history.json`, `data/runs.json`, `data/source_health.json`, `outputs/job-monitor/Job_Monitor.xlsx`, `outputs/job-monitor/dashboard.html`, `index.html`, `AGENTS.md`
+- Files deleted: None.
+- Behavior/data impact: (1) Created `data/company_jobs.json` indexing 342 jobs across all 17 companies. (2) Added canonical company-scoped keys (`company_id:job_id`), discovery timestamps, and lifecycle status tracking. (3) Classified 168 pre-existing older jobs as `DiscoveredOld` (suppressing notifications) and 38 fresh eligible jobs as `Alerted`. (4) Added `data/company_jobs.json` to GitHub Actions workflow persistence.
+- Verification: Ran `npm test` 100% passing; completed live 17-company scan (17/17 Healthy, 0 Degraded, 0 Broken); verified `company_jobs.json` database correctly indexes 342 records.
+- Scheduler status: Unchanged (GitHub Actions active on `7,37 * * * *`).
+- Follow-up: None.
+
 
 
 

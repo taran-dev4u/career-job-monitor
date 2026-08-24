@@ -1,7 +1,7 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawn } from "node:child_process";
-import { clean, extractJobId, formatScanIntervalWindow, getJobIdentityKeys, readJson, stableJobIdentityKey, writeCsvAtomic, writeJsonAtomic } from "./lib.mjs";
+import { buildCompanyJobRecord, canonicalCompanyJobKey, clean, extractJobId, formatScanIntervalWindow, getJobIdentityKeys, readJson, stableJobIdentityKey, writeCsvAtomic, writeJsonAtomic } from "./lib.mjs";
 import { scanCompany, startBrowser, adapterName } from "./scrape.mjs";
 import { writeDashboards } from "./dashboard.mjs";
 
@@ -219,6 +219,27 @@ async function runOnce() {
     }
   }
 
+  const priorCompanyJobs = await readJson(dataPath("company_jobs.json"), {});
+  const companyJobs = { ...priorCompanyJobs };
+  const seenInCurrent = new Set();
+
+  for (const record of current) {
+    const cKey = canonicalCompanyJobKey(record.company_id, record.job_id, record.job_url || record.href);
+    if (!cKey) continue;
+    seenInCurrent.add(cKey);
+    const existing = companyJobs[cKey];
+    companyJobs[cKey] = buildCompanyJobRecord(record, existing, runAt, suppressNotifications, config);
+  }
+
+  const scannedHealthyCompanies = new Set(health.filter(h => ["Healthy", "Confirmed Empty"].includes(h.status)).map(h => h.company_id));
+  for (const [k, entry] of Object.entries(companyJobs)) {
+    if (entry && scannedHealthyCompanies.has(entry.company_id) && !seenInCurrent.has(k)) {
+      entry.lifecycle_status = "Unlisted / Inactive";
+      entry.last_verified_at = runAt;
+    }
+  }
+
+  await writeJsonAtomic(dataPath("company_jobs.json"), companyJobs);
   await writeJsonAtomic(dataPath("state.json"), state);
   await writeJsonAtomic(dataPath("jobs.json"), [...jobs, ...added]);
   await writeJsonAtomic(dataPath("current_candidates.json"), current);

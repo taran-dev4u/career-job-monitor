@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import config from "../config.json" with { type: "json" };
-import { enrollmentDecision, evaluateEligibility, experienceDecision, extractJobId, isUsLocation, markBaselinePending, notificationDecision, parseJobDate, roleLooksRelevant, sponsorshipDecision, stableJobIdentityKey, stableJobKey } from "../src/lib.mjs";
+import { buildCompanyJobRecord, canonicalCompanyJobKey, enrollmentDecision, evaluateEligibility, experienceDecision, extractJobId, isUsLocation, markBaselinePending, notificationDecision, parseJobDate, roleLooksRelevant, sponsorshipDecision, stableJobIdentityKey, stableJobKey } from "../src/lib.mjs";
 import parserFixtures from "./fixtures/parser_contracts.json" with { type: "json" };
 import { adapterName, jsonCandidatesFrom } from "../src/scrape.mjs";
 
@@ -126,5 +126,17 @@ assert.equal(parseJobDate("Today").isRecent, true);
 assert.equal(parseJobDate("2 hours ago").isRecent, true);
 assert.equal(parseJobDate("Posted 1 day ago").isRecent, true);
 assert.equal(evaluateEligibility({ title: "Software Engineer I", description: "Early career.", location: "Plano, TX, US", posted: "08/20/2026, 04:34 PM", config }).accepted, false, "4-day old job must be rejected");
+
+assert.equal(canonicalCompanyJobKey("CMP-008", "210775729", "https://example.com"), "CMP-008:210775729");
+assert.equal(canonicalCompanyJobKey("CMP-008", "", "https://example.com/jobs/1"), stableJobKey("CMP-008", "https://example.com/jobs/1"));
+
+const baselineJob = buildCompanyJobRecord({ company_id: "CMP-008", job_id: "210775729", title: "Software Engineer", accepted: true, decision: "Included", posted: "08/24/2026" }, null, "2026-08-24T00:00:00Z", true, config);
+assert.equal(baselineJob.notification_status, "Baseline");
+
+const oldDiscoveredJob = buildCompanyJobRecord({ company_id: "CMP-008", job_id: "9999", title: "Software Engineer", accepted: false, decision: "Rejected", posted: "08/10/2026" }, null, "2026-08-24T00:00:00Z", false, config);
+assert.equal(oldDiscoveredJob.notification_status, "DiscoveredOld");
+
+const freshJob = buildCompanyJobRecord({ company_id: "CMP-008", job_id: "8888", title: "Software Engineer I", accepted: true, decision: "Included", posted: "Today" }, null, "2026-08-24T00:00:00Z", false, config);
+assert.equal(freshJob.notification_status, "Alerted");
 
 console.log("Eligibility, sponsorship, internship, location, date, deduplication, and adapter tests passed.");

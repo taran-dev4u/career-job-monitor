@@ -419,3 +419,60 @@ export function notificationDecision(notified, recordOrKey, extraRecord, suppres
   }
   return false;
 }
+
+export function canonicalCompanyJobKey(companyId, jobId, url = "") {
+  const cid = clean(companyId || "");
+  const jid = clean(jobId || extractJobId(url));
+  if (cid && jid) return `${cid}:${jid.toLowerCase()}`;
+  if (cid && url) return stableJobKey(cid, url);
+  return "";
+}
+
+export function buildCompanyJobRecord(record, existing, now, suppress, config) {
+  const key = canonicalCompanyJobKey(record.company_id, record.job_id, record.job_url || record.href);
+  const parsedDate = record.parsed_date || parseJobDate(record.posted, config?.max_job_age_days || 2);
+  const firstSeen = existing?.first_seen_at || record.first_seen_at || now;
+  const isOldOnDiscovery = parsedDate.isExplicitlyOld;
+
+  let notificationStatus = existing?.notification_status;
+  if (!notificationStatus) {
+    if (suppress) {
+      notificationStatus = record.accepted ? "Baseline" : "BaselineRejected";
+    } else if (isOldOnDiscovery) {
+      notificationStatus = "DiscoveredOld";
+    } else if (record.accepted) {
+      notificationStatus = "Alerted";
+    } else {
+      notificationStatus = "Ineligible";
+    }
+  }
+
+  return {
+    key,
+    company_id: record.company_id,
+    company: record.company,
+    job_id: record.job_id || extractJobId(record.job_url || record.href),
+    title: record.title || record.role,
+    location: record.location || "",
+    job_url: record.job_url || record.href,
+    source_url: record.source_url || "",
+    job_type: record.job_type || "Not specified",
+    first_seen_at: firstSeen,
+    last_seen_at: now,
+    published_date_raw: record.posted || "",
+    published_date_iso: parsedDate.iso || "",
+    age_days_at_discovery: existing?.age_days_at_discovery ?? parsedDate.ageDays,
+    lifecycle_status: record.active_status === "Expired" ? "Expired" : "Active",
+    notification_status: notificationStatus,
+    accepted: record.accepted,
+    decision: record.decision,
+    exclusion_reasons: record.exclusion_reasons || [],
+    required_experience_years: record.required_experience_years ?? null,
+    preferred_experience_years: record.preferred_experience_years ?? null,
+    experience_label: record.experience_label || "Not evaluated",
+    sponsorship_status: record.sponsorship_status || "Unclear",
+    student_enrollment: record.student_enrollment || "Unknown",
+    is_us_location: record.is_us_location ?? null,
+    description_snippet: (record.description_snippet || "").slice(0, 400)
+  };
+}
