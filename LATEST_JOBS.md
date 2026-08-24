@@ -1,6 +1,6 @@
 # Latest Eligible Jobs — Filtered
 
-Updated: **2026-08-23T23:51:30.101Z UTC** / **Aug 23, 2026, 7:51 PM Eastern**
+Updated: **2026-08-24T01:50:53.229Z UTC** / **Aug 23, 2026, 9:50 PM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
@@ -77,6 +77,7 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 | 2026-08-20T08:55:40.881Z | Microsoft | Software Engineer | US | FULL_TIME | 2026-08-19T17:44:34 | Not stated | Not stated | Not Mentioned | [Apply](https://apply.careers.microsoft.com/careers/job/1970393556928331) |
 | 2026-08-20T08:55:40.881Z | Microsoft | Applied Scientist II | Mountain View, CA,US, US | FULL_TIME | 2026-08-17T23:36:42 | 2+ years | Not stated | Not Mentioned | [Apply](https://apply.careers.microsoft.com/careers/job/1970393556960240) |
 | 2026-08-18T16:41:03.547Z | Amazon.com Services LLC | Software Development Engineer, iOS | Not stated | Not specified | Posted: February 6, 2026 (Updated 3 months ago) | Not stated | 1+ years | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10505107/software-development-engineer-ios) |
+| 2026-08-18T14:47:33.519Z | Qualcomm Technologies, Inc | Computer Vision Engineer | San Diego, CA,US, US | FULL_TIME | 2026-07-29T00:00:00 | Not stated | 4+ years | Not Mentioned | [Apply](https://careers.qualcomm.com/careers/job/446720178575) |
 | 2026-08-18T14:16:58.737Z | Microsoft | Member of Technical Staff, Microsoft Robotics (Robot Learning) | Redmond, WA,US, US; Redmond, WA,US, US | FULL_TIME | 2026-05-29T17:31:13 | Not stated | Not stated | Not Mentioned | [Apply](https://apply.careers.microsoft.com/careers/job/1970393556866699) |
 | 2026-08-18T14:13:32.851Z | U.S. Bank National Association | Core Banking developer | Dublin, Ireland | Full time | 2026-04-09T00:00:00.000+0000 | Not stated | Not stated | Not Mentioned | [Apply](https://careers.usbank.com/global/en/job/2026-0006184/Core-Banking-developer) |
 | 2026-08-18T14:06:49.813Z | Qualcomm Technologies, Inc | Video Research Engineer (Multiple Levels) | San Diego, CA,US, US; Hsinchu, Hsinchu City,TW, TW; Munich, BY,DE, DE | FULL_TIME | 2026-07-30T00:00:00 | 1+ years | Not stated | Not Mentioned | [Apply](https://careers.qualcomm.com/careers/job/446716320059) |
@@ -106,22 +107,22 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 
 | ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |
 |---|---|---|---:|---:|---:|---|---|
-| CMP-003 | Google LLC | Healthy | 1 | 0 | 0 | 2026-08-23T23:49:49.277Z |  |
-| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-23T23:49:56.130Z |  |
-| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-23T23:50:01.283Z |  |
-| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-23T23:50:11.214Z |  |
-| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-23T23:50:20.848Z |  |
-| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-23T23:50:24.780Z |  |
-| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-23T23:50:29.127Z |  |
-| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-23T23:50:34.377Z |  |
-| CMP-011 | Microsoft Corporation | Healthy | 22 | 0 | 0 | 2026-08-23T23:50:42.742Z |  |
-| CMP-012 | Cisco Systems, Inc | Healthy | 4 | 0 | 0 | 2026-08-23T23:50:42.925Z |  |
-| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 20 | 0 | 0 | 2026-08-23T23:50:58.488Z |  |
-| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-23T23:51:03.277Z |  |
-| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-23T23:51:05.553Z |  |
-| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-23T23:51:09.234Z |  |
-| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-08-23T23:51:12.444Z |  |
-| CMP-017 | Goldman Sachs | Healthy | 18 | 0 | 0 | 2026-08-23T23:51:14.502Z |  |
-| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-23T23:51:30.008Z | 10 jobs queued for incremental evaluation |
+| CMP-003 | Google LLC | Healthy | 1 | 0 | 0 | 2026-08-24T01:49:12.555Z |  |
+| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-24T01:49:19.290Z |  |
+| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-24T01:49:24.841Z |  |
+| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-24T01:49:34.651Z |  |
+| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-24T01:49:44.069Z |  |
+| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-24T01:49:49.144Z |  |
+| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-24T01:49:52.325Z |  |
+| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-24T01:49:58.448Z |  |
+| CMP-011 | Microsoft Corporation | Healthy | 22 | 0 | 0 | 2026-08-24T01:50:06.046Z |  |
+| CMP-012 | Cisco Systems, Inc | Healthy | 4 | 0 | 0 | 2026-08-24T01:50:07.167Z |  |
+| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 20 | 0 | 0 | 2026-08-24T01:50:22.788Z |  |
+| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-24T01:50:25.881Z |  |
+| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-24T01:50:29.195Z |  |
+| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-08-24T01:50:34.923Z |  |
+| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-24T01:50:36.013Z |  |
+| CMP-017 | Goldman Sachs | Healthy | 18 | 0 | 0 | 2026-08-24T01:50:38.186Z |  |
+| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-24T01:50:53.143Z | 10 jobs queued for incremental evaluation |
 
 > “Degraded” means extraction could not prove the source was complete. Review the unfiltered dashboard or workbook audit sheets for every decision.
