@@ -1,12 +1,12 @@
 # All Extracted Jobs — Unfiltered
 
-Updated: **2026-08-24T07:18:12.034Z UTC** / **Aug 24, 2026, 3:18 AM Eastern**
+Updated: **2026-08-24T08:14:32.057Z UTC** / **Aug 24, 2026, 4:14 AM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
 > Newest discovered jobs are always shown first.
 
-Snapshot totals: **319 extracted**, **89 included**, **220 rejected**, **10 pending**, **0 extraction errors**.
+Snapshot totals: **317 extracted**, **88 included**, **219 rejected**, **10 pending**, **0 extraction errors**.
 
 This view intentionally includes rejected jobs. Use the **Decision** and **Reasons** columns before applying.
 
@@ -66,7 +66,6 @@ This view intentionally includes rejected jobs. Use the **Decision** and **Reaso
 | 2026-08-22T10:43:11.229Z | U.S. Bank National Association | Small Business Relationship Manager - Seattle, WA | Seattle, WA, United States | 2026-07-16T00:00:00.000+0000 | Not Mentioned | Not stated | Rejected | Not a configured technical discipline; Excluded: manager | [Open](https://careers.usbank.com/global/en/job/2026-0021151/Small-Business-Relationship-Manager-Seattle-WA) |
 | 2026-08-22T10:43:11.229Z | U.S. Bank National Association | Small Business Specialist 3 - Hood River, OR | Hood River, OR, United States | 2026-07-16T00:00:00.000+0000 | Not Mentioned | Not stated | Rejected | Not a configured technical discipline | [Open](https://careers.usbank.com/global/en/job/2026-0021263/Small-Business-Specialist-3-Hood-River-OR) |
 | 2026-08-22T10:43:11.229Z | U.S. Bank National Association | Small Business Specialist 3 - Ladd & Bush, OR | Salem, OR, United States | 2026-07-16T00:00:00.000+0000 | Not Mentioned | Not stated | Rejected | Not a configured technical discipline | [Open](https://careers.usbank.com/global/en/job/2026-0021313/Small-Business-Specialist-3-Ladd-Bush-OR) |
-| 2026-08-22T10:43:10.853Z | Cisco Systems, Inc | Software Engineer III (Full Time) - United States ENG/CPO/WTG ETR | Milpitas, California, United States of America | 2026-08-23 | Not Mentioned | Not stated | Included | — | [Open](https://careers.cisco.com/global/en/job/2022055/Software-Engineer-III-Full-Time-United-States-ENG-CPO-WTG-ETR) |
 | 2026-08-22T10:43:10.853Z | Cisco Systems, Inc | Software Engineer II (Full Time) - United States ENG/CPO/WTG ETR | Milpitas, California, United States of America; San Jose, California, United States of America | 2026-08-22 | Not Mentioned | 2+ years | Included | — | [Open](https://careers.cisco.com/global/en/job/2022072/Software-Engineer-II-Full-Time-United-States-ENG-CPO-WTG-ETR) |
 | 2026-08-22T10:42:50.281Z | Microsoft Corporation | Project Manager | Not stated | Not stated | Not Mentioned | 2+ years | Rejected | Not a configured technical discipline; Excluded: manager | [Open](https://us.microsoft.talentnet.community/jobs/a32b40d1-f6c3-4a54-9303-5b1eed8059ad) |
 | 2026-08-22T10:42:50.281Z | Microsoft Corporation | Project Manager | Not stated | Not stated | Not Mentioned | 7+ years | Rejected | Not a configured technical discipline; Excluded: manager; Requires 7+ years | [Open](https://us.microsoft.talentnet.community/jobs/ff4f344b-e86f-4094-9b48-18ae1d40bbf0) |
@@ -262,7 +261,6 @@ This view intentionally includes rejected jobs. Use the **Decision** and **Reaso
 | 2026-08-18T14:13:32.851Z | U.S. Bank National Association | Core Banking developer | Dublin, Ireland | 2026-04-09T00:00:00.000+0000 | Not Mentioned | Not stated | Included | — | [Open](https://careers.usbank.com/global/en/job/2026-0006184/Core-Banking-developer) |
 | 2026-08-18T14:13:32.851Z | U.S. Bank National Association | Wealth Management Advisor - San Jose CA | San Jose, CA, United States | 2026-03-16T00:00:00.000+0000 | Not Mentioned | Not stated | Rejected | Not a configured technical discipline | [Open](https://careers.usbank.com/global/en/job/2026-0006294/Wealth-Management-Advisor-San-Jose-CA) |
 | 2026-08-18T14:13:32.851Z | U.S. Bank National Association | Wealth Management Advisor - Farmington, MO | Farmington, MO, United States | 2026-01-27T00:00:00.000+0000 | Not Mentioned | Not stated | Rejected | Not a configured technical discipline | [Open](https://careers.usbank.com/global/en/job/2025-0010215/Wealth-Management-Advisor-Farmington-MO) |
-| 2026-08-18T14:13:10.768Z | Cisco Systems, Inc | Electrical Engineer | San Jose, California, United States of America; Austin, Texas, United States of America; Research Triangle Park, North Carolina, United States of America | 2026-08-23 | Not Mentioned | 2+ years | Rejected | Not a configured technical discipline | [Open](https://careers.cisco.com/global/en/job/2020283/Electrical-Engineer) |
 | 2026-08-18T14:11:53.300Z | Microsoft Corporation | Administrative Assistant | Not stated | Not stated | Not Mentioned | Not stated | Rejected | Not a configured technical discipline | [Open](https://us.microsoft.talentnet.community/jobs/15a97932-4147-490f-98e0-a7aa3d656fd9) |
 | 2026-08-18T14:11:53.300Z | Microsoft Corporation | Administrative Assistant | Not stated | Not stated | Not Mentioned | 8+ years | Rejected | Not a configured technical discipline; Requires 8+ years | [Open](https://us.microsoft.talentnet.community/jobs/6b818340-9771-479a-a0a5-b9c88b2685ef) |
 | 2026-08-18T14:11:53.300Z | Microsoft Corporation | Administrative Assistant | Not stated | Not stated | Not Mentioned | 4+ years | Rejected | Not a configured technical discipline; Requires 4+ years | [Open](https://us.microsoft.talentnet.community/jobs/aeabc7bc-1a8a-4780-9c68-dbf7cbc1abcf) |
