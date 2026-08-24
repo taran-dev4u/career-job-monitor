@@ -948,10 +948,10 @@
     "duration_seconds": 125.8
   },
   {
-    "run_at": "2026-08-24T11:39:20.941Z",
+    "run_at": "2026-08-24T12:46:32.967Z",
     "mode": "incremental",
     "companies_checked": 17,
-    "candidates_seen": 317,
+    "candidates_seen": 337,
     "evaluations_completed": 35,
     "new_jobs_added": 0,
     "healthy_sources": 17,
@@ -959,20 +959,20 @@
     "degraded_sources": 0,
     "broken_sources": 0,
     "errors": 0,
-    "duration_seconds": 110.8
+    "duration_seconds": 122
   },
   {
-    "run_at": "2026-08-24T12:00:33.248Z",
+    "run_at": "2026-08-24T12:49:12.784Z",
     "mode": "incremental",
     "companies_checked": 17,
-    "candidates_seen": 317,
+    "candidates_seen": 297,
     "evaluations_completed": 35,
     "new_jobs_added": 0,
-    "healthy_sources": 17,
+    "healthy_sources": 16,
     "confirmed_empty_sources": 0,
     "degraded_sources": 0,
-    "broken_sources": 0,
-    "errors": 0,
-    "duration_seconds": 110.1
+    "broken_sources": 1,
+    "errors": 1,
+    "duration_seconds": 121
   }
 ]

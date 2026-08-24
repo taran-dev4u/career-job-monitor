@@ -23,7 +23,11 @@ assert.equal(roleLooksRelevant("Software Dev Engineer I - Graviton", "United Sta
 assert.equal(roleLooksRelevant("GPU ML Engineer", "United States", config), true);
 assert.equal(roleLooksRelevant("Member of Technical Staff, Robotics", "United States", config), true);
 assert.equal(roleLooksRelevant("DevSecOps Engineer", "United States", config), true);
-assert.equal(roleLooksRelevant("Java Developer III", "United States", config), true);
+assert.equal(roleLooksRelevant("Java Developer II", "United States", config), true);
+assert.equal(roleLooksRelevant("Java Developer III", "United States", config), false, "Level III is senior");
+assert.equal(roleLooksRelevant("Java Full stack Software Engineer III - React/Python", "United States", config), false, "SE III is senior");
+assert.equal(roleLooksRelevant("Palantir Data Engineer Level III/IV", "United States", config), false, "Level III/IV is senior");
+assert.equal(roleLooksRelevant("Experienced Software Engineer Java / Python", "United States", config), false, "Experienced prefix is senior");
 assert.equal(roleLooksRelevant("AI Solutions Engineer - Associate", "United States", config), true);
 assert.equal(roleLooksRelevant("Voice Engineer", "United States", config), true);
 assert.equal(roleLooksRelevant("Graph Workflow Engineer (TS/SCI)", "United States", config), true);

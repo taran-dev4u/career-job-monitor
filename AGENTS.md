@@ -430,6 +430,18 @@ Entry template:
 - Scheduler status: Unchanged.
 - Follow-up: None.
 
+### TASK-20260824-1245-antigravity — DONE
+- Started: 2026-08-24T12:45:00Z
+- Completed: 2026-08-24T12:50:00Z
+- Objective: Exclude Level III/IV+ senior titles (e.g. Software Engineer III, Developer III, Level III/IV, Experienced Software Engineer) and re-evaluate all candidates dynamically.
+- Files expected: `config.json`, `src/lib.mjs`, `src/scrape.mjs`, `tests/filter.test.mjs`, `AGENTS.md`
+- Files changed: `config.json`, `src/lib.mjs`, `src/scrape.mjs`, `tests/filter.test.mjs`, `data/current_candidates.json`, `data/decision_history.json`, `data/runs.json`, `outputs/job-monitor/Job_Monitor.xlsx`, `outputs/job-monitor/dashboard.html`, `index.html`, `AGENTS.md`
+- Files deleted: None.
+- Behavior/data impact: (1) Added roman numeral level 3+ exclusions (III, IV, V, VI, level 3+, ic3+, experienced) to `config.json` and `roleDecision` in `lib.mjs`. (2) Updated `scanCompany` in `scrape.mjs` to dynamically re-evaluate cached candidates against current config. (3) Confirmed all JPMorgan Chase SE III roles (e.g. "Java Full stack Software Engineer III - React/Python") and other level 3+ roles are marked Rejected.
+- Verification: Ran `npm test` 100% passing; completed live `node src/monitor.mjs` run (exit code 0); verified SE III roles rejected in `current_candidates.json`.
+- Scheduler status: Unchanged.
+- Follow-up: None.
+
 
 
 

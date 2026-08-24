@@ -256,7 +256,34 @@ export async function scanCompany(browser, company, config, state, suppressNotif
           detailErrors += 1;
           records.push({ key: candidate.key, first_seen_at: discovered.first_seen_at, last_verified_at: now, company_id: company.id, company: company.company, title: candidate.title, location: "", posted: "", job_id: candidate.external_id || extractJobId(candidate.href), job_url: candidate.href, source_url: company.career_url, description_extracted: false, description_hash: "", description_snippet: "", active_status: "Unknown", accepted: false, decision: "Extraction Error", exclusion_reasons: [error.message], role_relevant: null, seniority: "Unknown", required_experience_years: null, preferred_experience_years: null, experience_label: "Not evaluated", experience_evidence: "", sponsorship_status: "Unclear", sponsorship_evidence: "", student_enrollment: "Unknown", enrollment_evidence: "", job_type: "Not specified" });
         }
-      } else if (cached) records.push({ ...cached, last_seen_at: now });
+      } else if (cached) {
+        const recheck = evaluateEligibility({
+          title: cached.title,
+          context: candidate.context,
+          description: cached.description_snippet || "",
+          location: cached.location,
+          posted: cached.posted,
+          config
+        });
+        const updatedRecord = {
+          ...cached,
+          last_seen_at: now,
+          accepted: recheck.accepted,
+          decision: recheck.decision,
+          exclusion_reasons: recheck.exclusion_reasons,
+          role_relevant: recheck.role_relevant,
+          seniority: recheck.seniority,
+          required_experience_years: recheck.required_experience_years,
+          preferred_experience_years: recheck.preferred_experience_years,
+          experience_label: recheck.experience_label,
+          experience_evidence: recheck.experience_evidence,
+          sponsorship_status: recheck.sponsorship_status,
+          sponsorship_evidence: recheck.sponsorship_evidence,
+          is_us_location: recheck.is_us_location
+        };
+        records.push(updatedRecord);
+        state.evaluated[candidate.key] = { ...state.evaluated[candidate.key], record: updatedRecord };
+      }
       else records.push({ key: candidate.key, first_seen_at: discovered.first_seen_at, last_verified_at: "", company_id: company.id, company: company.company, title: candidate.title, location: "", posted: "", job_id: candidate.external_id || extractJobId(candidate.href), job_url: candidate.href, source_url: company.career_url, description_extracted: false, description_hash: "", description_snippet: "", active_status: "Unknown", accepted: false, decision: "Pending Detail", exclusion_reasons: ["Detail evaluation limit reached"], role_relevant: null, seniority: "Unknown", required_experience_years: null, preferred_experience_years: null, experience_label: "Not evaluated", experience_evidence: "", sponsorship_status: "Unclear", sponsorship_evidence: "", student_enrollment: "Unknown", enrollment_evidence: "", job_type: "Not specified" });
     }
     const pending = records.filter(record => record.decision === "Pending Detail").length;

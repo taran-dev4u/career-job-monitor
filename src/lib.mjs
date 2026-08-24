@@ -83,7 +83,8 @@ export function roleDecision(title, context, config) {
   //    TITLE reliably signals seniority; in the body it is just noise.
   //    "Member of Technical Staff" is an IC title, not a "Staff" seniority level.
   const titleForSeniority = cleanTitle.replace(/technical staff/g, "technical role");
-  const seniorTerm = config.exclude_title_terms.find(term => tokenPresent(term, titleForSeniority)) || "";
+  const seniorNumeral = titleForSeniority.match(/\b(?:iii|iv|v|vi|vii)\b|\b(?:level|lvl|ic|tier|grade)\s*(?:[3-9]|iii|iv|v|vi)\b|\bexperienced\s+(?:software|developer|engineer)\b/i);
+  const seniorTerm = seniorNumeral ? seniorNumeral[0] : (config.exclude_title_terms.find(term => tokenPresent(term, titleForSeniority)) || "");
   return {
     accepted: relevant && !seniorTerm,
     relevant,
