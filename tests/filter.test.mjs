@@ -118,9 +118,13 @@ assert.equal(isUsLocation("Remote - EMEA").accepted, false);
 
 assert.equal(parseJobDate("2026-04-09").isExplicitlyOld, true);
 assert.equal(parseJobDate("February 6, 2026").isExplicitlyOld, true);
+assert.equal(parseJobDate("08/20/2026, 04:34 PM").isExplicitlyOld, true);
+assert.equal(parseJobDate("Posted 4 days ago").isExplicitlyOld, true);
 assert.equal(parseJobDate("Posted 30+ days ago").isExplicitlyOld, true);
 assert.equal(parseJobDate("Just posted").isRecent, true);
 assert.equal(parseJobDate("Today").isRecent, true);
 assert.equal(parseJobDate("2 hours ago").isRecent, true);
+assert.equal(parseJobDate("Posted 1 day ago").isRecent, true);
+assert.equal(evaluateEligibility({ title: "Software Engineer I", description: "Early career.", location: "Plano, TX, US", posted: "08/20/2026, 04:34 PM", config }).accepted, false, "4-day old job must be rejected");
 
 console.log("Eligibility, sponsorship, internship, location, date, deduplication, and adapter tests passed.");

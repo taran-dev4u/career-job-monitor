@@ -8,6 +8,7 @@
   "max_pages_per_company": 3,
   "max_new_details_per_company": 15,
   "detail_recheck_hours": 24,
+  "max_job_age_days": 2,
   "decision_history_days": 30,
   "source_health_degraded_alert_streak": 3,
   "max_experience_years": 3,
