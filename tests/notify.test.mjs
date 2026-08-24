@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import fsp from "node:fs/promises";
 import path from "node:path";
 import os from "node:os";
 import { buildHealthAlertPayload, buildJobPayload, buildOverflowPayload, sendBatchNotifications } from "../src/notify_ntfy.mjs";
@@ -141,6 +142,57 @@ const filteredResult = await sendBatchNotifications({
   fetchFn: mockFetch,
   pushedLogPath: testNonUsLog
 });
-assert.equal(filteredResult.ok, 1, "Only the 1 fresh US job should be pushed");
+// The Dublin job is rejected on location. The fresh Apple job is pushed as
+// news. The old Meta job has NEVER been pushed before, so it earns exactly one
+// catch-up alert rather than being silently dropped forever - monitor.mjs marks
+// a job notified on first sight whether or not a push went out, so suppressing
+// a first sighting on age meant it was never offered again.
+assert.equal(filteredResult.ok, 2, "fresh US job + one catch-up for the never-pushed older job");
 
-console.log("ntfy notification, location, freshness, & deduplication tests passed.");
+// 9b. An older job that HAS already been pushed must stay suppressed.
+const testCatchUpLog = path.join(os.tmpdir(), `pushed_test_catchup_${Date.now()}.json`);
+const oldJob = { role: "Old Engineer", company: "Meta", company_id: "CMP-002", location: "Menlo Park, CA", job_id: "meta-old", job_url: "https://meta.com/1", posted: "2026-04-09T00:00:00Z" };
+const firstSighting = await sendBatchNotifications({ batch: { jobs: [oldJob] }, topic: "t", fetchFn: mockFetch, pushedLogPath: testCatchUpLog });
+assert.equal(firstSighting.ok, 1, "first sighting of an old job gets one catch-up push");
+const secondSighting = await sendBatchNotifications({ batch: { jobs: [oldJob] }, topic: "t", fetchFn: mockFetch, pushedLogPath: testCatchUpLog });
+assert.equal(secondSighting.ok, 0, "the same old job must not be pushed twice");
+
+// 10. Overflow must be DEFERRED to the next run, never discarded.
+// A real run added 48 new jobs; with a hard cap of 20 and a summary naming only
+// 15 more, 13 jobs reached the user as a bare number and were never offered
+// again because monitor.mjs had already marked them notified.
+const overflowLog = path.join(os.tmpdir(), `pushed_test_overflow_${Date.now()}.json`);
+const carryPath = path.join(os.tmpdir(), `pending_push_${Date.now()}.json`);
+const manyJobs = Array.from({ length: 48 }, (_, i) => ({
+  role: `Software Engineer ${i}`, company: "Amazon", company_id: "CMP-001",
+  location: "Seattle, WA", job_id: `amz-${i}`, job_url: `https://amazon.com/${i}`, posted: nowIso
+}));
+const overflowRun = await sendBatchNotifications({
+  batch: { jobs: manyJobs }, topic: "t", fetchFn: mockFetch,
+  pushedLogPath: overflowLog, carryOverPath: carryPath
+});
+assert.equal(overflowRun.ok, 20, "first run pushes the per-run maximum");
+assert.equal(overflowRun.deferred, 28, "the remaining 28 are deferred, not dropped");
+const carried = JSON.parse(await fsp.readFile(carryPath, "utf8"));
+assert.equal(carried.jobs.length, 28, "deferred jobs are persisted for the next run");
+
+// The next run must drain the queue from the front, not re-push what already went.
+const drainRun = await sendBatchNotifications({
+  batch: { jobs: [] }, topic: "t", fetchFn: mockFetch,
+  pushedLogPath: overflowLog, carryOverPath: carryPath
+});
+assert.equal(drainRun.ok, 20, "the next run continues draining the deferred queue");
+const stillCarried = JSON.parse(await fsp.readFile(carryPath, "utf8"));
+assert.equal(stillCarried.jobs.length, 8, "queue shrinks until it is empty");
+
+// 11. A critical source-audit finding must reach the phone, not just the log.
+const auditLog = path.join(os.tmpdir(), `pushed_test_audit_${Date.now()}.json`);
+const auditRun = await sendBatchNotifications({
+  batch: { jobs: [], health_alerts: [], audit_alerts: [
+    { company_id: "CMP-001", company: "Amazon", severity: "critical", code: "LOCATION_EXTRACTION_DEAD", message: "location blank on all 30 candidates", evidence: "" }
+  ] },
+  topic: "t", fetchFn: mockFetch, pushedLogPath: auditLog
+});
+assert.equal(auditRun.auditAlerts, 1, "a broken source must generate a push");
+
+console.log("ntfy notification, location, freshness, deduplication, catch-up, overflow-carryover & source-audit tests passed.");

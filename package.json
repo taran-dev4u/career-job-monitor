@@ -9,9 +9,11 @@
     "build-workbook": "node src/build_workbook.mjs",
     "build-workbook:ci": "node src/build_workbook_ci.mjs",
     "build-dashboards": "node src/dashboard.mjs",
-    "test": "node tests/filter.test.mjs && node tests/monitor_data.test.mjs && node tests/notify.test.mjs",
+    "test": "node tests/filter.test.mjs && node tests/monitor_data.test.mjs && node tests/notify.test.mjs && node tests/companies.test.mjs && node tests/watchdog.test.mjs",
     "smoke": "node tests/smoke_scraper.mjs",
-    "smoke:all": "node tests/smoke_all.mjs"
+    "smoke:all": "node tests/smoke_all.mjs",
+    "probe": "node tests/company_probe.mjs",
+    "watchdog": "node src/watchdog.mjs"
   },
   "dependencies": {
     "exceljs": "4.4.0",

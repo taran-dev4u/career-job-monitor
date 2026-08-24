@@ -1,9 +1,10 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawn } from "node:child_process";
-import { buildCompanyJobRecord, canonicalCompanyJobKey, clean, extractJobId, formatScanIntervalWindow, getJobIdentityKeys, readJson, stableJobIdentityKey, writeCsvAtomic, writeJsonAtomic } from "./lib.mjs";
+import { pruneState, buildCompanyJobRecord, canonicalCompanyJobKey, clean, extractJobId, formatScanIntervalWindow, getJobIdentityKeys, readJson, stableJobIdentityKey, writeCsvAtomic, writeJsonAtomic } from "./lib.mjs";
 import { scanCompany, startBrowser, adapterName } from "./scrape.mjs";
 import { writeDashboards } from "./dashboard.mjs";
+import { auditAllCompanies, formatAuditReport } from "./company_audit.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const args = process.argv.slice(2);
@@ -219,6 +220,15 @@ async function runOnce() {
     }
   }
 
+  // Per-company self-audit. Each source is judged against its OWN declared
+  // expectations in companies.json, independently of every other source.
+  // Aggregate health reported "17/17 Healthy" while Amazon returned 30
+  // unusable candidates every run for days; this makes that impossible to miss.
+  state.company_audit_state ||= {};
+  const audit = auditAllCompanies(companies, current, health, state.company_audit_state, runAt);
+  state.company_audit_state = audit.state;
+  console.log(formatAuditReport(audit));
+
   const priorCompanyJobs = await readJson(dataPath("company_jobs.json"), {});
   const companyJobs = { ...priorCompanyJobs };
   const seenInCurrent = new Set();
@@ -239,6 +249,20 @@ async function runOnce() {
     }
   }
 
+  // Prune state before persisting. Everything still listed by any company this
+  // run, plus everything still active in the catalog, is protected; only long-
+  // dead entries are dropped. Without this, state.json grows forever and every
+  // 30-minute run commits a multi-megabyte diff of it.
+  const liveKeys = new Set();
+  for (const record of current) for (const k of getJobIdentityKeys(record.company_id, record.job_id, record.job_url, record.key)) liveKeys.add(k);
+  for (const entry of Object.values(companyJobs)) {
+    if (entry?.lifecycle_status === "Active") for (const k of getJobIdentityKeys(entry.company_id, entry.job_id, entry.job_url, entry.key)) liveKeys.add(k);
+  }
+  const pruned = pruneState(state, liveKeys);
+  if (pruned.discovered || pruned.evaluated || pruned.notified) {
+    console.log(`State pruned: ${pruned.discovered} discovered, ${pruned.evaluated} evaluated, ${pruned.notified} notified entries removed.`);
+  }
+
   await writeJsonAtomic(dataPath("company_jobs.json"), companyJobs);
   await writeJsonAtomic(dataPath("state.json"), state);
   await writeJsonAtomic(dataPath("jobs.json"), [...jobs, ...added]);
@@ -246,7 +270,18 @@ async function runOnce() {
   const cutoff = Date.now() - Number(config.decision_history_days || 30) * 86_400_000;
   await writeJsonAtomic(dataPath("decision_history.json"), [...priorAudit, ...evaluations].filter(item => new Date(item.evaluated_at || item.last_verified_at).getTime() >= cutoff));
   await writeJsonAtomic(dataPath("source_health.json"), health);
-  await writeJsonAtomic(dataPath("last_batch.json"), { run_at: runAt, suppressed: suppressNotifications, jobs: added, health_alerts: activeAlerts });
+  await writeJsonAtomic(dataPath("company_audit.json"), {
+    run_at: runAt, critical: audit.critical, warnings: audit.warnings, findings: audit.findings
+  });
+  await writeJsonAtomic(dataPath("last_batch.json"), {
+    run_at: runAt,
+    suppressed: suppressNotifications,
+    jobs: added,
+    health_alerts: activeAlerts,
+    // Critical audit findings ride along so a broken source reaches the phone
+    // rather than only the Actions log, which nobody reads.
+    audit_alerts: audit.critical
+  });
 
   const csvHeaders = [
     { label: "Company", key: "company" },
@@ -268,7 +303,13 @@ async function runOnce() {
   runs.push({ run_at: runAt, mode: upgradeBaseline ? "reliability baseline" : configuredBaseline ? "configured baseline" : "incremental", companies_checked: companies.length, candidates_seen: current.length, evaluations_completed: evaluations.length, new_jobs_added: added.length, healthy_sources: counts.Healthy || 0, confirmed_empty_sources: counts["Confirmed Empty"] || 0, degraded_sources: counts.Degraded || 0, broken_sources: counts.Broken || 0, errors: counts.Broken || 0, duration_seconds: Math.round((Date.now() - started) / 100) / 10 });
   await writeJsonAtomic(dataPath("runs.json"), runs.slice(-500));
   await writeDashboards(ROOT, runAt, current, health);
-  await rebuildWorkbook();
+  // Non-fatal, like the dashboard. All state/data files are already written by
+  // this point; letting a workbook error throw made the scan step exit 1, which
+  // skipped the workflow persist step entirely - so a run could push phone
+  // alerts and then fail to commit the state proving it had done so, causing the
+  // same jobs to be rediscovered and re-alerted on the next run.
+  try { await rebuildWorkbook(); }
+  catch (error) { console.error(`Workbook build warning: ${error.message}`); }
   await rebuildDashboard();
   console.log(`Completed: ${added.length} new jobs; ${counts.Healthy || 0} healthy, ${counts["Confirmed Empty"] || 0} confirmed empty, ${counts.Degraded || 0} degraded, ${counts.Broken || 0} broken.`);
 }

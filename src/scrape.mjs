@@ -219,10 +219,50 @@ export async function startBrowser(headless = true) {
   try { return await chromium.launch(options); } catch { return chromium.launch({ headless }); }
 }
 
-export async function scanCompany(browser, company, config, state, suppressNotifications = false) {
+// Per-company settings resolution.
+//
+// Every tunable is global in config.json, but the 17 sources are wildly
+// different: Amazon lists thousands of roles and needs a deeper card budget,
+// enterprise ATS platforms (Workday, Oracle, Phenom) render slowly and need a
+// longer settle, and a small careers page needs neither. A single global value
+// either starves the big sources or wastes minutes on the small ones.
+//
+// Each company may declare a `limits` object in companies.json; anything it
+// omits falls back to the global config, so existing entries keep working
+// unchanged. Nothing here reads another company's settings - a value set for
+// one source can never affect another.
+export function companySettings(company, config) {
+  const limits = (company && company.limits) || {};
+  const pick = (key, fallback) => {
+    const v = limits[key];
+    return v === undefined || v === null ? fallback : v;
+  };
+  return {
+    ...config,
+    max_cards_per_company: Number(pick("max_cards", config.max_cards_per_company ?? 40)),
+    max_pages_per_company: Number(pick("max_pages", config.max_pages_per_company ?? 1)),
+    max_new_details_per_company: Number(pick("max_new_details", config.max_new_details_per_company ?? 15)),
+    navigation_timeout_ms: Number(pick("navigation_timeout_ms", config.navigation_timeout_ms ?? 45000)),
+    settle_time_ms: Number(pick("settle_time_ms", config.settle_time_ms ?? 5000))
+  };
+}
+
+export async function scanCompany(browser, company, globalConfig, state, suppressNotifications = false) {
   const now = new Date().toISOString();
-  const context = await browser.newContext({ userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/131 Safari/537.36", locale: "en-US", viewport: { width: 1440, height: 1100 } });
-  const page = await context.newPage();
+  const config = companySettings(company, globalConfig);
+  // Create the context and its page together, and tear the context down if the
+  // page fails to open. Previously both ran before the try block, so a failure
+  // in newPage() leaked the context into the ONE browser shared by all 17
+  // companies. Enough leaks exhaust it, and every later company then fails -
+  // exactly the "one source breaks the whole run" case this must never allow.
+  let context, page;
+  try {
+    context = await browser.newContext({ userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/131 Safari/537.36", locale: "en-US", viewport: { width: 1440, height: 1100 } });
+    page = await context.newPage();
+  } catch (error) {
+    if (context) await context.close().catch(() => {});
+    throw error;
+  }
   const payloads = [];
   page.on("response", async response => {
     try {
@@ -255,7 +295,19 @@ export async function scanCompany(browser, company, config, state, suppressNotif
       if (!await advanceNextPage(page)) break;
       await scrollResults(page);
     }
-    const candidates = [...candidateMap.values()];
+    // Order the detail-evaluation queue so never-evaluated candidates come
+    // first, oldest discovery first. In raw DOM order a high-volume source that
+    // posts more than max_new_details jobs per cycle pushes its own backlog
+    // further down the "most recent" listing every run, so those jobs can lose
+    // the budget race forever and never get evaluated or alerted.
+    const candidates = [...candidateMap.values()].sort((a, b) => {
+      const ea = state.evaluated[a.key] ? 1 : 0;
+      const eb = state.evaluated[b.key] ? 1 : 0;
+      if (ea !== eb) return ea - eb;
+      const da = state.discovered[a.key]?.first_seen_at || now;
+      const db = state.discovered[b.key]?.first_seen_at || now;
+      return String(da).localeCompare(String(db));
+    });
     const bodyText = clean(await page.locator("body").innerText().catch(() => ""));
     const explicitZero = EXPLICIT_ZERO.test(bodyText);
     const records = [], evaluations = [], newJobs = [];

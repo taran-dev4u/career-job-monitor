@@ -8,9 +8,57 @@ export async function readJson(file, fallback) {
 }
 export async function writeJsonAtomic(file, value) {
   await fs.mkdir(path.dirname(file), { recursive: true });
-  const temp = `${file}.tmp`;
-  await fs.writeFile(temp, `${JSON.stringify(value, null, 2)}\n`, "utf8");
-  await fs.rename(temp, file);
+  // Unique temp name per write. A fixed `${file}.tmp` is atomic for a single
+  // writer but two concurrent writers to the same path clobber each other's
+  // temp file mid-write and one of them renames a truncated JSON document into
+  // place. Only the workflow's concurrency group prevented that, which does not
+  // protect a local `--watch` run against a manual `--once` run in the same
+  // checkout - a real possibility since this repo is edited by hand.
+  const temp = `${file}.${process.pid}.${crypto.randomBytes(4).toString("hex")}.tmp`;
+  try {
+    await fs.writeFile(temp, `${JSON.stringify(value, null, 2)}\n`, "utf8");
+    await fs.rename(temp, file);
+  } catch (error) {
+    await fs.rm(temp, { force: true }).catch(() => {});
+    throw error;
+  }
+}
+
+// Keep state.json from growing without bound.
+//
+// `discovered`, `evaluated` and `notified` were append-only. state.json is
+// already 4.3 MB and is rewritten in full roughly every 30 minutes, so the
+// repository carries a multi-megabyte diff per run forever. Entries are kept
+// while the job is still live (present in `keepKeys`) or still recent; anything
+// older than the retention window and no longer listed anywhere is dropped.
+//
+// `notified` is pruned far more conservatively than the others: forgetting that
+// a job was announced is what causes a duplicate alert, so its window is long.
+export function pruneState(state, keepKeys, { now = Date.now(), discoveredDays = 45, notifiedDays = 120 } = {}) {
+  const keep = keepKeys instanceof Set ? keepKeys : new Set(keepKeys || []);
+  const cutoff = days => now - days * 86400000;
+  const stamp = entry => {
+    const raw = entry && (entry.last_seen_at || entry.first_seen_at || entry.last_evaluated_at || entry.notified_at);
+    const t = raw ? new Date(raw).getTime() : NaN;
+    return Number.isNaN(t) ? null : t;
+  };
+  const removed = { discovered: 0, evaluated: 0, notified: 0 };
+
+  for (const [bucket, days] of [["discovered", discoveredDays], ["evaluated", discoveredDays], ["notified", notifiedDays]]) {
+    const map = state[bucket];
+    if (!map) continue;
+    const limit = cutoff(days);
+    for (const [key, entry] of Object.entries(map)) {
+      if (keep.has(key)) continue;
+      const t = stamp(entry);
+      // An entry with no usable timestamp is kept: deleting it could re-announce
+      // a job. Only demonstrably old entries are removed.
+      if (t === null || t >= limit) continue;
+      delete map[key];
+      removed[bucket] += 1;
+    }
+  }
+  return removed;
 }
 export async function writeCsvAtomic(file, rows, headers) {
   await fs.mkdir(path.dirname(file), { recursive: true });
@@ -84,7 +132,12 @@ export function roleDecision(title, context, config) {
   //    "Member of Technical Staff" is an IC title, not a "Staff" seniority level.
   const titleForSeniority = cleanTitle.replace(/technical staff/g, "technical role");
   const seniorNumeral = titleForSeniority.match(/\b(?:iii|iv|v|vi|vii)\b|\b(?:level|lvl|ic|tier|grade)\s*(?:[3-9]|iii|iv|v|vi)\b|\bexperienced\s+(?:software|developer|engineer)\b/i);
-  const seniorTerm = seniorNumeral ? seniorNumeral[0] : (config.exclude_title_terms.find(term => tokenPresent(term, titleForSeniority)) || "");
+  // A title that ALSO advertises entry level is open to early-career applicants
+  // even when it names a senior tier: "Entry Level & Senior Software Engineer"
+  // (a real Qualcomm req, tagged Entry/Mid by Qualcomm itself) and
+  // "Software Engineer (New Grad / Experienced Levels)" were both excluded.
+  const entryQualifier = /\b(?:entry[ -]?level|new ?grad(?:uate)?|early career|university grad(?:uate)?|campus)\b/i.test(cleanTitle);
+  const seniorTerm = entryQualifier ? "" : (seniorNumeral ? seniorNumeral[0] : (config.exclude_title_terms.find(term => tokenPresent(term, titleForSeniority)) || ""));
   return {
     accepted: relevant && !seniorTerm,
     relevant,
@@ -118,10 +171,17 @@ export function experienceDecision(text, maxYears) {
   for (const pattern of preferredPatterns) for (const match of source.matchAll(pattern)) preferred.push({ years: Number(match[1]), evidence: sentenceEvidence(source, match.index) });
   for (const pattern of requiredPatterns) for (const match of source.matchAll(pattern)) {
     const evidence = sentenceEvidence(source, match.index);
+    // "About us: founded in 1998, we have 25 years of experience..." is company
+    // history, not a candidate requirement. Reading it as "requires 25 years"
+    // rejected the job outright.
+    if (COMPANY_HISTORY_RE.test(evidence)) continue;
+    // A range "2-8 years" must be judged on its UPPER bound; taking match[1]
+    // reported a 2-8 year role as requiring only 2 and wrongly accepted it.
+    const years = match[2] !== undefined ? Math.max(Number(match[1]), Number(match[2])) : Number(match[1]);
     const before = source.toLowerCase().slice(0, match.index);
     const inPreferredSection = Math.max(before.lastIndexOf("preferred qualifications"), before.lastIndexOf("preferred experience")) > Math.max(before.lastIndexOf("minimum qualifications"), before.lastIndexOf("required qualifications"));
-    if (inPreferredSection || /preferred|ideally|desired|nice to have/i.test(evidence)) preferred.push({ years: Number(match[1]), evidence });
-    else required.push({ years: Number(match[1]), evidence });
+    if (inPreferredSection || /preferred|ideally|desired|nice to have/i.test(evidence)) preferred.push({ years, evidence });
+    else required.push({ years, evidence });
   }
   const requiredYears = required.length ? Math.max(...required.map(x => x.years)) : null;
   const preferredYears = preferred.length ? Math.max(...preferred.map(x => x.years)) : null;
@@ -142,7 +202,14 @@ export function sponsorshipDecision(text, policy = {}) {
     /\bno\s+(?:visa|immigration|employment|work(?:\s+visa)?)?\s*sponsorship\b/i,
     /\bsponsorship\s+(?:is\s+)?(?:not available|unavailable|not offered|not provided|not supported)\b/i,
     /\bnot eligible for\b.{0,100}\bsponsorship\b/i,
-    /\b(?:do not|don't|does not|doesn't|will not|won't|cannot|can't|unable to|not)\s+(?:currently\s+)?(?:be\s+)?(?:able to\s+)?(?:offer(?:ing)?|provide|providing|support(?:ing)?)?\s*(?:visa|immigration|employment)?\s*sponsor(?:ship)?\b/i,
+    // The visa/immigration/employment context is REQUIRED here, not optional.
+    // With it optional, ordinary copy such as "we cannot sponsor the local
+    // hackathon this year" or "unable to sponsor athletic events" matched and
+    // stamped the job "Sponsorship: Not Available", dropping it outright.
+    /\b(?:do not|don't|does not|doesn't|will not|won't|cannot|can't|unable to|not)\s+(?:currently\s+)?(?:be\s+)?(?:able to\s+)?(?:offer(?:ing)?|provide|providing|support(?:ing)?)?\s*(?:visa|immigration|employment|work(?:\s+visa)?|h-?1b|green card)\s*sponsor(?:ship)?\b/i,
+    // ...and the bare form only when "sponsorship" (the noun) is the object,
+    // which in job-posting prose is essentially always about work authorisation.
+    /\b(?:do not|don't|does not|doesn't|will not|won't|cannot|can't|unable to)\s+(?:currently\s+)?(?:be\s+)?(?:able to\s+)?(?:offer(?:ing)?|provide|providing|support(?:ing)?)\s+sponsorship\b/i,
     /\bwithout\s+(?:the need for\s+)?(?:(?:current|now)\s+(?:or|and)\s+(?:future|in the future)\s+)?(?:visa|immigration|employment)?\s*sponsorship\b/i,
     /\b(?:must not|will not)\s+(?:now or in the future\s+)?require\b.{0,60}\bsponsorship\b/i,
     /\b(?:candidates?|applicants?)\b.{0,45}\b(?:requiring|who require|needing|who need)\b.{0,60}\bsponsorship\b.{0,60}\b(?:not considered|not eligible|not accepted|will not be considered)\b/i,
@@ -165,7 +232,25 @@ export function enrollmentDecision(title, text) {
   if (!internship) return { accepted: true, is_internship: false, status: "Not an internship", evidence: "" };
   const source = clean(text);
   const required = /(?:currently|actively)\s+(?:enrolled|pursuing)|must\s+be\s+enrolled|return(?:ing)?\s+to\s+(?:school|university|college)|continuing\s+(?:their|your)\s+education/i.exec(source);
-  return { accepted: !required, is_internship: true, status: required ? "Current student required" : "Graduate eligible / no current-student requirement found", evidence: required ? sentenceEvidence(source, required.index) : "No explicit current-enrollment requirement detected" };
+  // Big-tech internship postings routinely write "must be enrolled in a degree
+  // program OR a recent graduate within 6 months". Matching only the enrolled
+  // clause read that as student-only and rejected a graduate-eligible role.
+  // If a graduate alternative appears near the match, the posting is open to
+  // graduates and must not be excluded.
+  // The graduate alternative can sit on either side of the enrollment clause:
+  //   "enrolled in a degree program OR a recent graduate"        (or -> graduate)
+  //   "must have graduated or be returning to school in the fall" (graduate -> or)
+  // Require a genuine "or" disjunction so "enrolled AND graduating in 2027"
+  // (student-only) is still correctly rejected.
+  const graduateWindow = required
+    ? source.slice(Math.max(0, required.index - 120), required.index + 220)
+    : "";
+  const graduateAlternative = Boolean(required) && (
+    /\bor\b[^.;]{0,90}\bgraduat(?:e|ed|ing|es|ion)\b/i.test(graduateWindow) ||
+    /\bgraduat(?:e|ed|ing|es|ion)\b[^.;]{0,90}\bor\b/i.test(graduateWindow)
+  );
+  const blocked = Boolean(required) && !graduateAlternative;
+  return { accepted: !blocked, is_internship: true, status: blocked ? "Current student required" : graduateAlternative ? "Graduate eligible (enrolled OR recent graduate)" : "Graduate eligible / no current-student requirement found", evidence: required ? sentenceEvidence(source, required.index) : "No explicit current-enrollment requirement detected" };
 }
 export function detectJobType(text) {
   const value = clean(text).toLowerCase();
@@ -175,6 +260,15 @@ export function detectJobType(text) {
   if (/\bfull[ -]?time\b/.test(value)) return "Full-time";
   return "Not specified";
 }
+// Shared US-evidence regexes. Defined once so the foreign-city guard and the
+// positive US check below cannot drift apart - that drift is exactly what made
+// "Birmingham, AL" resolve as non-US.
+const US_COUNTRY_RE = /\b(?:united states|usa|u\.s\.a?\b|us remote|remote\s*[-–]\s*us|remote,\s*us|anywhere in the us)\b/i;
+const US_STATE_ABBR_RE = /,\s*(?:AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VT|VA|WA|WV|WI|WY|DC)(?:\b|;|\/|\s|$)/;
+const US_STATE_NAME_RE = /\b(?:Alabama|Alaska|Arizona|Arkansas|California|Colorado|Connecticut|Delaware|Florida|Georgia|Hawaii|Idaho|Illinois|Indiana|Iowa|Kansas|Kentucky|Louisiana|Maine|Maryland|Massachusetts|Michigan|Minnesota|Mississippi|Missouri|Montana|Nebraska|Nevada|New Hampshire|New Jersey|New Mexico|New York|North Carolina|North Dakota|Ohio|Oklahoma|Oregon|Pennsylvania|Rhode Island|South Carolina|South Dakota|Tennessee|Texas|Utah|Vermont|Virginia|Washington|West Virginia|Wisconsin|Wyoming)\b/i;
+// Company-history phrasing that must never be read as a candidate requirement.
+const COMPANY_HISTORY_RE = /\b(?:founded|established|since \d{4}|our (?:company|firm|team)|we (?:have|bring|offer)|has (?:over|more than)|with over)\b[^.]{0,60}\b\d{1,2}\+?\s*(?:years?|yrs?)\b|\b\d{1,2}\+?\s*(?:years?|yrs?)\s+of\s+experience\s+(?:in the industry|serving|building great|delivering)/i;
+
 export function isUsLocation(locationText = "", contextText = "") {
   const combined = clean(`${locationText} ${contextText}`).trim();
   if (!combined) return { accepted: true, is_us: null, location_confidence: "Unverified", reason: "No explicit location specified", evidence: "" };
@@ -196,8 +290,14 @@ export function isUsLocation(locationText = "", contextText = "") {
 
   for (const pattern of nonUsCountries) {
     if (pattern.test(combined)) {
-      const hasExplicitUs = /\b(?:united states|usa|u\.s\.a?\b|remote\s*[-–]\s*us|us remote)\b/i.test(combined) ||
-        /\b(?:al|ak|az|ar|ca|co|ct|de|fl|ga|hi|id|il|in|ia|ks|ky|la|me|md|ma|mi|mn|ms|mo|mt|ne|nv|nh|nj|nm|ny|nc|nd|oh|ok|or|pa|ri|sc|sd|tn|tx|ut|vt|va|wa|wv|wi|wy),\s*(?:united states|usa|us)\b/i.test(combined);
+      // Many real US cities share a name with a foreign one: Birmingham AL,
+      // Manchester NH, Belfast ME, London OH, Dublin OH/CA/GA, Waterloo IA,
+      // Vancouver WA, Sydney MT, Paris TX. The old guard only recognised
+      // "STATE, United States" or the literal country name, so "Birmingham, AL"
+      // was rejected as foreign and the job was silently dropped. Reuse the same
+      // positive-US evidence used further down: a state abbreviation after a
+      // comma, or a full state name, both count as explicit US evidence.
+      const hasExplicitUs = US_COUNTRY_RE.test(combined) || US_STATE_ABBR_RE.test(combined) || US_STATE_NAME_RE.test(combined);
 
       if (!hasExplicitUs) {
         return { accepted: false, is_us: false, location_confidence: "Confirmed", reason: "Location is outside the United States", evidence: combined.slice(0, 100) };
@@ -250,7 +350,17 @@ function matchAbsoluteDate(cleanStr) {
   } else if (textDateMatch) {
     dateObj = new Date(textDateMatch[1]);
   }
-  return dateObj && !isNaN(dateObj.getTime()) ? dateObj : null;
+  if (!dateObj || isNaN(dateObj.getTime())) return null;
+  // JS Date silently rolls overflow: "02/30/2026" becomes 2 March. Verify the
+  // constructed date still matches the digits that produced it.
+  if (mmddyyyy) {
+    const m = Number(mmddyyyy[1]), d = Number(mmddyyyy[2]);
+    if (dateObj.getMonth() + 1 !== m || dateObj.getDate() !== d) return null;
+  }
+  // A date meaningfully in the future is a typo or a parse of the wrong field;
+  // treating it as "posted today" would push a stale job as brand new.
+  if (dateObj.getTime() > Date.now() + 2 * 86400000) return null;
+  return dateObj;
 }
 
 function describeAbsoluteDate(dateObj, maxAgeDays) {
@@ -345,40 +455,22 @@ export function parseJobDate(dateStr, maxAgeDays = 2) {
     return { hasDate: true, isRecent: true, isExplicitlyOld: false, ageDays: 0, label: cleanStr };
   }
 
-  // 3. Absolute dates: MM/DD/YYYY, YYYY-MM-DD, Month DD, YYYY
-  const mmddyyyy = cleanStr.match(/\b(\d{1,2})\/(\d{1,2})\/(\d{4})(?:,\s*(\d{1,2}:\d{2}(?:\s*[AP]M)?))?\b/i);
-  const isoMatch = cleanStr.match(/\b(\d{4}-\d{2}-\d{2}(?:T\d{2}:\d{2}:\d{2}(?:\.\d+)?Z?)?)\b/);
-  const textDateMatch = cleanStr.match(/\b(?:posted:?\s*)?([A-Za-z]+ \d{1,2},? \d{4})\b/i);
-
-  let dateObj = null;
-  if (mmddyyyy) {
-    const timePart = mmddyyyy[4] ? ` ${mmddyyyy[4]}` : "";
-    dateObj = new Date(`${mmddyyyy[1]}/${mmddyyyy[2]}/${mmddyyyy[3]}${timePart}`);
-  } else if (isoMatch) {
-    dateObj = new Date(isoMatch[1]);
-  } else if (textDateMatch) {
-    dateObj = new Date(textDateMatch[1]);
-  } else {
+  // 3. Absolute dates - one validated code path only.
+  // This branch used to build its own Date and skip validation, so
+  // "02/30/2026" silently became 2 March and a typo'd "12/31/2099" became a
+  // brand-new posting. matchAbsoluteDate() rejects rolled-over and
+  // far-future dates; routing through it keeps the two paths from drifting.
+  const dateObj = matchAbsoluteDate(cleanStr) || (() => {
+    // Do not let the permissive fallback resurrect a string matchAbsoluteDate
+    // already rejected: new Date("02/30/2026") happily returns 2 March.
+    if (/\d{1,2}\/\d{1,2}\/\d{4}|\d{4}-\d{2}-\d{2}/.test(cleanStr)) return null;
     const directParse = new Date(cleanStr);
-    if (!isNaN(directParse.getTime()) && directParse.getFullYear() >= 2020) {
-      dateObj = directParse;
-    }
-  }
+    if (isNaN(directParse.getTime()) || directParse.getFullYear() < 2020) return null;
+    if (directParse.getTime() > Date.now() + 2 * 86400000) return null;
+    return directParse;
+  })();
 
-  if (dateObj && !isNaN(dateObj.getTime())) {
-    const ageMs = Date.now() - dateObj.getTime();
-    const ageDays = ageMs / (1000 * 60 * 60 * 24);
-    const isExplicitlyOld = ageDays > maxAgeDays;
-    return {
-      hasDate: true,
-      timestamp: dateObj.getTime(),
-      iso: dateObj.toISOString(),
-      ageDays: Math.round(ageDays * 10) / 10,
-      isRecent: !isExplicitlyOld,
-      isExplicitlyOld,
-      label: formatDateUtc(dateObj.toISOString())
-    };
-  }
+  if (dateObj) return describeAbsoluteDate(dateObj, maxAgeDays);
 
   return { hasDate: false, isRecent: true, isExplicitlyOld: false, ageDays: null, label: cleanStr };
 }
@@ -504,10 +596,24 @@ export function markBaselinePending(notified, key, now) {
   notified[key] ||= { notified_at: now, reason: "baseline pending first evaluation" };
 }
 
-export function notificationDecision(notified, recordOrKey, extraRecord, suppress, now) {
-  // Support both (notified, record, suppress, now) and legacy (notified, key, record, suppress, now)
-  const record = (typeof recordOrKey === "object" && recordOrKey !== null) ? recordOrKey : (extraRecord || {});
-  const directKey = typeof recordOrKey === "string" ? recordOrKey : record.key;
+export function notificationDecision(notified, recordOrKey, a3, a4, a5) {
+  // Two supported call shapes:
+  //   modern: (notified, record:object,  suppress:boolean, now:string)
+  //   legacy: (notified, key:string,     record:object,    suppress:boolean, now:string)
+  //
+  // The previous dispatch read `suppress` from the 4th positional slot in BOTH
+  // shapes. In the modern shape that slot holds `now` - a non-empty ISO string,
+  // so `suppress` was permanently truthy. Every genuinely new eligible job took
+  // the suppress branch, got stamped "notification-suppressed eligible baseline"
+  // in state.notified, and the function returned false. newJobs was never
+  // populated, so NO push notification could fire for any company, ever.
+  // Detect the shape from the type of the second argument instead of assuming
+  // a fixed arity.
+  const legacy = typeof recordOrKey === "string";
+  const record = legacy ? (a3 || {}) : (recordOrKey && typeof recordOrKey === "object" ? recordOrKey : {});
+  const directKey = legacy ? recordOrKey : record.key;
+  const suppress = legacy ? a4 : a3;
+  const now = legacy ? a5 : a4;
   const keys = getJobIdentityKeys(record.company_id, record.job_id, record.job_url || record.href, directKey);
   const marker = keys.map(k => notified[k]).find(Boolean);
 

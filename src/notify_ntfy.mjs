@@ -156,6 +156,24 @@ export function buildHealthAlertPayload(alerts, topic) {
   };
 }
 
+export function buildAuditAlertPayload(findings, topic) {
+  const lines = [
+    `A source is returning results, but they are not usable. This is the failure mode that hides jobs while every dashboard still reads healthy.`,
+    "",
+    ...findings.slice(0, 10).map(f => `• **${f.company}** — \`${f.code}\`\n  ${f.message}${f.evidence ? `\n  _${f.evidence}_` : ""}`)
+  ];
+  if (findings.length > 10) lines.push(`• ...and ${findings.length - 10} more.`);
+  return {
+    topic,
+    title: `🛠 ${findings.length} source(s) failing their own checks`,
+    message: lines.join("\n"),
+    markdown: true,
+    tags: ["hammer_and_wrench", "rotating_light"],
+    priority: 4,
+    actions: [{ action: "view", label: "🔍 Open dashboard", url: "https://taran-dev4u.github.io/career-job-monitor/" }]
+  };
+}
+
 export async function pushNtfy(server, payload, token) {
   const headers = {
     "Content-Type": "application/json"
@@ -185,7 +203,8 @@ export async function sendBatchNotifications({
   token = "",
   maxPerRun = MAX_PER_RUN,
   fetchFn = pushNtfy,
-  pushedLogPath = path.join(ROOT, "data", "pushed_jobs.json")
+  pushedLogPath = path.join(ROOT, "data", "pushed_jobs.json"),
+  carryOverPath = path.join(ROOT, "data", "pending_push.json")
 }) {
   if (!topic) {
     console.log("NTFY_TOPIC not configured — skipping ntfy notifications.");
@@ -197,11 +216,28 @@ export async function sendBatchNotifications({
     return { ok: 0, total: 0, alerts: 0, skipped: true, reason: "NO_TOPIC" };
   }
 
-  const allJobs = Array.isArray(batch?.jobs) ? batch.jobs : [];
+  // Jobs deferred by a previous run's MAX_PER_RUN cap go to the FRONT of the
+  // queue, so a busy day drains over successive runs instead of losing the tail.
+  const carried = await readJson(carryOverPath, {});
+  const carriedJobs = Array.isArray(carried?.jobs) ? carried.jobs : [];
+  if (carriedJobs.length) console.log(`ntfy: resuming ${carriedJobs.length} job(s) deferred by an earlier run.`);
+  const batchJobs = Array.isArray(batch?.jobs) ? batch.jobs : [];
+  const allJobs = [...carriedJobs, ...batchJobs];
   const alerts = Array.isArray(batch?.health_alerts) ? batch.health_alerts : [];
+  const auditAlerts = Array.isArray(batch?.audit_alerts) ? batch.audit_alerts : [];
 
   const pushedLog = await readJson(pushedLogPath, {});
   const nowIso = new Date().toISOString();
+
+  // One place that knows how a job maps to dedup-log keys, so the "have we
+  // pushed this?" question and the "record that we pushed it" write can never
+  // disagree about the key shape.
+  const logKeys = j => [
+    j.key || "",
+    (j.job_url || "").replace(/#.*$/, "").replace(/\/$/, ""),
+    j.company_id && j.job_id ? `${j.company_id}:${clean(j.job_id).toLowerCase()}` : ""
+  ].filter(Boolean);
+  const neverPushed = j => !logKeys(j).some(k => pushedLog[k]);
 
   // Deduplicate against previously pushed jobs, non-US locations, and stale publication dates (>48h old)
   const jobs = allJobs.filter(j => {
@@ -219,17 +255,32 @@ export async function sendBatchNotifications({
       return false;
     }
 
-    // Strict freshness gate (reject if explicitly older than 48 hours / 2 days)
+    // Freshness gate - with one deliberate exception.
+    //
+    // monitor.mjs marks a job "notified" the moment it is first discovered,
+    // whether or not a push ever went out. So a job carrying an old posting
+    // date the FIRST time we see it (a newly added company, a scraper outage,
+    // a pagination miss, a backfilled listing) was suppressed here and then
+    // never offered again - silently, permanently.
+    //
+    // Freshness should stop us re-announcing stale listings, not stop a job
+    // from ever being announced once. A job never pushed before gets exactly
+    // one alert regardless of age, flagged as a catch-up rather than news.
     const dateCheck = parseJobDate(j.posted, 2);
     if (dateCheck.isExplicitlyOld) {
-      console.log(`ntfy: Skipping older job: "${j.role || j.title}" (${j.company}) - posted: ${j.posted} (${dateCheck.ageDays}d old)`);
+      if (neverPushed(j)) {
+        j.__catchUp = true;
+        console.log(`ntfy: First sighting of an older job, sending one catch-up alert: "${j.role || j.title}" (${j.company}) - posted ${j.posted}`);
+        return true;
+      }
+      console.log(`ntfy: Skipping older job already handled: "${j.role || j.title}" (${j.company})`);
       return false;
     }
 
     return true;
   });
 
-  if (!jobs.length && !alerts.length) {
+  if (!jobs.length && !alerts.length && !auditAlerts.length) {
     console.log("ntfy: No new jobs or health alerts to push.");
     return { ok: 0, total: 0, alerts: 0, skipped: true, reason: "EMPTY_BATCH" };
   }
@@ -263,13 +314,31 @@ export async function sendBatchNotifications({
     console.error(`Failed to update pushed_jobs.json: ${error.message}`);
   }
 
+  // Overflow is CARRIED OVER, not discarded.
+  //
+  // MAX_PER_RUN capped each run at 20 pushes and the summary named only the
+  // next 15, so anything past #35 arrived as a bare count with no company,
+  // role or link. Because monitor.mjs had already marked every one of them
+  // notified, they were never offered again. One real run added 48 new jobs,
+  // so 13 of them reached the user as nothing but a number. Deferred jobs are
+  // now written to a carry-over queue and are deliberately NOT written to the
+  // pushed log, so the next run picks them up from the front of the queue.
   if (jobs.length > send.length) {
+    const deferred = jobs.slice(send.length);
     const overflowPayload = buildOverflowPayload(jobs, send.length, topic);
     try {
       await fetchFn(server, overflowPayload, token);
     } catch (e) {
       console.error(`ntfy overflow push failed: ${e.message}`);
     }
+    try {
+      await fs.writeFile(carryOverPath, JSON.stringify({ saved_at: nowIso, jobs: deferred }, null, 2), "utf8");
+      console.log(`ntfy: deferred ${deferred.length} job(s) to the next run rather than dropping them.`);
+    } catch (e) {
+      console.error(`Failed to save the deferred push queue: ${e.message}`);
+    }
+  } else {
+    try { await fs.rm(carryOverPath, { force: true }); } catch {}
   }
 
   let alertsPushed = 0;
@@ -283,8 +352,21 @@ export async function sendBatchNotifications({
     }
   }
 
-  console.log(`ntfy: pushed ${ok}/${send.length} job notifications${alerts.length ? ` + ${alerts.length} health alert(s)` : ""}.`);
-  return { ok, total: send.length, alerts: alertsPushed, skipped: false };
+  // A broken source is as urgent as a new job: if a company has stopped
+  // producing usable results, every day it stays broken is jobs never seen.
+  // These findings previously existed only in the Actions log.
+  let auditPushed = 0;
+  if (auditAlerts.length) {
+    try {
+      await fetchFn(server, buildAuditAlertPayload(auditAlerts, topic), token);
+      auditPushed = 1;
+    } catch (e) {
+      console.error(`ntfy audit alert push failed: ${e.message}`);
+    }
+  }
+
+  console.log(`ntfy: pushed ${ok}/${send.length} job notifications${alerts.length ? ` + ${alerts.length} health alert(s)` : ""}${auditAlerts.length ? ` + ${auditAlerts.length} source-audit finding(s)` : ""}.`);
+  return { ok, total: send.length, alerts: alertsPushed, auditAlerts: auditPushed, deferred: Math.max(0, jobs.length - send.length), skipped: false };
 }
 
 async function main() {
