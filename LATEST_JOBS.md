@@ -1,12 +1,12 @@
 # Latest Eligible Jobs — Filtered
 
-Updated: **2026-08-24T06:07:39.961Z UTC** / **Aug 24, 2026, 2:07 AM Eastern**
+Updated: **2026-08-24T07:18:12.034Z UTC** / **Aug 24, 2026, 3:18 AM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
 > Newest discovered jobs are always shown first.
 
-Source health: **16 healthy**, **0 confirmed empty**, **0 degraded**, **1 broken**.
+Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken**.
 
 ## Apply Now
 
@@ -106,22 +106,22 @@ Source health: **16 healthy**, **0 confirmed empty**, **0 degraded**, **1 broken
 
 | ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |
 |---|---|---|---:|---:|---:|---|---|
-| CMP-003 | Google LLC | Healthy | 1 | 0 | 0 | 2026-08-24T06:06:00.659Z |  |
-| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-24T06:06:07.547Z |  |
-| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-24T06:06:12.502Z |  |
-| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-24T06:06:21.839Z |  |
-| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-24T06:06:31.493Z |  |
-| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-24T06:06:39.835Z |  |
-| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-24T06:06:40.929Z |  |
-| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-24T06:06:49.154Z |  |
-| CMP-011 | Microsoft Corporation | Healthy | 22 | 0 | 0 | 2026-08-24T06:06:54.982Z |  |
-| CMP-012 | Cisco Systems, Inc | Healthy | 4 | 0 | 0 | 2026-08-24T06:06:57.844Z |  |
-| CMP-014 | WELLS FARGO BANK, N.A | Broken | 0 | 0 | 1 | 2026-08-24T05:22:41.251Z | HTTP 429 |
-| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-24T06:07:15.168Z |  |
-| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-24T06:07:16.690Z |  |
-| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-24T06:07:18.640Z |  |
-| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-08-24T06:07:24.960Z |  |
-| CMP-017 | Goldman Sachs | Healthy | 18 | 0 | 0 | 2026-08-24T06:07:25.298Z |  |
-| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-24T06:07:39.879Z | 10 jobs queued for incremental evaluation |
+| CMP-003 | Google LLC | Healthy | 1 | 0 | 0 | 2026-08-24T07:16:33.265Z |  |
+| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-24T07:16:40.114Z |  |
+| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-24T07:16:44.663Z |  |
+| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-24T07:16:53.831Z |  |
+| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-24T07:17:02.986Z |  |
+| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-24T07:17:09.276Z |  |
+| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-24T07:17:11.430Z |  |
+| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-24T07:17:18.674Z |  |
+| CMP-011 | Microsoft Corporation | Healthy | 22 | 0 | 0 | 2026-08-24T07:17:24.977Z |  |
+| CMP-012 | Cisco Systems, Inc | Healthy | 4 | 0 | 0 | 2026-08-24T07:17:28.062Z |  |
+| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 20 | 0 | 0 | 2026-08-24T07:17:43.701Z |  |
+| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-24T07:17:45.318Z |  |
+| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-24T07:17:48.443Z |  |
+| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-24T07:17:54.677Z |  |
+| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-08-24T07:17:54.786Z |  |
+| CMP-017 | Goldman Sachs | Healthy | 18 | 0 | 0 | 2026-08-24T07:17:57.318Z |  |
+| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-24T07:18:11.933Z | 10 jobs queued for incremental evaluation |
 
 > “Degraded” means extraction could not prove the source was complete. Review the unfiltered dashboard or workbook audit sheets for every decision.
