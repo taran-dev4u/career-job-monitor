@@ -17,12 +17,23 @@ const intervalMinutes = intervalIndex >= 0 ? Number(args[intervalIndex + 1]) : N
 const dataPath = name => path.join(ROOT, "data", name);
 
 async function rebuildWorkbook() {
-  const builder = process.env.WORKBOOK_BUILDER || path.join("src", "build_workbook.mjs");
-  await new Promise((resolve, reject) => {
-    const child = spawn(process.execPath, [path.resolve(ROOT, builder)], { cwd: ROOT, stdio: "inherit" });
-    child.on("exit", code => code === 0 ? resolve() : reject(new Error(`Workbook builder exited ${code}`)));
-    child.on("error", reject);
-  });
+  const builders = process.env.WORKBOOK_BUILDER
+    ? [process.env.WORKBOOK_BUILDER]
+    : [path.join("src", "build_workbook_ci.mjs"), path.join("src", "build_workbook.mjs")];
+  let lastError = null;
+  for (const builder of builders) {
+    try {
+      await new Promise((resolve, reject) => {
+        const child = spawn(process.execPath, [path.resolve(ROOT, builder), "--verify"], { cwd: ROOT, stdio: "inherit" });
+        child.on("exit", code => code === 0 ? resolve() : reject(new Error(`Workbook builder ${builder} exited ${code}`)));
+        child.on("error", reject);
+      });
+      return;
+    } catch (e) {
+      lastError = e;
+    }
+  }
+  throw lastError;
 }
 
 // Regenerate the interactive HTML dashboard. Non-fatal: a dashboard failure must

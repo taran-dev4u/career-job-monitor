@@ -406,6 +406,18 @@ Entry template:
 - Scheduler status: Unchanged.
 - Follow-up: None.
 
+### TASK-20260824-1100-antigravity — DONE
+- Started: 2026-08-24T10:47:00Z
+- Completed: 2026-08-24T11:01:00Z
+- Objective: Diagnose notification delivery behavior, test all 77 active eligible job URLs for dead links, fix workbook builder fallback in monitor.mjs, and execute a full 17-company scan cycle to clear broken/degraded source streaks.
+- Files expected: `src/monitor.mjs`, `AGENTS.md`
+- Files changed: `src/monitor.mjs`, `data/source_health.json`, `data/runs.json`, `data/current_candidates.json`, `data/jobs.json`, `data/last_batch.json`, `data/apply_now.csv`, `outputs/job-monitor/Job_Monitor.xlsx`, `outputs/job-monitor/dashboard.html`, `index.html`, `AGENTS.md`
+- Files deleted: None.
+- Behavior/data impact: (1) Tested all 77 eligible job URLs; identified 1 expired Cisco posting (HTTP 410) and pruned it. (2) Updated `rebuildWorkbook` in `monitor.mjs` to prioritize portable `build_workbook_ci.mjs` (exceljs). (3) Completed full 17-company scan: 17/17 Healthy, 0 Degraded, 0 Broken, 337 candidates extracted, 87 active eligible jobs in Apply Now.
+- Verification: Ran `npm test` 100% passing; completed full live `node src/monitor.mjs` run (exit code 0); verified `source_health.json` has 17/17 Healthy with degraded streak 0.
+- Scheduler status: Unchanged.
+- Follow-up: None.
+
 
 
 
