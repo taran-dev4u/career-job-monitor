@@ -1,6 +1,6 @@
 # Latest Eligible Jobs — Filtered
 
-Updated: **2026-08-24T17:39:14.436Z UTC** / **Aug 24, 2026, 1:39 PM Eastern**
+Updated: **2026-08-24T18:04:20.837Z UTC** / **Aug 24, 2026, 2:04 PM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
@@ -12,14 +12,15 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 
 | First Seen | Company | Role | Location | Type | Posted | Required | Preferred | Sponsorship | Apply |
 |---|---|---|---|---|---|---:|---:|---|---|
+| 2026-08-24T18:03:55.794Z | COMPUNNEL SOFTWARE GROUP, INC | Cloud Infrastructure Engineer | Not stated | Not specified | Upload Resume | 1+ years | Not stated | Not Mentioned | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=4pxyUZjYbDgXV5fBYHMAzw%3d%3d&Source=4414&EntityGroup=2321) |
+| 2026-08-24T18:03:55.794Z | COMPUNNEL SOFTWARE GROUP, INC | Data Modeling Analyst | Not stated | Not specified | Upload Resume | Not stated | Not stated | Not Mentioned | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=4NEKNxivgov%2bD9rhGwwU0g%3d%3d&Source=4414&EntityGroup=2321) |
+| 2026-08-24T18:03:55.794Z | COMPUNNEL SOFTWARE GROUP, INC | Front End Developer | Not stated | Not specified | Upload Resume | Not stated | 6+ years | Not Mentioned | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=EGzBI%2bqczcdNiXmQPnloAQ%3d%3d&Source=4414&EntityGroup=2321) |
+| 2026-08-24T18:02:59.582Z | JPMorgan Chase & Co | Full Stack Java Software Engineer II Kafka / Oracle / Python | Tampa, FL, United States | Full time | 2026-08-24T17:36:40.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210768777) |
 | 2026-08-24T17:38:15.301Z | Oracle America, Inc | Platform Software Engineer 1 | Nashville, TN, United States | Not specified | 2026-08-24T17:30:45.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://careers.oracle.com/en/sites/jobsearch/job/343770) |
 | 2026-08-24T17:38:01.049Z | JPMorgan Chase & Co | Software Engineer II - Automation Tester | New York, NY, United States | Full time | 2026-08-24T17:10:06.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210760696) |
-| 2026-08-24T17:37:16.743Z | Apple Inc | Software Engineer - Applied Intelligence | Not stated | Not specified | 2026-08-24 | 3+ years | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200679666-3337/software-engineer-applied-intelligence?team=SFTWR) |
-| 2026-08-24T17:37:16.743Z | Apple Inc | Software Engineer - Applied Intelligence | Not stated | Not specified | 2026-08-24 | 3+ years | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200679666-3760/software-engineer-applied-intelligence?team=SFTWR) |
+| 2026-08-24T17:37:16.743Z | Apple Inc | Software Engineer - Applied Intelligence | Not stated | Not specified | 2026-08-24 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200679666-3337/software-engineer-applied-intelligence?team=SFTWR) |
+| 2026-08-24T17:37:16.743Z | Apple Inc | Software Engineer - Applied Intelligence | Not stated | Not specified | 2026-08-24 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200679666-3760/software-engineer-applied-intelligence?team=SFTWR) |
 | 2026-08-24T16:49:54.038Z | COMPUNNEL SOFTWARE GROUP, INC | Forward Deployed Engineer AI/ML | Not stated | Not specified | Upload Resume | Not stated | Not stated | Not Mentioned | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=cIWGgjXvjrC752JIVyzHLQ%3d%3d&Source=4414&EntityGroup=2321) |
-| 2026-08-24T15:49:17.862Z | COMPUNNEL SOFTWARE GROUP, INC | Angular UI Developer | Not stated | Not specified | Upload Resume | Not stated | Not stated | Not Mentioned | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=MVAimOd%2bzkQC%2bS39qcnOuw%3d%3d&Source=4414&EntityGroup=2321) |
-| 2026-08-24T15:49:17.862Z | COMPUNNEL SOFTWARE GROUP, INC | Cybersecurity Audit & Compliance Specialist | Not stated | Not specified | Upload Resume | Not stated | Not stated | Not Mentioned | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=nskrBl12D1fWJZwl%2fKA6Tg%3d%3d&Source=4414&EntityGroup=2321) |
-| 2026-08-24T15:49:17.862Z | COMPUNNEL SOFTWARE GROUP, INC | Data Engineer | Not stated | Not specified | Upload Resume | Not stated | Not stated | Not Mentioned | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=zC8j2qWXELVoWULygo16JA%3d%3d&Source=4414&EntityGroup=2321) |
 | 2026-08-24T15:48:23.848Z | JPMorgan Chase & Co | Software Engineer II/AI Native Component Engineer | OH, United States | Full time | 2026-08-24T15:02:08.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210778308) |
 | 2026-08-24T13:58:35.566Z | JPMorgan Chase & Co | Software Engineer II - Android Engineer | NY, United States | Full time | 2026-08-24T13:02:45.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210768377) |
 | 2026-08-24T13:58:35.566Z | JPMorgan Chase & Co | Software Engineer [Multiple Positions Available] | Plano, TX, United States | Full time | 2026-08-24T13:00:00.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210782101) |
@@ -47,22 +48,22 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 
 | ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |
 |---|---|---|---:|---:|---:|---|---|
-| CMP-003 | Google LLC | Healthy | 1 | 0 | 0 | 2026-08-24T17:37:25.404Z |  |
-| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-24T17:37:37.582Z |  |
-| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-24T17:37:59.772Z |  |
-| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-24T17:38:01.049Z |  |
-| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-24T17:38:09.301Z |  |
-| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-24T17:38:15.301Z |  |
-| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-24T17:38:17.628Z |  |
-| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-24T17:38:34.885Z |  |
-| CMP-011 | Microsoft Corporation | Healthy | 23 | 0 | 0 | 2026-08-24T17:38:36.404Z |  |
-| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-24T17:38:43.013Z |  |
-| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-24T17:38:43.778Z |  |
-| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-24T17:38:56.740Z |  |
-| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-24T17:38:58.657Z |  |
-| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 20 | 0 | 0 | 2026-08-24T17:38:58.767Z |  |
-| CMP-017 | Goldman Sachs | Healthy | 17 | 0 | 0 | 2026-08-24T17:39:09.940Z |  |
-| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-08-24T17:39:10.236Z |  |
-| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-24T17:39:14.345Z | 10 jobs queued for incremental evaluation |
+| CMP-003 | Google LLC | Healthy | 1 | 0 | 0 | 2026-08-24T18:02:37.733Z |  |
+| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-24T18:02:44.968Z |  |
+| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-24T18:02:49.899Z |  |
+| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-08-24T18:02:59.582Z |  |
+| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-24T18:03:12.799Z |  |
+| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-24T18:03:21.231Z |  |
+| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-24T18:03:27.230Z |  |
+| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-24T18:03:35.610Z |  |
+| CMP-011 | Microsoft Corporation | Healthy | 22 | 0 | 0 | 2026-08-24T18:03:42.254Z |  |
+| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-24T18:03:44.665Z |  |
+| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-24T18:03:55.793Z |  |
+| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-24T18:04:02.789Z |  |
+| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 20 | 0 | 0 | 2026-08-24T18:04:11.633Z |  |
+| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-08-24T18:04:12.122Z |  |
+| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-24T18:04:18.826Z |  |
+| CMP-017 | Goldman Sachs | Healthy | 17 | 0 | 0 | 2026-08-24T18:04:20.534Z |  |
+| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-24T18:04:20.741Z | 10 jobs queued for incremental evaluation |
 
 > “Degraded” means extraction could not prove the source was complete. Review the unfiltered dashboard or workbook audit sheets for every decision.
