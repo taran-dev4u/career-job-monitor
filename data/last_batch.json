@@ -1,6 +1,28 @@
 {
-  "run_at": "2026-08-24T13:59:53.850Z",
+  "run_at": "2026-08-24T14:52:46.399Z",
   "suppressed": false,
   "jobs": [],
-  "health_alerts": []
+  "health_alerts": [
+    {
+      "run_at": "2026-08-24T14:52:17.855Z",
+      "company_id": "CMP-014",
+      "company": "WELLS FARGO BANK, N.A",
+      "source_url": "https://www.wellsfargojobs.com/en/jobs/?search=software+engineer&country=United+States+of+America&team=Data+%26+Analytics&team=Technology&type=Full+time&pagesize=20#results",
+      "resolved_url": "https://www.wellsfargojobs.com/en/jobs/?search=software+engineer&country=United+States+of+America&team=Data+%26+Analytics&team=Technology&type=Full+time&pagesize=20#results",
+      "adapter": "Phenom",
+      "http_status": 429,
+      "status": "Broken",
+      "candidate_count": 0,
+      "detail_success_count": 0,
+      "detail_error_count": 0,
+      "pending_detail_count": 0,
+      "eligible_count": 0,
+      "rejected_count": 0,
+      "zero_streak": 1,
+      "degraded_streak": 0,
+      "last_candidate_at": "2026-08-24T13:59:33.291Z",
+      "last_healthy_at": "2026-08-24T13:59:33.291Z",
+      "diagnostic": "HTTP 429"
+    }
+  ]
 }
