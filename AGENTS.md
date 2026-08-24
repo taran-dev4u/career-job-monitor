@@ -34,20 +34,19 @@ The monitor must:
 
 ## 3. Current Project Snapshot
 
-Last structurally verified: **2026-08-18 15:00 UTC**.
+Last structurally verified: **2026-08-24 20:30 UTC**.
 
 - Companies configured: **17** (`CMP-001` through `CMP-017`).
 - Monitor interval: **30 minutes**.
 - Primary runner: active GitHub Actions workflow `.github/workflows/job-monitor.yml`, scheduled at minutes **7 and 37 UTC** each hour.
 - Private repository: **`https://github.com/taran-dev4u/career-job-monitor`**, default branch `main`.
-- Local fallback task: **`Career Job Monitor - Every 30 Minutes`**, retained but disabled while GitHub Actions is active.
-- State schema: **v4**, with separate `discovered`, `evaluated`, and `notified` maps, stable company/job-ID deduplication when an external ID is available, and baseline-pending suppression that still allows a rejected posting to alert if it later becomes eligible.
-- Latest controlled cloud validation: **17 Healthy**, **0 Confirmed Empty**, **0 Degraded**, **0 Broken**; 398 extracted records reconciled as 63 included and 335 rejected.
-- Sponsorship policy: prospectively reject explicit no-sponsorship/no-OPT/no-CPT postings; allow sponsorship-available and sponsorship-not-mentioned postings. Historical accepted rows predating this policy are retained.
-- User dashboards: `LATEST_JOBS.md` is filtered/eligible and `ALL_EXTRACTED_JOBS.md` is unfiltered; both keep newest discoveries first. GitHub issues provide new-job and source-health notifications.
+- Web Dashboard: **`https://taran-dev4u.github.io/career-job-monitor/`** (`index.html`).
+- Mobile Push Notifications: Active via **`ntfy.sh/taran-career-jobs-2026`**.
+- Persistent Database: **`data/company_jobs.json`** indexing 342 jobs across all 17 companies with canonical primary keys (`CMP-###:job_id`), discovery timestamps, and lifecycle/notification status tracking.
+- Latest controlled cloud validation: **17 Healthy**, **0 Confirmed Empty**, **0 Degraded**, **0 Broken**; 342 extracted records reconciled as 38 fresh included, 168 pre-existing old, and 136 ineligible.
+- Strict Targeting: Strict US-only locations; max 3 years experience; roman numeral / level 3+ exclusions (SE III, Level 3+, IC3+, Experienced prefix); 48h publication freshness barrier; sponsorship-available or not-mentioned allowed.
+- User dashboards: `LATEST_JOBS.md` (active eligible) and `ALL_EXTRACTED_JOBS.md` (unfiltered); both keep newest discoveries first.
 - Generated workbook: `outputs/job-monitor/Job_Monitor.xlsx`, with seven audit/visibility sheets.
-- Runtime: local runs use bundled Node.js, Playwright, and `@oai/artifact-tool`; GitHub uses Node.js 24, Playwright, Chromium, and the ExcelJS CI builder.
-- Repository status: Git repository on branch `main`, tracking private remote `origin` at `taran-dev4u/career-job-monitor`.
 
 The snapshot is not a live dashboard. Update it only after structural changes such as adding/removing companies, changing the scheduler, changing runtime dependencies, changing data layout, or completing a controlled re-baseline. Routine 30-minute scan results belong in the runtime logs, not here.
 
@@ -62,27 +61,31 @@ The snapshot is not a live dashboard. Update it only after structural changes su
 
 | Path | Authority and purpose | Editing rule |
 |---|---|---|
-| `AGENTS.md` | Canonical agent rules, project map, and agent change ledger | Every agent must read it; agents update only their own active ledger entry plus structurally affected documentation sections. |
-| `README.md` | Human-facing usage and basic operating commands | Keep concise; do not duplicate the complete agent manual. |
+| `AGENTS.md` | Canonical agent rules, architecture manual, multi-agent coordination protocol, and change ledger | Every agent must read it; agents update only their own active ledger entry plus structurally affected documentation sections. |
+| `README.md` | Human-facing usage, links, and basic operating commands | Keep concise; do not duplicate the complete agent manual. |
 | `companies.json` | Stable company IDs, names, and customized career URLs | Check duplicates; never reuse a retired ID. |
-| `config.json` | Interval, browser limits, role terms, experience limit, and exclusions | Do not alter user criteria without authorization. |
-| `data/state.json` | Baseline/schema flags plus discovered, evaluated, notified, and legacy seen-job state | Runtime-owned; never clear or reset casually. |
+| `config.json` | Interval, browser limits, role terms, experience limit, age limit, and exclusions | Do not alter user criteria without authorization. |
+| `data/company_jobs.json` | Permanent per-company job catalog, lifecycle status, and notification status | Runtime-owned; never clear or delete. |
+| `data/pushed_jobs.json` | Permanent deduplication database for mobile push alerts | Runtime-owned; prevents duplicate push alerts across all time. |
+| `data/state.json` | Baseline/schema flags plus discovered, evaluated, and notified state | Runtime-owned; never clear or reset casually. |
 | `data/jobs.json` | Accepted newly discovered jobs | Append/deduplicate; preserve history unless deletion is explicitly requested. |
 | `data/runs.json` | Monitor run history | Runtime-owned; do not manually manufacture successful runs. |
 | `data/current_candidates.json` | Latest unfiltered extracted-job snapshot and decisions | Runtime-owned; includes included, rejected, pending, and extraction-error records. |
 | `data/decision_history.json` | Rolling 30-day decision/evidence audit | Runtime-owned; preserve legacy records and let retention logic prune by age. |
 | `data/source_health.json` | Latest one-row-per-company health diagnostics and streaks | Runtime-owned; zero candidates must never silently imply health. |
 | `data/last_batch.json` | Notification handoff for the latest new-job batch and health alerts | Runtime-owned; first reliability baseline is suppressed. |
+| `data/apply_now.csv` | Active eligible jobs CSV feed (auto-synced with Google Sheets `=IMPORTDATA(...)`) | Generated by the monitor; do not hand-curate. |
 | `LATEST_JOBS.md` | Tracked Apply Now dashboard and compact source-health summary | Generated by the monitor; do not hand-curate job rows. |
 | `ALL_EXTRACTED_JOBS.md` | Tracked unfiltered snapshot with every extracted job, decision, and exclusion reasons | Generated by the monitor; do not hand-curate job rows. |
+| `index.html` / `dashboard.html`| Interactive Web Dashboard with sorting, searching, badges, and local application tracking | Generated by `src/build_dashboard_html.mjs`. |
 | `monitor.log` | Detailed operational output and source errors | Append-only runtime log; inspect recent lines during diagnosis. |
 | `outputs/job-monitor/Job_Monitor.xlsx` | Generated user-facing workbook | Never edit manually. Correct JSON/code, then rebuild it. |
 | `.github/workflows/job-monitor.yml` | Primary always-on scheduler, tests, scan, alerts, workbook artifact, and persistence commit | Keep `contents: write`, `issues: write`, concurrency protection, and off-hour cron minutes. |
-| `src/` | Scraping, filtering, deduplication, orchestration, and workbook generation | Make minimal changes and test the affected subsystem. |
+| `src/` | Scraping, filtering, deduplication, orchestration, workbook generation, and ntfy push | Make minimal changes and test the affected subsystem. |
 | `scripts/` | One-shot runner and Windows scheduled-task management | Treat scheduler changes as operationally significant. |
-| `tests/` | Filter/dedup unit checks and live source smoke test | Extend when behavior changes. |
+| `tests/` | Filter/dedup unit checks, date freshness, location, and data contracts | Extend when behavior changes. |
 
-The JSON files and application code are the editable sources of truth. The Excel workbook is always a generated projection of those sources.
+The JSON files and application code are the editable sources of truth. The Excel workbook and HTML dashboards are always generated projections of those sources.
 
 ## 5. Mandatory Agent Workflow
 

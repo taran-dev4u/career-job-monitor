@@ -1,81 +1,114 @@
-# Career Job Monitor
+# Career Job Monitor 🚀
 
-This project checks 17 configured US career pages every 30 minutes. GitHub Actions is the always-on runner, so monitoring continues while the local computer is shut down. Open [`LATEST_JOBS.md`](LATEST_JOBS.md) for filtered eligible jobs, [`ALL_EXTRACTED_JOBS.md`](ALL_EXTRACTED_JOBS.md) for the unfiltered snapshot, or download `outputs/job-monitor/Job_Monitor.xlsx` for the full audit. All job and run views keep the newest records at the top.
+Automated 24/7 job monitoring engine running every 30 minutes on GitHub Actions. It scans 17 top technology career portals, maintains a persistent per-company job catalog, extracts native ATS publication dates, and delivers instant **1-Tap Apply** mobile notifications to your phone lock screen for newly released early-career roles.
 
-## What is recorded
+---
 
-- `Apply Now`: currently active, eligible jobs with direct links and the evidence used to include them.
-- `New Jobs`: complete history of roles first accepted after a baseline.
-- `All Extracted Jobs`: the latest unfiltered snapshot, including rejected and pending jobs.
-- `Decision Audit`: 30 days of inclusion/rejection decisions and matched evidence.
-- `Source Health`: exactly one diagnostic row for each configured company.
-- `Run Log`: scan totals plus healthy, confirmed-empty, degraded, and broken source counts.
-- `Companies`: stable IDs and the exact customized career URLs supplied by the user.
+## 🎯 Target Profile & Strict Filtering Rules
 
-The Markdown views are deliberately separate: `LATEST_JOBS.md` contains only active eligible roles, while `ALL_EXTRACTED_JOBS.md` includes every extracted role with its decision and exclusion reasons.
+A job is classified as **Included (Eligible)** only when it strictly satisfies all five criteria:
 
-Job identity uses the career site's stable job or requisition ID when available, so a title or URL-slug change does not create a duplicate new-job alert. URL identity remains the fallback for sources that expose no stable ID.
+1. **Discipline:** Software engineering, software development, AI, machine learning, data engineering, platform, SRE, DevOps, cloud, mobile (iOS/Android), systems, firmware, or adjacent technical domains.
+2. **Seniority:** 0–3 years experience (Entry-Level, Associate, New Grad, SWE I, SWE II).
+   - **Strictly Excluded:** Senior, Staff, Principal, Lead, Director, Architect, Level III/IV+ (`SWE III`, `Engineer III`, `Level 3+`, `IC3+`, `Tier 3+`, `Experienced` prefix).
+3. **Location:** **Strictly United States** (US cities, states, or US-Remote). All international roles (e.g. Dublin, London, Bangalore, Toronto, EMEA, APAC) are rejected.
+4. **Freshness Barrier:** Released within **$\le 48$ hours** (Today, Yesterday, or 2 days). Older postings (e.g. 4+ days, April 2026) are rejected.
+5. **Sponsorship & Eligibility:**
+   - **Allowed:** Sponsorship available, future sponsorship possible, sponsorship not mentioned.
+   - **Rejected:** Explicit statement denying current/future visa sponsorship or OPT/CPT eligibility.
+   - **Internships:** Full-time/part-time graduate-eligible internships qualify; internships requiring current student enrollment are rejected.
 
-The monitor opens each job-detail page before deciding eligibility. It keeps software engineering/development, AI/ML, applied technical, data/platform/infrastructure, SRE, DevOps, cloud, mobile, and related roles. Full-time, part-time, contract, and graduate-eligible internships may qualify. A role is rejected when it explicitly requires more than three years, establishes excluded senior/leadership responsibility, requires an intern to be currently enrolled, says sponsorship is unavailable, or says OPT/CPT applicants are ineligible. Experience above three years that is only preferred is displayed but does not cause rejection. Sponsorship silence and current/future sponsorship availability remain eligible.
+---
 
-## First run behavior
+## 🏗️ System Architecture & Dual-Mode Ingestion Engine
 
-The first upgraded live run is a notification-suppressed reliability baseline. It populates the unfiltered snapshot, decisions, health data, dashboard, and workbook without announcing existing jobs. Later runs maintain separate `discovered`, `evaluated`, and `notified` state, and a previously rejected job can become newly eligible when its description changes. Never clear `data/state.json` or its existing maps merely to re-baseline or add a company; follow `AGENTS.md`.
-
-## Commands
-
-Run once:
-
-```powershell
-powershell.exe -ExecutionPolicy Bypass -File .\scripts\run_once.ps1
+```mermaid
+flowchart TD
+    A[GitHub Actions Runner - Every 30m] --> B[Test Suite: 100% Green]
+    B --> C[17 Company Scanners]
+    C --> D{ATS Date Mode}
+    
+    D -->|Mode A: Date-Explicit| E[Universal Date Normalizer]
+    E --> F{Is date > 48h old?}
+    F -->|YES| G[Mark 'DiscoveredOld' in DB - Silent]
+    F -->|NO| H[Lookup in data/company_jobs.json]
+    
+    D -->|Mode B: Date-Implicit| I{Is First Baseline Run?}
+    I -->|YES| J[Index all IDs as 'Baseline' - Silent]
+    I -->|NO| K[Lookup in data/company_jobs.json]
+    
+    H -->|New ID & Eligible| L[🚀 Send 1-Tap Apply Mobile Alert]
+    K -->|New ID & Eligible| L
+    
+    L --> M[Update data/company_jobs.json with status: 'Alerted']
+    L --> N[Regenerate Web Dashboard, Excel Workbook, CSV, Markdown]
+    N --> O[Git Commit & Push State to GitHub]
 ```
 
-Install the 30-minute Windows scheduled task:
+### Dual-Mode Handling:
+- **Mode A (Date-Explicit Portals):** *Oracle HCM (JPMorgan, Oracle), Workday (Intel, US Bank, Fidelity), Eightfold (Qualcomm), Phenom (Cisco), Amazon, Apple.*
+  - Even if search results return listings in arbitrary/shuffled order, the scraper extracts the exact publication timestamp from API payloads or DOM labels (`Posting Date: MM/DD/YYYY`). Postings $> 48$h old are indexed silently without triggering false alerts.
+- **Mode B (Date-Implicit Portals):** *Meta, Google, Microsoft, Goldman Sachs.*
+  - On cold start, all existing listings are baselined. On incremental runs, newly appeared unique requisition IDs are recognized as genuine new releases within that 30-minute window.
 
-```powershell.exe -ExecutionPolicy Bypass -File .\scripts\install_scheduled_task.ps1
-```
+---
 
-Remove it:
+## 🏢 Monitored Companies & ATS Platforms
 
-```powershell.exe -ExecutionPolicy Bypass -File .\scripts\uninstall_scheduled_task.ps1
-```
+| ID | Company | Platform / ATS | Career Portal Scope |
+|---|---|---|---|
+| `CMP-001` | Amazon.com Services LLC | Amazon Jobs REST API | US Software Engineering / Applied Science |
+| `CMP-002` | Meta Platforms, Inc | Meta Careers | US Software Engineering |
+| `CMP-003` | Google LLC | Google Applications API | US Early Career Campus & SWE |
+| `CMP-004` | Apple Inc | Apple Jobs REST API | US Software & Hardware Engineering |
+| `CMP-005` | Fidelity Investments | Workday | US Technology & Software |
+| `CMP-006` | IBM Corporation | IBM Careers | US Software Engineering & Cloud |
+| `CMP-007` | Qualcomm Technologies, Inc | Eightfold.ai | US Software & Embedded Engineering |
+| `CMP-008` | JPMorgan Chase & Co | Oracle Cloud HCM | US Software Engineering |
+| `CMP-009` | Intel Corporation | Workday | US Software Engineering |
+| `CMP-010` | Oracle America, Inc | Oracle Cloud HCM | US Software Development & Cloud |
+| `CMP-011` | Microsoft Corporation | Microsoft TalentNet | US Engineering & Technology |
+| `CMP-012` | Cisco Systems, Inc | Phenom People | US Software Engineering |
+| `CMP-013` | U.S. Bank National Association | Workday | US Technology & Architecture |
+| `CMP-014` | Wells Fargo Bank, N.A. | WellsFargoJobs | US Technology & Software |
+| `CMP-015` | Compunnel Software Group | Staffline | US Software & Cloud |
+| `CMP-016` | Microsoft | Microsoft Careers | US Software Engineering |
+| `CMP-017` | Goldman Sachs | Higher.gs.com | US Engineering & Technology |
 
-## Mobile Push Notifications (ntfy.sh)
+---
 
-Get instant phone notifications whenever new eligible jobs are found without checking email or GitHub issues:
+## 📲 Access Channels & Live Dashboards
 
-1. **Install the ntfy app** on your phone (iOS App Store or Android Google Play / F-Droid), or open [ntfy.sh](https://ntfy.sh) in your browser.
-2. **Subscribe to a private topic** name (e.g. `taran-career-jobs-secret789`).
-3. **Configure the topic**:
-   - **In GitHub Actions**: Add a secret named `NTFY_TOPIC` with your topic name in [GitHub Repository Secrets](https://github.com/taran-dev4u/career-job-monitor/settings/secrets/actions).
-   - **For local runs**: Set `"ntfy_topic": "your-secret-topic"` in `config.json` or set `$env:NTFY_TOPIC="your-secret-topic"`.
-4. When a new job matching your criteria is discovered, an instant push notification is sent to your phone with direct **Apply Now** action buttons!
+1. **Live Interactive Website:** [https://taran-dev4u.github.io/career-job-monitor/](https://taran-dev4u.github.io/career-job-monitor/)
+   - View active eligible roles, search by company/title, view actual company `Posted Date`, and track applications locally (`✓ Applied` / `✕ Dismiss`).
+2. **Instant Mobile Push Notifications (ntfy.sh):**
+   - Install the **ntfy** app on iOS / Android.
+   - Subscribe to topic: **`taran-career-jobs-2026`** ([https://ntfy.sh/taran-career-jobs-2026](https://ntfy.sh/taran-career-jobs-2026)).
+   - Receive instant push notifications with direct **1-Tap Apply Now** action buttons.
+3. **Google Sheets Live Auto-Sync:**
+   - In any Google Sheet cell `A1`, paste:
+     ```text
+     =IMPORTDATA("https://raw.githubusercontent.com/taran-dev4u/career-job-monitor/main/data/apply_now.csv")
+     ```
+   - Automatically refreshes active eligible jobs with clickable apply links.
+4. **Excel 7-Sheet Audit Workbook:** [`outputs/job-monitor/Job_Monitor.xlsx`](outputs/job-monitor/Job_Monitor.xlsx)
+   - Contains *Apply Now*, *New Jobs*, *All Extracted Jobs*, *Decision Audit*, *Source Health*, *Run Log*, and *Companies*.
+5. **GitHub Markdown Dashboards:**
+   - [Filtered Eligible Jobs (`LATEST_JOBS.md`)](LATEST_JOBS.md)
+   - [Unfiltered Extracted Snapshot (`ALL_EXTRACTED_JOBS.md`)](ALL_EXTRACTED_JOBS.md)
 
-## Google Sheets Live Auto-Sync
+---
 
-You can view and track jobs directly inside **Google Sheets** on your phone, tablet, or PC without downloading files:
+## 🤖 Multi-Agent Operating Rules & Precedence
 
-1. Create a new [Google Sheet](https://sheets.new).
-2. In cell **`A1`**, paste this formula:
-   ```text
-   =IMPORTDATA("https://raw.githubusercontent.com/taran-dev4u/career-job-monitor/main/data/apply_now.csv")
-   ```
-3. Google Sheets will automatically import and keep the job list refreshed with direct clickable Apply URLs! You can add your own adjacent columns (e.g. *Application Status*, *Date Applied*, *Notes*).
+This repository is maintained collaboratively by autonomous coding agents. **Every agent working in this folder must adhere to [`AGENTS.md`](AGENTS.md):**
 
-## Access Links & Dashboards
+1. **Instruction Precedence:** User explicit instructions $\to$ `AGENTS.md` $\to$ `README.md` $\to$ Agent assumptions.
+2. **Coordination via Agent Change Ledger:**
+   - Before editing, agents must read `AGENTS.md`, check for active tasks, and create an `IN_PROGRESS` entry.
+   - After verification, agents update their ledger entry to `DONE`. Completed entries are **immutable history** and must never be deleted or modified.
+3. **Sources of Truth Integrity:**
+   - Never clear `data/company_jobs.json`, `data/state.json`, `data/jobs.json`, or reset historical databases.
+   - Never edit `Job_Monitor.xlsx` directly; rebuild it from source code using `node src/build_workbook_ci.mjs --verify`.
+   - Run `npm test` before committing any code changes.
 
-- **Live Interactive Website:** https://taran-dev4u.github.io/career-job-monitor/
-- **Filtered Eligible Jobs (Markdown):** https://github.com/taran-dev4u/career-job-monitor/blob/main/LATEST_JOBS.md
-- **All Extracted Snapshot (Markdown):** https://github.com/taran-dev4u/career-job-monitor/blob/main/ALL_EXTRACTED_JOBS.md
-- **Excel 7-Sheet Workbook (.xlsx):** https://github.com/taran-dev4u/career-job-monitor/raw/main/outputs/job-monitor/Job_Monitor.xlsx
-- **Live CSV Feed for Google Sheets:** https://raw.githubusercontent.com/taran-dev4u/career-job-monitor/main/data/apply_now.csv
-- **Private Repository:** https://github.com/taran-dev4u/career-job-monitor
-- **Workflow Runs:** https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml
-
-## GitHub Actions
-
-The workflow at `.github/workflows/job-monitor.yml` runs at minutes 7 and 37 of every UTC hour and can also be started manually from the Actions tab. It installs Chromium, runs tests, scans all sources, rebuilds and verifies the seven-sheet workbook, pushes mobile notifications via ntfy, uploads the workbook as a 30-day artifact, and commits the dashboard plus runtime JSON/CSVs/workbook back to `main`.
-
-The workflow uses the repository-scoped `GITHUB_TOKEN` with `contents: write` and `issues: write`; no personal token or career-site credentials are stored. When new jobs are found, instant mobile push alerts are delivered via ntfy. Broken sources, or sources degraded for three consecutive runs, trigger health notifications.
-
-GitHub schedules are best-effort and may start late during platform congestion. The local Windows task must remain disabled while the cloud workflow is active. Career sites change frequently; `Confirmed Empty` means the source explicitly reported no matches, while `Degraded` or `Broken` means zero results cannot be trusted or extraction failed. Inspect `LATEST_JOBS.md`, `Source Health`, `Decision Audit`, and `monitor.log` rather than assuming a zero count means no jobs.
