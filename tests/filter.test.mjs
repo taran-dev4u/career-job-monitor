@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import config from "../config.json" with { type: "json" };
-import { buildCompanyJobRecord, canonicalCompanyJobKey, enrollmentDecision, evaluateEligibility, experienceDecision, extractJobId, isUsLocation, markBaselinePending, notificationDecision, parseJobDate, roleLooksRelevant, sponsorshipDecision, stableJobIdentityKey, stableJobKey } from "../src/lib.mjs";
+import { deriveLocationFromText, buildCompanyJobRecord, canonicalCompanyJobKey, enrollmentDecision, evaluateEligibility, experienceDecision, extractJobId, isUsLocation, markBaselinePending, notificationDecision, parseJobDate, roleLooksRelevant, sponsorshipDecision, stableJobIdentityKey, stableJobKey } from "../src/lib.mjs";
 import parserFixtures from "./fixtures/parser_contracts.json" with { type: "json" };
 import { adapterName, jsonCandidatesFrom } from "../src/scrape.mjs";
 
@@ -138,5 +138,113 @@ assert.equal(oldDiscoveredJob.notification_status, "DiscoveredOld");
 
 const freshJob = buildCompanyJobRecord({ company_id: "CMP-008", job_id: "8888", title: "Software Engineer I", accepted: true, decision: "Included", posted: "Today" }, null, "2026-08-24T00:00:00Z", false, config);
 assert.equal(freshJob.notification_status, "Alerted");
+
+
+// ---------------------------------------------------------------------------
+// Regression suite for the 2026-08-24 audit fixes.
+//
+// Context: an audit found 46 of 90 genuinely-eligible jobs were being silently
+// discarded. Three defects were responsible. These tests pin each one shut.
+// ---------------------------------------------------------------------------
+
+// FIX 1 - Freshness must NOT gate eligibility.
+// A 3-day-old Apple SWE role is still applyable; age only decides whether the
+// job earns a phone push. Previously `accepted` ANDed in !isExplicitlyOld,
+// which stamped such jobs Rejected and removed them from the dashboard, the
+// CSV and the workbook entirely.
+{
+  const oldButPerfect = evaluateEligibility({
+    title: "Software Engineer, Accessibility",
+    context: "Sunnyvale, California, United States. Build accessible software.",
+    description: "Sunnyvale, California, United States. Build accessible software.",
+    location: "Sunnyvale, California, United States",
+    posted: "08/21/2026",
+    config
+  });
+  assert.equal(oldButPerfect.accepted, true, "a 3-day-old eligible role must stay ELIGIBLE");
+  assert.equal(oldButPerfect.decision, "Included", "and must not be stamped Rejected");
+  assert.equal(oldButPerfect.is_fresh, false, "but it must be flagged as not fresh");
+  assert.ok(oldButPerfect.age_days >= 2, "and must carry its real age");
+  assert.ok(
+    !oldButPerfect.exclusion_reasons.some(r => /posted/i.test(r)),
+    "age must never appear as an exclusion reason"
+  );
+
+  const freshOne = evaluateEligibility({
+    title: "Software Engineer I",
+    context: "Seattle, Washington, United States",
+    description: "Seattle, Washington, United States",
+    location: "Seattle, WA",
+    posted: "Today",
+    config
+  });
+  assert.equal(freshOne.accepted, true);
+  assert.equal(freshOne.is_fresh, true, "a job posted today is fresh and push-worthy");
+
+  // Real disqualifiers must still reject.
+  assert.equal(evaluateEligibility({ title: "Principal Software Engineer", context: "Austin, TX", description: "Austin, TX", location: "Austin, TX", posted: "Today", config }).accepted, false, "senior titles still rejected");
+  assert.equal(evaluateEligibility({ title: "Software Engineer", context: "Dublin, Ireland", description: "Dublin, Ireland", location: "Dublin, Ireland", posted: "Today", config }).accepted, false, "foreign roles still rejected");
+}
+
+// FIX 2 - An absolute publication date beats a trailing relative phrase.
+// Amazon renders "Posted: February 6, 2026 (Updated 3 months ago)". The
+// relative matcher used to win and report 90 days; the string states its own
+// publication date, and "Updated" describes an edit, not the posting.
+{
+  const amazon = parseJobDate("Posted: February 6, 2026 (Updated 3 months ago)", 2);
+  assert.ok(amazon.iso.startsWith("2026-02-06"), "absolute date must win over '3 months ago'");
+  assert.notEqual(amazon.ageDays, 90, "must not report the relative phrase's age");
+
+  const both = parseJobDate("Posted: July 7, 2026 (Updated 11 days ago)", 2);
+  assert.ok(both.iso.startsWith("2026-07-07"), "publication date wins over update age");
+
+  // Purely relative strings must be untouched by the reorder.
+  assert.equal(parseJobDate("2 days ago", 2).isExplicitlyOld, false);
+  assert.equal(parseJobDate("3 days ago", 2).isExplicitlyOld, true);
+  assert.equal(parseJobDate("3 months ago", 2).isExplicitlyOld, true);
+  assert.equal(parseJobDate("Just posted", 2).isRecent, true);
+}
+
+// FIX 3 - A location that cannot be read must fail OPEN, not closed.
+// Nine of seventeen sources return an empty location field. Every one is a
+// US-scoped search URL, so "unreadable" means the scraper could not see it,
+// not that the job is abroad. Rejecting on absence lost 15 US roles.
+{
+  const blank = isUsLocation("", "");
+  assert.equal(blank.accepted, true, "blank location must not be rejected");
+  assert.equal(blank.location_confidence, "Unverified", "but must be marked unverified");
+
+  const confirmed = isUsLocation("Sunnyvale, California, United States", "");
+  assert.equal(confirmed.accepted, true);
+  assert.equal(confirmed.location_confidence, "Confirmed");
+
+  // Positively-identified foreign locations must still be rejected.
+  for (const foreign of ["Dublin, Ireland", "Warsaw, Poland", "Bengaluru, India", "Toronto, Canada"]) {
+    assert.equal(isUsLocation(foreign, "").accepted, false, foreign + " must still be rejected");
+  }
+
+  // An Amazon-shaped record with no location field must survive.
+  const amazonShaped = evaluateEligibility({
+    title: "Software Engineer I, Payments",
+    context: "Come build the future of payments.",
+    description: "Come build the future of payments.",
+    location: "",
+    posted: "Today",
+    config
+  });
+  assert.equal(amazonShaped.accepted, true, "Amazon SWE I with no location must be eligible");
+  assert.equal(amazonShaped.location_confidence, "Unverified");
+}
+
+// FIX 3b - Location recovery from description text.
+{
+  assert.equal(deriveLocationFromText("Software Engineer I USA, WA, Seattle | Job ID: 2712345"), "USA, WA, Seattle");
+  assert.equal(deriveLocationFromText("AppleCare Sunnyvale, California, United States Software"), "Sunnyvale, California, United States");
+  assert.equal(deriveLocationFromText("Join our team in Austin, TX and build"), "Austin, TX");
+  assert.equal(deriveLocationFromText("Great opportunity in Dublin, Ireland"), "", "must not invent a US location");
+  assert.equal(deriveLocationFromText("no location information here"), "");
+  // Recovered text must then satisfy the US check.
+  assert.equal(isUsLocation(deriveLocationFromText("Engineer USA, WA, Seattle | Job ID: 1"), "").accepted, true);
+}
 
 console.log("Eligibility, sponsorship, internship, location, date, deduplication, and adapter tests passed.");

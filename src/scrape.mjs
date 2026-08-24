@@ -1,5 +1,5 @@
 import { chromium } from "playwright";
-import { clean, compactSnippet, detectJobType, evaluateEligibility, extractJobId, hashText, isOlderThan, markBaselinePending, notificationDecision, stableJobIdentityKey } from "./lib.mjs";
+import { deriveLocationFromText, clean, compactSnippet, detectJobType, evaluateEligibility, extractJobId, hashText, isOlderThan, markBaselinePending, notificationDecision, stableJobIdentityKey } from "./lib.mjs";
 
 const GENERIC_TITLES = /^(?:jobs?|careers?|search results?|view jobs?|learn more|apply|read more|saved jobs?)$/i;
 const NAVIGATION_URL = /\/(?:search|results?|saved-jobs?|job-search|recommendations|alerts)\/?$/i;
@@ -160,13 +160,21 @@ async function readDetail(context, candidate, company, config, now) {
       return {
         title: posting?.title || firstText(["[data-automation-id='jobPostingHeader']", "[class*='job-title']", "[class*='jobTitle']", "meta[property='og:title']", "h1", "h2"]),
         location: jsonLocation || firstText(["[data-automation-id='locations']", "[class*='job-location']", "[class*='jobLocation']", "[class*='location']"]),
+        // Date precedence: structured metadata first, then a LABELLED date in
+        // the body ("Posted: August 21, 2026"), and only then loose DOM
+        // selectors. The loose [class*='date'] / "time" grab used to win, and
+        // on Amazon it latched onto a page-level element, stamping all 30 jobs
+        // with the same "(Updated 3 months ago)" string. A labelled date sits
+        // inside the job body and is per-job; an unlabelled element matched by
+        // fuzzy class name is a guess.
         posted: posting?.datePosted ||
           document.querySelector("meta[property='article:published_time']")?.getAttribute("content") ||
           document.querySelector("meta[name='date']")?.getAttribute("content") ||
           document.querySelector("meta[name='dcterms.date']")?.getAttribute("content") ||
           document.querySelector("time[datetime]")?.getAttribute("datetime") ||
-          firstText(["time", "[class*='posted']", "[data-automation-id='postedOn']", "[itemprop='datePosted']", "[class*='date']"]) ||
-          domPosted,
+          document.querySelector("[itemprop='datePosted']")?.textContent?.trim() ||
+          domPosted ||
+          firstText(["time", "[class*='posted']", "[data-automation-id='postedOn']", "[class*='date']"]),
         employmentType: Array.isArray(posting?.employmentType) ? posting.employmentType.join(", ") : posting?.employmentType || "",
         validThrough: posting?.validThrough || "", body, finalUrl: location.href,
         closedText: /no longer available|position has been filled|job has expired|posting is closed/i.test(body)
@@ -176,7 +184,17 @@ async function readDetail(context, candidate, company, config, now) {
     const title = !GENERIC_TITLES.test(candidate.title) && candidate.title.length > 4 ? candidate.title : detailTitle;
     const expired = !response || response.status() >= 400 || data.closedText || (data.validThrough && new Date(data.validThrough).getTime() < Date.now());
     const description = clean(data.body || candidate.context);
-    const location = clean(data.location || (company.id === "CMP-002" ? candidate.context : ""));
+    // Location resolution, in order of trust:
+    //   1. what the detail page exposed as a location field
+    //   2. Meta only: the search-card context (its detail pages omit location)
+    //   3. NEW: derive it from the description body
+    //
+    // Nine of seventeen sources returned an empty location field, and Amazon
+    // returned 30/30 empty - every one of those jobs was then rejected as
+    // "outside the United States" despite being Seattle/Sunnyvale roles. The
+    // body almost always states the city even when no location element does.
+    const rawLocation = clean(data.location || (company.id === "CMP-002" ? candidate.context : ""));
+    const location = rawLocation || deriveLocationFromText(`${candidate.context} ${description}`);
     const posted = clean(data.posted);
     const eligibility = evaluateEligibility({ title, context: candidate.context, description, location, posted, config });
     if (expired) { eligibility.accepted = false; eligibility.decision = "Rejected"; eligibility.exclusion_reasons.push("Job is expired or closed"); }

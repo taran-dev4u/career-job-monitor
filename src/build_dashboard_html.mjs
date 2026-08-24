@@ -86,8 +86,19 @@ async function build() {
     const expOK = t.reqYears == null || t.reqYears <= maxYears;
     const spOK = !(t.spons === "Not Available" || t.spons === "OPT/CPT Not Allowed");
     const enrollOK = !t.reasons.some(x => /current enrollment/i.test(x));
-    const activeOK = t.active !== "Expired" && !t.reasons.some(x => /outside the United States/i.test(x));
+    // Location is judged by the LIVE recheck above, never by t.reasons.
+    // t.reasons is the stored verdict from the last scan; re-reading the old
+    // "outside the United States" string here re-applied the very bug the
+    // recheck exists to correct, so a fix could not surface until the stored
+    // data happened to be rewritten.
+    const activeOK = t.active !== "Expired";
     const accepted = recheck.accepted && expOK && spOK && enrollOK && activeOK;
+    // Freshness is informational now, not disqualifying: it drives the NEW
+    // badge and the default newest-first sort, and gates phone pushes in
+    // src/notify_ntfy.mjs - but never hides a job you can still apply to.
+    t.isFresh = recheck.is_fresh !== false;
+    t.ageDays = recheck.age_days ?? null;
+    t.locConf = recheck.location_confidence || "Confirmed";
     const correctedDecision = accepted ? "Included"
       : t.decision === "Pending Detail" || t.decision === "Extraction Error" ? t.decision : "Rejected";
     t.recovered = accepted && r.decision !== "Included";
@@ -283,6 +294,8 @@ footer{color:var(--muted);font-size:12px;margin-top:28px;text-align:center}
 .banner b{font-weight:660}
 .tile.rec{background:linear-gradient(180deg,color-mix(in srgb,var(--good) 18%,var(--card)),var(--card))}
 .rowtag{display:inline-block;margin-left:6px;padding:0 7px;border-radius:999px;font-size:10px;font-weight:700;background:var(--good);color:#fff;vertical-align:middle}
+.rowtag.tag-new{background:var(--brand)}
+.rowtag.tag-loc{background:transparent;color:var(--muted);border:1px solid var(--border);font-weight:600;cursor:help}
 .act{display:inline-flex;gap:6px;align-items:center}
 .act button{border:1px solid var(--border);background:var(--surface);color:var(--ink2);border-radius:7px;
   padding:5px 9px;font-size:11px;cursor:pointer;font-family:inherit;font-weight:550;white-space:nowrap}
@@ -608,10 +621,14 @@ function render(){
     const open=expanded.has(r.key);
     const status=STATUS[r.key]||"none";
     const recTag=r.recovered?'<span class="rowtag">RECOVERED</span>':'';
+    // NEW = inside the 48h window, i.e. this one also went to your phone.
+    // Everything else is still fully applyable, just not push-worthy.
+    const freshTag=(r.isFresh&&r.decision==="Included")?'<span class="rowtag tag-new">NEW</span>':'';
+    const locTag=(r.locConf==="Unverified"&&r.decision==="Included")?'<span class="rowtag tag-loc" title="The source did not state a location. Not rejected \u2014 this is a US-scoped search.">US?</span>':'';
     out.push('<tr class="'+(status==="dismissed"?"dismissed":"")+'">'+
       '<td class="num" title="Scanned at: '+fmtDate(r.seen)+'">'+fmtPostedDate(r)+'</td>'+
       '<td>'+esc(r.company)+'</td>'+
-      '<td class="role">'+esc(r.title)+recTag+
+      '<td class="role">'+esc(r.title)+freshTag+recTag+locTag+
         '<span class="expander" data-x="'+r.key+'">'+(open?"▲ less":"▼ why")+'</span></td>'+
       '<td>'+esc(r.location||"—")+'</td>'+
       '<td>'+esc(r.type||"—")+'</td>'+

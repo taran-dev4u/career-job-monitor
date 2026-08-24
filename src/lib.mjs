@@ -267,7 +267,43 @@ function describeAbsoluteDate(dateObj, maxAgeDays) {
   };
 }
 
+// Recover a location from free description text when the source did not expose a
+// location field of its own. Nine of seventeen adapters return an empty
+// location; their pages still almost always state the city in the body
+// ("USA, WA, Seattle", "Sunnyvale, California, United States", "Austin, TX").
+// Returns "" when nothing convincing is found, which leaves the caller in the
+// Unverified fail-open path rather than inventing a location.
+const US_STATE_ABBR = "AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VT|VA|WA|WV|WI|WY|DC";
+const US_STATE_FULL = "Alabama|Alaska|Arizona|Arkansas|California|Colorado|Connecticut|Delaware|Florida|Georgia|Hawaii|Idaho|Illinois|Indiana|Iowa|Kansas|Kentucky|Louisiana|Maine|Maryland|Massachusetts|Michigan|Minnesota|Mississippi|Missouri|Montana|Nebraska|Nevada|New Hampshire|New Jersey|New Mexico|New York|North Carolina|North Dakota|Ohio|Oklahoma|Oregon|Pennsylvania|Rhode Island|South Carolina|South Dakota|Tennessee|Texas|Utah|Vermont|Virginia|Washington|West Virginia|Wisconsin|Wyoming";
+// A city is 1-3 capitalised words ("Austin", "San Jose", "Salt Lake City").
+// Allowing free lowercase inside would let prose ("Join our team in Austin")
+// bleed into the captured location.
+const CITY = "[A-Z][a-z.'-]{1,18}(?: [A-Z][a-z.'-]{1,18}){0,2}";
+
+export function deriveLocationFromText(text) {
+  const t = clean(String(text || "")).slice(0, 1200);
+  if (!t) return "";
+  const patterns = [
+    // Amazon style: "USA, WA, Seattle" / "US, CA, Sunnyvale"
+    new RegExp("\\b(?:USA|US|United States)\\s*,\\s*(?:" + US_STATE_ABBR + ")\\s*,\\s*" + CITY),
+    // "Sunnyvale, California, United States"
+    new RegExp("\\b" + CITY + ",\\s*(?:" + US_STATE_FULL + ")(?:,\\s*United States)?\\b"),
+    // "Austin, TX" / "Seattle, WA"
+    new RegExp("\\b" + CITY + ",\\s*(?:" + US_STATE_ABBR + ")\\b"),
+    // "Remote - US"
+    /\bRemote\s*[-–]\s*(?:US|USA|United States)\b/i,
+    // Bare country mention, last resort
+    /\bUnited States\b/
+  ];
+  for (const pattern of patterns) {
+    const match = t.match(pattern);
+    if (match) return clean(match[0]);
+  }
+  return "";
+}
+
 export function parseJobDate(dateStr, maxAgeDays = 2) {
+
   if (!dateStr) return { hasDate: false, isRecent: true, isExplicitlyOld: false, ageDays: null, label: "Recently Released" };
   const cleanStr = clean(String(dateStr)).trim();
 
