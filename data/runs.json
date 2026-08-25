@@ -1618,5 +1618,19 @@
     "broken_sources": 0,
     "errors": 0,
     "duration_seconds": 115.8
+  },
+  {
+    "run_at": "2026-08-25T23:00:35.775Z",
+    "mode": "incremental",
+    "companies_checked": 17,
+    "candidates_seen": 361,
+    "evaluations_completed": 37,
+    "new_jobs_added": 0,
+    "healthy_sources": 17,
+    "confirmed_empty_sources": 0,
+    "degraded_sources": 0,
+    "broken_sources": 0,
+    "errors": 0,
+    "duration_seconds": 110.4
   }
 ]
