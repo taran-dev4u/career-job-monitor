@@ -1,6 +1,6 @@
 # All Extracted Jobs — Unfiltered
 
-Updated: **2026-08-25T03:08:45.979Z UTC** / **Aug 24, 2026, 11:08 PM Eastern**
+Updated: **2026-08-25T03:57:51.345Z UTC** / **Aug 24, 2026, 11:57 PM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
