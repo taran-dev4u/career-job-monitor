@@ -1,6 +1,28 @@
 {
-  "run_at": "2026-08-25T13:04:05.767Z",
+  "run_at": "2026-08-25T13:59:54.829Z",
   "suppressed": false,
   "jobs": [],
-  "health_alerts": []
+  "health_alerts": [
+    {
+      "run_at": "2026-08-25T13:59:54.752Z",
+      "company_id": "CMP-017",
+      "company": "Goldman Sachs",
+      "source_url": "https://higher.gs.com/results?EXPERIENCE_LEVEL=Analyst|Associate&JOB_FUNCTION=Data%20Analytics|Data%20Engineering|Software%20Engineering&LOCATION=Arizona|Los%20Angeles|Newport%20Beach|San%20Francisco|Newport%20Beach|San%20Francisco|Washington|Wilmington|Washington|Miami|West%20Palm%20Beach|Miami|West%20Palm%20Beach|Atlanta|Chicago|Deerfield|Chicago|Boston|Boston|Detroit|Jersey%20City|Albany|New%20York|Jersey%20City|Albany|New%20York|Philadelphia|Pittsburgh|Philadelphia|Dallas|Houston|Irving|Richardson|Dallas|Houston|Richardson|Draper|Salt%20Lake%20City|Salt%20Lake%20City|Seattle|Seattle&page=1&sort=POSTED_DATE",
+      "resolved_url": "",
+      "adapter": "Goldman Sachs",
+      "http_status": 0,
+      "status": "Broken",
+      "candidate_count": 0,
+      "detail_success_count": 0,
+      "detail_error_count": 0,
+      "pending_detail_count": 0,
+      "eligible_count": 0,
+      "rejected_count": 0,
+      "zero_streak": 2,
+      "degraded_streak": 0,
+      "last_candidate_at": "2026-08-25T12:00:45.193Z",
+      "last_healthy_at": "2026-08-25T12:00:45.193Z",
+      "diagnostic": "page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://higher.gs.com/results?EXPERIENCE_LEVEL=Analyst|Associate&JOB_FUNCTION=Data%20Analytics|Data%20Engineering|Software%20Engineering&LOCATION=Arizona|Los%20Angeles|Newport%20Beach|San%20Francisco|Newport%20Beach|San%20Francisco|Washington|Wilmington|Washington|Miami|West%20Palm%20Beach|Miami|West%20Palm%20Beach|Atlanta|Chicago|Deerfield|Chicago|Boston|Boston|Detroit|Jersey%20City|Albany|New%20York|Jersey%20City|Albany|New%20York|Philadelphia|Pittsburgh|Philadelphia|Dallas|Houston|Irving|Richardson|Dallas|Houston|Richardson|Draper|Salt%20Lake%20City|Salt%20Lake%20City|Seattle|Seattle&page=1&sort=POSTED_DATE\", waiting until \"domcontentloaded\"\n"
+    }
+  ]
 }
