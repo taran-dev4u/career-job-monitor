@@ -1,6 +1,6 @@
 # Latest Eligible Jobs — Filtered
 
-Updated: **2026-08-25T21:59:03.024Z UTC** / **Aug 25, 2026, 5:59 PM Eastern**
+Updated: **2026-08-25T22:37:17.815Z UTC** / **Aug 25, 2026, 6:37 PM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
@@ -12,8 +12,12 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 
 | First Seen | Company | Role | Location | Type | Posted | Required | Preferred | Sponsorship | Apply |
 |---|---|---|---|---|---|---:|---:|---|---|
+| 2026-08-25T22:36:52.546Z | Microsoft | Software Engineer | Redmond, WA,US, US | FULL_TIME | 2026-08-25T21:50:50 | Not stated | Not stated | Not Mentioned | [Apply](https://apply.careers.microsoft.com/careers/job/1970393556978993) |
+| 2026-08-25T22:36:50.688Z | COMPUNNEL SOFTWARE GROUP, INC | Database Engineer Maria DB & ServiceNow | Not stated | Not specified | Upload Resume | Not stated | Not stated | Not Mentioned | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=Jk%2bzIAnUSYLcrkp6qPNu7A%3d%3d&Source=4414&EntityGroup=2321) |
+| 2026-08-25T22:36:50.688Z | COMPUNNEL SOFTWARE GROUP, INC | Front-End Developer React/UX/UI | Not stated | Not specified | Upload Resume | 2+ years | Not stated | Not Mentioned | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=XuCKEksiyI%2beuMoNhn5RpA%3d%3d&Source=4414&EntityGroup=2321) |
+| 2026-08-25T21:57:02.977Z | Apple Inc | Machine Learning Engineer, Human Centered AI - Evaluations & Insights | Insights Seattle, Washington, United States | Not specified | 2026-08-25 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200679685-3337/machine-learning-engineer-human-centered-ai-evaluations-insights?team=MLAI) |
 | 2026-08-25T21:57:02.977Z | Apple Inc | Software Development Engineer in Test, Creative Apps | Apps San Diego, California, United States | Not specified | 2026-08-25 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200679734-3543/software-development-engineer-in-test-creative-apps?team=SFTWR) |
-| 2026-08-25T21:57:02.976Z | Amazon.com Services LLC | Software Development Engineer, Recipient Experience, Your Orders | Not stated | Not specified | Posted: June 18, 2026 (Updated 9 minutes ago) | Not stated | 3+ years | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10514850/software-development-engineer-recipient-experience-your-orders) |
+| 2026-08-25T21:57:02.976Z | Amazon.com Services LLC | Software Development Engineer, Recipient Experience, Your Orders | Not stated | Not specified | Posted: June 18, 2026 (Updated 9 minutes ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10514850/software-development-engineer-recipient-experience-your-orders) |
 | 2026-08-25T21:38:28.882Z | Microsoft | Member of Technical Staff - AI Data Platform, Frontier Models | [object Object] | FULL_TIME | 2026-08-25T21:10:09 | Not stated | Not stated | Not Mentioned | [Apply](https://apply.careers.microsoft.com/careers/job/1970393556981193) |
 | 2026-08-25T21:37:31.373Z | JPMorgan Chase & Co | AI/ ML Software Engineer II | New York, NY, United States | Full time | 2026-08-25T21:13:50.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210704209) |
 | 2026-08-25T21:36:52.212Z | Google LLC | Software Engineer, Generative AI, Maps | Mountain View, CA | Not specified | Not stated | 2+ years | 2+ years | Not Mentioned | [Apply](https://www.google.com/about/careers/applications/jobs/results/76862868464509638-software-engineer-generative-ai-maps?location=United%20States&hl=en&sort_by=date&employment_type=FULL_TIME&q=%22Software%20Engineer%22) |
@@ -46,18 +50,18 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 | 2026-08-25T07:00:14.065Z | Amazon.com Services LLC | Software Dev Engineer I, AWS Region Expansion | Not stated | Not specified | Posted: August 24, 2026 (Updated about 9 hours ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10512584/software-dev-engineer-i-aws-region-expansion) |
 | 2026-08-25T01:43:30.354Z | Apple Inc | Machine Learning Engineer - Intelligent Quality Systems | Quality Systems Cupertino, California, United States | Not specified | 2026-08-25 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200670335-0836/machine-learning-engineer-intelligent-quality-systems?team=SFTWR) |
 | 2026-08-25T01:43:30.354Z | Apple Inc | Software Engineer, Infrastructure Services (Cloud Network Fault Tolerance) | Francisco Bay Area, California, United States | Not specified | 2026-08-25 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200679765-3401/software-engineer-infrastructure-services-cloud-network-fault-tolerance?team=SFTWR) |
-| 2026-08-24T22:35:15.335Z | Amazon.com Services LLC | Software Development Engineer, Amazon WorkSpaces | Not stated | Not specified | Posted: August 24, 2026 (Updated 10 minutes ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10512990/software-development-engineer-amazon-workspaces) |
-| 2026-08-24T21:57:51.693Z | Amazon.com Services LLC | Software Development Engineer, Conversational Ads Experience | Not stated | Not specified | Posted: April 8, 2026 (Updated 23 minutes ago) | Not stated | Not stated | Unclear | [Apply](https://www.amazon.jobs/en/jobs/10512945/software-development-engineer-conversational-ads-experience) |
+| 2026-08-24T22:35:15.335Z | Amazon.com Services LLC | Software Development Engineer, Amazon WorkSpaces | Not stated | Not specified | Posted: February 6, 2026 (Updated 3 months ago) | Not stated | 3+ years | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10512990/software-development-engineer-amazon-workspaces) |
+| 2026-08-24T21:57:51.693Z | Amazon.com Services LLC | Software Development Engineer, Conversational Ads Experience | Not stated | Not specified | Posted: February 6, 2026 (Updated 3 months ago) | Not stated | 4+ years | Unclear | [Apply](https://www.amazon.jobs/en/jobs/10512945/software-development-engineer-conversational-ads-experience) |
 | 2026-08-24T21:04:41.161Z | Google LLC | Software Engineer, Infrastructure, PhD, Early Career, 2027 Start | Sunnyvale, CA | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://www.google.com/about/careers/applications/jobs/results/84680705375642310-software-engineer-infrastructure-phd-early-career-2027-start?location=United%20States&hl=en&sort_by=date&employment_type=FULL_TIME&q=%22Software%20Engineer%22&page=2) |
 | 2026-08-24T20:59:12.823Z | Microsoft | AI Software Engineering Intern | Redmond, WA,US, US; Mountain View, CA,US, US | FULL_TIME | 2026-08-25T19:15:31 | Not stated | Not stated | Not Mentioned | [Apply](https://apply.careers.microsoft.com/careers/job/1970393556979054) |
 | 2026-08-24T20:57:59.542Z | Qualcomm Technologies, Inc | Artificial Intelligence for Video Compression - Research Scientist | San Diego, CA,US, US; Hsinchu, Hsinchu City,TW, TW; Munich, BY,DE, DE | FULL_TIME | 2026-07-17T00:00:00 | Not stated | Not stated | Not Mentioned | [Apply](https://careers.qualcomm.com/careers/job/446707518930) |
-| 2026-08-24T20:57:12.955Z | Amazon.com Services LLC | Software Development Engineer, Security Platform | Not stated | Not specified | Posted: March 27, 2026 (Updated about 2 months ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10510816/software-development-engineer-security-platform) |
 | 2026-08-24T20:57:12.955Z | Amazon.com Services LLC | Data Scientist, Automated Vehicle Testing | Not stated | Not specified | Posted: February 6, 2026 (Updated 3 months ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10509454/data-scientist-automated-vehicle-testing) |
 | 2026-08-24T20:57:12.955Z | Amazon.com Services LLC | Software Development Engineer, Ads Console Frameworks | Not stated | Not specified | Posted: February 6, 2026 (Updated 3 months ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10511665/software-development-engineer-ads-console-frameworks) |
 | 2026-08-24T20:57:12.955Z | Amazon.com Services LLC | Software Development Engineer, Amazon WorkSpaces | Not stated | Not specified | Posted: February 6, 2026 (Updated 3 months ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10512148/software-development-engineer-amazon-workspaces) |
 | 2026-08-24T20:57:12.955Z | Amazon.com Services LLC | Software Development Engineer, Automated Vehicle Testing | Not stated | Not specified | Posted: February 6, 2026 (Updated 3 months ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10509453/software-development-engineer-automated-vehicle-testing) |
 | 2026-08-24T20:57:12.955Z | Amazon.com Services LLC | Software Development Engineer, Integrated Vehicle Testing | Not stated | Not specified | Posted: February 6, 2026 (Updated 3 months ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10510229/software-development-engineer-integrated-vehicle-testing) |
 | 2026-08-24T20:57:12.955Z | Amazon.com Services LLC | Software Development Engineer, S3 Glacier | Not stated | Not specified | Posted: February 6, 2026 (Updated 3 months ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10512552/software-development-engineer-s3-glacier) |
+| 2026-08-24T20:57:12.955Z | Amazon.com Services LLC | Software Development Engineer, Security Platform | Not stated | Not specified | Posted: February 6, 2026 (Updated 3 months ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10510816/software-development-engineer-security-platform) |
 | 2026-08-24T20:00:28.287Z | Goldman Sachs | Engineering - SRE Platforms - SRE Engineer - Associate - Dallas | Corporate Treasury, New York | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/153024) |
 | 2026-08-24T19:37:14.450Z | Cisco Systems, Inc | Software Engineer I (Full Time) - United States | Milpitas, California, United States of America; San Jose, California, United States of America | FULL_TIME | 2026-08-25 | Not stated | Not stated | Not Mentioned | [Apply](https://careers.cisco.com/global/en/job/2023527/Software-Engineer-I-Full-Time-United-States) |
 | 2026-08-24T19:37:14.450Z | Cisco Systems, Inc | Software Engineer II (Full Time) - United States | Milpitas, California, United States of America | Full time | 2026-08-24T00:00:00.000+0000 | Not stated | Not stated | Not Mentioned | [Apply](https://careers.cisco.com/global/en/job/2023512/Software-Engineer-II-Full-Time-United-States) |
@@ -93,22 +97,22 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 
 | ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |
 |---|---|---|---:|---:|---:|---|---|
-| CMP-003 | Google LLC | Healthy | 40 | 0 | 0 | 2026-08-25T21:57:17.265Z |  |
-| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-25T21:57:27.482Z |  |
-| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-25T21:57:49.437Z |  |
-| CMP-007 | Qualcomm Technologies, Inc | Healthy | 20 | 0 | 0 | 2026-08-25T21:57:58.765Z |  |
-| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-25T21:58:12.124Z |  |
-| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-25T21:58:13.622Z |  |
-| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-25T21:58:20.533Z |  |
-| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-25T21:58:23.019Z |  |
-| CMP-012 | Cisco Systems, Inc | Healthy | 6 | 0 | 0 | 2026-08-25T21:58:31.478Z |  |
-| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-25T21:58:33.583Z | 4 jobs queued for incremental evaluation |
-| CMP-011 | Microsoft Corporation | Healthy | 23 | 0 | 0 | 2026-08-25T21:58:34.505Z |  |
-| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-25T21:58:51.820Z |  |
-| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 20 | 0 | 0 | 2026-08-25T21:58:53.256Z |  |
-| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-25T21:58:57.531Z |  |
-| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-08-25T21:59:00.777Z |  |
-| CMP-017 | Goldman Sachs | Healthy | 17 | 0 | 0 | 2026-08-25T21:59:02.376Z |  |
-| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-25T21:59:02.937Z |  |
+| CMP-003 | Google LLC | Healthy | 40 | 0 | 0 | 2026-08-25T22:35:36.517Z |  |
+| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-25T22:35:43.029Z |  |
+| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-25T22:35:56.604Z |  |
+| CMP-007 | Qualcomm Technologies, Inc | Healthy | 20 | 0 | 0 | 2026-08-25T22:36:06.318Z |  |
+| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-25T22:36:07.960Z |  |
+| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-25T22:36:16.207Z |  |
+| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-25T22:36:19.718Z |  |
+| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-25T22:36:26.027Z |  |
+| CMP-011 | Microsoft Corporation | Healthy | 23 | 0 | 0 | 2026-08-25T22:36:33.390Z |  |
+| CMP-012 | Cisco Systems, Inc | Healthy | 6 | 0 | 0 | 2026-08-25T22:36:34.872Z |  |
+| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 20 | 0 | 0 | 2026-08-25T22:36:50.688Z |  |
+| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-25T22:36:52.546Z | 2 jobs queued for incremental evaluation |
+| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-25T22:36:53.771Z |  |
+| CMP-017 | Goldman Sachs | Healthy | 17 | 0 | 0 | 2026-08-25T22:37:02.489Z |  |
+| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-08-25T22:37:07.216Z |  |
+| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-25T22:37:17.496Z |  |
+| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-25T22:37:17.732Z |  |
 
 > “Degraded” means extraction could not prove the source was complete. Review the unfiltered dashboard or workbook audit sheets for every decision.
