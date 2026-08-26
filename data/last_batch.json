@@ -1,16 +1,16 @@
 {
-  "run_at": "2026-08-26T12:02:45.800Z",
+  "run_at": "2026-08-26T13:08:44.734Z",
   "suppressed": false,
   "jobs": [],
   "health_alerts": [
     {
-      "run_at": "2026-08-26T12:02:01.441Z",
-      "company_id": "CMP-014",
-      "company": "WELLS FARGO BANK, N.A",
-      "source_url": "https://www.wellsfargojobs.com/en/jobs/?search=software+engineer&country=United+States+of+America&team=Data+%26+Analytics&team=Technology&type=Full+time&pagesize=20#results",
-      "resolved_url": "https://www.wellsfargojobs.com/en/jobs/?search=software+engineer&country=United+States+of+America&team=Data+%26+Analytics&team=Technology&type=Full+time&pagesize=20#results",
-      "adapter": "Phenom",
-      "http_status": 429,
+      "run_at": "2026-08-26T13:08:21.268Z",
+      "company_id": "CMP-010",
+      "company": "Oracle America, Inc",
+      "source_url": "https://careers.oracle.com/en/sites/jobsearch/jobs?keyword=Software+Engineering&lastSelectedFacet=POSTING_DATES&location=United+States&locationId=300000000149325&selectedPostingDatesFacet=7&sortBy=POSTING_DATES_DESC",
+      "resolved_url": "https://careers.oracle.com/en/sites/jobsearch/jobs?keyword=Software+Engineering&lastSelectedFacet=POSTING_DATES&location=United+States&locationId=300000000149325&selectedPostingDatesFacet=7&sortBy=POSTING_DATES_DESC",
+      "adapter": "Oracle Recruiting",
+      "http_status": 504,
       "status": "Broken",
       "candidate_count": 0,
       "detail_success_count": 0,
@@ -20,9 +20,9 @@
       "rejected_count": 0,
       "zero_streak": 1,
       "degraded_streak": 0,
-      "last_candidate_at": "2026-08-26T11:40:07.365Z",
-      "last_healthy_at": "2026-08-26T11:40:07.365Z",
-      "diagnostic": "HTTP 429"
+      "last_candidate_at": "2026-08-26T12:01:23.015Z",
+      "last_healthy_at": "2026-08-26T12:01:23.015Z",
+      "diagnostic": "HTTP 504"
     }
   ]
 }
