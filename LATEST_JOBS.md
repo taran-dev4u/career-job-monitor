@@ -1,6 +1,6 @@
 # Latest Eligible Jobs — Filtered
 
-Updated: **2026-08-26T06:03:56.664Z UTC** / **Aug 26, 2026, 2:03 AM Eastern**
+Updated: **2026-08-26T07:02:54.604Z UTC** / **Aug 26, 2026, 3:02 AM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
@@ -47,7 +47,6 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 | 2026-08-25T20:37:52.425Z | Apple Inc | Backend Software Engineer - Camera & Photos Tools & AI Team | Team Cupertino, California, United States | Not specified | 2026-08-25 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200672256-0836/backend-software-engineer-camera-photos-tools-ai-team?team=SFTWR) |
 | 2026-08-25T19:40:39.887Z | Oracle America, Inc | Software Engineer, Core Infrastructure | Nashville, TN, United States | Not specified | 2026-08-25T19:24:53.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://careers.oracle.com/en/sites/jobsearch/job/342348) |
 | 2026-08-25T19:39:40.008Z | Apple Inc | AIML Software Engineer, On-Device Audio Intelligence, Sensing & Connectivity | Connectivity Cupertino, California, United States | Not specified | 2026-08-25 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200679707-0836/aiml-software-engineer-on-device-audio-intelligence-sensing-connectivity?team=SFTWR) |
-| 2026-08-25T18:52:02.574Z | Cisco Systems, Inc | Software Engineer | Austin, Texas, United States of America | Full time | 2026-08-25T00:00:00.000+0000 | Not stated | Not stated | Not Mentioned | [Apply](https://careers.cisco.com/global/en/job/2020278/Software-Engineer) |
 | 2026-08-25T18:50:21.064Z | Apple Inc | DRM Software Engineer | Engineer New City, New York, United States | Not specified | 2026-08-25 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200679922-5819/drm-software-engineer?team=SFTWR) |
 | 2026-08-25T17:38:38.184Z | Amazon.com Services LLC | Software Development Engineer II, Amazon Leo Fulfillment Technology | Not stated | Not specified | Posted: August 25, 2026 (Updated 20 minutes ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10514163/software-development-engineer-ii-amazon-leo-fulfillment-technology) |
 | 2026-08-25T16:46:54.434Z | Amazon.com Services LLC | Software Development Engineer, S3 | Not stated | Not specified | Posted: August 25, 2026 (Updated 39 minutes ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10513862/software-development-engineer-s3) |
@@ -103,22 +102,22 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 
 | ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |
 |---|---|---|---:|---:|---:|---|---|
-| CMP-003 | Google LLC | Healthy | 40 | 0 | 0 | 2026-08-26T06:02:23.567Z |  |
-| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-26T06:02:25.203Z |  |
-| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-26T06:02:29.875Z |  |
-| CMP-007 | Qualcomm Technologies, Inc | Healthy | 20 | 0 | 0 | 2026-08-26T06:02:39.147Z |  |
-| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-26T06:02:48.290Z |  |
-| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-26T06:02:54.839Z |  |
-| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-26T06:03:01.632Z |  |
-| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-26T06:03:04.105Z |  |
-| CMP-012 | Cisco Systems, Inc | Healthy | 6 | 0 | 0 | 2026-08-26T06:03:12.893Z |  |
-| CMP-011 | Microsoft Corporation | Healthy | 23 | 0 | 0 | 2026-08-26T06:03:15.268Z |  |
-| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 40 | 0 | 0 | 2026-08-26T06:03:31.146Z |  |
-| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-26T06:03:32.836Z |  |
-| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-26T06:03:39.516Z |  |
-| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-26T06:03:42.188Z |  |
-| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-08-26T06:03:42.801Z |  |
-| CMP-017 | Goldman Sachs | Healthy | 17 | 0 | 0 | 2026-08-26T06:03:48.038Z |  |
-| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-26T06:03:56.559Z |  |
+| CMP-003 | Google LLC | Healthy | 40 | 0 | 0 | 2026-08-26T07:01:18.818Z |  |
+| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-26T07:01:20.355Z |  |
+| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-26T07:01:25.181Z |  |
+| CMP-007 | Qualcomm Technologies, Inc | Healthy | 20 | 0 | 0 | 2026-08-26T07:01:34.409Z |  |
+| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-26T07:01:43.785Z |  |
+| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-26T07:01:49.051Z |  |
+| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-26T07:01:52.226Z |  |
+| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-26T07:01:58.442Z |  |
+| CMP-011 | Microsoft Corporation | Healthy | 23 | 0 | 0 | 2026-08-26T07:02:06.147Z |  |
+| CMP-012 | Cisco Systems, Inc | Healthy | 5 | 0 | 0 | 2026-08-26T07:02:07.160Z |  |
+| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 40 | 0 | 0 | 2026-08-26T07:02:23.140Z |  |
+| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-26T07:02:31.532Z |  |
+| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-26T07:02:33.936Z |  |
+| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-26T07:02:35.202Z |  |
+| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-08-26T07:02:40.872Z |  |
+| CMP-017 | Goldman Sachs | Healthy | 17 | 0 | 0 | 2026-08-26T07:02:43.031Z |  |
+| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-26T07:02:54.523Z |  |
 
 > “Degraded” means extraction could not prove the source was complete. Review the unfiltered dashboard or workbook audit sheets for every decision.

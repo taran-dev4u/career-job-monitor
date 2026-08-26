@@ -1,12 +1,12 @@
 # All Extracted Jobs — Unfiltered
 
-Updated: **2026-08-26T06:03:56.664Z UTC** / **Aug 26, 2026, 2:03 AM Eastern**
+Updated: **2026-08-26T07:02:54.604Z UTC** / **Aug 26, 2026, 3:02 AM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
 > Newest discovered jobs are always shown first.
 
-Snapshot totals: **381 extracted**, **87 included**, **294 rejected**, **0 pending**, **0 extraction errors**.
+Snapshot totals: **380 extracted**, **86 included**, **294 rejected**, **0 pending**, **0 extraction errors**.
 
 This view intentionally includes rejected jobs. Use the **Decision** and **Reasons** columns before applying.
 
@@ -112,7 +112,6 @@ This view intentionally includes rejected jobs. Use the **Decision** and **Reaso
 | 2026-08-25T19:39:40.008Z | Apple Inc | AIML Software Engineer, On-Device Audio Intelligence, Sensing & Connectivity | Connectivity Cupertino, California, United States | 2026-08-25 | Not Mentioned | Not stated | Included | — | [Open](https://jobs.apple.com/en-us/details/200679707-0836/aiml-software-engineer-on-device-audio-intelligence-sensing-connectivity?team=SFTWR) |
 | 2026-08-25T19:39:40.008Z | Apple Inc | AppleCare Technologies BPR Manager — Enterprise & Channel Sales Portfolio | Sales Portfolio Austin, Texas, United States | 2026-08-25 | Not Mentioned | Not stated | Rejected | Not a configured technical discipline; Excluded: manager | [Open](https://jobs.apple.com/en-us/details/200679764-0157/applecare-technologies-bpr-manager-enterprise-channel-sales-portfolio?team=SFTWR) |
 | 2026-08-25T19:39:40.008Z | Apple Inc | AppleCare Technologies BPR Manager — Enterprise & Channel Sales Portfolio | Sales Portfolio Sunnyvale, California, United States | 2026-08-25 | Not Mentioned | Not stated | Rejected | Not a configured technical discipline; Excluded: manager | [Open](https://jobs.apple.com/en-us/details/200679764-3956/applecare-technologies-bpr-manager-enterprise-channel-sales-portfolio?team=SFTWR) |
-| 2026-08-25T18:52:02.574Z | Cisco Systems, Inc | Software Engineer | Austin, Texas, United States of America | 2026-08-25T00:00:00.000+0000 | Not Mentioned | Not stated | Included | — | [Open](https://careers.cisco.com/global/en/job/2020278/Software-Engineer) |
 | 2026-08-25T18:51:43.695Z | Oracle America, Inc | Senior Platform Software Engineer | Nashville, TN | Not stated | Not Mentioned | Not stated | Rejected | Excluded: senior | [Open](https://careers.oracle.com/en/sites/jobsearch/job/342728) |
 | 2026-08-25T18:50:21.064Z | Google LLC | Software Engineer, Embedded Systems, Pixel Touch | Mountain View, CA | Not stated | Not Mentioned | 5+ years | Rejected | Requires 5+ years | [Open](https://www.google.com/about/careers/applications/jobs/results/84868756223730374-software-engineer-embedded-systems-pixel-touch?location=United%20States&hl=en&sort_by=date&employment_type=FULL_TIME&q=%22Software%20Engineer%22) |
 | 2026-08-25T18:50:21.064Z | Google LLC | Staff Software Engineer, Data Protection | San Jose, CA | Not stated | Not Mentioned | 8+ years | Rejected | Excluded: staff; Requires 8+ years | [Open](https://www.google.com/about/careers/applications/jobs/results/134738205613138630-staff-software-engineer-data-protection?location=United%20States&hl=en&sort_by=date&employment_type=FULL_TIME&q=%22Software%20Engineer%22) |
