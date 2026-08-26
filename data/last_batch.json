@@ -1,28 +1,6 @@
 {
-  "run_at": "2026-08-26T13:08:44.734Z",
+  "run_at": "2026-08-26T14:03:15.514Z",
   "suppressed": false,
   "jobs": [],
-  "health_alerts": [
-    {
-      "run_at": "2026-08-26T13:08:21.268Z",
-      "company_id": "CMP-010",
-      "company": "Oracle America, Inc",
-      "source_url": "https://careers.oracle.com/en/sites/jobsearch/jobs?keyword=Software+Engineering&lastSelectedFacet=POSTING_DATES&location=United+States&locationId=300000000149325&selectedPostingDatesFacet=7&sortBy=POSTING_DATES_DESC",
-      "resolved_url": "https://careers.oracle.com/en/sites/jobsearch/jobs?keyword=Software+Engineering&lastSelectedFacet=POSTING_DATES&location=United+States&locationId=300000000149325&selectedPostingDatesFacet=7&sortBy=POSTING_DATES_DESC",
-      "adapter": "Oracle Recruiting",
-      "http_status": 504,
-      "status": "Broken",
-      "candidate_count": 0,
-      "detail_success_count": 0,
-      "detail_error_count": 0,
-      "pending_detail_count": 0,
-      "eligible_count": 0,
-      "rejected_count": 0,
-      "zero_streak": 1,
-      "degraded_streak": 0,
-      "last_candidate_at": "2026-08-26T12:01:23.015Z",
-      "last_healthy_at": "2026-08-26T12:01:23.015Z",
-      "diagnostic": "HTTP 504"
-    }
-  ]
+  "health_alerts": []
 }
