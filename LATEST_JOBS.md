@@ -1,6 +1,6 @@
 # Latest Eligible Jobs — Filtered
 
-Updated: **2026-08-26T03:15:35.382Z UTC** / **Aug 25, 2026, 11:15 PM Eastern**
+Updated: **2026-08-26T04:14:25.437Z UTC** / **Aug 26, 2026, 12:14 AM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
@@ -12,9 +12,10 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 
 | First Seen | Company | Role | Location | Type | Posted | Required | Preferred | Sponsorship | Apply |
 |---|---|---|---|---|---|---:|---:|---|---|
-| 2026-08-26T03:13:32.162Z | Amazon.com Services LLC | Software Development Engineer , Leo Customer Terminals Applications & Networking Team | Not stated | Not specified | Posted: May 21, 2026 (Updated 15 minutes ago) | 1+ years | 3+ years | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10515148/software-development-engineer-leo-customer-terminals-applications-networking-team) |
-| 2026-08-26T03:13:32.162Z | Amazon.com Services LLC | Software Development Engineer , Leo Customer Terminals Applications & Networking Team | Not stated | Not specified | Posted: May 21, 2026 (Updated 15 minutes ago) | 1+ years | 3+ years | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10515149/software-development-engineer-leo-customer-terminals-applications-networking-team) |
-| 2026-08-26T03:13:32.162Z | Amazon.com Services LLC | Software Development Engineer , Leo Customer Terminals Applications & Networking Team | Not stated | Not specified | Posted: May 21, 2026 (Updated 15 minutes ago) | 1+ years | 3+ years | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10515150/software-development-engineer-leo-customer-terminals-applications-networking-team) |
+| 2026-08-26T04:12:31.351Z | Apple Inc | Wireless Bluetooth Tools & Triage Software Engineer | Francisco Bay Area, California, United States | Not specified | 2026-08-26 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200680025-3401/wireless-bluetooth-tools-triage-software-engineer?team=SFTWR) |
+| 2026-08-26T03:13:32.162Z | Amazon.com Services LLC | Software Development Engineer , Leo Customer Terminals Applications & Networking Team | Not stated | Not specified | Posted: May 21, 2026 (Updated 15 minutes ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10515148/software-development-engineer-leo-customer-terminals-applications-networking-team) |
+| 2026-08-26T03:13:32.162Z | Amazon.com Services LLC | Software Development Engineer , Leo Customer Terminals Applications & Networking Team | Not stated | Not specified | Posted: May 21, 2026 (Updated 15 minutes ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10515149/software-development-engineer-leo-customer-terminals-applications-networking-team) |
+| 2026-08-26T03:13:32.162Z | Amazon.com Services LLC | Software Development Engineer , Leo Customer Terminals Applications & Networking Team | Not stated | Not specified | Posted: May 21, 2026 (Updated 15 minutes ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10515150/software-development-engineer-leo-customer-terminals-applications-networking-team) |
 | 2026-08-26T01:51:04.217Z | Microsoft | Software Engineering - Commercial Engineering & AI (CEAI) | [object Object] | FULL_TIME | 2026-08-26T00:02:14 | Not stated | Not stated | Not Mentioned | [Apply](https://apply.careers.microsoft.com/careers/job/1970393556977374) |
 | 2026-08-26T01:51:04.217Z | Microsoft | Software Engineer AI Infra | US | FULL_TIME | 2026-08-25T23:31:49 | Not stated | Not stated | Not Mentioned | [Apply](https://apply.careers.microsoft.com/careers/job/1970393556641776) |
 | 2026-08-26T01:49:52.426Z | Qualcomm Technologies, Inc | Software Engineer, Core AI Software | San Diego, CA,US, US | FULL_TIME | 2026-07-09T00:00:00 | Not stated | Not stated | Not Mentioned | [Apply](https://careers.qualcomm.com/careers/job/446719653280) |
@@ -70,6 +71,8 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 | 2026-08-24T20:00:28.287Z | Goldman Sachs | Engineering - SRE Platforms - SRE Engineer - Associate - Dallas | Corporate Treasury, New York | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/153024) |
 | 2026-08-24T19:37:14.450Z | Cisco Systems, Inc | Software Engineer I (Full Time) - United States | Milpitas, California, United States of America; San Jose, California, United States of America | FULL_TIME | 2026-08-25 | Not stated | Not stated | Not Mentioned | [Apply](https://careers.cisco.com/global/en/job/2023527/Software-Engineer-I-Full-Time-United-States) |
 | 2026-08-24T19:37:14.450Z | Cisco Systems, Inc | Software Engineer II (Full Time) - United States | Milpitas, California, United States of America | Full time | 2026-08-24T00:00:00.000+0000 | Not stated | Not stated | Not Mentioned | [Apply](https://careers.cisco.com/global/en/job/2023512/Software-Engineer-II-Full-Time-United-States) |
+| 2026-08-22T10:44:34.190Z | Goldman Sachs | The Core Engineering, Software Engineering, Dallas, Associate | Software Engineering, New York | Not specified | Not stated | Not stated | 3+ years | Unclear | [Apply](https://higher.gs.com/roles/170257) |
+| 2026-08-22T10:44:34.190Z | Goldman Sachs | The Core Engineering, Software Engineering, New York, Associate | Software Engineering, New York | Not specified | Not stated | Not stated | 3+ years | Unclear | [Apply](https://higher.gs.com/roles/170256) |
 | 2026-08-22T10:44:34.190Z | Goldman Sachs | The Core Engineering-Corporate Treasury, New York, Associate, Software Engineering | Corporate Treasury, New York | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/176999) |
 | 2026-08-22T10:44:34.190Z | Goldman Sachs | The Core Engineering - Salt Lake City, Associate, Software Engineering | Corporate Treasury, New York | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/180303) |
 | 2026-08-22T10:44:34.190Z | Goldman Sachs | The Core Engineering-Corporate Treasury, New York, Associate, Software Engineering | Corporate Treasury, New York | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/178036) |
@@ -79,8 +82,6 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 | 2026-08-22T10:44:34.190Z | Goldman Sachs | Software Engineer - FCO Technology Team - Analyst - SLC | United States | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/119977) |
 | 2026-08-22T10:44:34.190Z | Goldman Sachs | Asset & Wealth Management - AI Solutions Engineer - Associate - Dallas | United States | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/168764) |
 | 2026-08-22T10:44:34.190Z | Goldman Sachs | Asset & Wealth Management - Android Mobile Engineer - Marcus - Associate - Richardson | United States | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/164029) |
-| 2026-08-22T10:44:34.190Z | Goldman Sachs | Corporate Planning & Management, Software Engineering, Dallas, Associate | United States | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/170257) |
-| 2026-08-22T10:44:34.190Z | Goldman Sachs | Corporate Planning & Management, Software Engineering, New York, Associate | United States | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/170256) |
 | 2026-08-22T10:44:34.190Z | Goldman Sachs | Software Engineer, Global Banking & Markets, AI/ML Technology | United States | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/177423) |
 | 2026-08-22T10:44:34.190Z | Goldman Sachs | Software Engineer, Global Banking & Markets, Electronic Trading | United States | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/180700) |
 | 2026-08-22T10:44:34.190Z | Goldman Sachs | Software Engineering - Data, Lakehouse and AI Data Platform Engineer - Associate - Dallas | United States | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/179758) |
@@ -101,22 +102,22 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 
 | ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |
 |---|---|---|---:|---:|---:|---|---|
-| CMP-003 | Google LLC | Healthy | 40 | 0 | 0 | 2026-08-26T03:13:46.025Z |  |
-| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-26T03:13:58.782Z |  |
-| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-26T03:14:07.633Z |  |
-| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-26T03:14:16.635Z |  |
-| CMP-007 | Qualcomm Technologies, Inc | Healthy | 20 | 0 | 0 | 2026-08-26T03:14:17.243Z |  |
-| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-26T03:14:25.576Z |  |
-| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-26T03:14:34.551Z |  |
-| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-26T03:14:39.938Z |  |
-| CMP-011 | Microsoft Corporation | Healthy | 23 | 0 | 0 | 2026-08-26T03:14:48.184Z |  |
-| CMP-012 | Cisco Systems, Inc | Healthy | 6 | 0 | 0 | 2026-08-26T03:14:48.488Z |  |
-| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 40 | 0 | 0 | 2026-08-26T03:15:04.445Z |  |
-| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-26T03:15:08.419Z |  |
-| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-26T03:15:15.625Z | 2 jobs queued for incremental evaluation |
-| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-08-26T03:15:17.866Z |  |
-| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-26T03:15:18.283Z |  |
-| CMP-017 | Goldman Sachs | Healthy | 17 | 0 | 0 | 2026-08-26T03:15:24.671Z |  |
-| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-26T03:15:35.275Z |  |
+| CMP-003 | Google LLC | Healthy | 40 | 0 | 0 | 2026-08-26T04:12:45.278Z |  |
+| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-26T04:12:51.836Z |  |
+| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-26T04:12:53.188Z |  |
+| CMP-007 | Qualcomm Technologies, Inc | Healthy | 20 | 0 | 0 | 2026-08-26T04:13:03.588Z |  |
+| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-26T04:13:13.338Z |  |
+| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-26T04:13:16.920Z |  |
+| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-26T04:13:21.798Z |  |
+| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-26T04:13:26.287Z |  |
+| CMP-012 | Cisco Systems, Inc | Healthy | 6 | 0 | 0 | 2026-08-26T04:13:34.996Z |  |
+| CMP-011 | Microsoft Corporation | Healthy | 23 | 0 | 0 | 2026-08-26T04:13:35.847Z |  |
+| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 20 | 0 | 0 | 2026-08-26T04:13:51.639Z |  |
+| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-26T04:13:55.220Z |  |
+| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-26T04:14:01.260Z |  |
+| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-26T04:14:02.583Z |  |
+| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-08-26T04:14:05.030Z |  |
+| CMP-017 | Goldman Sachs | Healthy | 17 | 0 | 0 | 2026-08-26T04:14:17.635Z |  |
+| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-26T04:14:25.324Z |  |
 
 > “Degraded” means extraction could not prove the source was complete. Review the unfiltered dashboard or workbook audit sheets for every decision.
