@@ -1,6 +1,6 @@
 # Latest Eligible Jobs — Filtered
 
-Updated: **2026-08-26T07:54:45.511Z UTC** / **Aug 26, 2026, 3:54 AM Eastern**
+Updated: **2026-08-26T08:55:56.469Z UTC** / **Aug 26, 2026, 4:55 AM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
@@ -70,6 +70,7 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 | 2026-08-24T20:00:28.287Z | Goldman Sachs | Engineering - SRE Platforms - SRE Engineer - Associate - Dallas | Corporate Treasury, New York | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/153024) |
 | 2026-08-24T19:37:14.450Z | Cisco Systems, Inc | Software Engineer I (Full Time) - United States | Milpitas, California, United States of America; San Jose, California, United States of America | FULL_TIME | 2026-08-25 | Not stated | Not stated | Not Mentioned | [Apply](https://careers.cisco.com/global/en/job/2023527/Software-Engineer-I-Full-Time-United-States) |
 | 2026-08-24T19:37:14.450Z | Cisco Systems, Inc | Software Engineer II (Full Time) - United States | Milpitas, California, United States of America | Full time | 2026-08-24T00:00:00.000+0000 | Not stated | Not stated | Not Mentioned | [Apply](https://careers.cisco.com/global/en/job/2023512/Software-Engineer-II-Full-Time-United-States) |
+| 2026-08-24T10:53:20.994Z | WELLS FARGO BANK, N.A | Web UI Developer | Not stated | FULL_TIME | 2026-08-25T00:00:00+00:00 | Not stated | Not stated | Not Mentioned | [Apply](https://www.wellsfargojobs.com/en/jobs/r-570240/web-ui-developer) |
 | 2026-08-22T10:44:34.190Z | Goldman Sachs | The Core Engineering, Software Engineering, Dallas, Associate | Software Engineering, New York | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/170257) |
 | 2026-08-22T10:44:34.190Z | Goldman Sachs | The Core Engineering, Software Engineering, New York, Associate | Software Engineering, New York | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/170256) |
 | 2026-08-22T10:44:34.190Z | Goldman Sachs | The Core Engineering-Corporate Treasury, New York, Associate, Software Engineering | Corporate Treasury, New York | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/176999) |
@@ -100,22 +101,22 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 
 | ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |
 |---|---|---|---:|---:|---:|---|---|
-| CMP-003 | Google LLC | Healthy | 40 | 0 | 0 | 2026-08-26T07:53:11.064Z |  |
-| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-26T07:53:12.686Z |  |
-| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-26T07:53:17.446Z |  |
-| CMP-007 | Qualcomm Technologies, Inc | Healthy | 20 | 0 | 0 | 2026-08-26T07:53:26.801Z |  |
-| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-26T07:53:36.152Z |  |
-| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-26T07:53:41.704Z |  |
-| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-26T07:53:44.425Z |  |
-| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-26T07:53:50.876Z |  |
-| CMP-011 | Microsoft Corporation | Healthy | 23 | 0 | 0 | 2026-08-26T07:53:58.576Z |  |
-| CMP-012 | Cisco Systems, Inc | Healthy | 4 | 0 | 0 | 2026-08-26T07:54:00.014Z |  |
-| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 20 | 0 | 0 | 2026-08-26T07:54:15.865Z |  |
-| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-26T07:54:18.978Z |  |
-| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-26T07:54:26.616Z |  |
-| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-26T07:54:27.782Z |  |
-| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-08-26T07:54:29.556Z |  |
-| CMP-017 | Goldman Sachs | Healthy | 17 | 0 | 0 | 2026-08-26T07:54:35.566Z |  |
-| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-26T07:54:45.402Z |  |
+| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-26T08:54:20.867Z |  |
+| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-26T08:54:25.675Z |  |
+| CMP-003 | Google LLC | Healthy | 40 | 0 | 0 | 2026-08-26T08:54:27.210Z |  |
+| CMP-007 | Qualcomm Technologies, Inc | Healthy | 20 | 0 | 0 | 2026-08-26T08:54:36.538Z |  |
+| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-26T08:54:46.182Z |  |
+| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-26T08:54:48.793Z |  |
+| CMP-009 | Intel Corporation | Healthy | 6 | 0 | 0 | 2026-08-26T08:54:54.470Z |  |
+| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-26T08:54:58.008Z |  |
+| CMP-012 | Cisco Systems, Inc | Healthy | 4 | 0 | 0 | 2026-08-26T08:55:06.777Z |  |
+| CMP-011 | Microsoft Corporation | Healthy | 23 | 0 | 0 | 2026-08-26T08:55:08.097Z |  |
+| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-26T08:55:26.876Z |  |
+| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 40 | 0 | 0 | 2026-08-26T08:55:31.201Z |  |
+| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-26T08:55:37.242Z |  |
+| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-26T08:55:38.994Z |  |
+| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-08-26T08:55:40.383Z |  |
+| CMP-017 | Goldman Sachs | Healthy | 17 | 0 | 0 | 2026-08-26T08:55:45.770Z |  |
+| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-26T08:55:56.383Z |  |
 
 > “Degraded” means extraction could not prove the source was complete. Review the unfiltered dashboard or workbook audit sheets for every decision.
