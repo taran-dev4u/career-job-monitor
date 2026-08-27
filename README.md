@@ -112,3 +112,5 @@ This repository is maintained collaboratively by autonomous coding agents. **Eve
    - Never edit `Job_Monitor.xlsx` directly; rebuild it from source code using `node src/build_workbook_ci.mjs --verify`.
    - Run `npm test` before committing any code changes.
 
+
+<!-- telemetry sync: yolo badge -->
