@@ -1,6 +1,6 @@
 # Latest Eligible Jobs — Filtered
 
-Updated: **2026-08-29T20:52:29.699Z UTC** / **Aug 29, 2026, 4:52 PM Eastern**
+Updated: **2026-08-29T23:14:37.902Z UTC** / **Aug 29, 2026, 7:14 PM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
@@ -50,6 +50,7 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 | 2026-08-27T21:01:19.320Z | Amazon.com Services LLC | Systems Development Engineer, Leo Avionics Test Software | Not stated | Not specified | Posted: October 30, 2025 (Updated 7 minutes ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10517030/systems-development-engineer-leo-avionics-test-software) |
 | 2026-08-27T11:09:26.215Z | Goldman Sachs | Software Engineer, Global Banking & Markets, Trading Technology | Software Engineering, New York | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/182893) |
 | 2026-08-27T00:40:32.940Z | Cisco Systems, Inc | Software Engineer Backend/Platform Systems II (Full Time) – United States | San Jose, California, United States of America; Alpharetta, Georgia, United States of America; Atlanta, Georgia, United States of America; Austin, Texas, United States of America; Boston, Massachusetts, United States of America; Dallas, Texas, United States of America; Fulton, Maryland, United States of America; Hillsboro, Oregon, United States of America; Knoxville, Tennessee, United States of America; Maynard, Massachusetts, United States of America; Milpitas, California, United States of America; New York, New York, United States of America; Research Triangle Park, North Carolina, United States of America | FULL_TIME | 2026-01-14 | Not stated | Not stated | Not Mentioned | [Apply](https://careers.cisco.com/global/en/job/2000135/Software-Engineer-Backend-Platform-Systems-II-Full-Time-United-States) |
+| 2026-08-26T21:02:40.651Z | WELLS FARGO BANK, N.A | Systems Operations Engineer | Not stated | FULL_TIME | 2026-08-26T00:00:00+00:00 | Not stated | Not stated | Not Mentioned | [Apply](https://www.wellsfargojobs.com/en/jobs/r-569611/systems-operations-engineer) |
 | 2026-08-26T16:26:20.040Z | JPMorgan Chase & Co | Software Engineer II (React/Java) | NY, United States | Full time | 2026-08-26T16:05:41.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210765133) |
 | 2026-08-26T01:49:52.426Z | Qualcomm Technologies, Inc | Software Engineer, Core AI Software | San Diego, CA,US, US | FULL_TIME | 2026-07-09T00:00:00 | Not stated | Not stated | Not Mentioned | [Apply](https://careers.qualcomm.com/careers/job/446719653280) |
 | 2026-08-24T20:57:59.542Z | Qualcomm Technologies, Inc | Artificial Intelligence for Video Compression - Research Scientist | San Diego, CA,US, US; Hsinchu, Hsinchu City,TW, TW; Munich, BY,DE, DE | FULL_TIME | 2026-07-17T00:00:00 | Not stated | Not stated | Not Mentioned | [Apply](https://careers.qualcomm.com/careers/job/446707518930) |
@@ -82,22 +83,22 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 
 | ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |
 |---|---|---|---:|---:|---:|---|---|
-| CMP-003 | Google LLC | Healthy | 40 | 0 | 0 | 2026-08-29T20:50:55.982Z |  |
-| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-29T20:50:57.507Z |  |
-| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-29T20:51:03.224Z |  |
-| CMP-007 | Qualcomm Technologies, Inc | Healthy | 21 | 0 | 0 | 2026-08-29T20:51:18.687Z |  |
-| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-29T20:51:27.041Z |  |
-| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-29T20:51:27.993Z |  |
-| CMP-009 | Intel Corporation | Healthy | 5 | 0 | 0 | 2026-08-29T20:51:35.204Z |  |
-| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-29T20:51:37.340Z |  |
-| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-29T20:51:45.815Z |  |
-| CMP-011 | Microsoft Corporation | Healthy | 20 | 0 | 0 | 2026-08-29T20:51:48.970Z |  |
-| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 20 | 0 | 0 | 2026-08-29T20:52:04.748Z |  |
-| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-29T20:52:05.693Z |  |
-| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-29T20:52:11.724Z |  |
-| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-29T20:52:15.570Z |  |
-| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-08-29T20:52:15.812Z |  |
-| CMP-017 | Goldman Sachs | Healthy | 18 | 0 | 0 | 2026-08-29T20:52:20.177Z |  |
-| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-29T20:52:29.581Z |  |
+| CMP-003 | Google LLC | Healthy | 40 | 0 | 0 | 2026-08-29T23:13:04.699Z |  |
+| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-29T23:13:05.795Z |  |
+| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-29T23:13:11.202Z |  |
+| CMP-007 | Qualcomm Technologies, Inc | Healthy | 21 | 0 | 0 | 2026-08-29T23:13:20.622Z |  |
+| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-29T23:13:29.854Z |  |
+| CMP-009 | Intel Corporation | Healthy | 5 | 0 | 0 | 2026-08-29T23:13:38.305Z |  |
+| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-29T23:13:39.001Z |  |
+| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-29T23:13:47.671Z |  |
+| CMP-011 | Microsoft Corporation | Healthy | 20 | 0 | 0 | 2026-08-29T23:13:53.149Z |  |
+| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-29T23:13:56.449Z |  |
+| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-29T23:14:13.612Z |  |
+| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 40 | 0 | 0 | 2026-08-29T23:14:16.090Z |  |
+| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-29T23:14:20.966Z |  |
+| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-29T23:14:24.453Z |  |
+| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-08-29T23:14:25.809Z |  |
+| CMP-017 | Goldman Sachs | Healthy | 18 | 0 | 0 | 2026-08-29T23:14:29.620Z |  |
+| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-29T23:14:37.791Z |  |
 
 > “Degraded” means extraction could not prove the source was complete. Review the unfiltered dashboard or workbook audit sheets for every decision.
