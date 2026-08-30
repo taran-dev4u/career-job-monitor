@@ -1,18 +1,18 @@
 # Latest Eligible Jobs — Filtered
 
-Updated: **2026-08-30T13:16:31.818Z UTC** / **Aug 30, 2026, 9:16 AM Eastern**
+Updated: **2026-08-30T17:46:28.087Z UTC** / **Aug 30, 2026, 1:46 PM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
 > Newest discovered jobs are always shown first.
 
-Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken**.
+Source health: **16 healthy**, **0 confirmed empty**, **0 degraded**, **1 broken**.
 
 ## Apply Now
 
 | First Seen | Company | Role | Location | Type | Posted | Required | Preferred | Sponsorship | Apply |
 |---|---|---|---|---|---|---:|---:|---|---|
-| 2026-08-29T14:23:08.957Z | Amazon.com Services LLC | Software Development Engineer II, AWS Lambda | Not stated | Not specified | Posted: May 24, 2026 (Updated 12 minutes ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10521241/software-development-engineer-ii-aws-lambda) |
+| 2026-08-29T14:23:08.957Z | Amazon.com Services LLC | Software Development Engineer II, AWS Lambda | Not stated | Not specified | Posted: August 29, 2026 (Updated about 20 hours ago) | Not stated | 3+ years | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10521241/software-development-engineer-ii-aws-lambda) |
 | 2026-08-29T08:56:17.956Z | Apple Inc | On-device ML Performance Engineer, Graphics, Games and Machine Learning | Machine Learning Seattle, Washington, United States | Not specified | 2026-08-29 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200680833-3337/on-device-ml-performance-engineer-graphics-games-and-machine-learning?team=SFTWR) |
 | 2026-08-29T01:46:07.841Z | Microsoft | Software Engineer II | Redmond, WA,US, US; Redmond, WA,US, US | FULL_TIME | 2026-08-28T21:41:54 | Not stated | Not stated | Not Mentioned | [Apply](https://apply.careers.microsoft.com/careers/job/1970393556980947) |
 | 2026-08-29T01:46:07.841Z | Microsoft | Software Engineer - Intune | Cambridge, MA,US, US | FULL_TIME | 2026-08-28T20:48:38 | Not stated | Not stated | Not Mentioned | [Apply](https://apply.careers.microsoft.com/careers/job/1970393556982924) |
@@ -26,19 +26,20 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 | 2026-08-29T01:42:21.997Z | Apple Inc | Software Engineer Simulation Infrastructure | Simulation Infrastructure Cupertino, California, United States | Not specified | 2026-08-29 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200680446-0836/software-engineer-simulation-infrastructure?team=SFTWR) |
 | 2026-08-29T01:42:21.997Z | Apple Inc |  Speech Processing ML Algorithm Engineer | Algorithm Engineer Cupertino, California, United States | Not specified | 2026-08-29 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200680823-0836/%EF%A3%BF-speech-processing-ml-algorithm-engineer?team=MLAI) |
 | 2026-08-29T01:42:21.997Z | Apple Inc | AI/ML Performance Analysis and Validation Engineer | Validation Engineer Cupertino, California, United States | Not specified | 2026-08-28 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200680164-0836/ai-ml-performance-analysis-and-validation-engineer?team=SFTWR) |
-| 2026-08-29T01:42:21.997Z | Apple Inc | Data Platform SRE, AI & Data Platforms (AiDP) | Austin, Texas, United States | Not specified | 2026-08-28 | 3+ years | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200680281-0157/data-platform-sre-ai-data-platforms-aidp?team=SFTWR) |
+| 2026-08-29T01:42:21.997Z | Apple Inc | Data Platform SRE, AI & Data Platforms (AiDP) | Austin, Texas, United States | Not specified | 2026-08-28 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200680281-0157/data-platform-sre-ai-data-platforms-aidp?team=SFTWR) |
 | 2026-08-29T01:42:21.997Z | Apple Inc | Full-Stack UI Software Engineer - Wallet, Payments & Commerce (WPC) | Cupertino, California, United States | Not specified | 2026-08-28 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200680683-0836/full-stack-ui-software-engineer-wallet-payments-commerce-wpc?team=SFTWR) |
 | 2026-08-29T01:42:21.997Z | Apple Inc | HomeKit Machine Learning Engineer | Francisco Bay Area, California, United States | Not specified | 2026-08-28 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200680682-3401/homekit-machine-learning-engineer?team=SFTWR) |
-| 2026-08-29T01:42:21.997Z | Apple Inc | Machine Learning Engineer, Apple Search & Knowledge Platforms | Knowledge Platforms Seattle, Washington, United States | Not specified | 2026-08-28 | 2+ years | 6+ years | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200641263-3337/machine-learning-engineer-apple-search-knowledge-platforms?team=SFTWR) |
-| 2026-08-29T01:42:21.997Z | Apple Inc | Site Reliability Engineer - Data, Apple Ads | Apple Ads Austin, Texas, United States | Not specified | 2026-08-28 | 2+ years | Not stated | Unclear | [Apply](https://jobs.apple.com/en-us/details/200680797-0157/site-reliability-engineer-data-apple-ads?team=SFTWR) |
+| 2026-08-29T01:42:21.997Z | Apple Inc | Machine Learning Engineer, Apple Search & Knowledge Platforms | Knowledge Platforms Seattle, Washington, United States | Not specified | 2026-08-28 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200641263-3337/machine-learning-engineer-apple-search-knowledge-platforms?team=SFTWR) |
+| 2026-08-29T01:42:21.997Z | Apple Inc | Site Reliability Engineer - Data, Apple Ads | Apple Ads Austin, Texas, United States | Not specified | 2026-08-28 | Not stated | Not stated | Unclear | [Apply](https://jobs.apple.com/en-us/details/200680797-0157/site-reliability-engineer-data-apple-ads?team=SFTWR) |
 | 2026-08-29T01:42:21.997Z | Apple Inc | Software Development Engineer, File Systems | File Systems Cupertino, California, United States | Not specified | 2026-08-28 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200680651-0836/software-development-engineer-file-systems?team=SFTWR) |
 | 2026-08-29T01:42:21.997Z | Apple Inc | Software Engineer - Applied Machine Learning & Localization | Localization Cupertino, California, United States | Not specified | 2026-08-28 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200668733-0836/software-engineer-applied-machine-learning-localization?team=SFTWR) |
-| 2026-08-29T01:42:21.997Z | Apple Inc | Software Engineer - Early Career (Front-end) | Austin, Texas, United States | Not specified | 2026-08-28 | Not stated | Not stated | Unclear | [Apply](https://jobs.apple.com/en-us/details/200680752-0157/software-engineer-early-career-front-end?team=SFTWR) |
-| 2026-08-29T01:42:21.997Z | Apple Inc | Software Engineer - Early Career (Front-end) | Cupertino, California, United States | Not specified | 2026-08-28 | Not stated | Not stated | Unclear | [Apply](https://jobs.apple.com/en-us/details/200680752-0836/software-engineer-early-career-front-end?team=SFTWR) |
+| 2026-08-29T01:42:21.997Z | Apple Inc | Software Engineer - Early Career (Front-end) | Austin, Texas, United States | Not specified | 2026-08-28 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200680752-0157/software-engineer-early-career-front-end?team=SFTWR) |
+| 2026-08-29T01:42:21.997Z | Apple Inc | Software Engineer - Early Career (Front-end) | Cupertino, California, United States | Not specified | 2026-08-28 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200680752-0836/software-engineer-early-career-front-end?team=SFTWR) |
 | 2026-08-29T01:42:21.997Z | Apple Inc | Software Engineer (Java Middleware), eBusiness | Sunnyvale, California, United States | Not specified | 2026-08-28 | Not stated | Not stated | Not Mentioned | [Apply](https://jobs.apple.com/en-us/details/200678154-3956/software-engineer-java-middleware-ebusiness?team=SFTWR) |
 | 2026-08-29T01:42:21.997Z | Amazon.com Services LLC | Systems Development Engineer II, AWS Edge Connectivity Services | Not stated | Not specified | Posted: May 21, 2026 (Updated about 17 hours ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10519884/systems-development-engineer-ii-aws-edge-connectivity-services) |
 | 2026-08-28T17:40:30.416Z | Amazon.com Services LLC | Software Development Engineer, Region Reliability | Not stated | Not specified | Posted: August 29, 2026 (Updated about 1 hour ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10519158/software-development-engineer-region-reliability) |
-| 2026-08-28T05:11:27.429Z | Amazon.com Services LLC | Software Development Engineer, Amazon Quick | Not stated | Not specified | Posted: August 29, 2026 (Updated about 21 hours ago) | Not stated | 3+ years | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10517569/software-development-engineer-amazon-quick) |
+| 2026-08-28T05:11:27.429Z | Amazon.com Services LLC | Software Development Engineer Intern, Annapurna Labs - 2027 | Not stated | Internship | Posted: August 29, 2026 (Updated about 20 hours ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10517567/software-development-engineer-intern-annapurna-labs-2027) |
+| 2026-08-28T05:11:27.429Z | Amazon.com Services LLC | Software Development Engineer, Amazon Quick | Not stated | Not specified | Posted: August 29, 2026 (Updated about 21 hours ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10517569/software-development-engineer-amazon-quick) |
 | 2026-08-27T21:04:08.693Z | Cisco Systems, Inc | Software Engineer | Milpitas, California, United States of America | FULL_TIME | 2026-08-30 | Not stated | Not stated | Not Mentioned | [Apply](https://careers.cisco.com/global/en/job/2023271/Software-Engineer) |
 | 2026-08-27T21:04:06.677Z | Microsoft Corporation | AI Engineer | Engineer Redmond, WA | Contract | 3 days ago | Not stated | Not stated | Not Mentioned | [Apply](https://us.microsoft.talentnet.community/jobs/5035b70e-ba0b-4c5d-9df5-3cdfa33b187e) |
 | 2026-08-27T21:01:19.320Z | Google LLC | Software Engineer, Cloud Bigtable SQL and Analytics | New York, NY | Not specified | Not stated | 2+ years | Not stated | Not Mentioned | [Apply](https://www.google.com/about/careers/applications/jobs/results/91776684985852614-software-engineer-cloud-bigtable-sql-and-analytics?location=United%20States&hl=en&sort_by=date&employment_type=FULL_TIME&q=%22Software%20Engineer%22&page=2) |
@@ -48,7 +49,7 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 | 2026-08-27T21:01:19.320Z | Amazon.com Services LLC | Software Development Engineer, AWS Compliance & Security Assurance | Not stated | Not specified | Posted: August 29, 2026 (Updated about 9 hours ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10516800/software-development-engineer-aws-compliance-security-assurance) |
 | 2026-08-27T21:01:19.320Z | Amazon.com Services LLC | Systems Development Engineer, Leo Avionics Test Software | Not stated | Not specified | Posted: August 29, 2026 (Updated about 9 hours ago) | Not stated | Not stated | Not Mentioned | [Apply](https://www.amazon.jobs/en/jobs/10517030/systems-development-engineer-leo-avionics-test-software) |
 | 2026-08-27T11:09:26.215Z | Goldman Sachs | Software Engineer, Global Banking & Markets, Trading Technology | Software Engineering, New York | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://higher.gs.com/roles/182893) |
-| 2026-08-26T21:02:40.651Z | WELLS FARGO BANK, N.A | Systems Operations Engineer | Not stated | FULL_TIME | 2026-08-26T00:00:00+00:00 | Not stated | Not stated | Not Mentioned | [Apply](https://www.wellsfargojobs.com/en/jobs/r-569611/systems-operations-engineer) |
+| 2026-08-27T00:40:32.940Z | Cisco Systems, Inc | Software Engineer Backend/Platform Systems II (Full Time) – United States | San Jose, California, United States of America; Alpharetta, Georgia, United States of America; Atlanta, Georgia, United States of America; Austin, Texas, United States of America; Boston, Massachusetts, United States of America; Dallas, Texas, United States of America; Fulton, Maryland, United States of America; Hillsboro, Oregon, United States of America; Knoxville, Tennessee, United States of America; Maynard, Massachusetts, United States of America; Milpitas, California, United States of America; New York, New York, United States of America; Research Triangle Park, North Carolina, United States of America | FULL_TIME | 2026-01-14 | Not stated | Not stated | Not Mentioned | [Apply](https://careers.cisco.com/global/en/job/2000135/Software-Engineer-Backend-Platform-Systems-II-Full-Time-United-States) |
 | 2026-08-26T16:26:20.040Z | JPMorgan Chase & Co | Software Engineer II (React/Java) | NY, United States | Full time | 2026-08-26T16:05:41.000Z | Not stated | Not stated | Not Mentioned | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210765133) |
 | 2026-08-26T01:49:52.426Z | Qualcomm Technologies, Inc | Software Engineer, Core AI Software | San Diego, CA,US, US | FULL_TIME | 2026-07-09T00:00:00 | Not stated | Not stated | Not Mentioned | [Apply](https://careers.qualcomm.com/careers/job/446719653280) |
 | 2026-08-24T20:57:59.542Z | Qualcomm Technologies, Inc | Artificial Intelligence for Video Compression - Research Scientist | San Diego, CA,US, US; Hsinchu, Hsinchu City,TW, TW; Munich, BY,DE, DE | FULL_TIME | 2026-07-17T00:00:00 | Not stated | Not stated | Not Mentioned | [Apply](https://careers.qualcomm.com/careers/job/446707518930) |
@@ -70,7 +71,7 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 | 2026-08-20T08:44:07.198Z | Meta Platforms, Inc | Embedded Software Engineer | Redmond, WA, US | Full-time | 2026-08-05T07:13:23-07:00 | Not stated | Not stated | Not Mentioned | [Apply](https://www.metacareers.com/profile/job_details/4535026343380190/) |
 | 2026-08-18T17:38:26.534Z | IBM Corporation | Confluent - Data Scientist - Product | POUGHKEEPSIE, LOWELL, ROCHESTER, TUCSON, RESEARCH TRIANGLE PARK, Armonk, Boston, Bellevue, Atlanta, San Jose, Dallas, Austin, San Francisco, Seattle, Georgia, Minnesota, Texas, New York, North Carolina, Arizona, Washington, Massachusetts, California, United States | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://careers.ibm.com/en_US/careers/JobDetail?jobId=128216) |
 | 2026-08-18T14:09:28.565Z | Intel Corporation | Development Tools Software Arch | USA - CA - Santa Clara, United States of America | FULL_TIME | 2026-08-28 | Not stated | Not stated | Not Mentioned | [Apply](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-California-Santa-Clara/Development-Tools-Software-Arch_JR0286046) |
-| 2026-08-18T14:06:49.813Z | Qualcomm Technologies, Inc | Video Research Engineer (Multiple Levels) | San Diego, CA,US, US; Hsinchu, Hsinchu City,TW, TW; Munich, BY,DE, DE | FULL_TIME | 2026-07-30T00:00:00 | 1+ years | Not stated | Not Mentioned | [Apply](https://careers.qualcomm.com/careers/job/446716320059) |
+| 2026-08-18T14:06:49.813Z | Qualcomm Technologies, Inc | Video Research Engineer (Multiple Levels) | San Diego, CA,US, US; Hsinchu, Hsinchu City,TW, TW; Munich, BY,DE, DE | FULL_TIME | 2026-07-30T00:00:00 | Not stated | Not stated | Not Mentioned | [Apply](https://careers.qualcomm.com/careers/job/446716320059) |
 | 2026-08-18T14:06:49.813Z | Qualcomm Technologies, Inc | Speech & Audio Research Engineer | San Diego, CA,US, US | FULL_TIME | 2026-06-23T00:00:00 | Not stated | Not stated | Not Mentioned | [Apply](https://careers.qualcomm.com/careers/job/446719164923) |
 | 2026-08-18T14:05:15.694Z | IBM Corporation | DevSecOps Engineer (TS/SCI) | Annapolis Junction, ALEXANDRIA, Chantilly, WASHINGTON, Reston, McLean, Herndon, Bethesda, Catonsville, Frederick, Ashburn, Virginia, Maryland, District of Columbia, United States | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://careers.ibm.com/en_US/careers/JobDetail?jobId=129241) |
 | 2026-08-18T14:05:15.694Z | IBM Corporation | Graph Workflow Engineer (TS/SCI) | Annapolis Junction, ALEXANDRIA, Chantilly, WASHINGTON, Reston, McLean, Herndon, Bethesda, Catonsville, Frederick, Ashburn, Virginia, Maryland, District of Columbia, United States | Not specified | Not stated | Not stated | Not stated | Not Mentioned | [Apply](https://careers.ibm.com/en_US/careers/JobDetail?jobId=129240) |
@@ -81,22 +82,22 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 
 | ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |
 |---|---|---|---:|---:|---:|---|---|
-| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-30T13:13:39.118Z |  |
-| CMP-003 | Google LLC | Healthy | 40 | 0 | 0 | 2026-08-30T13:13:48.037Z |  |
-| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-30T13:14:01.984Z |  |
-| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-30T13:14:33.314Z |  |
-| CMP-007 | Qualcomm Technologies, Inc | Healthy | 21 | 0 | 0 | 2026-08-30T13:14:37.813Z |  |
-| CMP-009 | Intel Corporation | Healthy | 5 | 0 | 0 | 2026-08-30T13:14:46.082Z |  |
-| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-30T13:14:54.427Z | 1 jobs queued for incremental evaluation |
-| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-30T13:15:00.095Z |  |
-| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-30T13:15:13.650Z |  |
-| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-30T13:15:19.596Z |  |
-| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 40 | 0 | 0 | 2026-08-30T13:15:39.120Z |  |
-| CMP-011 | Microsoft Corporation | Healthy | 20 | 0 | 0 | 2026-08-30T13:15:39.800Z |  |
-| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-30T13:15:46.331Z |  |
-| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-08-30T13:15:48.922Z |  |
-| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-30T13:15:49.575Z |  |
-| CMP-017 | Goldman Sachs | Healthy | 18 | 0 | 0 | 2026-08-30T13:15:55.102Z |  |
-| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-30T13:16:31.705Z |  |
+| CMP-003 | Google LLC | Healthy | 40 | 0 | 0 | 2026-08-30T17:44:43.970Z |  |
+| CMP-001 | Amazon.com Services LLC | Healthy | 30 | 0 | 0 | 2026-08-30T17:44:54.388Z |  |
+| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-08-30T17:45:15.261Z |  |
+| CMP-007 | Qualcomm Technologies, Inc | Healthy | 21 | 0 | 0 | 2026-08-30T17:45:24.465Z |  |
+| CMP-004 | Apple Inc | Healthy | 40 | 0 | 0 | 2026-08-30T17:45:37.565Z |  |
+| CMP-009 | Intel Corporation | Healthy | 5 | 0 | 0 | 2026-08-30T17:45:45.783Z |  |
+| CMP-008 | JPMorgan Chase & Co | Healthy | 40 | 0 | 0 | 2026-08-30T17:45:46.403Z |  |
+| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-08-30T17:45:55.231Z |  |
+| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-08-30T17:45:58.115Z | 1 jobs queued for incremental evaluation |
+| CMP-011 | Microsoft Corporation | Healthy | 20 | 0 | 0 | 2026-08-30T17:46:00.754Z |  |
+| CMP-012 | Cisco Systems, Inc | Healthy | 2 | 0 | 0 | 2026-08-30T17:46:04.065Z |  |
+| CMP-014 | WELLS FARGO BANK, N.A | Broken | 0 | 0 | 1 | 2026-08-30T13:15:39.120Z | HTTP 429 |
+| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-08-30T17:46:14.654Z |  |
+| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-08-30T17:46:17.820Z |  |
+| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-08-30T17:46:22.118Z |  |
+| CMP-017 | Goldman Sachs | Healthy | 18 | 0 | 0 | 2026-08-30T17:46:23.092Z |  |
+| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-08-30T17:46:27.975Z |  |
 
 > “Degraded” means extraction could not prove the source was complete. Review the unfiltered dashboard or workbook audit sheets for every decision.
