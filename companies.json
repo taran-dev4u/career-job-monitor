@@ -161,7 +161,7 @@
   {
     "id": "CMP-011",
     "company": "Microsoft Corporation",
-    "career_url": "https://us.microsoft.talentnet.community/jobs/search",
+    "career_url": "https://us.microsoft.talentnet.community/jobs/search?query=software%20engineer",
     "limits": {
       "max_cards": 50,
       "settle_time_ms": 8000
@@ -176,7 +176,7 @@
   {
     "id": "CMP-012",
     "company": "Cisco Systems, Inc",
-    "career_url": "https://careers.cisco.com/global/en/search-results?ak=r1ieen63n80y",
+    "career_url": "https://careers.cisco.com/global/en/search-results?q=software%20engineer",
     "limits": {
       "max_cards": 50,
       "settle_time_ms": 8000,
@@ -187,12 +187,12 @@
       "location": true,
       "date": true
     },
-    "notes": "Phenom on careers.cisco.com; the search URL carries an opaque ak= token."
+    "notes": "Phenom on careers.cisco.com."
   },
   {
     "id": "CMP-013",
     "company": "U.S. Bank National Association",
-    "career_url": "https://careers.usbank.com/global/en/search-results?utm_source=homepage&utm_medium=button",
+    "career_url": "https://careers.usbank.com/global/en/search-results?keywords=software%20engineer",
     "limits": {
       "settle_time_ms": 8000,
       "navigation_timeout_ms": 60000

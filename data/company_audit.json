@@ -1,0 +1,48 @@
+{
+  "run_at": "2026-08-31T03:37:28.003Z",
+  "critical": [
+    {
+      "company_id": "CMP-001",
+      "company": "Amazon.com Services LLC",
+      "severity": "critical",
+      "code": "LOCATION_EXTRACTION_DEAD",
+      "message": "Amazon.com Services LLC: location is blank on all 40 candidates, but this source is expected to provide one",
+      "evidence": "every job falls back to text-derived location, which is how Amazon lost 15 US roles"
+    },
+    {
+      "company_id": "CMP-015",
+      "company": "COMPUNNEL SOFTWARE GROUP, INC",
+      "severity": "critical",
+      "code": "SHARED_POSTING_DATE",
+      "message": "COMPUNNEL SOFTWARE GROUP, INC: all 10 dated candidates share one posting date",
+      "evidence": "\"Upload Resume\" - a page-level element is being read instead of a per-job date"
+    }
+  ],
+  "warnings": [],
+  "findings": [
+    {
+      "company_id": "CMP-001",
+      "company": "Amazon.com Services LLC",
+      "severity": "critical",
+      "code": "LOCATION_EXTRACTION_DEAD",
+      "message": "Amazon.com Services LLC: location is blank on all 40 candidates, but this source is expected to provide one",
+      "evidence": "every job falls back to text-derived location, which is how Amazon lost 15 US roles"
+    },
+    {
+      "company_id": "CMP-015",
+      "company": "COMPUNNEL SOFTWARE GROUP, INC",
+      "severity": "critical",
+      "code": "SHARED_POSTING_DATE",
+      "message": "COMPUNNEL SOFTWARE GROUP, INC: all 10 dated candidates share one posting date",
+      "evidence": "\"Upload Resume\" - a page-level element is being read instead of a per-job date"
+    },
+    {
+      "company_id": "CMP-014",
+      "company": "WELLS FARGO BANK, N.A",
+      "severity": "info",
+      "code": "LOCATION_ALWAYS_BLANK",
+      "message": "WELLS FARGO BANK, N.A: no candidate carries a location (expected for this source)",
+      "evidence": ""
+    }
+  ]
+}

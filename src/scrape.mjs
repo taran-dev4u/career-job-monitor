@@ -99,8 +99,8 @@ async function discoverCandidates(page, jsonPayloads, company, config) {
   const sourceUrl = company.career_url.replace(/#.*$/, "").replace(/\/$/, "");
   const sourceHost = new URL(company.career_url).hostname.replace(/^www\./, "");
   const oracleDetailUrl = id => {
-    if (/jpmc\.fa\.oraclecloud\.com/i.test(company.career_url)) return `https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/${id}`;
-    if (/careers\.oracle\.com/i.test(company.career_url)) return `https://careers.oracle.com/en/sites/jobsearch/job/${id}`;
+    if (/jpmc\.fa\.oraclecloud\.com/i.test(company.career_url)) return `https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/${id}/`;
+    if (/careers\.oracle\.com/i.test(company.career_url)) return `https://careers.oracle.com/en/sites/jobsearch/job/${id}/`;
     return "";
   };
   const eightfoldDetailUrl = id => {
@@ -177,12 +177,12 @@ async function readDetail(context, candidate, company, config, now) {
           firstText(["time", "[class*='posted']", "[data-automation-id='postedOn']", "[class*='date']"]),
         employmentType: Array.isArray(posting?.employmentType) ? posting.employmentType.join(", ") : posting?.employmentType || "",
         validThrough: posting?.validThrough || "", body, finalUrl: location.href,
-        closedText: /no longer available|position has been filled|job has expired|posting is closed/i.test(body)
+        closedText: /no longer available|no longer accepting applications|position has been filled|job has expired|posting is closed|job is closed|this job is closed|requisition has been closed|this job posting is no longer available|this opening is closed|this position is closed|could not find the job|job not found/i.test(body)
       };
     });
     const detailTitle = clean(data.title).replace(/^#+\s*/, "");
     const title = !GENERIC_TITLES.test(candidate.title) && candidate.title.length > 4 ? candidate.title : detailTitle;
-    const expired = !response || response.status() >= 400 || data.closedText || (data.validThrough && new Date(data.validThrough).getTime() < Date.now());
+    const expired = !response || response.status() >= 400 || response.status() === 0 || data.closedText || (data.validThrough && new Date(data.validThrough).getTime() < Date.now());
     const description = clean(data.body || candidate.context);
     // Location resolution, in order of trust:
     //   1. what the detail page exposed as a location field
