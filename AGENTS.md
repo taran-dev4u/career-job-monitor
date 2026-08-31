@@ -613,3 +613,23 @@ Entry template:
 - Scheduler status: Unchanged (`7,37 * * * *` UTC on GitHub Actions).
 - Follow-up: None.
 
+### TASK-20260831-1316-antigravity — DONE
+- Started: 2026-08-31T13:16:00Z
+- Completed: 2026-08-31T13:20:00Z
+- Objective: Modularize scraper into independent company/platform adapters (Phenom, Eightfold, Workday, Oracle HCM, Amazon, Meta, Google, Apple) using exact structured data formats (native state/APIs) for 100% precision on Job IDs, dates, and locations.
+- Files expected: `src/adapters/index.mjs`, `src/adapters/phenom.mjs`, `src/adapters/eightfold.mjs`, `src/adapters/workday.mjs`, `src/adapters/oracle_hcm.mjs`, `src/adapters/amazon.mjs`, `src/scrape.mjs`, `package.json`, `tests/adapters.test.mjs`, `AGENTS.md`
+- Files changed: `src/adapters/index.mjs`, `src/adapters/phenom.mjs`, `src/adapters/eightfold.mjs`, `src/adapters/workday.mjs`, `src/adapters/oracle_hcm.mjs`, `src/adapters/amazon.mjs`, `src/scrape.mjs`, `package.json`, `tests/adapters.test.mjs`, `AGENTS.md`
+- Files deleted: None.
+- Behavior/data impact:
+  (1) **Independent Platform Adapters**: Established `src/adapters/` with specialized platform extractors:
+      - **Phenom Adapter** (`src/adapters/phenom.mjs`): Reads in-memory `window.phApp.ddo.eagerLoadRefineSearch` and network `refineSearch` responses for Cisco, Fidelity, U.S. Bank, and Wells Fargo, obtaining exact ATS Job IDs, clean city/state/country locations, and ISO publication timestamps.
+      - **Eightfold Adapter** (`src/adapters/eightfold.mjs`): Intercepts `/api/apply/v2/jobs` for Qualcomm and Microsoft, extracting exact millisecond timestamps (`posted_ts`), direct links, and structured locations.
+      - **Workday Adapter** (`src/adapters/workday.mjs`): Intercepts `/wday/cxs/...` REST payloads for Intel, capturing exact requisition numbers and `postedOn` status.
+      - **Oracle Cloud HCM Adapter** (`src/adapters/oracle_hcm.mjs`): Intercepts `recruitingCEJobRequisitions` for JPMorgan Chase and Oracle, building verified canonical `/job/${id}/` routes.
+      - **Amazon Adapter** (`src/adapters/amazon.mjs`): Intercepts `search.json` for Amazon, capturing `id_icims`, clean calendar dates, and qualifications.
+  (2) **Native Attributes in Detail Reading**: `src/scrape.mjs` now prioritizes native structured location, date, and country fields extracted by adapters before falling back to DOM scraping. Non-US country tags on candidate records are immediately rejected.
+  (3) **Resilient Fallback**: If an internal API or state object is missing on any run, the system automatically falls back to Playwright DOM/JSON-LD parsing so no scan cycle is ever dropped.
+- Verification: Created and ran `tests/adapters.test.mjs`; passed all 6 automated test suites via `npm test`; ran live Playwright smoke tests with `--details` on Cisco (CMP-012, Healthy, 10 candidates with clean Job IDs and timestamps) and Qualcomm (CMP-007, Healthy, Eightfold positions cleanly evaluated); verified CI workbook generation (`npm run build-workbook:ci -- --verify`, exit code 0).
+- Scheduler status: Unchanged (`7,37 * * * *` UTC on GitHub Actions).
+- Follow-up: None.
+

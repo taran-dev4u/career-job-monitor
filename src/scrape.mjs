@@ -1,5 +1,6 @@
 import { chromium } from "playwright";
 import { deriveLocationFromText, clean, compactSnippet, detectJobType, evaluateEligibility, extractJobId, hashText, isOlderThan, markBaselinePending, notificationDecision, stableJobIdentityKey } from "./lib.mjs";
+import { trySpecializedAdapter } from "./adapters/index.mjs";
 
 const GENERIC_TITLES = /^(?:jobs?|careers?|search results?|view jobs?|learn more|apply|read more|saved jobs?)$/i;
 const NAVIGATION_URL = /\/(?:search|results?|saved-jobs?|job-search|recommendations|alerts)\/?$/i;
@@ -80,6 +81,14 @@ export function jsonCandidatesFrom(value, pageUrl) {
 
 async function discoverCandidates(page, jsonPayloads, company, config) {
   const adapter = adapterName(company.career_url);
+
+  // 1. Try independent specialized platform adapter first
+  const specialized = await trySpecializedAdapter(page, jsonPayloads, company, adapter);
+  if (specialized && specialized.length) {
+    return specialized.slice(0, config.max_cards_per_company);
+  }
+
+  // 2. Generic DOM / JSON-LD fallback
   const dom = await page.locator("a[href]").evaluateAll(anchors => anchors.map(anchor => {
     const href = anchor.href || "";
     const container = anchor.closest("article, li, [role='listitem'], [class*='job'], [class*='result'], [data-testid]") || anchor.parentElement;
@@ -193,13 +202,21 @@ async function readDetail(context, candidate, company, config, now) {
     // returned 30/30 empty - every one of those jobs was then rejected as
     // "outside the United States" despite being Seattle/Sunnyvale roles. The
     // body almost always states the city even when no location element does.
-    const rawLocation = clean(data.location || (company.id === "CMP-002" ? candidate.context : ""));
+    const rawLocation = clean(candidate.location || data.location || (company.id === "CMP-002" ? candidate.context : ""));
     const location = rawLocation || deriveLocationFromText(`${candidate.context} ${description}`);
-    const rawPosted = clean(data.posted);
+    const rawPosted = clean(candidate.posted || data.posted);
     const posted = (/upload resume|not stated|not published/i.test(rawPosted) || !rawPosted)
       ? (clean(`${candidate.context} ${description}`).match(/\b(?:posted:?\s*)?([A-Za-z]+ \d{1,2},? \d{4}|\d{4}-\d{2}-\d{2})\b/i)?.[1] || "")
       : rawPosted;
     const eligibility = evaluateEligibility({ title, context: candidate.context, description, location, posted, config });
+    if (candidate.country && !/united states|usa|us\b/i.test(candidate.country)) {
+      eligibility.accepted = false;
+      eligibility.decision = "Rejected";
+      if (!eligibility.exclusion_reasons.includes("Location is outside the United States")) {
+        eligibility.exclusion_reasons.push("Location is outside the United States");
+      }
+      eligibility.is_us_location = false;
+    }
     if (expired) { eligibility.accepted = false; eligibility.decision = "Rejected"; eligibility.exclusion_reasons.push("Job is expired or closed"); }
     const finalJobUrl = data.finalUrl || candidate.href;
     const finalJobId = candidate.external_id || extractJobId(finalJobUrl, `${title} ${description}`);
