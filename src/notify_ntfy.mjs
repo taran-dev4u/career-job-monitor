@@ -255,25 +255,11 @@ export async function sendBatchNotifications({
       return false;
     }
 
-    // Freshness gate - with one deliberate exception.
-    //
-    // monitor.mjs marks a job "notified" the moment it is first discovered,
-    // whether or not a push ever went out. So a job carrying an old posting
-    // date the FIRST time we see it (a newly added company, a scraper outage,
-    // a pagination miss, a backfilled listing) was suppressed here and then
-    // never offered again - silently, permanently.
-    //
-    // Freshness should stop us re-announcing stale listings, not stop a job
-    // from ever being announced once. A job never pushed before gets exactly
-    // one alert regardless of age, flagged as a catch-up rather than news.
-    const dateCheck = parseJobDate(j.posted, 2);
+    // Strict freshness gate: only push genuinely fresh jobs (<= 3 days old).
+    // Older jobs (> 3 days old) must NEVER be pushed to mobile.
+    const dateCheck = parseJobDate(j.posted, 3);
     if (dateCheck.isExplicitlyOld) {
-      if (neverPushed(j)) {
-        j.__catchUp = true;
-        console.log(`ntfy: First sighting of an older job, sending one catch-up alert: "${j.role || j.title}" (${j.company}) - posted ${j.posted}`);
-        return true;
-      }
-      console.log(`ntfy: Skipping older job already handled: "${j.role || j.title}" (${j.company})`);
+      console.log(`ntfy: Skipping older job (>3 days old): "${j.role || j.title}" (${j.company}) - posted ${j.posted}`);
       return false;
     }
 

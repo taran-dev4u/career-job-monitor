@@ -195,7 +195,10 @@ async function readDetail(context, candidate, company, config, now) {
     // body almost always states the city even when no location element does.
     const rawLocation = clean(data.location || (company.id === "CMP-002" ? candidate.context : ""));
     const location = rawLocation || deriveLocationFromText(`${candidate.context} ${description}`);
-    const posted = clean(data.posted);
+    const rawPosted = clean(data.posted);
+    const posted = (/upload resume|not stated|not published/i.test(rawPosted) || !rawPosted)
+      ? (clean(`${candidate.context} ${description}`).match(/\b(?:posted:?\s*)?([A-Za-z]+ \d{1,2},? \d{4}|\d{4}-\d{2}-\d{2})\b/i)?.[1] || "")
+      : rawPosted;
     const eligibility = evaluateEligibility({ title, context: candidate.context, description, location, posted, config });
     if (expired) { eligibility.accepted = false; eligibility.decision = "Rejected"; eligibility.exclusion_reasons.push("Job is expired or closed"); }
     const finalJobUrl = data.finalUrl || candidate.href;
@@ -204,7 +207,7 @@ async function readDetail(context, candidate, company, config, now) {
 
     return {
       key: canonicalKey, first_seen_at: now, last_verified_at: now, company_id: company.id, company: company.company,
-      title, location: /search for jobs/i.test(location) ? "" : location, posted: clean(data.posted),
+      title, location: /search for jobs/i.test(location) ? "" : location, posted,
       job_id: finalJobId, job_url: finalJobUrl,
       source_url: company.career_url, description_extracted: Boolean(description), description_hash: hashText(description),
       description_snippet: compactSnippet(description), active_status: expired ? "Expired" : "Active",

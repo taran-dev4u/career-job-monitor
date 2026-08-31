@@ -93,10 +93,9 @@ async function build() {
     // data happened to be rewritten.
     const activeOK = t.active !== "Expired";
     const accepted = recheck.accepted && expOK && spOK && enrollOK && activeOK;
-    // Freshness is informational now, not disqualifying: it drives the NEW
-    // badge and the default newest-first sort, and gates phone pushes in
-    // src/notify_ntfy.mjs - but never hides a job you can still apply to.
-    t.isFresh = recheck.is_fresh !== false;
+    // Freshness is informational: it drives the NEW badge (strictly <= 3 days old)
+    // and the default newest-first sort.
+    t.isFresh = Boolean(recheck.is_fresh && recheck.parsed_date?.hasDate && recheck.age_days !== null && recheck.age_days <= 3);
     t.ageDays = recheck.age_days ?? null;
     t.locConf = recheck.location_confidence || "Confirmed";
     const correctedDecision = accepted ? "Included"
@@ -542,7 +541,7 @@ const COLS = [
 let sortKey="posted", sortDir=-1, expanded=new Set();
 
 function fmtPostedDate(r){
-  if(r.posted && r.posted !== "Not stated" && r.posted !== "Recently Released") {
+  if(r.posted && r.posted !== "Not stated" && r.posted !== "Recently Released" && r.posted !== "Upload Resume" && r.posted !== "Date not stated") {
     const d = new Date(r.posted);
     if (!isNaN(d.getTime()) && d.getFullYear() >= 2020) {
       return d.toLocaleDateString("en-US", {month:"short", day:"numeric", year:"numeric"});
@@ -550,9 +549,9 @@ function fmtPostedDate(r){
     return esc(r.posted);
   }
   if(r.seen) {
-    return 'Detected ' + fmtDay(r.seen);
+    return 'First seen ' + fmtDay(r.seen);
   }
-  return "Recently Released";
+  return "Date not stated";
 }
 
 function decBadge(d){

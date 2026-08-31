@@ -142,20 +142,15 @@ const filteredResult = await sendBatchNotifications({
   fetchFn: mockFetch,
   pushedLogPath: testNonUsLog
 });
-// The Dublin job is rejected on location. The fresh Apple job is pushed as
-// news. The old Meta job has NEVER been pushed before, so it earns exactly one
-// catch-up alert rather than being silently dropped forever - monitor.mjs marks
-// a job notified on first sight whether or not a push went out, so suppressing
-// a first sighting on age meant it was never offered again.
-assert.equal(filteredResult.ok, 2, "fresh US job + one catch-up for the never-pushed older job");
+// The Dublin job is rejected on location. The old Meta job is rejected on age (>3 days).
+// Only the fresh Apple job is pushed.
+assert.equal(filteredResult.ok, 1, "only fresh US job is pushed; older jobs (>3 days old) are skipped");
 
-// 9b. An older job that HAS already been pushed must stay suppressed.
-const testCatchUpLog = path.join(os.tmpdir(), `pushed_test_catchup_${Date.now()}.json`);
+// 9b. An older job (>3 days old) must be skipped even on first sighting.
+const testOldJobLog = path.join(os.tmpdir(), `pushed_test_old_${Date.now()}.json`);
 const oldJob = { role: "Old Engineer", company: "Meta", company_id: "CMP-002", location: "Menlo Park, CA", job_id: "meta-old", job_url: "https://meta.com/1", posted: "2026-04-09T00:00:00Z" };
-const firstSighting = await sendBatchNotifications({ batch: { jobs: [oldJob] }, topic: "t", fetchFn: mockFetch, pushedLogPath: testCatchUpLog });
-assert.equal(firstSighting.ok, 1, "first sighting of an old job gets one catch-up push");
-const secondSighting = await sendBatchNotifications({ batch: { jobs: [oldJob] }, topic: "t", fetchFn: mockFetch, pushedLogPath: testCatchUpLog });
-assert.equal(secondSighting.ok, 0, "the same old job must not be pushed twice");
+const oldJobResult = await sendBatchNotifications({ batch: { jobs: [oldJob] }, topic: "t", fetchFn: mockFetch, pushedLogPath: testOldJobLog });
+assert.equal(oldJobResult.ok, 0, "an older job (>3 days old) must never be pushed to mobile");
 
 // 10. Overflow must be DEFERRED to the next run, never discarded.
 // A real run added 48 new jobs; with a hard cap of 20 and a summary naming only

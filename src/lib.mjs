@@ -270,6 +270,7 @@ const US_STATE_NAME_RE = /\b(?:Alabama|Alaska|Arizona|Arkansas|California|Colora
 const COMPANY_HISTORY_RE = /\b(?:founded|established|since \d{4}|our (?:company|firm|team)|we (?:have|bring|offer)|has (?:over|more than)|with over)\b[^.]{0,60}\b\d{1,2}\+?\s*(?:years?|yrs?)\b|\b\d{1,2}\+?\s*(?:years?|yrs?)\s+of\s+experience\s+(?:in the industry|serving|building great|delivering)/i;
 
 export function isUsLocation(locationText = "", contextText = "") {
+  const locOnly = clean(String(locationText || "")).trim();
   const combined = clean(`${locationText} ${contextText}`).trim();
   if (!combined) return { accepted: true, is_us: null, location_confidence: "Unverified", reason: "No explicit location specified", evidence: "" };
 
@@ -288,15 +289,26 @@ export function isUsLocation(locationText = "", contextText = "") {
     /\bremote\s*[-–]\s*(?:emea|apac|latam|uk|ireland|india|canada|europe|asia)\b/i
   ];
 
+  // 1. If the locationText itself contains an explicit foreign country or international city,
+  // ensure that company description boilerplate (e.g. "fifth-largest bank in the United States")
+  // cannot override the explicit foreign job location.
+  if (locOnly) {
+    for (const pattern of nonUsCountries) {
+      if (pattern.test(locOnly)) {
+        const locHasUs = US_COUNTRY_RE.test(locOnly) || US_STATE_ABBR_RE.test(locOnly) || US_STATE_NAME_RE.test(locOnly);
+        if (!locHasUs) {
+          return { accepted: false, is_us: false, location_confidence: "Confirmed", reason: "Location is outside the United States", evidence: locOnly.slice(0, 100) };
+        }
+      }
+    }
+  }
+
   for (const pattern of nonUsCountries) {
     if (pattern.test(combined)) {
       // Many real US cities share a name with a foreign one: Birmingham AL,
       // Manchester NH, Belfast ME, London OH, Dublin OH/CA/GA, Waterloo IA,
-      // Vancouver WA, Sydney MT, Paris TX. The old guard only recognised
-      // "STATE, United States" or the literal country name, so "Birmingham, AL"
-      // was rejected as foreign and the job was silently dropped. Reuse the same
-      // positive-US evidence used further down: a state abbreviation after a
-      // comma, or a full state name, both count as explicit US evidence.
+      // Vancouver WA, Sydney MT, Paris TX. Reuse positive-US evidence:
+      // a state abbreviation after a comma, or a full state name.
       const hasExplicitUs = US_COUNTRY_RE.test(combined) || US_STATE_ABBR_RE.test(combined) || US_STATE_NAME_RE.test(combined);
 
       if (!hasExplicitUs) {
@@ -412,20 +424,17 @@ export function deriveLocationFromText(text) {
   return "";
 }
 
-export function parseJobDate(dateStr, maxAgeDays = 2) {
-
-  if (!dateStr) return { hasDate: false, isRecent: true, isExplicitlyOld: false, ageDays: null, label: "Recently Released" };
+export function parseJobDate(dateStr, maxAgeDays = 3) {
+  if (!dateStr || /not stated|not published|upload resume/i.test(clean(String(dateStr)))) {
+    return { hasDate: false, isRecent: false, isExplicitlyOld: false, ageDays: null, label: "Date not stated" };
+  }
   const cleanStr = clean(String(dateStr)).trim();
 
-  // 0. An explicit publication date always wins over a trailing relative phrase.
-  //
-  // Amazon renders "Posted: February 6, 2026 (Updated 3 months ago)". The
-  // relative matchers below would read "3 months ago" and mark the job 90 days
-  // old, even though the string states its real publication date. The "Updated"
-  // clause describes an edit, not the posting. When a string carries BOTH an
-  // absolute date and a relative phrase, the absolute date is authoritative.
+  // 0. An explicit publication date ALWAYS wins over any relative update phrases.
+  // Amazon renders "Posted: July 1, 2026 (Updated about 1 hour ago)" or "Posted: August 14, 2026 (Updated about 3 hours ago)".
+  // An absolute date in the string must ALWAYS take precedence over trailing update clauses or relative tokens.
   const absoluteFirst = matchAbsoluteDate(cleanStr);
-  if (absoluteFirst && /\b\d+\s*(?:day|week|month|year)s?\s*ago\b/i.test(cleanStr)) {
+  if (absoluteFirst) {
     return describeAbsoluteDate(absoluteFirst, maxAgeDays);
   }
 
@@ -450,29 +459,18 @@ export function parseJobDate(dateStr, maxAgeDays = 2) {
     return { hasDate: true, isRecent: false, isExplicitlyOld: true, ageDays: 30, label: cleanStr };
   }
 
-  // 2. Relative fresh phrases: "Just posted", "Today", "Hours ago", "1 day ago", "Yesterday"
-  if (/\b(?:just posted|today|hours? ago|minutes? ago|1 day ago|yesterday|recently)\b/i.test(cleanStr)) {
+  // 2. Relative fresh phrases (ONLY when no absolute date exists): "Just posted", "Recently posted", "Today", "Hours ago", "1 day ago", "Yesterday"
+  if (/\b(?:just posted|recently posted|today|hours? ago|minutes? ago|1 day ago|yesterday)\b/i.test(cleanStr)) {
     return { hasDate: true, isRecent: true, isExplicitlyOld: false, ageDays: 0, label: cleanStr };
   }
 
-  // 3. Absolute dates - one validated code path only.
-  // This branch used to build its own Date and skip validation, so
-  // "02/30/2026" silently became 2 March and a typo'd "12/31/2099" became a
-  // brand-new posting. matchAbsoluteDate() rejects rolled-over and
-  // far-future dates; routing through it keeps the two paths from drifting.
-  const dateObj = matchAbsoluteDate(cleanStr) || (() => {
-    // Do not let the permissive fallback resurrect a string matchAbsoluteDate
-    // already rejected: new Date("02/30/2026") happily returns 2 March.
-    if (/\d{1,2}\/\d{1,2}\/\d{4}|\d{4}-\d{2}-\d{2}/.test(cleanStr)) return null;
-    const directParse = new Date(cleanStr);
-    if (isNaN(directParse.getTime()) || directParse.getFullYear() < 2020) return null;
-    if (directParse.getTime() > Date.now() + 2 * 86400000) return null;
-    return directParse;
-  })();
+  // 3. Permissive fallback for direct date strings
+  const directParse = new Date(cleanStr);
+  if (!isNaN(directParse.getTime()) && directParse.getFullYear() >= 2020 && directParse.getTime() <= Date.now() + 2 * 86400000) {
+    return describeAbsoluteDate(directParse, maxAgeDays);
+  }
 
-  if (dateObj) return describeAbsoluteDate(dateObj, maxAgeDays);
-
-  return { hasDate: false, isRecent: true, isExplicitlyOld: false, ageDays: null, label: cleanStr };
+  return { hasDate: false, isRecent: false, isExplicitlyOld: false, ageDays: null, label: cleanStr || "Date not stated" };
 }
 
 export function evaluateEligibility({ title, context = "", description = "", location = "", posted = "", config }) {
@@ -554,18 +552,13 @@ export function formatScanIntervalWindow(startIso, endIso) {
 
 export function formatReleaseTimeline(rawPosted, discoveredAt, windowStart) {
   const cleanPosted = clean(rawPosted);
-  let parsedDate = null;
-  if (cleanPosted && !/not stated|recently/i.test(cleanPosted)) {
-    const d = new Date(cleanPosted);
-    if (!isNaN(d.getTime())) parsedDate = d;
-  }
-  
+  const parsed = parseJobDate(cleanPosted, 3);
   const intervalWindow = formatScanIntervalWindow(windowStart, discoveredAt);
 
-  if (parsedDate) {
+  if (parsed.hasDate && parsed.iso) {
     const hasSpecificTime = /T\d{2}:\d{2}/.test(cleanPosted) || /:\d{2}/.test(cleanPosted);
-    const dateStr = formatDateUtc(parsedDate);
-    const timeStr = formatTimeUtc(parsedDate);
+    const dateStr = formatDateUtc(parsed.iso);
+    const timeStr = formatTimeUtc(parsed.iso);
     const exactLabel = hasSpecificTime && timeStr ? `${dateStr} at ${timeStr} UTC (Exact ATS timestamp)` : dateStr;
     return {
       posted_display: exactLabel,
@@ -574,8 +567,16 @@ export function formatReleaseTimeline(rawPosted, discoveredAt, windowStart) {
     };
   }
 
+  if (parsed.hasDate && parsed.label && !/date not stated/i.test(parsed.label)) {
+    return {
+      posted_display: parsed.label,
+      discovery_window: intervalWindow,
+      is_exact: false
+    };
+  }
+
   return {
-    posted_display: cleanPosted && !/not stated/i.test(cleanPosted) ? cleanPosted : "Recently Released",
+    posted_display: "Date not stated by company",
     discovery_window: intervalWindow,
     is_exact: false
   };
@@ -630,6 +631,14 @@ export function notificationDecision(notified, recordOrKey, a3, a4, a5) {
     }
     return false;
   }
+
+  // Strict Freshness Gate: A job explicitly older than 3 days is an existing listing, NOT a new job.
+  const dateInfo = record.parsed_date || parseJobDate(record.posted, 3);
+  if (dateInfo.isExplicitlyOld) {
+    for (const k of keys) notified[k] = { notified_at: now, reason: `discovered old listing (${dateInfo.ageDays}d old)` };
+    return false;
+  }
+
   if (record.accepted && !marker) {
     for (const k of keys) notified[k] = { notified_at: now, reason: "new eligible job" };
     return true;

@@ -593,3 +593,23 @@ Entry template:
 - Scheduler status: Unchanged (`7,37 * * * *`).
 - Follow-up: None.
 
+### TASK-20260831-1310-antigravity — DONE
+- Started: 2026-08-31T13:10:00Z
+- Completed: 2026-08-31T13:10:00Z
+- Objective: Fix date parsing errors where jobs posted weeks/months ago were misidentified as posted today, enforce strict maximum 3-day freshness ceiling on new job alerts, suppress false "Recently Released" labels on undated jobs, and fix location leakage on international roles.
+- Files expected: `src/lib.mjs`, `src/scrape.mjs`, `src/notify_ntfy.mjs`, `src/build_dashboard_html.mjs`, `tests/filter.test.mjs`, `tests/notify.test.mjs`, `data/jobs.json`, `AGENTS.md`
+- Files changed: `src/lib.mjs`, `src/scrape.mjs`, `src/notify_ntfy.mjs`, `src/build_dashboard_html.mjs`, `tests/filter.test.mjs`, `tests/notify.test.mjs`, `data/jobs.json`, `outputs/job-monitor/Job_Monitor.xlsx`, `outputs/job-monitor/dashboard.html`, `index.html`, `AGENTS.md`
+- Files deleted: None.
+- Behavior/data impact:
+  (1) **Date Parsing Priority**: Fixed `parseJobDate` in `src/lib.mjs` so explicit calendar dates (e.g. `July 1, 2026`, `August 14, 2026`) always take authoritative precedence over relative update clauses (e.g. `Updated about 1 hour ago`). Jobs posted months ago are now accurately parsed with their real publication age (>50 days old) and marked `isExplicitlyOld: true` rather than 0 days old / "Posted Today".
+  (2) **Strict 3-Day Age Gate on New Jobs & Push Notifications**:
+      - In `src/lib.mjs` (`notificationDecision`), jobs older than 3 days (`dateInfo.isExplicitlyOld === true`) are recorded as `"discovered old listing"` and return `false`, preventing them from entering `newJobs`, `data/jobs.json`, or the user-facing "New Jobs" workbook sheet.
+      - In `src/notify_ntfy.mjs`, removed the legacy "catch-up alert" exception that was pushing stale listings (>3 days old) to mobile; older jobs are strictly skipped.
+  (3) **Truthful Labeling for Undated Postings**: Fixed `formatReleaseTimeline` and `build_dashboard_html.mjs` so unstated dates accurately display `"Date not stated by company"` (or `"First seen <date>"`), eliminating deceptive `"Recently Released"` and `"Posted Today"` claims.
+  (4) **International Location Guard**: In `isUsLocation` (`src/lib.mjs`), `locationText` is now checked directly against international city/country patterns first, preventing company description boilerplate (e.g. "fifth-largest bank in the United States") from overriding foreign job locations like `"Chennai, Tamil Nādu, India"`.
+  (5) **Detail Date Validation**: In `src/scrape.mjs` (`readDetail`), button text such as `"Upload Resume"` is rejected as a date and falls back to extracting genuine calendar dates from card context text.
+  (6) **Historical Data Hygiene**: Purged 122 stale (>3 days old) or foreign entries from `data/jobs.json`, restoring the "New Jobs" feed to genuine, fresh, eligible US postings. Rebuilt and verified `Job_Monitor.xlsx` (40 New Jobs rows) and web dashboards.
+- Verification: Passed all 5 automated test suites via `npm test` (`tests/filter.test.mjs`, `tests/monitor_data.test.mjs`, `tests/notify.test.mjs`, `tests/companies.test.mjs`, `tests/watchdog.test.mjs`). CI workbook generation and verification passed with exit code 0 (`npm run build-workbook:ci -- --verify`).
+- Scheduler status: Unchanged (`7,37 * * * *` UTC on GitHub Actions).
+- Follow-up: None.
+

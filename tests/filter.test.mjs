@@ -247,4 +247,32 @@ assert.equal(freshJob.notification_status, "Alerted");
   assert.equal(isUsLocation(deriveLocationFromText("Engineer USA, WA, Seattle | Job ID: 1"), "").accepted, true);
 }
 
+// FIX 2b - An absolute date beats trailing hourly update phrases like "(Updated about 1 hour ago)".
+{
+  const amazon1h = parseJobDate("Posted: July 1, 2026 (Updated about 1 hour ago)", 3);
+  assert.ok(amazon1h.iso.startsWith("2026-07-01"), "absolute date July 1 must win over 'Updated about 1 hour ago'");
+  assert.equal(amazon1h.isExplicitlyOld, true, "July 1 must be explicitly old");
+  assert.ok(amazon1h.ageDays > 50, "must report real publication age >50 days, not 0 days");
+
+  const amazon3h = parseJobDate("Posted: August 14, 2026 (Updated about 3 hours ago)", 3);
+  assert.ok(amazon3h.iso.startsWith("2026-08-14"), "absolute date August 14 must win over 'Updated about 3 hours ago'");
+  assert.equal(amazon3h.isExplicitlyOld, true, "August 14 must be explicitly old");
+  assert.ok(amazon3h.ageDays > 10, "must report real publication age >10 days, not 0 days");
+
+  // Non-dates and empty dates
+  const emptyDate = parseJobDate("", 3);
+  assert.equal(emptyDate.hasDate, false);
+  assert.equal(emptyDate.label, "Date not stated");
+
+  const resumeBtn = parseJobDate("Upload Resume", 3);
+  assert.equal(resumeBtn.hasDate, false);
+  assert.equal(resumeBtn.label, "Date not stated");
+}
+
+// FIX 3c - Explicit foreign location must not be overridden by company boilerplate mentioning United States.
+{
+  const chennaiWithUsBoilerplate = isUsLocation("Chennai, Tamil Nādu, India", "As the fifth-largest bank in the United States, we are committed to excellence.");
+  assert.equal(chennaiWithUsBoilerplate.accepted, false, "Chennai location must be rejected even if company boilerplate mentions United States");
+}
+
 console.log("Eligibility, sponsorship, internship, location, date, deduplication, and adapter tests passed.");
