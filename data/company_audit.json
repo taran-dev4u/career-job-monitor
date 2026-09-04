@@ -1,40 +1,89 @@
 {
-  "run_at": "2026-08-31T03:37:28.003Z",
+  "run_at": "2026-09-04T05:09:52.623Z",
   "critical": [
     {
-      "company_id": "CMP-001",
-      "company": "Amazon.com Services LLC",
+      "company_id": "CMP-005",
+      "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
-      "code": "LOCATION_EXTRACTION_DEAD",
-      "message": "Amazon.com Services LLC: location is blank on all 40 candidates, but this source is expected to provide one",
-      "evidence": "every job falls back to text-derived location, which is how Amazon lost 15 US roles"
+      "code": "ZERO_ELIGIBLE_STREAK",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 97h despite scanning cleanly",
+      "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
+    },
+    {
+      "company_id": "CMP-011",
+      "company": "Microsoft Corporation",
+      "severity": "critical",
+      "code": "ZERO_ELIGIBLE_STREAK",
+      "message": "Microsoft Corporation has produced no eligible job for 97h despite scanning cleanly",
+      "evidence": "16 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
       "company_id": "CMP-015",
       "company": "COMPUNNEL SOFTWARE GROUP, INC",
       "severity": "critical",
-      "code": "SHARED_POSTING_DATE",
-      "message": "COMPUNNEL SOFTWARE GROUP, INC: all 10 dated candidates share one posting date",
-      "evidence": "\"Upload Resume\" - a page-level element is being read instead of a per-job date"
+      "code": "DATE_EXTRACTION_DEAD",
+      "message": "COMPUNNEL SOFTWARE GROUP, INC: no candidate carries a posting date, but this source is expected to provide one",
+      "evidence": "freshness cannot be judged, so nothing from this source can earn a push alert"
+    },
+    {
+      "company_id": "CMP-015",
+      "company": "COMPUNNEL SOFTWARE GROUP, INC",
+      "severity": "critical",
+      "code": "ZERO_ELIGIBLE_STREAK",
+      "message": "COMPUNNEL SOFTWARE GROUP, INC has produced no eligible job for 97h despite scanning cleanly",
+      "evidence": "10 candidates this run; check the search URL's filters and the rejection reasons"
     }
   ],
-  "warnings": [],
+  "warnings": [
+    {
+      "company_id": "CMP-004",
+      "company": "Apple Inc",
+      "severity": "warning",
+      "code": "MOSTLY_SHARED_POSTING_DATE",
+      "message": "Apple Inc: 96% of dated candidates share one posting date",
+      "evidence": "\"2026-09-03\""
+    }
+  ],
   "findings": [
     {
-      "company_id": "CMP-001",
-      "company": "Amazon.com Services LLC",
+      "company_id": "CMP-005",
+      "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
-      "code": "LOCATION_EXTRACTION_DEAD",
-      "message": "Amazon.com Services LLC: location is blank on all 40 candidates, but this source is expected to provide one",
-      "evidence": "every job falls back to text-derived location, which is how Amazon lost 15 US roles"
+      "code": "ZERO_ELIGIBLE_STREAK",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 97h despite scanning cleanly",
+      "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
+    },
+    {
+      "company_id": "CMP-011",
+      "company": "Microsoft Corporation",
+      "severity": "critical",
+      "code": "ZERO_ELIGIBLE_STREAK",
+      "message": "Microsoft Corporation has produced no eligible job for 97h despite scanning cleanly",
+      "evidence": "16 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
       "company_id": "CMP-015",
       "company": "COMPUNNEL SOFTWARE GROUP, INC",
       "severity": "critical",
-      "code": "SHARED_POSTING_DATE",
-      "message": "COMPUNNEL SOFTWARE GROUP, INC: all 10 dated candidates share one posting date",
-      "evidence": "\"Upload Resume\" - a page-level element is being read instead of a per-job date"
+      "code": "DATE_EXTRACTION_DEAD",
+      "message": "COMPUNNEL SOFTWARE GROUP, INC: no candidate carries a posting date, but this source is expected to provide one",
+      "evidence": "freshness cannot be judged, so nothing from this source can earn a push alert"
+    },
+    {
+      "company_id": "CMP-015",
+      "company": "COMPUNNEL SOFTWARE GROUP, INC",
+      "severity": "critical",
+      "code": "ZERO_ELIGIBLE_STREAK",
+      "message": "COMPUNNEL SOFTWARE GROUP, INC has produced no eligible job for 97h despite scanning cleanly",
+      "evidence": "10 candidates this run; check the search URL's filters and the rejection reasons"
+    },
+    {
+      "company_id": "CMP-004",
+      "company": "Apple Inc",
+      "severity": "warning",
+      "code": "MOSTLY_SHARED_POSTING_DATE",
+      "message": "Apple Inc: 96% of dated candidates share one posting date",
+      "evidence": "\"2026-09-03\""
     },
     {
       "company_id": "CMP-014",
@@ -42,6 +91,14 @@
       "severity": "info",
       "code": "LOCATION_ALWAYS_BLANK",
       "message": "WELLS FARGO BANK, N.A: no candidate carries a location (expected for this source)",
+      "evidence": ""
+    },
+    {
+      "company_id": "CMP-015",
+      "company": "COMPUNNEL SOFTWARE GROUP, INC",
+      "severity": "info",
+      "code": "LOCATION_ALWAYS_BLANK",
+      "message": "COMPUNNEL SOFTWARE GROUP, INC: no candidate carries a location (expected for this source)",
       "evidence": ""
     }
   ]
