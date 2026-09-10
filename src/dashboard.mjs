@@ -14,8 +14,16 @@ function dashboardHeader(title, runAt) {
   return [
     `# ${title}`, "", `Updated: **${runAt} UTC** / **${eastern} Eastern**`, "",
     `[Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)`, "",
-    "> Newest discovered jobs are always shown first.", ""
+    "> Newest company postings are always shown first.", ""
   ];
+}
+
+function formatPostedCell(job) {
+  const raw = job.posted || job.published_date_raw;
+  if (raw && !/not stated|not published|upload resume/i.test(raw)) {
+    return escapeMd(raw);
+  }
+  return "Date not stated";
 }
 
 export function filteredDashboard(runAt, records, health) {
@@ -25,8 +33,17 @@ export function filteredDashboard(runAt, records, health) {
   lines.push(`Source health: **${counts.Healthy || 0} healthy**, **${counts["Confirmed Empty"] || 0} confirmed empty**, **${counts.Degraded || 0} degraded**, **${counts.Broken || 0} broken**.`, "", "## Apply Now", "");
   if (!active.length) lines.push("No currently verified eligible jobs are available.", "");
   else {
-    lines.push("| First Seen | Company | Role | Location | Type | Posted | Required | Preferred | Sponsorship | Apply |", "|---|---|---|---|---|---|---:|---:|---|---|");
-    for (const job of active) lines.push(`| ${escapeMd(job.first_seen_at || job.discovered_at || "Not stated")} | ${escapeMd(job.company)} | ${escapeMd(job.title || job.role)} | ${escapeMd(job.location || "Not stated")} | ${escapeMd(job.job_type || "Not specified")} | ${escapeMd(job.posted || "Not stated")} | ${displayYears(job.required_experience_years)} | ${displayYears(job.preferred_experience_years)} | ${escapeMd(job.sponsorship_status || "Not Mentioned")} | [Apply](${job.job_url}) |`);
+    lines.push("| Posted Date | Company | Role | Location | Type | Experience | Sponsorship | Discovered At | Apply |", "|---|---|---|---|---|---|---|---|---|");
+    for (const job of active) {
+      const postedCell = formatPostedCell(job);
+      const discoveredCell = escapeMd(job.first_seen_at || job.discovered_at || "Not stated");
+      const expCell = job.required_experience_years !== null && job.required_experience_years !== undefined
+        ? `${job.required_experience_years}+ yrs req`
+        : job.preferred_experience_years !== null && job.preferred_experience_years !== undefined
+          ? `${job.preferred_experience_years}+ yrs pref`
+          : "0–3 yrs";
+      lines.push(`| ${postedCell} | ${escapeMd(job.company)} | ${escapeMd(job.title || job.role)} | ${escapeMd(job.location || "Not stated")} | ${escapeMd(job.job_type || "Not specified")} | ${expCell} | ${escapeMd(job.sponsorship_status || "Not Mentioned")} | ${discoveredCell} | [Apply](${job.job_url}) |`);
+    }
     lines.push("");
   }
   lines.push("## Source Health", "", "| ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |", "|---|---|---|---:|---:|---:|---|---|");
@@ -42,8 +59,12 @@ export function unfilteredDashboard(runAt, records) {
   lines.push(`Snapshot totals: **${ordered.length} extracted**, **${counts.Included || 0} included**, **${counts.Rejected || 0} rejected**, **${counts["Pending Detail"] || 0} pending**, **${counts["Extraction Error"] || 0} extraction errors**.`, "", "This view intentionally includes rejected jobs. Use the **Decision** and **Reasons** columns before applying.", "", "## Every Extracted Job", "");
   if (!ordered.length) lines.push("No jobs have been extracted yet.", "");
   else {
-    lines.push("| First Seen | Company | Role | Location | Posted | Sponsorship | Required | Decision | Reasons | Apply |", "|---|---|---|---|---|---|---:|---|---|---|");
-    for (const job of ordered) lines.push(`| ${escapeMd(job.first_seen_at || job.discovered_at || "Not stated")} | ${escapeMd(job.company)} | ${escapeMd(job.title || job.role)} | ${escapeMd(job.location || "Not stated")} | ${escapeMd(job.posted || "Not stated")} | ${escapeMd(job.sponsorship_status || "Unclear")} | ${displayYears(job.required_experience_years)} | ${escapeMd(job.decision || "Unknown")} | ${escapeMd(reasons(job))} | [Open](${job.job_url}) |`);
+    lines.push("| Posted Date | Company | Role | Location | Sponsorship | Required | Decision | Reasons | Discovered At | Apply |", "|---|---|---|---|---|---:|---|---|---|---|");
+    for (const job of ordered) {
+      const postedCell = formatPostedCell(job);
+      const discoveredCell = escapeMd(job.first_seen_at || job.discovered_at || "Not stated");
+      lines.push(`| ${postedCell} | ${escapeMd(job.company)} | ${escapeMd(job.title || job.role)} | ${escapeMd(job.location || "Not stated")} | ${escapeMd(job.sponsorship_status || "Unclear")} | ${displayYears(job.required_experience_years)} | ${escapeMd(job.decision || "Unknown")} | ${escapeMd(reasons(job))} | ${discoveredCell} | [Open](${job.job_url}) |`);
+    }
     lines.push("");
   }
   return `${lines.join("\n").trimEnd()}\n`;

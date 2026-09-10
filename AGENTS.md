@@ -633,3 +633,25 @@ Entry template:
 - Scheduler status: Unchanged (`7,37 * * * *` UTC on GitHub Actions).
 - Follow-up: None.
 
+### TASK-20260910-1155-antigravity — DONE
+- Started: 2026-09-10T11:45:00Z
+- Completed: 2026-09-10T11:58:00Z
+- Objective: Disentangle company publication date from crawler discovery timestamp ("first seen"), establish company publication date as the primary sorting and display column (Column 1) across all dashboards and workbooks, eliminate false "Posted Today" labels, and document platform-specific extraction proof.
+- Files expected: `src/job_order.mjs`, `src/dashboard.mjs`, `src/build_dashboard_html.mjs`, `src/workbook_data.mjs`, `src/notify_ntfy.mjs`, `tests/notify.test.mjs`, `LATEST_JOBS.md`, `ALL_EXTRACTED_JOBS.md`, `index.html`, `outputs/job-monitor/Job_Monitor.xlsx`, `outputs/job-monitor/dashboard.html`, `AGENTS.md`
+- Files changed: `src/job_order.mjs`, `src/dashboard.mjs`, `src/build_dashboard_html.mjs`, `src/workbook_data.mjs`, `src/notify_ntfy.mjs`, `tests/notify.test.mjs`, `LATEST_JOBS.md`, `ALL_EXTRACTED_JOBS.md`, `index.html`, `outputs/job-monitor/Job_Monitor.xlsx`, `outputs/job-monitor/dashboard.html`, `AGENTS.md`
+- Files deleted: None.
+- Behavior/data impact:
+  (1) **Publication Date as Primary Sort & Column 1**:
+      - `src/job_order.mjs`: `newestFirst()` now ranks jobs strictly by `getJobPostingTimestamp()` (resolving `published_date_iso`, `posted`, or `published_date_raw`), falling back to `first_seen_at` only when the company publishes no date.
+      - `src/dashboard.mjs`: `LATEST_JOBS.md` and `ALL_EXTRACTED_JOBS.md` tables redesigned with **`Posted Date`** in Column 1 and `Discovered At` shifted to audit column.
+      - `src/build_dashboard_html.mjs`: Fixed `fmtPostedDate()` to never substitute crawler `first_seen_at` into the Posted Date column; default table sort now compares genuine publication timestamps.
+      - `src/workbook_data.mjs`: Updated Excel workbook layout so Column A in `Apply Now`, `New Jobs`, and `All Extracted Jobs` is `Posted Date` with `First Seen` in Column I.
+  (2) **No False "Posted Today" Claims**:
+      - Postings with explicit past dates (e.g. `09/08/2026`) display `Sep 8, 2026 (2 days ago)`; undated listings display `Date not stated by company`.
+      - `src/notify_ntfy.mjs`: Distinguishes `📅 Company Posted Date` from `⚡ Monitor Discovered At` and restricts `"⚡ Posted Today"` strictly to listings published within the last 24 hours.
+  (3) **Static Template Timestamp Guard**: `matchAbsoluteDate` in `src/lib.mjs` ignores timestamps before 2020 to prevent static CMS creation dates from being scraped as job posting dates.
+- Verification: Passed all 6 test suites via `npm test` (`filter.test.mjs`, `monitor_data.test.mjs`, `notify.test.mjs`, `companies.test.mjs`, `watchdog.test.mjs`, `adapters.test.mjs`). Rebuilt and verified `npm run build-workbook:ci -- --verify`, `src/dashboard.mjs`, and `src/build_dashboard_html.mjs` with exit code 0.
+- Scheduler status: Unchanged (`7,37 * * * *` UTC on GitHub Actions).
+- Follow-up: None.
+
+

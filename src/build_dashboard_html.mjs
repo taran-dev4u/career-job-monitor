@@ -544,14 +544,15 @@ function fmtPostedDate(r){
   if(r.posted && r.posted !== "Not stated" && r.posted !== "Recently Released" && r.posted !== "Upload Resume" && r.posted !== "Date not stated") {
     const d = new Date(r.posted);
     if (!isNaN(d.getTime()) && d.getFullYear() >= 2020) {
+      const hasSpecificTime = /T\d{2}:\d{2}/.test(r.posted) || /:\d{2}/.test(r.posted);
+      if (hasSpecificTime) {
+        return d.toLocaleDateString("en-US", {month:"short", day:"numeric", year:"numeric"}) + ' ' + d.toLocaleTimeString("en-US", {hour:"numeric", minute:"2-digit", timeZone:"UTC"}) + ' UTC';
+      }
       return d.toLocaleDateString("en-US", {month:"short", day:"numeric", year:"numeric"});
     }
     return esc(r.posted);
   }
-  if(r.seen) {
-    return 'First seen ' + fmtDay(r.seen);
-  }
-  return "Date not stated";
+  return '<span style="color:var(--muted)">Date not stated</span>';
 }
 
 function decBadge(d){
@@ -603,9 +604,14 @@ function filtered(){
     let av=a[sortKey]??"", bv=b[sortKey]??"";
     if(sortKey==="reqYears"){ av=av===null?-1:av; bv=bv===null?-1:bv; return (av-bv)*sortDir; }
     if(sortKey==="posted"){
-      const aDate = new Date(a.postedIso || a.posted || a.seen).getTime() || 0;
-      const bDate = new Date(b.postedIso || b.posted || b.seen).getTime() || 0;
-      if (aDate !== bDate) return (aDate - bDate) * sortDir;
+      const aRaw = a.postedIso || a.posted;
+      const bRaw = b.postedIso || b.posted;
+      const aDate = aRaw && !/not stated/i.test(aRaw) ? new Date(aRaw).getTime() : 0;
+      const bDate = bRaw && !/not stated/i.test(bRaw) ? new Date(bRaw).getTime() : 0;
+      if (aDate !== bDate) return ((aDate || 0) - (bDate || 0)) * sortDir;
+      const aSeen = new Date(a.seen || 0).getTime() || 0;
+      const bSeen = new Date(b.seen || 0).getTime() || 0;
+      if (aSeen !== bSeen) return (aSeen - bSeen) * sortDir;
     }
     av=String(av).toLowerCase(); bv=String(bv).toLowerCase();
     return av<bv?-1*sortDir: av>bv?1*sortDir: 0;

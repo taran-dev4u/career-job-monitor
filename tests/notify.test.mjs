@@ -31,7 +31,6 @@ assert.ok(relativeTimeline.discovery_window.includes("6:07 AM – 6:37 AM UTC"))
 // 2. Job payload construction
 const jobPayload = buildJobPayload(sampleJob, "test-topic");
 assert.equal(jobPayload.topic, "test-topic");
-assert.ok(jobPayload.title.includes("🎯"));
 assert.ok(jobPayload.title.includes("Software Engineer"));
 assert.ok(jobPayload.title.includes("Apple Inc"));
 assert.ok(jobPayload.message.includes("Cupertino, CA, US"));

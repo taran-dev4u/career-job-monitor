@@ -42,10 +42,17 @@ export function buildJobPayload(job, topic) {
     job.discovered_at,
     job.discovery_window_start || job.scan_window?.start
   );
+  const dateInfo = parseJobDate(job.posted, 3);
+  const isToday = dateInfo.hasDate && dateInfo.ageDays !== null && dateInfo.ageDays < 1;
+  const alertPrefix = isToday ? "⚡ Posted Today" : "🎯 New Job";
 
   // Clean description snippet up to 280 chars
   let snippet = (job.description_snippet || "").replace(/\s+/g, " ").trim();
   if (snippet.length > 280) snippet = `${snippet.slice(0, 277)}…`;
+
+  const postedDisplay = dateInfo.hasDate && dateInfo.ageDays !== null && dateInfo.ageDays >= 1
+    ? `${timeline.posted_display} (${Math.floor(dateInfo.ageDays)} day(s) ago)`
+    : timeline.posted_display;
 
   const lines = [
     `🏢 **Company:** ${company}${companyId}`,
@@ -53,8 +60,8 @@ export function buildJobPayload(job, topic) {
     `💼 **Type:** ${type}  |  🆔 **Job ID:** \`${reqId}\``,
     `⏱️ **Experience:** ${exp}`,
     `🛂 **Sponsorship:** ${spons}`,
-    `📅 **Released:** ${timeline.posted_display}`,
-    `⚡ **Discovery Window:** ${job.discovery_window || timeline.discovery_window}`
+    `📅 **Company Posted Date:** ${postedDisplay}`,
+    `⚡ **Monitor Discovered At:** ${job.discovered_at || timeline.discovery_window}`
   ];
 
   if (snippet) {
@@ -67,7 +74,7 @@ export function buildJobPayload(job, topic) {
 
   const payload = {
     topic,
-    title: `🎯 New Job: ${role} · ${company}`,
+    title: `${alertPrefix}: ${role} · ${company}`,
     message: lines.join("\n"),
     markdown: true,
     tags: ["briefcase", "sparkles"],
