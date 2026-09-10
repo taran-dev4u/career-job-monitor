@@ -76,23 +76,28 @@ assert.equal(healthPayload.priority, 2);
 assert.deepEqual(healthPayload.tags, ["warning", "rotating_light"]);
 
 // 5. Batch sender without topic (skips cleanly)
+const noTopicCarry = path.join(os.tmpdir(), `no_topic_carry_${Date.now()}.json`);
 const noTopicResult = await sendBatchNotifications({
   batch: { jobs: [sampleJob] },
-  topic: ""
+  topic: "",
+  carryOverPath: noTopicCarry
 });
 assert.equal(noTopicResult.skipped, true);
 assert.equal(noTopicResult.reason, "NO_TOPIC");
 
 // 6. Batch sender with empty batch (skips cleanly)
+const emptyCarry = path.join(os.tmpdir(), `empty_carry_${Date.now()}.json`);
 const emptyResult = await sendBatchNotifications({
   batch: { jobs: [], health_alerts: [] },
-  topic: "test-topic"
+  topic: "test-topic",
+  carryOverPath: emptyCarry
 });
 assert.equal(emptyResult.skipped, true);
 assert.equal(emptyResult.reason, "EMPTY_BATCH");
 
 // 7. Batch sender with mock fetch and push deduplication test
 const tempLog = path.join(os.tmpdir(), `pushed_test_${Date.now()}.json`);
+const tempCarry = path.join(os.tmpdir(), `pushed_carry_${Date.now()}.json`);
 const sentPayloads = [];
 const mockFetch = async (server, payload, token) => {
   sentPayloads.push({ server, payload, token });
@@ -108,7 +113,8 @@ const sendResult = await sendBatchNotifications({
   server: "https://ntfy.sh",
   token: "my-token",
   fetchFn: mockFetch,
-  pushedLogPath: tempLog
+  pushedLogPath: tempLog,
+  carryOverPath: tempCarry
 });
 
 assert.equal(sendResult.ok, 2);
@@ -123,13 +129,15 @@ const secondRunResult = await sendBatchNotifications({
   },
   topic: "my-career-topic",
   fetchFn: mockFetch,
-  pushedLogPath: tempLog
+  pushedLogPath: tempLog,
+  carryOverPath: tempCarry
 });
 assert.equal(secondRunResult.skipped, true);
 assert.equal(secondRunResult.reason, "EMPTY_BATCH");
 
 // 9. Strict US Location & Date Freshness gating test
 const testNonUsLog = path.join(os.tmpdir(), `pushed_test_nonus_${Date.now()}.json`);
+const testNonUsCarry = path.join(os.tmpdir(), `pushed_test_nonus_carry_${Date.now()}.json`);
 const filteredResult = await sendBatchNotifications({
   batch: {
     jobs: [
@@ -140,7 +148,8 @@ const filteredResult = await sendBatchNotifications({
   },
   topic: "my-career-topic",
   fetchFn: mockFetch,
-  pushedLogPath: testNonUsLog
+  pushedLogPath: testNonUsLog,
+  carryOverPath: testNonUsCarry
 });
 // The Dublin job is rejected on location. The old Meta job is rejected on age (>3 days).
 // Only the fresh Apple job is pushed.

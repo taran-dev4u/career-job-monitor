@@ -1,21 +1,37 @@
 {
-  "run_at": "2026-09-04T05:09:52.623Z",
+  "run_at": "2026-09-10T10:52:56.672Z",
   "critical": [
     {
       "company_id": "CMP-005",
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 97h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 247h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
+    },
+    {
+      "company_id": "CMP-006",
+      "company": "IBM Corporation",
+      "severity": "critical",
+      "code": "SHARED_POSTING_DATE",
+      "message": "IBM Corporation: all 12 dated candidates share one posting date",
+      "evidence": "\"2014-07-23\" - a page-level element is being read instead of a per-job date"
     },
     {
       "company_id": "CMP-011",
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 97h despite scanning cleanly",
-      "evidence": "16 candidates this run; check the search URL's filters and the rejection reasons"
+      "message": "Microsoft Corporation has produced no eligible job for 247h despite scanning cleanly",
+      "evidence": "14 candidates this run; check the search URL's filters and the rejection reasons"
+    },
+    {
+      "company_id": "CMP-013",
+      "company": "U.S. Bank National Association",
+      "severity": "critical",
+      "code": "ZERO_ELIGIBLE_STREAK",
+      "message": "U.S. Bank National Association has produced no eligible job for 149h despite scanning cleanly",
+      "evidence": "10 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
       "company_id": "CMP-015",
@@ -24,24 +40,16 @@
       "code": "DATE_EXTRACTION_DEAD",
       "message": "COMPUNNEL SOFTWARE GROUP, INC: no candidate carries a posting date, but this source is expected to provide one",
       "evidence": "freshness cannot be judged, so nothing from this source can earn a push alert"
-    },
-    {
-      "company_id": "CMP-015",
-      "company": "COMPUNNEL SOFTWARE GROUP, INC",
-      "severity": "critical",
-      "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "COMPUNNEL SOFTWARE GROUP, INC has produced no eligible job for 97h despite scanning cleanly",
-      "evidence": "10 candidates this run; check the search URL's filters and the rejection reasons"
     }
   ],
   "warnings": [
     {
-      "company_id": "CMP-004",
-      "company": "Apple Inc",
+      "company_id": "CMP-005",
+      "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "warning",
       "code": "MOSTLY_SHARED_POSTING_DATE",
-      "message": "Apple Inc: 96% of dated candidates share one posting date",
-      "evidence": "\"2026-09-03\""
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments: 88% of dated candidates share one posting date",
+      "evidence": "\"2026-09-09\""
     }
   ],
   "findings": [
@@ -50,16 +58,32 @@
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 97h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 247h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
+    },
+    {
+      "company_id": "CMP-006",
+      "company": "IBM Corporation",
+      "severity": "critical",
+      "code": "SHARED_POSTING_DATE",
+      "message": "IBM Corporation: all 12 dated candidates share one posting date",
+      "evidence": "\"2014-07-23\" - a page-level element is being read instead of a per-job date"
     },
     {
       "company_id": "CMP-011",
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 97h despite scanning cleanly",
-      "evidence": "16 candidates this run; check the search URL's filters and the rejection reasons"
+      "message": "Microsoft Corporation has produced no eligible job for 247h despite scanning cleanly",
+      "evidence": "14 candidates this run; check the search URL's filters and the rejection reasons"
+    },
+    {
+      "company_id": "CMP-013",
+      "company": "U.S. Bank National Association",
+      "severity": "critical",
+      "code": "ZERO_ELIGIBLE_STREAK",
+      "message": "U.S. Bank National Association has produced no eligible job for 149h despite scanning cleanly",
+      "evidence": "10 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
       "company_id": "CMP-015",
@@ -70,20 +94,12 @@
       "evidence": "freshness cannot be judged, so nothing from this source can earn a push alert"
     },
     {
-      "company_id": "CMP-015",
-      "company": "COMPUNNEL SOFTWARE GROUP, INC",
-      "severity": "critical",
-      "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "COMPUNNEL SOFTWARE GROUP, INC has produced no eligible job for 97h despite scanning cleanly",
-      "evidence": "10 candidates this run; check the search URL's filters and the rejection reasons"
-    },
-    {
-      "company_id": "CMP-004",
-      "company": "Apple Inc",
+      "company_id": "CMP-005",
+      "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "warning",
       "code": "MOSTLY_SHARED_POSTING_DATE",
-      "message": "Apple Inc: 96% of dated candidates share one posting date",
-      "evidence": "\"2026-09-03\""
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments: 88% of dated candidates share one posting date",
+      "evidence": "\"2026-09-09\""
     },
     {
       "company_id": "CMP-014",
@@ -91,14 +107,6 @@
       "severity": "info",
       "code": "LOCATION_ALWAYS_BLANK",
       "message": "WELLS FARGO BANK, N.A: no candidate carries a location (expected for this source)",
-      "evidence": ""
-    },
-    {
-      "company_id": "CMP-015",
-      "company": "COMPUNNEL SOFTWARE GROUP, INC",
-      "severity": "info",
-      "code": "LOCATION_ALWAYS_BLANK",
-      "message": "COMPUNNEL SOFTWARE GROUP, INC: no candidate carries a location (expected for this source)",
       "evidence": ""
     }
   ]

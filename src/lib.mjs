@@ -369,9 +369,8 @@ function matchAbsoluteDate(cleanStr) {
     const m = Number(mmddyyyy[1]), d = Number(mmddyyyy[2]);
     if (dateObj.getMonth() + 1 !== m || dateObj.getDate() !== d) return null;
   }
-  // A date meaningfully in the future is a typo or a parse of the wrong field;
-  // treating it as "posted today" would push a stale job as brand new.
-  if (dateObj.getTime() > Date.now() + 2 * 86400000) return null;
+  // A date meaningfully in the future or older than 2020 is a static CMS template/creation timestamp.
+  if (dateObj.getFullYear() < 2020 || dateObj.getTime() > Date.now() + 2 * 86400000) return null;
   return dateObj;
 }
 
