@@ -1,28 +1,28 @@
 {
-  "run_at": "2026-09-11T13:51:07.869Z",
+  "run_at": "2026-09-11T17:45:57.222Z",
   "critical": [
     {
       "company_id": "CMP-005",
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 274h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 278h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
       "company_id": "CMP-006",
       "company": "IBM Corporation",
       "severity": "critical",
-      "code": "SHARED_POSTING_DATE",
-      "message": "IBM Corporation: all 17 dated candidates share one posting date",
-      "evidence": "\"2014-07-23\" - a page-level element is being read instead of a per-job date"
+      "code": "TOO_FEW_CANDIDATES",
+      "message": "IBM Corporation returned 0 candidates, expected at least 5",
+      "evidence": "career_url may have changed shape, or the selector/adapter no longer matches"
     },
     {
       "company_id": "CMP-011",
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 274h despite scanning cleanly",
+      "message": "Microsoft Corporation has produced no eligible job for 278h despite scanning cleanly",
       "evidence": "12 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -50,23 +50,23 @@
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 274h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 278h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
       "company_id": "CMP-006",
       "company": "IBM Corporation",
       "severity": "critical",
-      "code": "SHARED_POSTING_DATE",
-      "message": "IBM Corporation: all 17 dated candidates share one posting date",
-      "evidence": "\"2014-07-23\" - a page-level element is being read instead of a per-job date"
+      "code": "TOO_FEW_CANDIDATES",
+      "message": "IBM Corporation returned 0 candidates, expected at least 5",
+      "evidence": "career_url may have changed shape, or the selector/adapter no longer matches"
     },
     {
       "company_id": "CMP-011",
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 274h despite scanning cleanly",
+      "message": "Microsoft Corporation has produced no eligible job for 278h despite scanning cleanly",
       "evidence": "12 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
