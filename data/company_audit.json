@@ -1,12 +1,12 @@
 {
-  "run_at": "2026-09-11T00:30:01.893Z",
+  "run_at": "2026-09-11T05:07:57.279Z",
   "critical": [
     {
       "company_id": "CMP-005",
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 260h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 265h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -22,7 +22,7 @@
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 260h despite scanning cleanly",
+      "message": "Microsoft Corporation has produced no eligible job for 265h despite scanning cleanly",
       "evidence": "12 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -50,7 +50,7 @@
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 260h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 265h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -66,7 +66,7 @@
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 260h despite scanning cleanly",
+      "message": "Microsoft Corporation has produced no eligible job for 265h despite scanning cleanly",
       "evidence": "12 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
