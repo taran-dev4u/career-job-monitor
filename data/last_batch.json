@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-09-12T17:26:33.931Z",
+  "run_at": "2026-09-12T19:40:05.233Z",
   "suppressed": false,
   "jobs": [],
   "health_alerts": [],
@@ -9,7 +9,7 @@
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 301h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 304h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -17,7 +17,7 @@
       "company": "IBM Corporation",
       "severity": "critical",
       "code": "SHARED_POSTING_DATE",
-      "message": "IBM Corporation: all 23 dated candidates share one posting date",
+      "message": "IBM Corporation: all 24 dated candidates share one posting date",
       "evidence": "\"2014-07-23\" - a page-level element is being read instead of a per-job date"
     },
     {
@@ -25,7 +25,7 @@
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 301h despite scanning cleanly",
+      "message": "Microsoft Corporation has produced no eligible job for 304h despite scanning cleanly",
       "evidence": "11 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
