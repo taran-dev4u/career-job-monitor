@@ -3994,5 +3994,29 @@
     "sponsorship_status": "Not Mentioned",
     "sponsorship_evidence": "No sponsorship restriction found",
     "experience_evidence": "No explicit required-years statement detected"
+  },
+  {
+    "discovered_at": "2026-09-12T01:30:10.187Z",
+    "company_id": "CMP-016",
+    "company": "Microsoft",
+    "role": "Software Engineer II - CTJ - Poly",
+    "location": "United States, Washington, Redmond; United States, Virginia, Reston; United States, Maryland, Annapolis Junction",
+    "experience": "No required experience above 3 years detected",
+    "posted": "2026-09-12T00:33:25",
+    "job_id": "1970393556995354",
+    "job_url": "https://apply.careers.microsoft.com/careers/job/1970393556995354",
+    "source_url": "https://apply.careers.microsoft.com/careers?start=0&location=United+States&pid=1970393556867395&sort_by=timestamp&filter_include_remote=1&filter_profession=software+engineering%2Cresearch%252C%2520applied%252C%2520%2526%2520data%2520sciences",
+    "discovery_window": "11:13 PM – 1:30 AM UTC",
+    "discovery_window_start": "2026-09-11T23:13:32.475Z",
+    "match_reason": "Eligible technical role; No required experience above 3 years detected; sponsorship: Not Mentioned; Not an internship",
+    "description_snippet": "Own Service Reliability As a Designated Responsible Individual (DRI), you're the first line of defense for our critical services. You'll monitor systems for degradation, respond to incidents within SLA timeframes, and coordinate with stakeholders during outages. This isn't just firefighting - you'll learn to think systematically about reliability and build automation that prevents future incidents. Drive Technical Excellence Across Domains This variety means you'll develop breadth and depth simultaneously - understanding both how to build great software and how to keep it running in production. Build Automation and Improve Systems Contribute to developing automation for production deployment and operations. You'll run code in test environments, validate functionality, and progressively build confidence in our deployment processes. Over time, you'll identify patterns in operational work …",
+    "key": "b0672f512b985f48874b6ef9",
+    "active_status": "Active",
+    "job_type": "FULL_TIME",
+    "required_experience_years": null,
+    "preferred_experience_years": null,
+    "sponsorship_status": "Not Mentioned",
+    "sponsorship_evidence": "No sponsorship restriction found",
+    "experience_evidence": "No explicit required-years statement detected"
   }
 ]
