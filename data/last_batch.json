@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-09-12T14:24:19.252Z",
+  "run_at": "2026-09-12T17:26:33.931Z",
   "suppressed": false,
   "jobs": [],
   "health_alerts": [],
@@ -9,7 +9,7 @@
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 298h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 301h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -25,7 +25,7 @@
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 298h despite scanning cleanly",
+      "message": "Microsoft Corporation has produced no eligible job for 301h despite scanning cleanly",
       "evidence": "11 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
