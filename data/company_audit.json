@@ -1,12 +1,12 @@
 {
-  "run_at": "2026-09-12T19:40:05.233Z",
+  "run_at": "2026-09-12T21:40:18.137Z",
   "critical": [
     {
       "company_id": "CMP-005",
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 304h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 306h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -14,24 +14,32 @@
       "company": "IBM Corporation",
       "severity": "critical",
       "code": "SHARED_POSTING_DATE",
-      "message": "IBM Corporation: all 24 dated candidates share one posting date",
+      "message": "IBM Corporation: all 23 dated candidates share one posting date",
       "evidence": "\"2014-07-23\" - a page-level element is being read instead of a per-job date"
+    },
+    {
+      "company_id": "CMP-008",
+      "company": "JPMorgan Chase & Co",
+      "severity": "critical",
+      "code": "ZERO_ELIGIBLE_STREAK",
+      "message": "JPMorgan Chase & Co has produced no eligible job for 24h despite scanning cleanly",
+      "evidence": "50 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
       "company_id": "CMP-011",
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 304h despite scanning cleanly",
+      "message": "Microsoft Corporation has produced no eligible job for 306h despite scanning cleanly",
       "evidence": "11 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
       "company_id": "CMP-015",
       "company": "COMPUNNEL SOFTWARE GROUP, INC",
       "severity": "critical",
-      "code": "DATE_EXTRACTION_DEAD",
-      "message": "COMPUNNEL SOFTWARE GROUP, INC: no candidate carries a posting date, but this source is expected to provide one",
-      "evidence": "freshness cannot be judged, so nothing from this source can earn a push alert"
+      "code": "TOO_FEW_CANDIDATES",
+      "message": "COMPUNNEL SOFTWARE GROUP, INC returned 0 candidates, expected at least 2",
+      "evidence": "career_url may have changed shape, or the selector/adapter no longer matches"
     }
   ],
   "warnings": [
@@ -50,7 +58,7 @@
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 304h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 306h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -58,24 +66,32 @@
       "company": "IBM Corporation",
       "severity": "critical",
       "code": "SHARED_POSTING_DATE",
-      "message": "IBM Corporation: all 24 dated candidates share one posting date",
+      "message": "IBM Corporation: all 23 dated candidates share one posting date",
       "evidence": "\"2014-07-23\" - a page-level element is being read instead of a per-job date"
+    },
+    {
+      "company_id": "CMP-008",
+      "company": "JPMorgan Chase & Co",
+      "severity": "critical",
+      "code": "ZERO_ELIGIBLE_STREAK",
+      "message": "JPMorgan Chase & Co has produced no eligible job for 24h despite scanning cleanly",
+      "evidence": "50 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
       "company_id": "CMP-011",
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 304h despite scanning cleanly",
+      "message": "Microsoft Corporation has produced no eligible job for 306h despite scanning cleanly",
       "evidence": "11 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
       "company_id": "CMP-015",
       "company": "COMPUNNEL SOFTWARE GROUP, INC",
       "severity": "critical",
-      "code": "DATE_EXTRACTION_DEAD",
-      "message": "COMPUNNEL SOFTWARE GROUP, INC: no candidate carries a posting date, but this source is expected to provide one",
-      "evidence": "freshness cannot be judged, so nothing from this source can earn a push alert"
+      "code": "TOO_FEW_CANDIDATES",
+      "message": "COMPUNNEL SOFTWARE GROUP, INC returned 0 candidates, expected at least 2",
+      "evidence": "career_url may have changed shape, or the selector/adapter no longer matches"
     },
     {
       "company_id": "CMP-005",
