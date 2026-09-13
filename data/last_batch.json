@@ -1,15 +1,37 @@
 {
-  "run_at": "2026-09-13T01:24:12.475Z",
+  "run_at": "2026-09-13T06:45:38.783Z",
   "suppressed": false,
   "jobs": [],
-  "health_alerts": [],
+  "health_alerts": [
+    {
+      "run_at": "2026-09-13T06:45:14.090Z",
+      "company_id": "CMP-014",
+      "company": "WELLS FARGO BANK, N.A",
+      "source_url": "https://www.wellsfargojobs.com/en/jobs/?search=software+engineer&country=United+States+of+America&team=Data+%26+Analytics&team=Technology&type=Full+time&pagesize=20#results",
+      "resolved_url": "https://www.wellsfargojobs.com/en/jobs/?search=software+engineer&country=United+States+of+America&team=Data+%26+Analytics&team=Technology&type=Full+time&pagesize=20#results",
+      "adapter": "Phenom",
+      "http_status": 429,
+      "status": "Broken",
+      "candidate_count": 0,
+      "detail_success_count": 0,
+      "detail_error_count": 0,
+      "pending_detail_count": 0,
+      "eligible_count": 0,
+      "rejected_count": 0,
+      "zero_streak": 1,
+      "degraded_streak": 0,
+      "last_candidate_at": "2026-09-13T01:24:11.145Z",
+      "last_healthy_at": "2026-09-13T01:24:11.145Z",
+      "diagnostic": "HTTP 429"
+    }
+  ],
   "audit_alerts": [
     {
       "company_id": "CMP-005",
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 309h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 315h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -25,7 +47,7 @@
       "company": "JPMorgan Chase & Co",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "JPMorgan Chase & Co has produced no eligible job for 28h despite scanning cleanly",
+      "message": "JPMorgan Chase & Co has produced no eligible job for 33h despite scanning cleanly",
       "evidence": "50 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -33,8 +55,16 @@
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 309h despite scanning cleanly",
+      "message": "Microsoft Corporation has produced no eligible job for 315h despite scanning cleanly",
       "evidence": "11 candidates this run; check the search URL's filters and the rejection reasons"
+    },
+    {
+      "company_id": "CMP-014",
+      "company": "WELLS FARGO BANK, N.A",
+      "severity": "critical",
+      "code": "SOURCE_BROKEN",
+      "message": "WELLS FARGO BANK, N.A failed to scan",
+      "evidence": "HTTP 429"
     },
     {
       "company_id": "CMP-015",
