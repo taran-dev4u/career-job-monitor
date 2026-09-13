@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-09-13T17:00:31.057Z",
+  "run_at": "2026-09-13T19:19:51.352Z",
   "suppressed": false,
   "jobs": [],
   "health_alerts": [],
@@ -9,23 +9,23 @@
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 325h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 327h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
       "company_id": "CMP-006",
       "company": "IBM Corporation",
       "severity": "critical",
-      "code": "TOO_FEW_CANDIDATES",
-      "message": "IBM Corporation returned 0 candidates, expected at least 5",
-      "evidence": "career_url may have changed shape, or the selector/adapter no longer matches"
+      "code": "SHARED_POSTING_DATE",
+      "message": "IBM Corporation: all 23 dated candidates share one posting date",
+      "evidence": "\"2014-07-23\" - a page-level element is being read instead of a per-job date"
     },
     {
       "company_id": "CMP-008",
       "company": "JPMorgan Chase & Co",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "JPMorgan Chase & Co has produced no eligible job for 44h despite scanning cleanly",
+      "message": "JPMorgan Chase & Co has produced no eligible job for 46h despite scanning cleanly",
       "evidence": "50 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -33,7 +33,7 @@
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 325h despite scanning cleanly",
+      "message": "Microsoft Corporation has produced no eligible job for 327h despite scanning cleanly",
       "evidence": "11 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
