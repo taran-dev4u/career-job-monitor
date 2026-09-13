@@ -1,12 +1,12 @@
 {
-  "run_at": "2026-09-13T06:45:38.783Z",
+  "run_at": "2026-09-13T12:42:44.765Z",
   "critical": [
     {
       "company_id": "CMP-005",
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 315h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 321h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -22,7 +22,7 @@
       "company": "JPMorgan Chase & Co",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "JPMorgan Chase & Co has produced no eligible job for 33h despite scanning cleanly",
+      "message": "JPMorgan Chase & Co has produced no eligible job for 39h despite scanning cleanly",
       "evidence": "50 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -30,16 +30,8 @@
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 315h despite scanning cleanly",
+      "message": "Microsoft Corporation has produced no eligible job for 321h despite scanning cleanly",
       "evidence": "11 candidates this run; check the search URL's filters and the rejection reasons"
-    },
-    {
-      "company_id": "CMP-014",
-      "company": "WELLS FARGO BANK, N.A",
-      "severity": "critical",
-      "code": "SOURCE_BROKEN",
-      "message": "WELLS FARGO BANK, N.A failed to scan",
-      "evidence": "HTTP 429"
     },
     {
       "company_id": "CMP-015",
@@ -66,7 +58,7 @@
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 315h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 321h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -82,7 +74,7 @@
       "company": "JPMorgan Chase & Co",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "JPMorgan Chase & Co has produced no eligible job for 33h despite scanning cleanly",
+      "message": "JPMorgan Chase & Co has produced no eligible job for 39h despite scanning cleanly",
       "evidence": "50 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -90,16 +82,8 @@
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 315h despite scanning cleanly",
+      "message": "Microsoft Corporation has produced no eligible job for 321h despite scanning cleanly",
       "evidence": "11 candidates this run; check the search URL's filters and the rejection reasons"
-    },
-    {
-      "company_id": "CMP-014",
-      "company": "WELLS FARGO BANK, N.A",
-      "severity": "critical",
-      "code": "SOURCE_BROKEN",
-      "message": "WELLS FARGO BANK, N.A failed to scan",
-      "evidence": "HTTP 429"
     },
     {
       "company_id": "CMP-015",
@@ -116,6 +100,14 @@
       "code": "MOSTLY_SHARED_POSTING_DATE",
       "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments: 80% of dated candidates share one posting date",
       "evidence": "\"2026-09-09\""
+    },
+    {
+      "company_id": "CMP-014",
+      "company": "WELLS FARGO BANK, N.A",
+      "severity": "info",
+      "code": "LOCATION_ALWAYS_BLANK",
+      "message": "WELLS FARGO BANK, N.A: no candidate carries a location (expected for this source)",
+      "evidence": ""
     }
   ]
 }
