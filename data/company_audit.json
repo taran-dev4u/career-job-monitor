@@ -1,12 +1,12 @@
 {
-  "run_at": "2026-09-14T01:33:10.299Z",
+  "run_at": "2026-09-14T06:57:52.517Z",
   "critical": [
     {
       "company_id": "CMP-005",
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 333h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 339h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -22,7 +22,7 @@
       "company": "JPMorgan Chase & Co",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "JPMorgan Chase & Co has produced no eligible job for 52h despite scanning cleanly",
+      "message": "JPMorgan Chase & Co has produced no eligible job for 58h despite scanning cleanly",
       "evidence": "50 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -30,7 +30,7 @@
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 333h despite scanning cleanly",
+      "message": "Microsoft Corporation has produced no eligible job for 339h despite scanning cleanly",
       "evidence": "11 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -58,7 +58,7 @@
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 333h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 339h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -74,7 +74,7 @@
       "company": "JPMorgan Chase & Co",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "JPMorgan Chase & Co has produced no eligible job for 52h despite scanning cleanly",
+      "message": "JPMorgan Chase & Co has produced no eligible job for 58h despite scanning cleanly",
       "evidence": "50 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -82,7 +82,7 @@
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 333h despite scanning cleanly",
+      "message": "Microsoft Corporation has produced no eligible job for 339h despite scanning cleanly",
       "evidence": "11 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {

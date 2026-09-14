@@ -1,7 +1,56 @@
 {
-  "run_at": "2026-09-14T01:33:10.299Z",
+  "run_at": "2026-09-14T06:57:52.517Z",
   "suppressed": false,
-  "jobs": [],
+  "jobs": [
+    {
+      "discovered_at": "2026-09-14T06:57:52.517Z",
+      "company_id": "CMP-001",
+      "company": "Amazon.com Services LLC",
+      "role": "Software Development Engineer, AWS Transform",
+      "location": "US, WA, Seattle",
+      "experience": "No required experience above 3 years detected",
+      "posted": "September 14, 2026",
+      "job_id": "10538318",
+      "job_url": "https://www.amazon.jobs/en/jobs/10538318/software-development-engineer-aws-transform",
+      "source_url": "https://www.amazon.jobs/en/search?offset=0&result_limit=20&sort=recent&category%5B%5D=software-development&job_type%5B%5D=Full-Time&country%5B%5D=USA",
+      "discovery_window": "1:33 AM – 6:57 AM UTC",
+      "discovery_window_start": "2026-09-14T01:33:10.299Z",
+      "match_reason": "Eligible technical role; No required experience above 3 years detected; sponsorship: Not Mentioned; Not an internship",
+      "description_snippet": "Skip to main content Amazon Jobs home page My career Software Development Engineer, AWS Transform Job ID: 10538318 | Amazon.com Services LLC Apply now Description AWS Transform is responsible for building Agentic AI systems aimed at helping customers modernize applications to achieve cost savings, security, scalability, and resiliency. We build next-generation, agent-driven solutions that modernize enterprise workloads. This position within the AWS Transform team presents a unique and rare opportunity to get in on the ground floor within a fast-growing business and help shape the technology and product. A successful candidate will bring deep technical expertise, an ability to deliver novel products, desire to have an industry wide impact and ability to work within a fast moving, startup environment in a large company to rapidly deliver services that have a broad business impact. Key job…",
+      "key": "4584cba267a408ecfa122d5a",
+      "active_status": "Active",
+      "job_type": "Internship",
+      "required_experience_years": null,
+      "preferred_experience_years": 3,
+      "sponsorship_status": "Not Mentioned",
+      "sponsorship_evidence": "No sponsorship restriction found",
+      "experience_evidence": "Basic Qualifications - 3+ years of non-internship professional software development experience - 2+ years of non-internship design or architecture (design patterns, reliability and scaling) of new and existing systems ex"
+    },
+    {
+      "discovered_at": "2026-09-14T06:57:52.517Z",
+      "company_id": "CMP-001",
+      "company": "Amazon.com Services LLC",
+      "role": "Software Development Engineer , Ads Nova",
+      "location": "US, NY, New York",
+      "experience": "No required experience above 3 years detected",
+      "posted": "September 14, 2026",
+      "job_id": "10538328",
+      "job_url": "https://www.amazon.jobs/en/jobs/10538328/software-development-engineer-ads-nova",
+      "source_url": "https://www.amazon.jobs/en/search?offset=0&result_limit=20&sort=recent&category%5B%5D=software-development&job_type%5B%5D=Full-Time&country%5B%5D=USA",
+      "discovery_window": "1:33 AM – 6:57 AM UTC",
+      "discovery_window_start": "2026-09-14T01:33:10.299Z",
+      "match_reason": "Eligible technical role; No required experience above 3 years detected; sponsorship: Not Mentioned; Not an internship",
+      "description_snippet": "Skip to main content Amazon Jobs home page My career Software Development Engineer , Ads Nova Job ID: 10538328 | Amazon.com Services LLC Apply now Description Build AI-powered vertical advertising products from the ground up on a greenfield startup team — simplifying full-funnel solutions at internet scale with agentic AI models across strategic verticals including financial services, automotive, and local businesses. There is no known answer or existing pattern to follow — we are defining the space from scratch. Amazon Advertising is building this team to diversify demand and transform how vertical advertisers grow on Amazon through specialized, AI-driven advertising experiences. You'll work closely with Principal Engineers and Scientists to translate ambiguous business problems into scalable system architectures, designing and building end-to-end services in an ambiguous, fast-moving …",
+      "key": "a60d86a53c37fdb5d6d6182d",
+      "active_status": "Active",
+      "job_type": "Internship",
+      "required_experience_years": null,
+      "preferred_experience_years": 3,
+      "sponsorship_status": "Not Mentioned",
+      "sponsorship_evidence": "No sponsorship restriction found",
+      "experience_evidence": "Key job responsibilities - Design, develop, launch, and maintain AI-powered advertising solutions that simplify the advertiser experience across strategic verticals - Design and build end-to-end services and platforms fr"
+    }
+  ],
   "health_alerts": [],
   "audit_alerts": [
     {
@@ -9,7 +58,7 @@
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 333h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 339h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -25,7 +74,7 @@
       "company": "JPMorgan Chase & Co",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "JPMorgan Chase & Co has produced no eligible job for 52h despite scanning cleanly",
+      "message": "JPMorgan Chase & Co has produced no eligible job for 58h despite scanning cleanly",
       "evidence": "50 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -33,7 +82,7 @@
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 333h despite scanning cleanly",
+      "message": "Microsoft Corporation has produced no eligible job for 339h despite scanning cleanly",
       "evidence": "11 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
