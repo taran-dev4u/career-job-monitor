@@ -1,12 +1,12 @@
 {
-  "run_at": "2026-09-15T16:53:49.853Z",
+  "run_at": "2026-09-15T20:13:15.646Z",
   "critical": [
     {
       "company_id": "CMP-005",
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 373h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 376h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -22,7 +22,7 @@
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 373h despite scanning cleanly",
+      "message": "Microsoft Corporation has produced no eligible job for 376h despite scanning cleanly",
       "evidence": "12 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -41,7 +41,7 @@
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 373h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 376h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -57,7 +57,7 @@
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 373h despite scanning cleanly",
+      "message": "Microsoft Corporation has produced no eligible job for 376h despite scanning cleanly",
       "evidence": "12 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -74,6 +74,14 @@
       "severity": "info",
       "code": "LOCATION_ALWAYS_BLANK",
       "message": "WELLS FARGO BANK, N.A: no candidate carries a location (expected for this source)",
+      "evidence": ""
+    },
+    {
+      "company_id": "CMP-015",
+      "company": "COMPUNNEL SOFTWARE GROUP, INC",
+      "severity": "info",
+      "code": "LOCATION_ALWAYS_BLANK",
+      "message": "COMPUNNEL SOFTWARE GROUP, INC: no candidate carries a location (expected for this source)",
       "evidence": ""
     }
   ]
