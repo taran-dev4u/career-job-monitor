@@ -1,30 +1,30 @@
 {
-  "run_at": "2026-09-16T06:39:56.445Z",
+  "run_at": "2026-09-16T12:02:14.170Z",
   "suppressed": false,
   "jobs": [
     {
-      "discovered_at": "2026-09-16T06:39:56.445Z",
-      "company_id": "CMP-001",
-      "company": "Amazon.com Services LLC",
-      "role": "System Development Engineer, Leo Secure Communications Team",
-      "location": "US, WA, Redmond",
-      "experience": "No required experience above 3 years detected",
-      "posted": "September 16, 2026",
-      "job_id": "10544117",
-      "job_url": "https://www.amazon.jobs/en/jobs/10544117/system-development-engineer-leo-secure-communications-team",
-      "source_url": "https://www.amazon.jobs/en/search?offset=0&result_limit=20&sort=recent&category%5B%5D=software-development&job_type%5B%5D=Full-Time&country%5B%5D=USA",
-      "discovery_window": "1:19 AM – 6:39 AM UTC",
-      "discovery_window_start": "2026-09-16T01:19:52.137Z",
-      "match_reason": "Eligible technical role; No required experience above 3 years detected; sponsorship: Not Mentioned; Not an internship",
-      "description_snippet": "Skip to main content Amazon Jobs home page My career System Development Engineer, Leo Secure Communications Team Job ID: 10544117 | Amazon Kuiper Manufacturing Enterprises LLC Apply now Description Amazon Leo is Amazon’s low Earth orbit satellite network. Our mission is to deliver fast, reliable internet connectivity to customers beyond the reach of existing networks. From individual households to schools, hospitals, businesses, and government agencies, Amazon Leo will serve people and organizations operating in locations without reliable connectivity. We're looking for a Systems Engineer to operate and improve the OTA and security feature rollout process that delivers software updates to all Leo Satellites. You'll be hands-on with every release — preparing rollout plans, monitoring deployments, triaging field issues, and ensuring all hardware variants receive the right updates safely. …",
-      "key": "8eda07d4d0c4aaabcc1807cf",
+      "discovered_at": "2026-09-16T12:02:14.170Z",
+      "company_id": "CMP-003",
+      "company": "Google LLC",
+      "role": "Software Engineer, Generative Media AI, Apparel ML",
+      "location": "Mountain View, CA",
+      "experience": "2+ years required",
+      "posted": "",
+      "job_id": "128378670086529734",
+      "job_url": "https://www.google.com/about/careers/applications/jobs/results/128378670086529734-software-engineer-generative-media-ai-apparel-ml?location=United%20States&hl=en&sort_by=date&employment_type=FULL_TIME&q=%22Software%20Engineer%22",
+      "source_url": "https://www.google.com/about/careers/applications/jobs/results/?location=United%20States&hl=en&sort_by=date&employment_type=FULL_TIME&q=%22Software%20Engineer%22",
+      "discovery_window": "6:39 AM – 12:02 PM UTC",
+      "discovery_window_start": "2026-09-16T06:39:56.445Z",
+      "match_reason": "Eligible technical role; 2+ years required; sponsorship: Not Mentioned; Not an internship",
+      "description_snippet": "Software Engineer, Generative Media AI, Apparel ML share Share Software Engineer, Generative Media AI, Apparel ML corporate_fare Google place Mountain View, CA, USA ; Seattle, WA, USA ; +1 more bar_chart Mid Apply info_outline X In accordance with Washington state law, we are highlighting our comprehensive benefits package, which is available to all eligible US based employees. Benefits for this role include: Health, dental, vision, life, disability insurance Retirement Benefits: 401(k) with company match Paid Time Off: 20 days of vacation per year, accruing at a rate of 6.15 hours per pay period for the first five years of employment Sick Time: 40 hours/year (increased to 69 hours/year for Seattle) including 5 discretionary sick days per instance Maternity Leave (Short-Term Disability + Baby Bonding): 28-30 weeks Baby Bonding Leave: 18 weeks Holidays: 13 paid days per year Note: By app…",
+      "key": "99334c491ab671bbd1ad28c3",
       "active_status": "Active",
       "job_type": "Not specified",
-      "required_experience_years": null,
-      "preferred_experience_years": null,
+      "required_experience_years": 2,
+      "preferred_experience_years": 2,
       "sponsorship_status": "Not Mentioned",
       "sponsorship_evidence": "No sponsorship restriction found",
-      "experience_evidence": "No explicit required-years statement detected"
+      "experience_evidence": "2 years of experience with software development in one or more programming languages, or 1 year of experience with an advanced degree."
     }
   ],
   "health_alerts": [],
@@ -34,7 +34,7 @@
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 387h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 392h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -50,7 +50,7 @@
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 387h despite scanning cleanly",
+      "message": "Microsoft Corporation has produced no eligible job for 392h despite scanning cleanly",
       "evidence": "12 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
