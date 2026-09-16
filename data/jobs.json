@@ -5794,5 +5794,29 @@
     "sponsorship_status": "Not Mentioned",
     "sponsorship_evidence": "No sponsorship restriction found",
     "experience_evidence": "No explicit required-years statement detected"
+  },
+  {
+    "discovered_at": "2026-09-16T06:39:56.445Z",
+    "company_id": "CMP-001",
+    "company": "Amazon.com Services LLC",
+    "role": "System Development Engineer, Leo Secure Communications Team",
+    "location": "US, WA, Redmond",
+    "experience": "No required experience above 3 years detected",
+    "posted": "September 16, 2026",
+    "job_id": "10544117",
+    "job_url": "https://www.amazon.jobs/en/jobs/10544117/system-development-engineer-leo-secure-communications-team",
+    "source_url": "https://www.amazon.jobs/en/search?offset=0&result_limit=20&sort=recent&category%5B%5D=software-development&job_type%5B%5D=Full-Time&country%5B%5D=USA",
+    "discovery_window": "1:19 AM – 6:39 AM UTC",
+    "discovery_window_start": "2026-09-16T01:19:52.137Z",
+    "match_reason": "Eligible technical role; No required experience above 3 years detected; sponsorship: Not Mentioned; Not an internship",
+    "description_snippet": "Skip to main content Amazon Jobs home page My career System Development Engineer, Leo Secure Communications Team Job ID: 10544117 | Amazon Kuiper Manufacturing Enterprises LLC Apply now Description Amazon Leo is Amazon’s low Earth orbit satellite network. Our mission is to deliver fast, reliable internet connectivity to customers beyond the reach of existing networks. From individual households to schools, hospitals, businesses, and government agencies, Amazon Leo will serve people and organizations operating in locations without reliable connectivity. We're looking for a Systems Engineer to operate and improve the OTA and security feature rollout process that delivers software updates to all Leo Satellites. You'll be hands-on with every release — preparing rollout plans, monitoring deployments, triaging field issues, and ensuring all hardware variants receive the right updates safely. …",
+    "key": "8eda07d4d0c4aaabcc1807cf",
+    "active_status": "Active",
+    "job_type": "Not specified",
+    "required_experience_years": null,
+    "preferred_experience_years": null,
+    "sponsorship_status": "Not Mentioned",
+    "sponsorship_evidence": "No sponsorship restriction found",
+    "experience_evidence": "No explicit required-years statement detected"
   }
 ]
