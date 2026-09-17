@@ -1,20 +1,20 @@
 {
-  "run_at": "2026-09-17T06:37:49.574Z",
+  "run_at": "2026-09-17T16:52:34.710Z",
   "critical": [
     {
       "company_id": "CMP-005",
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 411h despite scanning cleanly",
-      "evidence": "40 candidates this run; check the search URL's filters and the rejection reasons"
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 421h despite scanning cleanly",
+      "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
       "company_id": "CMP-006",
       "company": "IBM Corporation",
       "severity": "critical",
       "code": "SHARED_POSTING_DATE",
-      "message": "IBM Corporation: all 23 dated candidates share one posting date",
+      "message": "IBM Corporation: all 22 dated candidates share one posting date",
       "evidence": "\"2014-07-23\" - a page-level element is being read instead of a per-job date"
     },
     {
@@ -22,8 +22,8 @@
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 411h despite scanning cleanly",
-      "evidence": "16 candidates this run; check the search URL's filters and the rejection reasons"
+      "message": "Microsoft Corporation has produced no eligible job for 421h despite scanning cleanly",
+      "evidence": "18 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
       "company_id": "CMP-015",
@@ -41,15 +41,15 @@
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 411h despite scanning cleanly",
-      "evidence": "40 candidates this run; check the search URL's filters and the rejection reasons"
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 421h despite scanning cleanly",
+      "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
       "company_id": "CMP-006",
       "company": "IBM Corporation",
       "severity": "critical",
       "code": "SHARED_POSTING_DATE",
-      "message": "IBM Corporation: all 23 dated candidates share one posting date",
+      "message": "IBM Corporation: all 22 dated candidates share one posting date",
       "evidence": "\"2014-07-23\" - a page-level element is being read instead of a per-job date"
     },
     {
@@ -57,8 +57,8 @@
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 411h despite scanning cleanly",
-      "evidence": "16 candidates this run; check the search URL's filters and the rejection reasons"
+      "message": "Microsoft Corporation has produced no eligible job for 421h despite scanning cleanly",
+      "evidence": "18 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
       "company_id": "CMP-015",
