@@ -1,6 +1,6 @@
 # Latest Eligible Jobs — Filtered
 
-Updated: **2026-09-17T01:20:35.907Z UTC** / **Sep 16, 2026, 9:20 PM Eastern**
+Updated: **2026-09-17T06:37:49.574Z UTC** / **Sep 17, 2026, 2:37 AM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
@@ -12,8 +12,10 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 
 | Posted Date | Company | Role | Location | Type | Experience | Sponsorship | Discovered At | Apply |
 |---|---|---|---|---|---|---|---|---|
-| Posted Today | Intel Corporation | Neuromorphic/AI Research Scientist | 5 Locations | FULL_TIME | 2+ yrs req | Not Mentioned | 2026-09-17T01:18:43.776Z | [Apply](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-California-Santa-Clara/Neuromorphic-AI-Research-Scientist_JR0284193) |
-| September 17, 2026 | Amazon.com Services LLC | Software Engineer, AWS SageMaker Unified Studio | US, VA, Arlington | Internship | 3+ yrs pref | Not Mentioned | 2026-09-17T01:17:04.987Z | [Apply](https://www.amazon.jobs/en/jobs/10551396/software-engineer-aws-sagemaker-unified-studio) |
+| Posted Today | Intel Corporation | Neuromorphic/AI Research Scientist | 5 Locations | FULL_TIME | 0–3 yrs | Not Mentioned | 2026-09-17T01:18:43.776Z | [Apply](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-California-Santa-Clara/Neuromorphic-AI-Research-Scientist_JR0284193) |
+| September 17, 2026 | Amazon.com Services LLC | Software Development Engineer , Ground Control Console (GC2) | US, WA, Redmond | Internship | 3+ yrs pref | Not Mentioned | 2026-09-17T06:35:33.844Z | [Apply](https://www.amazon.jobs/en/jobs/10551480/software-development-engineer-ground-control-console-gc2) |
+| September 17, 2026 | Amazon.com Services LLC | Software Development Engineer | US, WA, Seattle | Internship | 3+ yrs pref | Unclear | 2026-09-17T06:35:33.844Z | [Apply](https://www.amazon.jobs/en/jobs/10551443/software-development-engineer) |
+| September 17, 2026 | Amazon.com Services LLC | Software Engineer, AWS SageMaker Unified Studio | US, VA, Arlington | Internship | 0–3 yrs | Not Mentioned | 2026-09-17T01:17:04.987Z | [Apply](https://www.amazon.jobs/en/jobs/10551396/software-engineer-aws-sagemaker-unified-studio) |
 | Date not stated | COMPUNNEL SOFTWARE GROUP, INC | AI SDET | Not stated | Not specified | 0–3 yrs | Not Mentioned | 2026-09-16T22:54:23.622Z | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=HbM6KjiYW3enEfIr5UX4aQ%3d%3d&Source=4414&EntityGroup=2321) |
 | Date not stated | COMPUNNEL SOFTWARE GROUP, INC | Dotnet Fullstack - Angular - Developer | Not stated | Not specified | 0–3 yrs | Not Mentioned | 2026-09-16T22:54:23.622Z | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=sXX%2fSujfBuT7uxblL6NzvA%3d%3d&Source=4414&EntityGroup=2321) |
 | Date not stated | COMPUNNEL SOFTWARE GROUP, INC | Power BI Developer | Not stated | Not specified | 0–3 yrs | Not Mentioned | 2026-09-16T22:54:23.622Z | [Apply](https://staffline.compunnel.com/Support/UploadResume?JobId=bKYt3TFi%2fwI4menXRuGBgw%3d%3d&Source=4414&EntityGroup=2321) |
@@ -40,7 +42,6 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 | September 16, 2026 | Amazon.com Services LLC | Software Development Engineer II, Hosted Execution (HEX) | US, WA, Seattle | Internship | 0–3 yrs | Not Mentioned | 2026-09-16T16:41:04.460Z | [Apply](https://www.amazon.jobs/en/jobs/10544701/software-development-engineer-ii-hosted-execution-hex) |
 | September 16, 2026 | Amazon.com Services LLC | Software Development Engineer, Amazon Customer Service | US, TX, Austin | Internship | 0–3 yrs | Not Mentioned | 2026-09-16T16:41:04.460Z | [Apply](https://www.amazon.jobs/en/jobs/10544728/software-development-engineer-amazon-customer-service) |
 | September 16, 2026 | Amazon.com Services LLC | System Development Engineer, Leo Secure Communications Team | US, WA, Redmond | Not specified | 0–3 yrs | Not Mentioned | 2026-09-16T06:36:57.601Z | [Apply](https://www.amazon.jobs/en/jobs/10544117/system-development-engineer-leo-secure-communications-team) |
-| 2026-09-16T00:00:00.000+0000 | Cisco Systems, Inc | Site Reliability Engineer - Networking | San Francisco, California, United States of America | FULL_TIME | 0–3 yrs | Not Mentioned | 2026-09-10T13:34:59.268Z | [Apply](https://careers.cisco.com/global/en/job/2018207/Site-Reliability-Engineer-Networking) |
 | 2026-09-16 | Apple Inc | Camera Imaging Software Engineer, Camera & Photos | Photos Cupertino, California, United States | Not specified | 0–3 yrs | Not Mentioned | 2026-08-20T08:44:57.513Z | [Apply](https://jobs.apple.com/en-us/details/200653138-0836/camera-imaging-software-engineer-camera-photos?team=SFTWR) |
 | 2026-09-16T00:00:00+00:00 | WELLS FARGO BANK, N.A | Infrastructure Engineer | Not stated | FULL_TIME | 0–3 yrs | Not Mentioned | 2026-08-18T14:14:54.300Z | [Apply](https://www.wellsfargojobs.com/en/jobs/r-560341/infrastructure-engineer) |
 | Date not stated | Google LLC | Software Engineer, Semantic Understanding, Search Ads Personalization | Mountain View, CA | Not specified | 2+ yrs req | Not Mentioned | 2026-09-15T16:50:20.151Z | [Apply](https://www.google.com/about/careers/applications/jobs/results/138249054688551622-software-engineer-semantic-understanding-search-ads-personalization?location=United%20States&hl=en&sort_by=date&employment_type=FULL_TIME&q=%22Software%20Engineer%22&page=3) |
@@ -48,14 +49,13 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 | 2026-09-15T11:51:03.000Z | JPMorgan Chase & Co | Software Engineer II - Asset & Wealth Management Technology | Jersey City, NJ, United States | Full time | 0–3 yrs | Not Mentioned | 2026-09-15T12:05:32.919Z | [Apply](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210788250) |
 | Posted Yesterday | Intel Corporation | Software Engineer – Datacenter | 2 Locations | FULL_TIME | 0–3 yrs | Not Mentioned | 2026-09-15T01:23:11.230Z | [Apply](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-California-Santa-Clara/Software-Engineer---Datacenter_JR0286998) |
 | Posted Yesterday | Intel Corporation | Software QA Engineer | US, California, Santa Clara | FULL_TIME | 0–3 yrs | Not Mentioned | 2026-09-15T01:23:11.230Z | [Apply](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-California-Santa-Clara/Software-QA-Engineer_JR0286999) |
-| September 15, 2026 | Amazon.com Services LLC | Software Development Engineer, Amazon Ads Demand Tech, Forecasting and Guidance | US, CA, Palo Alto | Internship | 3+ yrs pref | Not Mentioned | 2026-09-16T01:17:08.216Z | [Apply](https://www.amazon.jobs/en/jobs/10544074/software-development-engineer-amazon-ads-demand-tech-forecasting-and-guidance) |
+| September 15, 2026 | Amazon.com Services LLC | Software Development Engineer, Amazon Ads Demand Tech, Forecasting and Guidance | US, CA, Palo Alto | Internship | 0–3 yrs | Not Mentioned | 2026-09-16T01:17:08.216Z | [Apply](https://www.amazon.jobs/en/jobs/10544074/software-development-engineer-amazon-ads-demand-tech-forecasting-and-guidance) |
 | 2026-09-15 | Apple Inc | Machine Learning Engineer | Learning Engineer Cupertino, California, United States | Not specified | 0–3 yrs | Not Mentioned | 2026-09-16T01:17:08.216Z | [Apply](https://jobs.apple.com/en-us/details/200683846-0836/machine-learning-engineer?team=SFTWR) |
-| September 15, 2026 | Amazon.com Services LLC | Software Dev Engineer II, AWS Discounts | US, WA, Seattle | Internship | 3+ yrs pref | Not Mentioned | 2026-09-15T22:52:20.703Z | [Apply](https://www.amazon.jobs/en/jobs/10543944/software-dev-engineer-ii-aws-discounts) |
-| September 15, 2026 | Amazon.com Services LLC | Software Dev Engineer II, Technical Content Experience (TCX) Engineering | US, WA, Seattle | Internship | 3+ yrs pref | Not Mentioned | 2026-09-15T22:52:20.703Z | [Apply](https://www.amazon.jobs/en/jobs/10543901/software-dev-engineer-ii-technical-content-experience-tcx-engineering) |
+| September 15, 2026 | Amazon.com Services LLC | Software Dev Engineer II, AWS Discounts | US, WA, Seattle | Internship | 0–3 yrs | Not Mentioned | 2026-09-15T22:52:20.703Z | [Apply](https://www.amazon.jobs/en/jobs/10543944/software-dev-engineer-ii-aws-discounts) |
+| September 15, 2026 | Amazon.com Services LLC | Software Dev Engineer II, Technical Content Experience (TCX) Engineering | US, WA, Seattle | Internship | 0–3 yrs | Not Mentioned | 2026-09-15T22:52:20.703Z | [Apply](https://www.amazon.jobs/en/jobs/10543901/software-dev-engineer-ii-technical-content-experience-tcx-engineering) |
 | 2026-09-15 | Apple Inc | iOS Engineer - Apple TV | Cupertino, California, United States | Not specified | 0–3 yrs | Not Mentioned | 2026-09-15T22:52:20.703Z | [Apply](https://jobs.apple.com/en-us/details/200682807-0836/ios-engineer-apple-tv?team=SFTWR) |
 | 2026-09-15 | Apple Inc | Software Engineer - Customer Feedback | Feedback San Diego, California, United States | Not specified | 0–3 yrs | Not Mentioned | 2026-09-15T22:52:20.703Z | [Apply](https://jobs.apple.com/en-us/details/200683935-3543/software-engineer-customer-feedback?team=SFTWR) |
 | 2026-09-15T00:00:00 | Qualcomm Technologies, Inc | Software Development Engineer | San Diego, California, United States of America | FULL_TIME | 0–3 yrs | Not Mentioned | 2026-09-15T20:09:23.019Z | [Apply](https://careers.qualcomm.com/careers/job/446721106667) |
-| September 15, 2026 | Amazon.com Services LLC | Software Development Engineer, Amazon Quick | US, WA, Seattle | Internship | 0–3 yrs | Not Mentioned | 2026-09-15T20:07:42.055Z | [Apply](https://www.amazon.jobs/en/jobs/10543019/software-development-engineer-amazon-quick) |
 | 2026-09-15 | Apple Inc | Machine Learning Engineer - Sensing & Connectivity | Connectivity Cupertino, California, United States | Not specified | 0–3 yrs | Not Mentioned | 2026-09-15T20:07:42.055Z | [Apply](https://jobs.apple.com/en-us/details/200683839-0836/machine-learning-engineer-sensing-connectivity?team=SFTWR) |
 | 2026-09-15 | Apple Inc | Machine Learning Engineer, Natural Language Understanding, Proactive | Proactive Santa Clara, California, United States | Not specified | 0–3 yrs | Not Mentioned | 2026-09-15T20:07:42.055Z | [Apply](https://jobs.apple.com/en-us/details/200683571-3760/machine-learning-engineer-natural-language-understanding-proactive?team=MLAI) |
 | 2026-09-15 | Apple Inc | Machine Learning Research Engineer, NLP, Input Experience | Input Experience Cupertino, California, United States | Not specified | 0–3 yrs | Not Mentioned | 2026-09-15T20:07:42.055Z | [Apply](https://jobs.apple.com/en-us/details/200671833-0836/machine-learning-research-engineer-nlp-input-experience?team=SFTWR) |
@@ -66,14 +66,14 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 | September 15, 2026 | Amazon.com Services LLC | Software Development Engineer II | US, WA, Seattle | Internship | 0–3 yrs | Not Mentioned | 2026-09-15T16:50:20.151Z | [Apply](https://www.amazon.jobs/en/jobs/10542435/software-development-engineer-ii) |
 | September 15, 2026 | Amazon.com Services LLC | Software Development Engineer, Agentic Workspaces | US, CA, Sunnyvale | Internship | 0–3 yrs | Not Mentioned | 2026-09-15T16:50:20.151Z | [Apply](https://www.amazon.jobs/en/jobs/10541943/software-development-engineer-agentic-workspaces) |
 | 2026-09-15 | Apple Inc | Software Development Engineer - iOS for Keyboard | Keyboard Cupertino, California, United States | Not specified | 0–3 yrs | Not Mentioned | 2026-09-15T01:21:24.510Z | [Apply](https://jobs.apple.com/en-us/details/200683681-0836/software-development-engineer-ios-for-keyboard?team=SFTWR) |
+| 2026-09-15 | Apple Inc | Machine Learning Engineer - Notifications & Personalization | Personalization Cupertino, California, United States | Not specified | 0–3 yrs | Not Mentioned | 2026-09-14T22:42:22.844Z | [Apply](https://jobs.apple.com/en-us/details/200683064-0836/machine-learning-engineer-notifications-personalization?team=SFTWR) |
 | 2026-09-14T00:00:00.000+0000 | U.S. Bank National Association | Associate Software Engineer (C#, .NET Core) | Hopkins, MN, United States | Full time | 0–3 yrs | Not Mentioned | 2026-09-15T20:11:34.116Z | [Apply](https://careers.usbank.com/global/en/job/2026-0028472/Associate-Software-Engineer-C-NET-Core) |
 | 2026-09-14 | Apple Inc | DevOps Engineer, Claris | Claris San Diego, California, United States | Not specified | 0–3 yrs | Not Mentioned | 2026-09-15T01:21:24.510Z | [Apply](https://jobs.apple.com/en-us/details/200647673-3543/devops-engineer-claris?team=SFTWR) |
 | 2026-09-14 | Apple Inc | DevOps Engineer, Claris | Claris Sunnyvale, California, United States | Not specified | 0–3 yrs | Not Mentioned | 2026-09-15T01:21:24.510Z | [Apply](https://jobs.apple.com/en-us/details/200647673-3956/devops-engineer-claris?team=SFTWR) |
 | 2026-09-14T00:00:00.000+0000 | U.S. Bank National Association | Software Engineer 2 | Irvine, CA, United States | Full time | 0–3 yrs | Not Mentioned | 2026-09-14T22:45:43.197Z | [Apply](https://careers.usbank.com/global/en/job/2026-0028474/Software-Engineer-2) |
-| 2026-09-14T00:00:00 | Qualcomm Technologies, Inc | Machine Learning Engineer | San Diego, California, United States of America | FULL_TIME | 1+ yrs pref | Not Mentioned | 2026-09-14T22:44:01.914Z | [Apply](https://careers.qualcomm.com/careers/job/446721085768) |
+| 2026-09-14T00:00:00 | Qualcomm Technologies, Inc | Machine Learning Engineer | San Diego, California, United States of America | FULL_TIME | 0–3 yrs | Not Mentioned | 2026-09-14T22:44:01.914Z | [Apply](https://careers.qualcomm.com/careers/job/446721085768) |
 | 2026-09-14 | Apple Inc | Compiler Security Engineer - C/C++, Languages & Runtimes | Runtimes Cupertino, California, United States | Not specified | 0–3 yrs | Not Mentioned | 2026-09-14T22:42:22.844Z | [Apply](https://jobs.apple.com/en-us/details/200678781-0836/compiler-security-engineer-c-c-languages-runtimes?team=SFTWR) |
 | 2026-09-14 | Apple Inc | Software Engineer, Triage Services | Triage Services Cupertino, California, United States | Not specified | 0–3 yrs | Not Mentioned | 2026-09-14T22:42:22.844Z | [Apply](https://jobs.apple.com/en-us/details/200683343-0836/software-engineer-triage-services?team=SFTWR) |
-| September 14, 2026 | Amazon.com Services LLC | Software Development Engineer, Catalog System Services - SPCL | US, WA, Seattle | Internship | 0–3 yrs | Not Mentioned | 2026-09-14T22:42:22.843Z | [Apply](https://www.amazon.jobs/en/jobs/10539357/software-development-engineer-catalog-system-services-spcl) |
 | September 14, 2026 | Amazon.com Services LLC | Software Development Engineer | US, NJ, Newark | Not specified | 0–3 yrs | Not Mentioned | 2026-09-14T19:14:01.150Z | [Apply](https://www.amazon.jobs/en/jobs/10539152/software-development-engineer) |
 | 2014-07-23 | IBM Corporation | Consultant, Data & AI Engineer | COLUMBIA, Buffalo, HUNTSVILLE, Bloomington, POUGHKEEPSIE, Syracuse, Brookhaven, ROCHESTER, CORAL GABLES, Bentonville, TUCSON, Armonk, DURHAM, Denver, Charlotte, Raleigh, Atlanta, Denver, Minneapolis, Dallas, Houston, Austin, Chicago, New York, Columbus, South Carolina, Georgia, Florida, South Dakota, Minnesota, Tennessee, Illinois, Ohio, Texas, Montana, Iowa, New York, North Carolina, Idaho, Virginia, North Dakota, Alabama, Arkansas, Colorado, Michigan, Oklahoma, Oregon, Pennsylvania, Utah, Indiana, Arizona, United States | Not specified | 0–3 yrs | Not Mentioned | 2026-09-12T01:28:07.970Z | [Apply](https://careers.ibm.com/en_US/careers/JobDetail?jobId=132398) |
 | 2014-07-23 | IBM Corporation | Microservices Developer | LOWELL, Cambridge, Massachusetts, United States | Not specified | 0–3 yrs | Not Mentioned | 2026-09-12T01:28:07.970Z | [Apply](https://careers.ibm.com/en_US/careers/JobDetail?jobId=131998) |
@@ -85,6 +85,7 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 | Posted 12 Days Ago | Intel Corporation | CAD/EDA Tools Automation Engineer | US, Oregon, Hillsboro | FULL_TIME | 0–3 yrs | Not Mentioned | 2026-09-10T10:47:19.388Z | [Apply](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/CAD-EDA-Tools-Automation-Engineer_JR0286757) |
 | 2014-07-23 | IBM Corporation | DevOps/Fullstack Developer | Annapolis Junction, ALEXANDRIA, Chantilly, WASHINGTON, Reston, McLean, Herndon, Bethesda, Catonsville, Frederick, Ashburn, Virginia, Maryland, District of Columbia, United States | Not specified | 0–3 yrs | Not Mentioned | 2026-09-10T10:45:16.623Z | [Apply](https://careers.ibm.com/en_US/careers/JobDetail?jobId=131393) |
 | 2026-09-10T00:00:00 | Qualcomm Technologies, Inc | #Software Engineer | San Diego, California, United States of America | FULL_TIME | 0–3 yrs | Not Mentioned | 2026-09-10T20:01:20.426Z | [Apply](https://careers.qualcomm.com/careers/job/446721041627) |
+| 2026-09-09T00:00:00.000+0000 | U.S. Bank National Association | Software engineer 2 (Java Developer) | Atlanta, GA, United States | Full time | 0–3 yrs | Not Mentioned | 2026-09-10T13:35:04.349Z | [Apply](https://careers.usbank.com/global/en/job/2026-0022172/Software-engineer-2-Java-Developer) |
 | 2026-09-09T00:00:00 | Qualcomm Technologies, Inc | Machine Learning / Computer Vision Engineer | San Diego, California, United States of America | FULL_TIME | 0–3 yrs | Not Mentioned | 2026-09-10T10:46:13.590Z | [Apply](https://careers.qualcomm.com/careers/job/446720988289) |
 | 2026-09-08T18:27:25-07:00 | Meta Platforms, Inc | Embedded Software Engineer, Connectivity/Wireless | Redmond, WA, US; Burlingame, CA, US; San Diego, CA, US; New York, NY, US | Full-time | 0–3 yrs | Not Mentioned | 2026-09-11T20:51:53.658Z | [Apply](https://www.metacareers.com/profile/job_details/1967414873947303/) |
 | Posted 13 Days Ago | Intel Corporation | CAD/EDA Tools Automation Engineer | US, Oregon, Hillsboro | FULL_TIME | 0–3 yrs | Not Mentioned | 2026-09-04T05:06:29.075Z | [Apply](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/CAD-EDA-Tools-Automation-Engineer_JR0286595) |
@@ -96,9 +97,10 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 | Date not stated | Goldman Sachs | Software Engineer - FCO Technology Team - Analyst - SLC | United States | Not specified | 0–3 yrs | Not Mentioned | 2026-08-22T10:44:34.190Z | [Apply](https://higher.gs.com/roles/119977) |
 | Date not stated | Goldman Sachs | Software Engineer, Global Banking & Markets, AI/ML Technology | United States | Not specified | 0–3 yrs | Not Mentioned | 2026-08-22T10:44:34.190Z | [Apply](https://higher.gs.com/roles/177423) |
 | Date not stated | Goldman Sachs | Software Engineer, Global Banking & Markets, Electronic Trading | United States | Not specified | 0–3 yrs | Not Mentioned | 2026-08-22T10:44:34.190Z | [Apply](https://higher.gs.com/roles/180700) |
+| Date not stated | Goldman Sachs | Software Engineering - SRE Data - Software Engineer - Associate - Dallas | United States | Not specified | 0–3 yrs | Not Mentioned | 2026-08-22T10:44:34.190Z | [Apply](https://higher.gs.com/roles/179758) |
 | Date not stated | Goldman Sachs | The Core Engineering-Corporate Treasury, New York, Associate, Software Engineering | United States | Not specified | 0–3 yrs | Not Mentioned | 2026-08-22T10:44:34.190Z | [Apply](https://higher.gs.com/roles/178036) |
+| 2026-08-13T00:00:00.000+0000 | Cisco Systems, Inc | Platform Engineer | Research Triangle Park, North Carolina, United States of America | FULL_TIME | 0–3 yrs | Not Mentioned | 2026-09-10T20:02:14.719Z | [Apply](https://careers.cisco.com/global/en/job/2018583/Platform-Engineer) |
 | 2026-08-12T00:00:00.000+0000 | U.S. Bank National Association | Hogan Software Engineer 2 (Mainframe Hogan) | Remote, OH, United States | Full time | 0–3 yrs | Not Mentioned | 2026-09-14T06:57:07.815Z | [Apply](https://careers.usbank.com/global/en/job/2026-0020596/Hogan-Software-Engineer-2-Mainframe-Hogan) |
-| 2026-08-11T00:00:00.000+0000 | Cisco Systems, Inc | Applied AI Scientist | Seattle, Washington, United States of America | FULL_TIME | 0–3 yrs | Not Mentioned | 2026-08-31T03:34:06.705Z | [Apply](https://careers.cisco.com/global/en/job/2018334/Applied-AI-Scientist) |
 | 2026-08-05T07:13:23-07:00 | Meta Platforms, Inc | Embedded Software Engineer | Redmond, WA, US | Full-time | 0–3 yrs | Not Mentioned | 2026-08-20T08:44:07.198Z | [Apply](https://www.metacareers.com/profile/job_details/4535026343380190/) |
 | 2026-07-30T00:00:00 | Qualcomm Technologies, Inc | Video Research Engineer (Multiple Levels) | San Diego, California, United States of America; Hsinchu City, Taiwan; Munich, Germany | FULL_TIME | 0–3 yrs | Not Mentioned | 2026-08-18T14:06:49.813Z | [Apply](https://careers.qualcomm.com/careers/job/446716320059) |
 | 2026-07-28T00:00:00 | Qualcomm Technologies, Inc | Entry Level & Senior Software Engineer, AI Software Platform (Onsite) | San Diego, California, United States of America | FULL_TIME | 0–3 yrs | Not Mentioned | 2026-08-18T14:06:49.813Z | [Apply](https://careers.qualcomm.com/careers/job/446718120116) |
@@ -109,22 +111,22 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 
 | ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |
 |---|---|---|---:|---:|---:|---|---|
-| CMP-003 | Google LLC | Healthy | 60 | 0 | 0 | 2026-09-17T01:17:24.266Z |  |
-| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-09-17T01:17:53.247Z |  |
-| CMP-001 | Amazon.com Services LLC | Healthy | 40 | 0 | 0 | 2026-09-17T01:18:29.044Z |  |
-| CMP-004 | Apple Inc | Healthy | 60 | 0 | 0 | 2026-09-17T01:18:30.044Z |  |
-| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-09-17T01:18:43.775Z |  |
-| CMP-009 | Intel Corporation | Healthy | 16 | 0 | 0 | 2026-09-17T01:19:02.810Z |  |
-| CMP-007 | Qualcomm Technologies, Inc | Healthy | 20 | 0 | 0 | 2026-09-17T01:19:05.790Z |  |
-| CMP-008 | JPMorgan Chase & Co | Healthy | 50 | 0 | 0 | 2026-09-17T01:19:07.108Z |  |
-| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-09-17T01:19:24.389Z |  |
-| CMP-011 | Microsoft Corporation | Healthy | 16 | 0 | 0 | 2026-09-17T01:19:27.353Z |  |
-| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-09-17T01:19:30.388Z |  |
-| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-09-17T01:19:41.416Z |  |
-| CMP-012 | Cisco Systems, Inc | Healthy | 10 | 0 | 0 | 2026-09-17T01:19:56.795Z |  |
-| CMP-017 | Goldman Sachs | Healthy | 10 | 0 | 0 | 2026-09-17T01:20:09.696Z |  |
-| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-09-17T01:20:14.384Z |  |
-| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 40 | 0 | 0 | 2026-09-17T01:20:33.124Z |  |
-| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-09-17T01:20:35.744Z |  |
+| CMP-003 | Google LLC | Healthy | 60 | 0 | 0 | 2026-09-17T06:35:53.055Z |  |
+| CMP-004 | Apple Inc | Healthy | 60 | 0 | 0 | 2026-09-17T06:36:11.226Z |  |
+| CMP-001 | Amazon.com Services LLC | Healthy | 40 | 0 | 0 | 2026-09-17T06:36:12.782Z |  |
+| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-09-17T06:36:22.919Z |  |
+| CMP-007 | Qualcomm Technologies, Inc | Healthy | 20 | 0 | 0 | 2026-09-17T06:36:26.649Z |  |
+| CMP-009 | Intel Corporation | Healthy | 16 | 0 | 0 | 2026-09-17T06:36:38.062Z |  |
+| CMP-008 | JPMorgan Chase & Co | Healthy | 50 | 0 | 0 | 2026-09-17T06:36:44.303Z |  |
+| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-09-17T06:36:50.438Z |  |
+| CMP-011 | Microsoft Corporation | Healthy | 16 | 0 | 0 | 2026-09-17T06:37:01.466Z |  |
+| CMP-012 | Cisco Systems, Inc | Healthy | 10 | 0 | 0 | 2026-09-17T06:37:06.331Z |  |
+| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 40 | 0 | 0 | 2026-09-17T06:37:11.318Z |  |
+| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-09-17T06:37:22.192Z |  |
+| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 20 | 0 | 0 | 2026-09-17T06:37:25.155Z |  |
+| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-09-17T06:37:28.657Z |  |
+| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-09-17T06:37:31.572Z |  |
+| CMP-017 | Goldman Sachs | Healthy | 10 | 0 | 0 | 2026-09-17T06:37:34.035Z |  |
+| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-09-17T06:37:49.434Z |  |
 
 > “Degraded” means extraction could not prove the source was complete. Review the unfiltered dashboard or workbook audit sheets for every decision.
