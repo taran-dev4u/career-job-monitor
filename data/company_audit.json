@@ -1,12 +1,12 @@
 {
-  "run_at": "2026-09-17T23:07:39.056Z",
+  "run_at": "2026-09-18T01:14:59.591Z",
   "critical": [
     {
       "company_id": "CMP-005",
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 427h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 429h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -22,7 +22,7 @@
       "company": "Oracle America, Inc",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Oracle America, Inc has produced no eligible job for 24h despite scanning cleanly",
+      "message": "Oracle America, Inc has produced no eligible job for 26h despite scanning cleanly",
       "evidence": "14 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -30,7 +30,7 @@
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 427h despite scanning cleanly",
+      "message": "Microsoft Corporation has produced no eligible job for 429h despite scanning cleanly",
       "evidence": "18 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -48,7 +48,7 @@
       "company": "Qualcomm Technologies, Inc",
       "severity": "warning",
       "code": "MOSTLY_SHARED_POSTING_DATE",
-      "message": "Qualcomm Technologies, Inc: 85% of dated candidates share one posting date",
+      "message": "Qualcomm Technologies, Inc: 80% of dated candidates share one posting date",
       "evidence": "\"2026-09-17T00:00:00\""
     }
   ],
@@ -58,7 +58,7 @@
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 427h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 429h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -74,7 +74,7 @@
       "company": "Oracle America, Inc",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Oracle America, Inc has produced no eligible job for 24h despite scanning cleanly",
+      "message": "Oracle America, Inc has produced no eligible job for 26h despite scanning cleanly",
       "evidence": "14 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -82,7 +82,7 @@
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 427h despite scanning cleanly",
+      "message": "Microsoft Corporation has produced no eligible job for 429h despite scanning cleanly",
       "evidence": "18 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -98,7 +98,7 @@
       "company": "Qualcomm Technologies, Inc",
       "severity": "warning",
       "code": "MOSTLY_SHARED_POSTING_DATE",
-      "message": "Qualcomm Technologies, Inc: 85% of dated candidates share one posting date",
+      "message": "Qualcomm Technologies, Inc: 80% of dated candidates share one posting date",
       "evidence": "\"2026-09-17T00:00:00\""
     }
   ]
