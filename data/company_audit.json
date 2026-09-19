@@ -1,12 +1,12 @@
 {
-  "run_at": "2026-09-19T04:33:47.770Z",
+  "run_at": "2026-09-19T08:59:31.959Z",
   "critical": [
     {
       "company_id": "CMP-005",
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 456h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 461h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -14,7 +14,7 @@
       "company": "IBM Corporation",
       "severity": "critical",
       "code": "SHARED_POSTING_DATE",
-      "message": "IBM Corporation: all 26 dated candidates share one posting date",
+      "message": "IBM Corporation: all 25 dated candidates share one posting date",
       "evidence": "\"2014-07-23\" - a page-level element is being read instead of a per-job date"
     },
     {
@@ -22,7 +22,7 @@
       "company": "Oracle America, Inc",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Oracle America, Inc has produced no eligible job for 53h despite scanning cleanly",
+      "message": "Oracle America, Inc has produced no eligible job for 58h despite scanning cleanly",
       "evidence": "14 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -30,16 +30,8 @@
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 456h despite scanning cleanly",
+      "message": "Microsoft Corporation has produced no eligible job for 461h despite scanning cleanly",
       "evidence": "21 candidates this run; check the search URL's filters and the rejection reasons"
-    },
-    {
-      "company_id": "CMP-014",
-      "company": "WELLS FARGO BANK, N.A",
-      "severity": "critical",
-      "code": "SOURCE_BROKEN",
-      "message": "WELLS FARGO BANK, N.A failed to scan",
-      "evidence": "HTTP 429"
     },
     {
       "company_id": "CMP-015",
@@ -57,7 +49,7 @@
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 456h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 461h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -65,7 +57,7 @@
       "company": "IBM Corporation",
       "severity": "critical",
       "code": "SHARED_POSTING_DATE",
-      "message": "IBM Corporation: all 26 dated candidates share one posting date",
+      "message": "IBM Corporation: all 25 dated candidates share one posting date",
       "evidence": "\"2014-07-23\" - a page-level element is being read instead of a per-job date"
     },
     {
@@ -73,7 +65,7 @@
       "company": "Oracle America, Inc",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Oracle America, Inc has produced no eligible job for 53h despite scanning cleanly",
+      "message": "Oracle America, Inc has produced no eligible job for 58h despite scanning cleanly",
       "evidence": "14 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -81,16 +73,8 @@
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 456h despite scanning cleanly",
+      "message": "Microsoft Corporation has produced no eligible job for 461h despite scanning cleanly",
       "evidence": "21 candidates this run; check the search URL's filters and the rejection reasons"
-    },
-    {
-      "company_id": "CMP-014",
-      "company": "WELLS FARGO BANK, N.A",
-      "severity": "critical",
-      "code": "SOURCE_BROKEN",
-      "message": "WELLS FARGO BANK, N.A failed to scan",
-      "evidence": "HTTP 429"
     },
     {
       "company_id": "CMP-015",
@@ -99,6 +83,14 @@
       "code": "DATE_EXTRACTION_DEAD",
       "message": "COMPUNNEL SOFTWARE GROUP, INC: no candidate carries a posting date, but this source is expected to provide one",
       "evidence": "freshness cannot be judged, so nothing from this source can earn a push alert"
+    },
+    {
+      "company_id": "CMP-014",
+      "company": "WELLS FARGO BANK, N.A",
+      "severity": "info",
+      "code": "LOCATION_ALWAYS_BLANK",
+      "message": "WELLS FARGO BANK, N.A: no candidate carries a location (expected for this source)",
+      "evidence": ""
     },
     {
       "company_id": "CMP-015",
