@@ -8506,5 +8506,29 @@
     "sponsorship_status": "Not Mentioned",
     "sponsorship_evidence": "No sponsorship restriction found",
     "experience_evidence": "No explicit required-years statement detected"
+  },
+  {
+    "discovered_at": "2026-09-19T04:33:47.770Z",
+    "company_id": "CMP-016",
+    "company": "Microsoft",
+    "role": "Software Engineer II - Excel Team",
+    "location": "United States, Washington, Redmond",
+    "experience": "No required experience above 3 years detected",
+    "posted": "2026-09-19T00:01:26",
+    "job_id": "1970393557001308",
+    "job_url": "https://apply.careers.microsoft.com/careers/job/1970393557001308",
+    "source_url": "https://apply.careers.microsoft.com/careers?start=0&location=United+States&pid=1970393556867395&sort_by=timestamp&filter_include_remote=1&filter_profession=software+engineering%2Cresearch%252C%2520applied%252C%2520%2526%2520data%2520sciences",
+    "discovery_window": "12:11 AM – 4:33 AM UTC",
+    "discovery_window_start": "2026-09-19T00:11:20.754Z",
+    "match_reason": "Eligible technical role; No required experience above 3 years detected; sponsorship: Not Mentioned; Not an internship",
+    "description_snippet": "Design, implement, test, ship, and operate AI-powered spreadsheet features; contribute to architecture, design, code reviews, debugging, deployment, monitoring, and operational readiness; and maintain high standards for code quality, maintainability, performance, reliability, security, and customer experience. Contribute to end-to-end AI product experiences spanning rich user interfaces, workbook and enterprise context, application logic, model orchestration, services, data access, and platform capabilities. Develop intelligent workflows that use large language models to understand user intent, reason over spreadsheet data, invoke appropriate tools, and help users calculate, analyze, visualize, organize, and share information. Build reliable, grounded agentic experiences that use workbook and permission-aware context, validated model outputs, evaluation, telemetry, and safeguards to com…",
+    "key": "e0d41afb9758c91185e8d9ec",
+    "active_status": "Active",
+    "job_type": "FULL_TIME",
+    "required_experience_years": null,
+    "preferred_experience_years": null,
+    "sponsorship_status": "Not Mentioned",
+    "sponsorship_evidence": "No sponsorship restriction found",
+    "experience_evidence": "No explicit required-years statement detected"
   }
 ]
