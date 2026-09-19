@@ -1,6 +1,6 @@
 # Latest Eligible Jobs — Filtered
 
-Updated: **2026-09-19T16:24:23.761Z UTC** / **Sep 19, 2026, 12:24 PM Eastern**
+Updated: **2026-09-19T18:49:13.162Z UTC** / **Sep 19, 2026, 2:49 PM Eastern**
 
 [Filtered eligible jobs](LATEST_JOBS.md) · [All extracted jobs](ALL_EXTRACTED_JOBS.md) · [Download Excel workbook](outputs/job-monitor/Job_Monitor.xlsx) · [Workflow runs](https://github.com/taran-dev4u/career-job-monitor/actions/workflows/job-monitor.yml)
 
@@ -39,7 +39,7 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 | 2026-09-18 | Apple Inc | Software Engineer (Data Solutions), AI & Data Platforms (AiDP) | Austin, Texas, United States | Not specified | 0–3 yrs | Not Mentioned | 2026-09-18T19:08:50.706Z | [Apply](https://jobs.apple.com/en-us/details/200684577-0157/software-engineer-data-solutions-ai-data-platforms-aidp?team=SFTWR) |
 | 2026-09-18 | Apple Inc | Software Engineer (Data Solutions), AI & Data Platforms (AiDP) | Sunnyvale, California, United States | Not specified | 0–3 yrs | Not Mentioned | 2026-09-18T19:08:50.706Z | [Apply](https://jobs.apple.com/en-us/details/200684577-3956/software-engineer-data-solutions-ai-data-platforms-aidp?team=SFTWR) |
 | 2026-09-18 | Apple Inc | Software Engineer (Graph), Supply Chain Integration | Chain Integration Sunnyvale, California, United States | Not specified | 0–3 yrs | Not Mentioned | 2026-09-18T19:08:50.706Z | [Apply](https://jobs.apple.com/en-us/details/200684594-3956/software-engineer-graph-supply-chain-integration?team=SFTWR) |
-| September 18, 2026 | Amazon.com Services LLC | Front-End Engineer, Core Shopping | US, WA, Seattle | Internship | 1+ yrs pref | Not Mentioned | 2026-09-18T16:16:48.968Z | [Apply](https://www.amazon.jobs/en/jobs/10553458/front-end-engineer-core-shopping) |
+| September 18, 2026 | Amazon.com Services LLC | Front-End Engineer, Core Shopping | US, WA, Seattle | Internship | 0–3 yrs | Not Mentioned | 2026-09-18T16:16:48.968Z | [Apply](https://www.amazon.jobs/en/jobs/10553458/front-end-engineer-core-shopping) |
 | September 18, 2026 | Amazon.com Services LLC | Software Development Engineer 2, Prime Video Personalization and Discovery | US, WA, Seattle | Internship | 0–3 yrs | Not Mentioned | 2026-09-18T11:42:05.211Z | [Apply](https://www.amazon.jobs/en/jobs/10553194/software-development-engineer-2-prime-video-personalization-and-discovery) |
 | September 18, 2026 | Amazon.com Services LLC | Software Development Engineer II, S3 Storage Control Plane - Durability | US, WA, Bellevue | Internship | 0–3 yrs | Not Mentioned | 2026-09-18T11:42:05.211Z | [Apply](https://www.amazon.jobs/en/jobs/10553307/software-development-engineer-ii-s3-storage-control-plane-durability) |
 | September 18, 2026 | Amazon.com Services LLC | Software Development Engineer, Prime Video ML Infrastructure | US, WA, Seattle | Internship | 0–3 yrs | Not Mentioned | 2026-09-18T11:42:05.211Z | [Apply](https://www.amazon.jobs/en/jobs/10553195/software-development-engineer-prime-video-ml-infrastructure) |
@@ -92,7 +92,7 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 | 2014-07-23 | IBM Corporation | DevOps/Fullstack Developer | Annapolis Junction, ALEXANDRIA, Chantilly, WASHINGTON, Reston, McLean, Herndon, Bethesda, Catonsville, Frederick, Ashburn, Virginia, Maryland, District of Columbia, United States | Not specified | 0–3 yrs | Not Mentioned | 2026-09-10T10:45:16.623Z | [Apply](https://careers.ibm.com/en_US/careers/JobDetail?jobId=131393) |
 | 2026-09-09T00:00:00.000+0000 | U.S. Bank National Association | Software engineer 2 (Java Developer) | Atlanta, GA, United States | Full time | 0–3 yrs | Not Mentioned | 2026-09-10T13:35:04.349Z | [Apply](https://careers.usbank.com/global/en/job/2026-0022172/Software-engineer-2-Java-Developer) |
 | 2026-09-08T18:27:25-07:00 | Meta Platforms, Inc | Embedded Software Engineer, Connectivity/Wireless | Redmond, WA, US; Burlingame, CA, US; San Diego, CA, US; New York, NY, US | Full-time | 0–3 yrs | Not Mentioned | 2026-09-11T20:51:53.658Z | [Apply](https://www.metacareers.com/profile/job_details/1967414873947303/) |
-| 2026-09-08T00:00:00+00:00 | WELLS FARGO BANK, N.A | Web UI Developer | Not stated | FULL_TIME | 0–3 yrs | Not Mentioned | 2026-08-24T10:53:20.994Z | [Apply](https://www.wellsfargojobs.com/en/jobs/r-570240/web-ui-developer) |
+| 2026-09-08T00:00:00.000+0000 | Cisco Systems, Inc | 2019369 Customer Delivery Consulting Engineer - Security | Herndon, Virginia, United States of America | FULL_TIME | 0–3 yrs | Not Mentioned | 2026-09-18T21:50:50.718Z | [Apply](https://careers.cisco.com/global/en/job/2019369/2019369-Customer-Delivery-Consulting-Engineer-Security) |
 | Posted 15 Days Ago | Intel Corporation | CAD/EDA Tools Automation Engineer | US, Oregon, Hillsboro | FULL_TIME | 0–3 yrs | Not Mentioned | 2026-09-04T05:06:29.075Z | [Apply](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/CAD-EDA-Tools-Automation-Engineer_JR0286595) |
 | Posted 15 Days Ago | Intel Corporation | GPU Software Development Engineer | US, California, Folsom | FULL_TIME | 0–3 yrs | Not Mentioned | 2026-09-04T05:06:29.075Z | [Apply](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-California-Folsom/GPU-Software-Development-Engineer_JR0283073) |
 | Posted 30+ Days Ago | Intel Corporation | Software Application Development Engineer | US, Arizona, Phoenix | FULL_TIME | 0–3 yrs | Not Mentioned | 2026-09-04T05:06:29.075Z | [Apply](https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Arizona-Phoenix/Software-Application-Development-Engineer-Grade_JR0283627) |
@@ -114,22 +114,22 @@ Source health: **17 healthy**, **0 confirmed empty**, **0 degraded**, **0 broken
 
 | ID | Company | Status | Candidates | Details Failed | Zero Streak | Last Healthy | Diagnostic |
 |---|---|---|---:|---:|---:|---|---|
-| CMP-004 | Apple Inc | Healthy | 60 | 0 | 0 | 2026-09-19T16:22:15.161Z |  |
-| CMP-001 | Amazon.com Services LLC | Healthy | 40 | 0 | 0 | 2026-09-19T16:22:18.421Z |  |
-| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-09-19T16:22:35.502Z |  |
-| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-09-19T16:23:00.937Z |  |
-| CMP-003 | Google LLC | Healthy | 60 | 0 | 0 | 2026-09-19T16:23:27.633Z |  |
-| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-09-19T16:23:29.417Z |  |
-| CMP-009 | Intel Corporation | Healthy | 16 | 0 | 0 | 2026-09-19T16:23:38.917Z |  |
-| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-09-19T16:23:46.140Z |  |
-| CMP-008 | JPMorgan Chase & Co | Healthy | 50 | 0 | 0 | 2026-09-19T16:23:51.086Z |  |
-| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-09-19T16:23:52.345Z |  |
-| CMP-011 | Microsoft Corporation | Healthy | 21 | 0 | 0 | 2026-09-19T16:24:07.617Z |  |
-| CMP-012 | Cisco Systems, Inc | Healthy | 10 | 0 | 0 | 2026-09-19T16:24:10.613Z |  |
-| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 40 | 0 | 0 | 2026-09-19T16:24:14.866Z |  |
-| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-09-19T16:24:18.157Z |  |
-| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-09-19T16:24:18.391Z |  |
-| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-09-19T16:24:19.386Z |  |
-| CMP-017 | Goldman Sachs | Healthy | 10 | 0 | 0 | 2026-09-19T16:24:23.611Z |  |
+| CMP-003 | Google LLC | Healthy | 60 | 0 | 0 | 2026-09-19T18:47:36.001Z |  |
+| CMP-004 | Apple Inc | Healthy | 60 | 0 | 0 | 2026-09-19T18:47:37.609Z |  |
+| CMP-001 | Amazon.com Services LLC | Healthy | 40 | 0 | 0 | 2026-09-19T18:47:42.460Z |  |
+| CMP-007 | Qualcomm Technologies, Inc | Healthy | 19 | 0 | 0 | 2026-09-19T18:47:51.621Z |  |
+| CMP-008 | JPMorgan Chase & Co | Healthy | 50 | 0 | 0 | 2026-09-19T18:48:04.602Z |  |
+| CMP-002 | Meta Platforms, Inc | Healthy | 5 | 0 | 0 | 2026-09-19T18:48:05.311Z |  |
+| CMP-009 | Intel Corporation | Healthy | 16 | 0 | 0 | 2026-09-19T18:48:15.856Z |  |
+| CMP-010 | Oracle America, Inc | Healthy | 14 | 0 | 0 | 2026-09-19T18:48:17.637Z |  |
+| CMP-012 | Cisco Systems, Inc | Healthy | 10 | 0 | 0 | 2026-09-19T18:48:29.325Z |  |
+| CMP-011 | Microsoft Corporation | Healthy | 21 | 0 | 0 | 2026-09-19T18:48:32.651Z |  |
+| CMP-005 | Fidelity Technology Group, LLC d/b/a Fidelity Investments | Healthy | 20 | 0 | 0 | 2026-09-19T18:48:50.139Z |  |
+| CMP-014 | WELLS FARGO BANK, N.A | Healthy | 20 | 0 | 0 | 2026-09-19T18:48:51.307Z |  |
+| CMP-013 | U.S. Bank National Association | Healthy | 30 | 0 | 0 | 2026-09-19T18:48:52.000Z |  |
+| CMP-017 | Goldman Sachs | Healthy | 10 | 0 | 0 | 2026-09-19T18:49:00.859Z |  |
+| CMP-015 | COMPUNNEL SOFTWARE GROUP, INC | Healthy | 10 | 0 | 0 | 2026-09-19T18:49:01.029Z |  |
+| CMP-016 | Microsoft | Healthy | 10 | 0 | 0 | 2026-09-19T18:49:01.056Z |  |
+| CMP-006 | IBM Corporation | Healthy | 30 | 0 | 0 | 2026-09-19T18:49:13.001Z |  |
 
 > “Degraded” means extraction could not prove the source was complete. Review the unfiltered dashboard or workbook audit sheets for every decision.
