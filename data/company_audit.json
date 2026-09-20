@@ -1,12 +1,12 @@
 {
-  "run_at": "2026-09-19T23:30:11.355Z",
+  "run_at": "2026-09-20T01:35:00.586Z",
   "critical": [
     {
       "company_id": "CMP-005",
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 475h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 477h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -22,7 +22,7 @@
       "company": "Oracle America, Inc",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Oracle America, Inc has produced no eligible job for 72h despite scanning cleanly",
+      "message": "Oracle America, Inc has produced no eligible job for 74h despite scanning cleanly",
       "evidence": "14 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -30,7 +30,7 @@
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 475h despite scanning cleanly",
+      "message": "Microsoft Corporation has produced no eligible job for 477h despite scanning cleanly",
       "evidence": "21 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -49,7 +49,7 @@
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 475h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 477h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -65,7 +65,7 @@
       "company": "Oracle America, Inc",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Oracle America, Inc has produced no eligible job for 72h despite scanning cleanly",
+      "message": "Oracle America, Inc has produced no eligible job for 74h despite scanning cleanly",
       "evidence": "14 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -73,7 +73,7 @@
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 475h despite scanning cleanly",
+      "message": "Microsoft Corporation has produced no eligible job for 477h despite scanning cleanly",
       "evidence": "21 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
