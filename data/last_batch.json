@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-09-20T16:28:52.737Z",
+  "run_at": "2026-09-20T19:02:44.958Z",
   "suppressed": false,
   "jobs": [],
   "health_alerts": [],
@@ -9,7 +9,7 @@
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 492h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 495h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -25,7 +25,7 @@
       "company": "Oracle America, Inc",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Oracle America, Inc has produced no eligible job for 89h despite scanning cleanly",
+      "message": "Oracle America, Inc has produced no eligible job for 92h despite scanning cleanly",
       "evidence": "14 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -33,7 +33,7 @@
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 492h despite scanning cleanly",
+      "message": "Microsoft Corporation has produced no eligible job for 495h despite scanning cleanly",
       "evidence": "21 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
