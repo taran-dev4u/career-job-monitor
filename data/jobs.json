@@ -8554,5 +8554,29 @@
     "sponsorship_status": "Not Mentioned",
     "sponsorship_evidence": "No sponsorship restriction found",
     "experience_evidence": "No explicit required-years statement detected"
+  },
+  {
+    "discovered_at": "2026-09-21T07:01:50.520Z",
+    "company_id": "CMP-001",
+    "company": "Amazon.com Services LLC",
+    "role": "Software Development Engineer - Expert Consultant, AGI - Data Services",
+    "location": "US, WA, Bellevue",
+    "experience": "No required experience above 3 years detected",
+    "posted": "September 21, 2026",
+    "job_id": "10554286",
+    "job_url": "https://www.amazon.jobs/en/jobs/10554286/software-development-engineer-expert-consultant-agi-data-services",
+    "source_url": "https://www.amazon.jobs/en/search?offset=0&result_limit=20&sort=recent&category%5B%5D=software-development&job_type%5B%5D=Full-Time&country%5B%5D=USA",
+    "discovery_window": "1:35 AM – 7:01 AM UTC",
+    "discovery_window_start": "2026-09-21T01:35:54.668Z",
+    "match_reason": "Eligible technical role; No required experience above 3 years detected; sponsorship: Not Mentioned; Not an internship",
+    "description_snippet": "Skip to main content Amazon Jobs home page My career Software Development Engineer - Expert Consultant, AGI - Data Services Job ID: 10554286 | Amazon.com Services LLC Apply now Description Amazon seeks a Software Engineering Domain Expert to provide strategic oversight of human-in-the-loop and model-in-the-loop data pipelines that power next-generation AI solutions. This role sits at the intersection of intellectual rigor and technological innovation — blending deep software development expertise with advanced analytical skills to ensure data excellence at every stage of the Model Training pipeline. The Domain Expert owns high-quality data output from end to end, translates training data needs into scalable engineering solutions, and fosters iterative development practices that raise the bar for the entire team. Beyond individual technical contribution, this role builds organizational c…",
+    "key": "b4a96f8372b4fb1b46c09a92",
+    "active_status": "Active",
+    "job_type": "Internship",
+    "required_experience_years": null,
+    "preferred_experience_years": 3,
+    "sponsorship_status": "Not Mentioned",
+    "sponsorship_evidence": "No sponsorship restriction found",
+    "experience_evidence": "• Develop and write demonstrations to illustrate \"what good data looks like\" in terms of meeting benchmarks for quality and efficiency • Provide detailed feedback and explanations for your evaluations, helping to refine "
   }
 ]
