@@ -1,15 +1,48 @@
 {
-  "run_at": "2026-09-20T23:27:59.305Z",
+  "run_at": "2026-09-21T01:35:54.668Z",
   "suppressed": false,
-  "jobs": [],
+  "jobs": [
+    {
+      "discovered_at": "2026-09-21T01:35:54.668Z",
+      "company_id": "CMP-016",
+      "company": "Microsoft",
+      "role": "Software Engineer II - Full Stack",
+      "location": "United States, Washington, Redmond",
+      "experience": "No required experience above 3 years detected",
+      "posted": "2026-09-20T23:08:33",
+      "job_id": "1970393556999241",
+      "job_url": "https://apply.careers.microsoft.com/careers/job/1970393556999241",
+      "source_url": "https://apply.careers.microsoft.com/careers?start=0&location=United+States&pid=1970393556867395&sort_by=timestamp&filter_include_remote=1&filter_profession=software+engineering%2Cresearch%252C%2520applied%252C%2520%2526%2520data%2520sciences",
+      "discovery_window": "11:27 PM – 1:35 AM UTC",
+      "discovery_window_start": "2026-09-20T23:27:59.305Z",
+      "match_reason": "Eligible technical role; No required experience above 3 years detected; sponsorship: Not Mentioned; Not an internship",
+      "description_snippet": "Collaborate with stakeholders to identify user requirements, incorporating feedback and actionable metrics into future designs. Contribute to product architecture, helps create proposals, owns solutions, and ensures security and compliance. Assist in testing plans and automation features. Implement code for products, services, or features with a focus on extensibility and maintainability. Review code for quality, reliability, and adherence to coding standards. Execute project plans, break down work items, conduct experimentation, and support safe deployment of features. Manage live service operations, act as a Designated Responsible Individual (DRI) on call, integrate telemetry data, and contribute to data analysis for system health. Engineering Excellence: Improve developer tools, contribute to automation in production, ensure compliance with security and privacy, and stay current with…",
+      "key": "2bfa6b8bdf40139fb6623979",
+      "active_status": "Active",
+      "job_type": "FULL_TIME",
+      "required_experience_years": null,
+      "preferred_experience_years": null,
+      "sponsorship_status": "Not Mentioned",
+      "sponsorship_evidence": "No sponsorship restriction found",
+      "experience_evidence": "No explicit required-years statement detected"
+    }
+  ],
   "health_alerts": [],
   "audit_alerts": [
+    {
+      "company_id": "CMP-002",
+      "company": "Meta Platforms, Inc",
+      "severity": "critical",
+      "code": "TOO_FEW_CANDIDATES",
+      "message": "Meta Platforms, Inc returned 0 candidates, expected at least 3",
+      "evidence": "career_url may have changed shape, or the selector/adapter no longer matches"
+    },
     {
       "company_id": "CMP-005",
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 499h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 501h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -25,7 +58,7 @@
       "company": "Oracle America, Inc",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Oracle America, Inc has produced no eligible job for 96h despite scanning cleanly",
+      "message": "Oracle America, Inc has produced no eligible job for 98h despite scanning cleanly",
       "evidence": "14 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -33,7 +66,7 @@
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 499h despite scanning cleanly",
+      "message": "Microsoft Corporation has produced no eligible job for 501h despite scanning cleanly",
       "evidence": "21 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
