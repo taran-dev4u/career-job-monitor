@@ -1,0 +1,53 @@
+{
+  "saved_at": "2026-09-22T23:18:56.585Z",
+  "jobs": [
+    {
+      "discovered_at": "2026-09-22T23:18:43.239Z",
+      "company_id": "CMP-016",
+      "company": "Microsoft",
+      "role": "Software Engineer - CTJ - TS (Cleared)",
+      "location": "United States, Virginia, Reston",
+      "experience": "No required experience above 3 years detected",
+      "posted": "2026-09-22T20:55:40",
+      "job_id": "1970393556982911",
+      "job_url": "https://apply.careers.microsoft.com/careers/job/1970393556982911",
+      "source_url": "https://apply.careers.microsoft.com/careers?start=0&location=United+States&pid=1970393556867395&sort_by=timestamp&filter_include_remote=1&filter_profession=software+engineering%2Cresearch%252C%2520applied%252C%2520%2526%2520data%2520sciences",
+      "discovery_window": "5:16 PM – 11:18 PM UTC",
+      "discovery_window_start": "2026-09-22T17:16:31.417Z",
+      "match_reason": "Eligible technical role; No required experience above 3 years detected; sponsorship: Not Mentioned; Not an internship",
+      "description_snippet": "Contribute to the design and evolution of scalable distributed systems, APIs, services, and platform capabilities, balancing requirements related to security, reliability, performance, maintainability, and cost. Develop automated tests, monitoring, telemetry, and operational tooling to improve software quality, observability, and long-term service health. Apply security, privacy, and compliance best practices throughout the software development lifecycle while working within specialized cloud environments. Diagnose, debug, and resolve technical issues across the software stack, using data and telemetry to improve performance, reliability, and maintainability over time. Design, implement, test, and maintain software features and services that meet customer and product requirements while operating within specialized security and compliance constraints. Participate in operational activitie…",
+      "key": "b91f7c7df86056438ce63710",
+      "active_status": "Active",
+      "job_type": "FULL_TIME",
+      "required_experience_years": null,
+      "preferred_experience_years": null,
+      "sponsorship_status": "Not Mentioned",
+      "sponsorship_evidence": "No sponsorship restriction found",
+      "experience_evidence": "No explicit required-years statement detected"
+    },
+    {
+      "discovered_at": "2026-09-22T23:18:43.239Z",
+      "company_id": "CMP-016",
+      "company": "Microsoft",
+      "role": "Software Engineer - CTJ - TS (Cleared)",
+      "location": "United States, Washington, Redmond",
+      "experience": "No required experience above 3 years detected",
+      "posted": "2026-09-22T20:56:12",
+      "job_id": "1970393556982903",
+      "job_url": "https://apply.careers.microsoft.com/careers/job/1970393556982903",
+      "source_url": "https://apply.careers.microsoft.com/careers?start=0&location=United+States&pid=1970393556867395&sort_by=timestamp&filter_include_remote=1&filter_profession=software+engineering%2Cresearch%252C%2520applied%252C%2520%2526%2520data%2520sciences",
+      "discovery_window": "5:16 PM – 11:18 PM UTC",
+      "discovery_window_start": "2026-09-22T17:16:31.417Z",
+      "match_reason": "Eligible technical role; No required experience above 3 years detected; sponsorship: Not Mentioned; Not an internship",
+      "description_snippet": "Contribute to the design and evolution of scalable distributed systems, APIs, services, and platform capabilities, balancing requirements related to security, reliability, performance, maintainability, and cost. Develop automated tests, monitoring, telemetry, and operational tooling to improve software quality, observability, and long-term service health. Apply security, privacy, and compliance best practices throughout the software development lifecycle while working within specialized cloud environments. Diagnose, debug, and resolve technical issues across the software stack, using data and telemetry to improve performance, reliability, and maintainability over time. Design, implement, test, and maintain software features and services that meet customer and product requirements while operating within specialized security and compliance constraints. Participate in operational activitie…",
+      "key": "f54172730702ab30e8072e42",
+      "active_status": "Active",
+      "job_type": "FULL_TIME",
+      "required_experience_years": null,
+      "preferred_experience_years": null,
+      "sponsorship_status": "Not Mentioned",
+      "sponsorship_evidence": "No sponsorship restriction found",
+      "experience_evidence": "No explicit required-years statement detected"
+    }
+  ]
+}
