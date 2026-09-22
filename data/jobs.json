@@ -9178,5 +9178,29 @@
     "sponsorship_status": "Unclear",
     "sponsorship_evidence": "Your code will directly impact how we calculate and apply advertising taxes across jurisdictions and orchestrate incentive programs that drive advertiser growth.<br/><br/>The TAP (Tax & Promotions) team within Amazon Ads",
     "experience_evidence": "Key job responsibilities - Design and develop scalable backend services for advertising tax calculation, regulatory compliance, and invoicing across global jurisdictions - Build and maintain promotion engines that orches"
+  },
+  {
+    "discovered_at": "2026-09-22T12:35:21.670Z",
+    "company_id": "CMP-003",
+    "company": "Google LLC",
+    "role": "Software Engineer, Applied Research, YouTube Languages Capabilities",
+    "location": "Mountain View, CA",
+    "experience": "2+ years required",
+    "posted": "",
+    "job_id": "92679765210604230",
+    "job_url": "https://www.google.com/about/careers/applications/jobs/results/92679765210604230-software-engineer-applied-research-youtube-languages-capabilities?location=United%20States&hl=en&sort_by=date&employment_type=FULL_TIME&q=%22Software%20Engineer%22",
+    "source_url": "https://www.google.com/about/careers/applications/jobs/results/?location=United%20States&hl=en&sort_by=date&employment_type=FULL_TIME&q=%22Software%20Engineer%22",
+    "discovery_window": "6:46 AM – 12:35 PM UTC",
+    "discovery_window_start": "2026-09-22T06:46:45.651Z",
+    "match_reason": "Eligible technical role; 2+ years required; sponsorship: Not Mentioned; Not an internship",
+    "description_snippet": "Software Engineer, Applied Research, YouTube Languages Capabilities share Share Software Engineer, Applied Research, YouTube Languages Capabilities corporate_fare YouTube place Mountain View, CA, USA bar_chart Mid Apply info_outline X In most instances, this position requires in-person interviews as part of the hiring process. Minimum qualifications: Bachelor’s degree or equivalent practical experience. 2 years of experience with software development in C++, or 1 year of experience with an advanced degree. 1 year of experience with ML infrastructure (e.g., model deployment, model evaluation, optimization, data processing, debugging). Experience prototyping and shipping ML products. Experience designing and developing services catering user-facing traffic. Preferred qualifications: Master's degree or PhD in Computer Science or related technical fields. 2 years of experience with data str…",
+    "key": "0081d0be6b60f54806d666f2",
+    "active_status": "Active",
+    "job_type": "Not specified",
+    "required_experience_years": 2,
+    "preferred_experience_years": 2,
+    "sponsorship_status": "Not Mentioned",
+    "sponsorship_evidence": "No sponsorship restriction found",
+    "experience_evidence": "2 years of experience with software development in C++, or 1 year of experience with an advanced degree."
   }
 ]

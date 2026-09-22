@@ -1,30 +1,30 @@
 {
-  "run_at": "2026-09-22T06:46:45.651Z",
+  "run_at": "2026-09-22T12:35:21.670Z",
   "suppressed": false,
   "jobs": [
     {
-      "discovered_at": "2026-09-22T06:46:45.651Z",
-      "company_id": "CMP-001",
-      "company": "Amazon.com Services LLC",
-      "role": "Software Development Engineer, Measurement, Ad Tech, and Data Science (MADS) - Tax & Promotions",
-      "location": "US, NY, New York",
-      "experience": "No required experience above 3 years detected",
-      "posted": "September 22, 2026",
-      "job_id": "10555776",
-      "job_url": "https://www.amazon.jobs/en/jobs/10555776/software-development-engineer-measurement-ad-tech-and-data-science-mads-tax-promotions",
-      "source_url": "https://www.amazon.jobs/en/search?offset=0&result_limit=20&sort=recent&category%5B%5D=software-development&job_type%5B%5D=Full-Time&country%5B%5D=USA",
-      "discovery_window": "1:37 AM – 6:46 AM UTC",
-      "discovery_window_start": "2026-09-22T01:37:41.643Z",
-      "match_reason": "Eligible technical role; No required experience above 3 years detected; sponsorship: Unclear; Not an internship",
-      "description_snippet": "Skip to main content Amazon Jobs home page My career Software Development Engineer, Measurement, Ad Tech, and Data Science (MADS) - Tax & Promotions Job ID: 10555776 | Amazon.com Services LLC Apply now Description Build the mission-critical backend systems that ensure advertisers worldwide are taxed correctly, invoiced compliantly, and rewarded appropriately — designing tax calculation services, government e-invoicing integrations, and promotion engines that power billing across Amazon's global advertising business. Your code will directly impact how we calculate and apply advertising taxes across jurisdictions and orchestrate incentive programs that drive advertiser growth. The TAP (Tax & Promotions) team within Amazon Ads owns the services that handle tax compliance, regulatory invoicing, and promotion consumption for Sponsored Ads, DSP, and vendor billing across worldwide marketplace…",
-      "key": "40f341b66e35ce2b6b4ee935",
+      "discovered_at": "2026-09-22T12:35:21.670Z",
+      "company_id": "CMP-003",
+      "company": "Google LLC",
+      "role": "Software Engineer, Applied Research, YouTube Languages Capabilities",
+      "location": "Mountain View, CA",
+      "experience": "2+ years required",
+      "posted": "",
+      "job_id": "92679765210604230",
+      "job_url": "https://www.google.com/about/careers/applications/jobs/results/92679765210604230-software-engineer-applied-research-youtube-languages-capabilities?location=United%20States&hl=en&sort_by=date&employment_type=FULL_TIME&q=%22Software%20Engineer%22",
+      "source_url": "https://www.google.com/about/careers/applications/jobs/results/?location=United%20States&hl=en&sort_by=date&employment_type=FULL_TIME&q=%22Software%20Engineer%22",
+      "discovery_window": "6:46 AM – 12:35 PM UTC",
+      "discovery_window_start": "2026-09-22T06:46:45.651Z",
+      "match_reason": "Eligible technical role; 2+ years required; sponsorship: Not Mentioned; Not an internship",
+      "description_snippet": "Software Engineer, Applied Research, YouTube Languages Capabilities share Share Software Engineer, Applied Research, YouTube Languages Capabilities corporate_fare YouTube place Mountain View, CA, USA bar_chart Mid Apply info_outline X In most instances, this position requires in-person interviews as part of the hiring process. Minimum qualifications: Bachelor’s degree or equivalent practical experience. 2 years of experience with software development in C++, or 1 year of experience with an advanced degree. 1 year of experience with ML infrastructure (e.g., model deployment, model evaluation, optimization, data processing, debugging). Experience prototyping and shipping ML products. Experience designing and developing services catering user-facing traffic. Preferred qualifications: Master's degree or PhD in Computer Science or related technical fields. 2 years of experience with data str…",
+      "key": "0081d0be6b60f54806d666f2",
       "active_status": "Active",
-      "job_type": "Internship",
-      "required_experience_years": null,
-      "preferred_experience_years": 5,
-      "sponsorship_status": "Unclear",
-      "sponsorship_evidence": "Your code will directly impact how we calculate and apply advertising taxes across jurisdictions and orchestrate incentive programs that drive advertiser growth.<br/><br/>The TAP (Tax & Promotions) team within Amazon Ads",
-      "experience_evidence": "Key job responsibilities - Design and develop scalable backend services for advertising tax calculation, regulatory compliance, and invoicing across global jurisdictions - Build and maintain promotion engines that orches"
+      "job_type": "Not specified",
+      "required_experience_years": 2,
+      "preferred_experience_years": 2,
+      "sponsorship_status": "Not Mentioned",
+      "sponsorship_evidence": "No sponsorship restriction found",
+      "experience_evidence": "2 years of experience with software development in C++, or 1 year of experience with an advanced degree."
     }
   ],
   "health_alerts": [],
@@ -34,7 +34,7 @@
       "company": "Fidelity Technology Group, LLC d/b/a Fidelity Investments",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 531h despite scanning cleanly",
+      "message": "Fidelity Technology Group, LLC d/b/a Fidelity Investments has produced no eligible job for 536h despite scanning cleanly",
       "evidence": "20 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -50,7 +50,7 @@
       "company": "Oracle America, Inc",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Oracle America, Inc has produced no eligible job for 127h despite scanning cleanly",
+      "message": "Oracle America, Inc has produced no eligible job for 133h despite scanning cleanly",
       "evidence": "14 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
@@ -58,7 +58,7 @@
       "company": "Microsoft Corporation",
       "severity": "critical",
       "code": "ZERO_ELIGIBLE_STREAK",
-      "message": "Microsoft Corporation has produced no eligible job for 531h despite scanning cleanly",
+      "message": "Microsoft Corporation has produced no eligible job for 536h despite scanning cleanly",
       "evidence": "18 candidates this run; check the search URL's filters and the rejection reasons"
     },
     {
